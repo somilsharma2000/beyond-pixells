@@ -3,26 +3,25 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Beyond Pixels — Digital Growth Systems for Local Businesses</title>
-<meta name="description" content="Beyond Pixels designs, builds, and deploys complete digital operating systems for local businesses worldwide. Our flagship product, Gym OS, is live and running.">
-<meta property="og:title" content="Beyond Pixels — Digital Growth Systems">
+<title>Beyond Pixells — Digital Growth Systems for Local Businesses</title>
+<meta name="description" content="Beyond Pixells designs, builds, and deploys complete digital operating systems for local businesses worldwide. Our flagship product, Gym OS, is live and running.">
+<meta property="og:title" content="Beyond Pixells — Digital Growth Systems">
 <meta property="og:description" content="Complete digital operating systems for local businesses worldwide. Gym OS is live. Partner program available by invitation.">
 <meta property="og:type" content="website">
+<meta property="og:image" content="https://somilsharma2000.github.io/beyond-pixels/logo.png">
 <link rel="icon" href="logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-:root{--blue:#1E4FD8;--blue-light:#3b6ae8;--navy:#0B1B3F;--navy-light:#132a5e;--slate:#1e293b;--gray:#64748b;--gray-light:#94a3b8;--light:#f1f5f9;--green:#22c55e;--white:#fff;--border:#e2e8f0;--border-dark:#334155}
+:root{--blue:#1E4FD8;--blue-light:#3b6ae8;--navy:#0B1B3F;--navy-light:#132a5e;--slate:#1e293b;--gray:#64748b;--gray-light:#94a3b8;--light:#f1f5f9;--green:#22c55e;--white:#fff;--border:#e2e8f0}
 html{scroll-behavior:smooth}
 body{font-family:'Inter',sans-serif;background:var(--white);color:var(--navy);line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased;font-size:16px}
 a{color:var(--blue);text-decoration:none}
 .container{max-width:1140px;margin:0 auto;padding:0 24px}
 img.logo-img{width:36px;height:36px;border-radius:50%;object-fit:cover}
 .svg-icon{width:24px;height:24px;stroke:currentColor;stroke-width:1.8;fill:none;stroke-linecap:round;stroke-linejoin:round}
-
-/* NAV */
 nav{position:fixed;top:0;width:100%;background:rgba(11,27,63,.97);backdrop-filter:blur(12px);z-index:100;padding:16px 0;transition:.3s;border-bottom:1px solid rgba(255,255,255,.06)}
 nav .container{display:flex;justify-content:space-between;align-items:center}
 nav .brand{display:flex;align-items:center;gap:10px;font-size:1.15rem;font-weight:800;color:var(--white)}
@@ -32,8 +31,6 @@ nav ul a:hover{color:#fff}
 nav .nav-cta{background:var(--blue);color:var(--white)!important;padding:10px 22px;border-radius:8px;font-weight:600;font-size:.9rem;transition:.2s}
 nav .nav-cta:hover{background:var(--blue-light)}
 @media(max-width:900px){nav ul li:not(:last-child){display:none}}
-
-/* HERO */
 .hero{background:var(--navy);color:var(--white);padding:160px 0 100px;position:relative;overflow:hidden}
 .hero::before{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background:radial-gradient(ellipse at 70% 30%,rgba(30,79,216,.25),transparent 50%),radial-gradient(ellipse at 20% 80%,rgba(19,42,94,.4),transparent 50%)}
 .hero .container{position:relative;z-index:1}
@@ -49,24 +46,18 @@ nav .nav-cta:hover{background:var(--blue-light)}
 .hero .btn-primary:hover{background:var(--blue-light);transform:translateY(-2px);box-shadow:0 8px 24px rgba(30,79,216,.35)}
 .hero .btn-ghost{background:transparent;color:var(--white);border:1px solid rgba(255,255,255,.2)}
 .hero .btn-ghost:hover{background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.3)}
-
-/* STATS BAR */
 .stats-bar{background:var(--navy-light);padding:48px 0;border-top:1px solid rgba(255,255,255,.06)}
 .stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:40px}
 @media(max-width:700px){.stats-grid{grid-template-columns:repeat(2,1fr);gap:30px}}
 .stat-item{text-align:center}
 .stat-item .num{font-size:2.4rem;font-weight:800;color:#60a5fa;letter-spacing:-.02em}
 .stat-item .label{font-size:.88rem;color:#94a3b8;margin-top:4px;font-weight:500}
-
-/* SECTION */
 section{padding:100px 0}
 .section-title{text-align:center;margin-bottom:64px;max-width:680px;margin-left:auto;margin-right:auto}
 .section-title .tag{color:var(--blue);font-weight:700;font-size:.82rem;text-transform:uppercase;letter-spacing:.1em;margin-bottom:12px;display:block}
 .section-title h2{font-size:2.4rem;font-weight:800;margin-bottom:16px;letter-spacing:-.02em}
 .section-title p{color:var(--gray);font-size:1.1rem}
 .section-title h2 span{color:var(--blue)}
-
-/* ECOSYSTEM */
 .ecosystem{background:var(--light)}
 .eco-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
 @media(max-width:900px){.eco-grid{grid-template-columns:1fr}}
@@ -80,8 +71,6 @@ section{padding:100px 0}
 .eco-card p{color:var(--gray);font-size:.94rem;margin-bottom:20px;line-height:1.65}
 .eco-card .link-out{font-weight:600;font-size:.88rem;display:inline-flex;align-items:center;gap:6px;color:var(--blue);transition:.2s}
 .eco-card .link-out:hover{gap:10px}
-
-/* PRODUCT SHOWCASE */
 .product-card{background:var(--navy);border-radius:24px;overflow:hidden;color:var(--white);display:grid;grid-template-columns:1.1fr 1fr;gap:0;box-shadow:0 24px 60px rgba(11,27,63,.3)}
 @media(max-width:800px){.product-card{grid-template-columns:1fr}}
 .product-card .info{padding:52px}
@@ -98,17 +87,6 @@ section{padding:100px 0}
 .product-card .visual .mockup .row{display:flex;justify-content:space-between;padding:14px 0;border-bottom:1px solid #e2e8f0;font-size:.88rem;font-weight:500}
 .product-card .visual .mockup .row:last-child{border-bottom:none}
 .product-card .visual .mockup .row b{color:var(--blue);font-weight:700}
-
-/* COMING SOON */
-.soon-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:40px}
-@media(max-width:800px){.soon-grid{grid-template-columns:1fr}}
-.soon-card{background:var(--white);border:1px dashed #cbd5e1;border-radius:14px;padding:32px;text-align:center;transition:.2s}
-.soon-card:hover{border-color:var(--blue);background:var(--light)}
-.soon-card .icon-wrap{width:44px;height:44px;background:var(--light);border-radius:12px;display:flex;align-items:center;justify-content:center;margin:0 auto 12px;color:var(--gray)}
-.soon-card h4{font-weight:700;margin-bottom:8px;font-size:1.05rem}
-.soon-card span{font-size:.76rem;color:var(--gray);background:var(--light);padding:4px 12px;border-radius:12px;font-weight:600;letter-spacing:.04em;text-transform:uppercase}
-
-/* ABOUT */
 .about{background:var(--navy);color:var(--white)}
 .about .section-title h2{color:#fff}
 .about .section-title h2 span{color:#60a5fa}
@@ -119,8 +97,6 @@ section{padding:100px 0}
 .about-card .icon-wrap{width:56px;height:56px;background:rgba(30,79,216,.15);border-radius:14px;display:flex;align-items:center;justify-content:center;margin:0 auto 18px;color:#60a5fa}
 .about-card h3{font-size:1.15rem;font-weight:700;margin-bottom:10px;color:#fff}
 .about-card p{color:#94a3b8;font-size:.92rem;line-height:1.7}
-
-/* PARTNER PROGRAM */
 .partner-section{background:linear-gradient(180deg,var(--light),var(--white))}
 .partner-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start}
 @media(max-width:800px){.partner-grid{grid-template-columns:1fr}}
@@ -143,8 +119,6 @@ section{padding:100px 0}
 .dash-preview .act-row{display:flex;justify-content:space-between;font-size:.84rem;padding:10px 0;border-bottom:1px solid #f1f5f9}
 .dash-preview .act-row:last-child{border-bottom:none}
 .dash-preview .act-row .ok{color:var(--green);font-weight:600}
-
-/* FORMS */
 .apply-form{background:var(--white);border:1px solid var(--border);border-radius:16px;padding:36px;margin-top:28px;box-shadow:0 8px 24px rgba(0,0,0,.04)}
 .apply-form h3{font-size:1.2rem;font-weight:700;margin-bottom:8px}
 .apply-form .sub{font-size:.88rem;color:var(--gray);margin-bottom:24px}
@@ -158,8 +132,6 @@ section{padding:100px 0}
 .apply-form .wa-btn:hover:not(:disabled){transform:translateY(-2px);box-shadow:0 8px 24px rgba(34,197,94,.3)}
 .apply-form .wa-btn:disabled{background:#cbd5e1;cursor:not-allowed}
 .apply-form .note{font-size:.8rem;color:var(--gray-light);margin-top:12px;text-align:center}
-
-/* FLYWHEEL */
 .flow-grid{display:flex;justify-content:space-between;align-items:stretch;gap:0;flex-wrap:wrap}
 .flow-item{flex:1;min-width:180px;text-align:center;background:var(--white);border:1px solid var(--border);border-radius:14px;padding:28px 18px;transition:.25s}
 .flow-item:hover{border-color:var(--blue);box-shadow:0 8px 24px rgba(0,0,0,.06)}
@@ -168,8 +140,6 @@ section{padding:100px 0}
 .flow-item p{font-size:.8rem;color:var(--gray)}
 .flow-connector{color:#cbd5e1;font-size:1.5rem;font-weight:300;display:flex;align-items:center;padding:0 6px}
 @media(max-width:800px){.flow-grid{flex-direction:column}.flow-connector{transform:rotate(90deg);justify-content:center;padding:10px 0}}
-
-/* CTA */
 .cta-final{background:var(--navy);text-align:center;color:var(--white);padding:100px 0}
 .cta-final h2{font-size:2.2rem;font-weight:800;margin-bottom:16px;letter-spacing:-.02em}
 .cta-final p{color:#94a3b8;margin-bottom:36px;font-size:1.1rem}
@@ -179,23 +149,20 @@ section{padding:100px 0}
 .cta-final .btn-blue:hover{background:var(--blue-light);transform:translateY(-2px)}
 .cta-final .btn-ghost{background:transparent;color:var(--white);border:1px solid rgba(255,255,255,.2)}
 .cta-final .btn-ghost:hover{background:rgba(255,255,255,.06)}
-
-/* FOOTER */
 footer{background:var(--navy);color:#94a3b8;padding:64px 0 32px;border-top:1px solid rgba(255,255,255,.06)}
-footer .footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px;margin-bottom:40px}
-@media(max-width:800px){footer .footer-grid{grid-template-columns:1fr 1fr;gap:32px}}
-@media(max-width:500px){footer .footer-grid{grid-template-columns:1fr}}
+footer .footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:48px;margin-bottom:40px}
+@media(max-width:800px){footer .footer-grid{grid-template-columns:1fr;gap:32px}}
 footer .footer-brand .brand{display:flex;align-items:center;gap:10px;font-size:1.2rem;font-weight:800;color:var(--white);margin-bottom:12px}
 footer .footer-brand p{font-size:.88rem;line-height:1.7;margin-bottom:16px}
+footer .footer-brand .contact-email{display:inline-flex;align-items:center;gap:8px;color:#60a5fa;font-size:.88rem;font-weight:500}
+footer .footer-brand .contact-email:hover{text-decoration:underline}
 footer .footer-col h5{color:var(--white);font-size:.85rem;font-weight:700;margin-bottom:16px;text-transform:uppercase;letter-spacing:.05em}
 footer .footer-col ul{list-style:none}
 footer .footer-col ul li{margin-bottom:10px}
 footer .footer-col ul a{color:#94a3b8;font-size:.88rem;transition:.2s}
 footer .footer-col ul a:hover{color:#fff}
-footer .footer-bottom{border-top:1px solid rgba(255,255,255,.06);padding-top:24px;display:flex;justify-content:space-between;align-items:center}
-@media(max-width:600px){footer .footer-bottom{flex-direction:column;gap:12px;text-align:center}}
+footer .footer-bottom{border-top:1px solid rgba(255,255,255,.06);padding-top:24px;text-align:center}
 footer .footer-bottom p{font-size:.84rem}
-
 .fade-in{opacity:0;transform:translateY(24px);transition:.6s}
 .fade-in.visible{opacity:1;transform:translateY(0)}
 </style>
@@ -205,7 +172,7 @@ footer .footer-bottom p{font-size:.84rem}
 <!-- NAV -->
 <nav>
 <div class="container">
-<div class="brand"><img src="logo.png" class="logo-img" alt="Beyond Pixels"> Beyond Pixels</div>
+<div class="brand"><img src="logo.png" class="logo-img" alt="Beyond Pixells"> Beyond Pixells</div>
 <ul>
 <li><a href="#ecosystem">Ecosystem</a></li>
 <li><a href="#products">Products</a></li>
@@ -222,7 +189,7 @@ footer .footer-bottom p{font-size:.84rem}
 <div class="container">
 <div class="pill"><span class="dot"></span> Gym OS is live and running in real gyms</div>
 <h1>We Build <span>Digital Growth Systems</span> For Local Businesses</h1>
-<p>Beyond Pixels designs, builds, and deploys complete digital operating systems — websites, automation, CRM, and AI — for local businesses worldwide.</p>
+<p>Beyond Pixells designs, builds, and deploys complete digital operating systems — websites, automation, CRM, and AI — for local businesses worldwide.</p>
 <div class="cta-group">
 <a href="https://somilsharma2000.github.io/gym-os/" class="btn btn-primary">Explore Gym OS</a>
 <a href="#partners" class="btn btn-ghost">Apply as Partner</a>
@@ -235,9 +202,9 @@ footer .footer-bottom p{font-size:.84rem}
 <div class="container">
 <div class="stats-grid">
 <div class="stat-item"><div class="num">1</div><div class="label">Product Live</div></div>
-<div class="stat-item"><div class="num">3</div><div class="label">In Development</div></div>
 <div class="stat-item"><div class="num">12</div><div class="label">Feature Modules</div></div>
 <div class="stat-item"><div class="num">18</div><div class="label">Automation Triggers</div></div>
+<div class="stat-item"><div class="num">1</div><div class="label">Partner Platform</div></div>
 </div>
 </div>
 </div>
@@ -248,14 +215,14 @@ footer .footer-bottom p{font-size:.84rem}
 <div class="section-title">
 <span class="tag">The Ecosystem</span>
 <h2>One Company, <span>Three Connected Systems</span></h2>
-<p>Beyond Pixels is not an agency — it is a self-feeding growth engine</p>
+<p>Beyond Pixells is not an agency — it is a self-feeding growth engine</p>
 </div>
 <div class="eco-grid">
 
 <div class="eco-card">
 <div class="step-num">01</div>
 <div class="icon-wrap"><svg class="svg-icon" viewBox="0 0 24 24"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6M9 9h.01M15 9h.01"/></svg></div>
-<h3>Beyond Pixels</h3>
+<h3>Beyond Pixells</h3>
 <p>The parent company. We design, build, and sell complete digital systems for local businesses — starting with gyms, expanding to salons, clinics, and restaurants.</p>
 <a href="#products" class="link-out">See our products &rarr;</a>
 </div>
@@ -286,7 +253,7 @@ footer .footer-bottom p{font-size:.84rem}
 <div class="section-title">
 <span class="tag">Our Product</span>
 <h2>Gym OS — <span>Live and Running</span></h2>
-<p>The first system built on the Beyond Pixels platform</p>
+<p>The first system built on the Beyond Pixells platform</p>
 </div>
 
 <div class="product-card">
@@ -309,33 +276,11 @@ footer .footer-bottom p{font-size:.84rem}
 <div class="visual">
 <div class="mockup">
 <div class="row"><span>Active Members</span><b>247</b></div>
-<div class="row"><span>Revenue This Month</span><b>₹2,847</b></div>
+<div class="row"><span>Revenue This Month</span><b>4,93,000</b></div>
 <div class="row"><span>New Leads (7d)</span><b>18</b></div>
 <div class="row"><span>Expiring Soon</span><b>9</b></div>
 <div class="row"><span>Checked In Now</span><b>34</b></div>
 </div>
-</div>
-</div>
-
-<div class="section-title" style="margin-top:72px;margin-bottom:0">
-<span class="tag">In Development</span>
-<h2>What We Are Building <span>Next</span></h2>
-</div>
-<div class="soon-grid">
-<div class="soon-card">
-<div class="icon-wrap"><svg class="svg-icon" viewBox="0 0 24 24" style="width:20px;height:20px"><path d="M12 2v6M9 5h6M5 8h14v8a4 4 0 0 1-4 4H9a4 4 0 0 1-4-4V8zM7 12h.01M17 12h.01M10 16h4"/></svg></div>
-<h4>Salon OS</h4>
-<span>In Development</span>
-</div>
-<div class="soon-card">
-<div class="icon-wrap"><svg class="svg-icon" viewBox="0 0 24 24" style="width:20px;height:20px"><path d="M12 2v6M9 5h6M5 8h14v8a4 4 0 0 1-4 4H9a4 4 0 0 1-4-4V8zM7 12h.01M17 12h.01M10 16h4"/></svg></div>
-<h4>Clinic OS</h4>
-<span>In Development</span>
-</div>
-<div class="soon-card">
-<div class="icon-wrap"><svg class="svg-icon" viewBox="0 0 24 24" style="width:20px;height:20px"><path d="M12 2v6M9 5h6M5 8h14v8a4 4 0 0 1-4 4H9a4 4 0 0 1-4-4V8zM7 12h.01M17 12h.01M10 16h4"/></svg></div>
-<h4>Restaurant OS</h4>
-<span>In Development</span>
 </div>
 </div>
 </div>
@@ -465,7 +410,7 @@ Send Application via WhatsApp
 <div class="flow-item">
 <div class="icon-wrap"><svg class="svg-icon" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
 <h4>We Close The Deal</h4>
-<p>Beyond Pixels demos the product and sells the right system</p>
+<p>Beyond Pixells demos the product and sells the right system</p>
 </div>
 <div class="flow-connector">&rarr;</div>
 <div class="flow-item">
@@ -500,16 +445,17 @@ Send Application via WhatsApp
 <div class="container">
 <div class="footer-grid">
 <div class="footer-brand">
-<div class="brand"><img src="logo.png" class="logo-img" alt="Beyond Pixels"> Beyond Pixels</div>
+<div class="brand"><img src="logo.png" class="logo-img" alt="Beyond Pixells"> Beyond Pixells</div>
 <p>Building digital growth systems for local businesses, one industry at a time.</p>
+<a href="mailto:beyondpixells@gmail.com" class="contact-email">
+<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+beyondpixells@gmail.com
+</a>
 </div>
 <div class="footer-col">
 <h5>Products</h5>
 <ul>
 <li><a href="https://somilsharma2000.github.io/gym-os/">Gym OS</a></li>
-<li><a href="#products">Salon OS</a></li>
-<li><a href="#products">Clinic OS</a></li>
-<li><a href="#products">Restaurant OS</a></li>
 </ul>
 </div>
 <div class="footer-col">
@@ -521,22 +467,14 @@ Send Application via WhatsApp
 <li><a href="https://github.com/somilsharma2000/gym-os">GitHub</a></li>
 </ul>
 </div>
-<div class="footer-col">
-<h5>Portal</h5>
-<ul>
-<li><a href="https://beyondhub-bqxcyobv.manus.space">Beyond Reach</a></li>
-<li><a href="#partners">Apply as Partner</a></li>
-</ul>
-</div>
 </div>
 <div class="footer-bottom">
-<p>&copy; 2026 Beyond Pixels. All systems live and running.</p>
+<p>&copy; 2026 Beyond Pixells. All systems live and running.</p>
 </div>
 </div>
 </footer>
 
 <script>
-// Partner application form -> WhatsApp
 const waBtn = document.getElementById('wa-send');
 const fields = ['p-name','p-city','p-email','p-phone'];
 function checkReady(){
@@ -555,20 +493,18 @@ waBtn.addEventListener('click', function(e){
   const interest = document.getElementById('p-interest').value || 'Not specified';
   const reason = document.getElementById('p-reason').value.trim() || 'Not specified';
   const waNumber = '917737077479';
-  const msg = `Beyond Pixels — Partner Application%0A%0A*Name:* ${name}%0A*City:* ${city}%0A*Email:* ${email}%0A*Phone:* ${phone}%0A*Interest:* ${interest}%0A*Reason:* ${reason}%0A%0AI would like to request partner access to Beyond Reach.`;
+  const msg = `Beyond Pixells — Partner Application%0A%0A*Name:* ${name}%0A*City:* ${city}%0A*Email:* ${email}%0A*Phone:* ${phone}%0A*Interest:* ${interest}%0A*Reason:* ${reason}%0A%0AI would like to request partner access to Beyond Reach.`;
   window.location.href = `https://wa.me/${waNumber}?text=${msg}`;
 });
 
-// Scroll animations
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); });
 }, {threshold: 0.1});
-document.querySelectorAll('.eco-card,.flow-item,.soon-card,.about-card,.product-card').forEach(el => {
+document.querySelectorAll('.eco-card,.flow-item,.about-card,.product-card').forEach(el => {
   el.classList.add('fade-in');
   observer.observe(el);
 });
 
-// Nav shrink
 window.addEventListener('scroll', () => {
   document.querySelector('nav').style.padding = window.scrollY > 50 ? '10px 0' : '16px 0';
 });
