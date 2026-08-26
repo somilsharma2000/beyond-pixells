@@ -3,161 +3,200 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Beyond Pixels — Growth Systems For Local Businesses</title>
-<meta name="description" content="Beyond Pixels builds complete digital growth systems for local businesses worldwide. Our first product, Gym OS, is live. Partner program available by invitation.">
+<title>Beyond Pixels — Digital Growth Systems for Local Businesses</title>
+<meta name="description" content="Beyond Pixels designs, builds, and deploys complete digital operating systems for local businesses worldwide. Our flagship product, Gym OS, is live and running.">
+<meta property="og:title" content="Beyond Pixels — Digital Growth Systems">
+<meta property="og:description" content="Complete digital operating systems for local businesses worldwide. Gym OS is live. Partner program available by invitation.">
+<meta property="og:type" content="website">
 <link rel="icon" href="logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-:root{--blue:#1E4FD8;--navy:#0B1B3F;--slate:#1e293b;--gray:#64748b;--light:#f1f5f9;--green:#22c55e;--white:#fff;--border:#e2e8f0}
-body{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:var(--white);color:var(--navy);line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+:root{--blue:#1E4FD8;--blue-light:#3b6ae8;--navy:#0B1B3F;--navy-light:#132a5e;--slate:#1e293b;--gray:#64748b;--gray-light:#94a3b8;--light:#f1f5f9;--green:#22c55e;--white:#fff;--border:#e2e8f0;--border-dark:#334155}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;background:var(--white);color:var(--navy);line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased;font-size:16px}
 a{color:var(--blue);text-decoration:none}
-.container{max-width:1120px;margin:0 auto;padding:0 20px}
-img.logo-img{width:32px;height:32px;border-radius:50%;object-fit:cover}
+.container{max-width:1140px;margin:0 auto;padding:0 24px}
+img.logo-img{width:36px;height:36px;border-radius:50%;object-fit:cover}
 .svg-icon{width:24px;height:24px;stroke:currentColor;stroke-width:1.8;fill:none;stroke-linecap:round;stroke-linejoin:round}
 
 /* NAV */
-nav{position:fixed;top:0;width:100%;background:rgba(11,27,63,.96);backdrop-filter:blur(10px);z-index:100;padding:14px 0;transition:.3s}
+nav{position:fixed;top:0;width:100%;background:rgba(11,27,63,.97);backdrop-filter:blur(12px);z-index:100;padding:16px 0;transition:.3s;border-bottom:1px solid rgba(255,255,255,.06)}
 nav .container{display:flex;justify-content:space-between;align-items:center}
 nav .brand{display:flex;align-items:center;gap:10px;font-size:1.15rem;font-weight:800;color:var(--white)}
-nav ul{display:flex;gap:28px;list-style:none;align-items:center}
-nav ul a{color:#cbd5e1;font-size:.92rem;transition:.2s}
+nav ul{display:flex;gap:32px;list-style:none;align-items:center}
+nav ul a{color:#cbd5e1;font-size:.92rem;font-weight:500;transition:.2s}
 nav ul a:hover{color:#fff}
-nav .nav-cta{background:var(--blue);color:var(--white)!important;padding:9px 20px;border-radius:8px;font-weight:600;font-size:.9rem;transition:.2s}
-nav .nav-cta:hover{background:#3b6ae8}
-@media(max-width:768px){nav ul li:not(:last-child){display:none}}
+nav .nav-cta{background:var(--blue);color:var(--white)!important;padding:10px 22px;border-radius:8px;font-weight:600;font-size:.9rem;transition:.2s}
+nav .nav-cta:hover{background:var(--blue-light)}
+@media(max-width:900px){nav ul li:not(:last-child){display:none}}
 
 /* HERO */
-.hero{background:linear-gradient(135deg,var(--navy) 0%,#132a5e 55%,var(--blue) 150%);padding:140px 0 100px;color:var(--white);text-align:center}
-.hero .pill{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);padding:6px 16px;border-radius:20px;font-size:.82rem;margin-bottom:24px;color:#e2e8f0}
+.hero{background:var(--navy);color:var(--white);padding:160px 0 100px;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background:radial-gradient(ellipse at 70% 30%,rgba(30,79,216,.25),transparent 50%),radial-gradient(ellipse at 20% 80%,rgba(19,42,94,.4),transparent 50%)}
+.hero .container{position:relative;z-index:1}
+.hero .pill{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);padding:7px 18px;border-radius:24px;font-size:.82rem;margin-bottom:28px;color:#e2e8f0;font-weight:500}
 .hero .pill .dot{width:7px;height:7px;background:var(--green);border-radius:50%;animation:pulse 2s infinite}
 @keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
-.hero h1{font-size:3rem;font-weight:800;margin-bottom:20px;line-height:1.15;max-width:800px;margin-left:auto;margin-right:auto}
-.hero h1 span{background:linear-gradient(to right,#60a5fa,#93c5fd);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-.hero p{font-size:1.15rem;color:#cbd5e1;max-width:600px;margin:0 auto 34px}
-.hero .cta-group{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
-.hero .btn{padding:14px 30px;border-radius:10px;font-weight:600;font-size:1rem;transition:.2s;border:none;cursor:pointer;display:inline-flex;align-items:center;gap:8px;text-decoration:none}
-.hero .btn-primary{background:var(--white);color:var(--navy)}
-.hero .btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(0,0,0,.25)}
-.hero .btn-outline{background:transparent;color:var(--white);border:2px solid rgba(255,255,255,.4)}
-.hero .btn-outline:hover{background:rgba(255,255,255,.1)}
+.hero h1{font-size:3.4rem;font-weight:800;margin-bottom:24px;line-height:1.1;letter-spacing:-.02em;max-width:820px}
+.hero h1 span{color:#60a5fa}
+.hero p{font-size:1.2rem;color:#94a3b8;max-width:580px;margin-bottom:40px;font-weight:400}
+.hero .cta-group{display:flex;gap:16px;flex-wrap:wrap}
+.hero .btn{padding:15px 32px;border-radius:10px;font-weight:600;font-size:1rem;transition:.25s;border:none;cursor:pointer;display:inline-flex;align-items:center;gap:8px}
+.hero .btn-primary{background:var(--blue);color:var(--white)}
+.hero .btn-primary:hover{background:var(--blue-light);transform:translateY(-2px);box-shadow:0 8px 24px rgba(30,79,216,.35)}
+.hero .btn-ghost{background:transparent;color:var(--white);border:1px solid rgba(255,255,255,.2)}
+.hero .btn-ghost:hover{background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.3)}
+
+/* STATS BAR */
+.stats-bar{background:var(--navy-light);padding:48px 0;border-top:1px solid rgba(255,255,255,.06)}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:40px}
+@media(max-width:700px){.stats-grid{grid-template-columns:repeat(2,1fr);gap:30px}}
+.stat-item{text-align:center}
+.stat-item .num{font-size:2.4rem;font-weight:800;color:#60a5fa;letter-spacing:-.02em}
+.stat-item .label{font-size:.88rem;color:#94a3b8;margin-top:4px;font-weight:500}
 
 /* SECTION */
-section{padding:80px 0}
-.section-title{text-align:center;margin-bottom:50px}
-.section-title .tag{color:var(--blue);font-weight:700;font-size:.82rem;text-transform:uppercase;letter-spacing:.08em;margin-bottom:10px;display:block}
-.section-title h2{font-size:2.1rem;font-weight:800;margin-bottom:10px}
-.section-title p{color:var(--gray);font-size:1.05rem;max-width:600px;margin:0 auto}
+section{padding:100px 0}
+.section-title{text-align:center;margin-bottom:64px;max-width:680px;margin-left:auto;margin-right:auto}
+.section-title .tag{color:var(--blue);font-weight:700;font-size:.82rem;text-transform:uppercase;letter-spacing:.1em;margin-bottom:12px;display:block}
+.section-title h2{font-size:2.4rem;font-weight:800;margin-bottom:16px;letter-spacing:-.02em}
+.section-title p{color:var(--gray);font-size:1.1rem}
 .section-title h2 span{color:var(--blue)}
 
 /* ECOSYSTEM */
 .ecosystem{background:var(--light)}
-.eco-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.eco-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
 @media(max-width:900px){.eco-grid{grid-template-columns:1fr}}
-.eco-card{background:var(--white);border-radius:16px;padding:32px;border:1px solid var(--border);position:relative;transition:.2s}
-.eco-card:hover{transform:translateY(-4px);box-shadow:0 12px 28px rgba(0,0,0,.08)}
-.eco-card .step-num{position:absolute;top:24px;right:24px;font-size:2.2rem;font-weight:800;color:#e2e8f0}
-.eco-card .icon-wrap{width:48px;height:48px;background:var(--light);border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:16px;color:var(--blue)}
-.eco-card h3{font-size:1.25rem;font-weight:700;margin-bottom:10px}
-.eco-card p{color:var(--gray);font-size:.92rem;margin-bottom:16px}
-.eco-card .link-out{font-weight:600;font-size:.88rem;display:inline-flex;align-items:center;gap:6px;color:var(--blue)}
-.eco-card .link-out:hover{text-decoration:underline}
+.eco-card{background:var(--white);border-radius:16px;padding:36px;border:1px solid var(--border);position:relative;transition:.25s;overflow:hidden}
+.eco-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--blue);transform:scaleX(0);transform-origin:left;transition:.3s}
+.eco-card:hover{transform:translateY(-6px);box-shadow:0 16px 40px rgba(0,0,0,.08)}
+.eco-card:hover::before{transform:scaleX(1)}
+.eco-card .step-num{position:absolute;top:28px;right:28px;font-size:2.4rem;font-weight:900;color:#e2e8f0}
+.eco-card .icon-wrap{width:52px;height:52px;background:var(--light);border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:20px;color:var(--blue)}
+.eco-card h3{font-size:1.35rem;font-weight:700;margin-bottom:12px}
+.eco-card p{color:var(--gray);font-size:.94rem;margin-bottom:20px;line-height:1.65}
+.eco-card .link-out{font-weight:600;font-size:.88rem;display:inline-flex;align-items:center;gap:6px;color:var(--blue);transition:.2s}
+.eco-card .link-out:hover{gap:10px}
 
 /* PRODUCT SHOWCASE */
-.product-card{background:var(--navy);border-radius:20px;overflow:hidden;color:var(--white);display:grid;grid-template-columns:1.1fr 1fr;gap:0;box-shadow:0 20px 50px rgba(11,27,63,.25)}
+.product-card{background:var(--navy);border-radius:24px;overflow:hidden;color:var(--white);display:grid;grid-template-columns:1.1fr 1fr;gap:0;box-shadow:0 24px 60px rgba(11,27,63,.3)}
 @media(max-width:800px){.product-card{grid-template-columns:1fr}}
-.product-card .info{padding:44px}
-.product-card .status{display:inline-block;background:rgba(34,197,94,.15);color:#4ade80;font-size:.78rem;font-weight:700;padding:4px 12px;border-radius:20px;margin-bottom:16px}
-.product-card h3{font-size:1.8rem;font-weight:800;margin-bottom:12px}
-.product-card .subtitle{color:#94a3b8;font-size:.9rem;margin-bottom:20px}
-.product-card ul{list-style:none;margin-bottom:26px}
-.product-card ul li{padding:6px 0;font-size:.92rem;color:#e2e8f0;display:flex;gap:10px;align-items:center}
-.product-card ul li svg{width:16px;height:16px;color:#4ade80;flex-shrink:0}
-.product-card .btn-live{background:var(--blue);color:var(--white);padding:12px 26px;border-radius:10px;font-weight:700;display:inline-flex;align-items:center;gap:8px;transition:.2s;text-decoration:none}
-.product-card .btn-live:hover{background:#3b6ae8;transform:translateY(-2px)}
-.product-card .visual{background:linear-gradient(135deg,var(--blue),#132a5e);display:flex;align-items:center;justify-content:center;padding:30px}
-.product-card .visual .mockup{background:var(--white);border-radius:12px;padding:20px;width:100%;color:var(--navy);box-shadow:0 10px 30px rgba(0,0,0,.3)}
-.product-card .visual .mockup .row{display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px solid #e2e8f0;font-size:.82rem}
+.product-card .info{padding:52px}
+.product-card .status{display:inline-block;background:rgba(34,197,94,.12);color:#4ade80;font-size:.76rem;font-weight:700;padding:5px 14px;border-radius:20px;margin-bottom:20px;letter-spacing:.05em;text-transform:uppercase}
+.product-card h3{font-size:2rem;font-weight:800;margin-bottom:14px;letter-spacing:-.02em}
+.product-card .subtitle{color:#94a3b8;font-size:.94rem;margin-bottom:28px}
+.product-card ul{list-style:none;margin-bottom:32px}
+.product-card ul li{padding:8px 0;font-size:.94rem;color:#e2e8f0;display:flex;gap:12px;align-items:center}
+.product-card ul li svg{width:18px;height:18px;color:#4ade80;flex-shrink:0}
+.product-card .btn-live{background:var(--blue);color:var(--white);padding:14px 30px;border-radius:10px;font-weight:700;display:inline-flex;align-items:center;gap:8px;transition:.25s}
+.product-card .btn-live:hover{background:var(--blue-light);transform:translateY(-2px);box-shadow:0 8px 24px rgba(30,79,216,.35)}
+.product-card .visual{background:linear-gradient(135deg,var(--navy-light),var(--blue));display:flex;align-items:center;justify-content:center;padding:40px}
+.product-card .visual .mockup{background:var(--white);border-radius:16px;padding:24px;width:100%;color:var(--navy);box-shadow:0 16px 40px rgba(0,0,0,.3)}
+.product-card .visual .mockup .row{display:flex;justify-content:space-between;padding:14px 0;border-bottom:1px solid #e2e8f0;font-size:.88rem;font-weight:500}
 .product-card .visual .mockup .row:last-child{border-bottom:none}
-.product-card .visual .mockup .row b{color:var(--blue)}
+.product-card .visual .mockup .row b{color:var(--blue);font-weight:700}
 
 /* COMING SOON */
-.soon-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:32px}
+.soon-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:40px}
 @media(max-width:800px){.soon-grid{grid-template-columns:1fr}}
-.soon-card{background:var(--white);border:1px dashed #cbd5e1;border-radius:14px;padding:28px;text-align:center;opacity:.75}
-.soon-card .icon-wrap{width:40px;height:40px;background:var(--light);border-radius:10px;display:flex;align-items:center;justify-content:center;margin:0 auto 10px;color:var(--gray)}
-.soon-card h4{font-weight:700;margin-bottom:6px;font-size:1rem}
-.soon-card span{font-size:.78rem;color:var(--gray);background:var(--light);padding:3px 10px;border-radius:12px}
+.soon-card{background:var(--white);border:1px dashed #cbd5e1;border-radius:14px;padding:32px;text-align:center;transition:.2s}
+.soon-card:hover{border-color:var(--blue);background:var(--light)}
+.soon-card .icon-wrap{width:44px;height:44px;background:var(--light);border-radius:12px;display:flex;align-items:center;justify-content:center;margin:0 auto 12px;color:var(--gray)}
+.soon-card h4{font-weight:700;margin-bottom:8px;font-size:1.05rem}
+.soon-card span{font-size:.76rem;color:var(--gray);background:var(--light);padding:4px 12px;border-radius:12px;font-weight:600;letter-spacing:.04em;text-transform:uppercase}
+
+/* ABOUT */
+.about{background:var(--navy);color:var(--white)}
+.about .section-title h2{color:#fff}
+.about .section-title h2 span{color:#60a5fa}
+.about .section-title p{color:#94a3b8}
+.about-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;margin-top:20px}
+@media(max-width:800px){.about-grid{grid-template-columns:1fr}}
+.about-card{text-align:center;padding:32px}
+.about-card .icon-wrap{width:56px;height:56px;background:rgba(30,79,216,.15);border-radius:14px;display:flex;align-items:center;justify-content:center;margin:0 auto 18px;color:#60a5fa}
+.about-card h3{font-size:1.15rem;font-weight:700;margin-bottom:10px;color:#fff}
+.about-card p{color:#94a3b8;font-size:.92rem;line-height:1.7}
 
 /* PARTNER PROGRAM */
-.partner-section{background:linear-gradient(135deg,var(--navy),#132a5e);color:var(--white)}
-.partner-grid{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
+.partner-section{background:linear-gradient(180deg,var(--light),var(--white))}
+.partner-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start}
 @media(max-width:800px){.partner-grid{grid-template-columns:1fr}}
-.partner-grid .left .tag{color:#93c5fd;font-weight:700;font-size:.82rem;text-transform:uppercase;letter-spacing:.08em;margin-bottom:10px;display:block}
-.partner-grid .left h2{font-size:2.1rem;font-weight:800;margin-bottom:16px}
-.partner-grid .left p{color:#cbd5e1;margin-bottom:24px;font-size:1rem}
-.partner-steps{list-style:none;margin-bottom:28px}
-.partner-steps li{display:flex;gap:14px;margin-bottom:16px;align-items:flex-start}
-.partner-steps .num{background:var(--blue);color:var(--white);width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:.85rem;flex-shrink:0}
-.partner-steps div b{display:block;margin-bottom:2px}
-.partner-steps div span{color:#94a3b8;font-size:.88rem}
-.dash-preview{background:var(--white);border-radius:16px;padding:22px;color:var(--navy);box-shadow:0 20px 50px rgba(0,0,0,.35)}
-.dash-preview .top-row{display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;padding-bottom:12px;border-bottom:1px solid #e2e8f0}
-.dash-preview .top-row b{font-size:.95rem}
-.dash-preview .top-row .live{font-size:.72rem;color:var(--green);font-weight:600}
-.dash-preview .metrics{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-bottom:16px}
-.dash-preview .metric{background:var(--light);border-radius:10px;padding:14px;text-align:center}
-.dash-preview .metric .n{font-size:1.4rem;font-weight:800;color:var(--blue)}
-.dash-preview .metric .l{font-size:.68rem;color:var(--gray);margin-top:2px}
-.dash-preview .act-row{display:flex;justify-content:space-between;font-size:.8rem;padding:8px 0;border-bottom:1px solid #f1f5f9}
+.partner-grid .left .tag{color:var(--blue);font-weight:700;font-size:.82rem;text-transform:uppercase;letter-spacing:.1em;margin-bottom:12px;display:block}
+.partner-grid .left h2{font-size:2.2rem;font-weight:800;margin-bottom:20px;letter-spacing:-.02em}
+.partner-grid .left p{color:var(--gray);margin-bottom:28px;font-size:1.02rem;line-height:1.7}
+.partner-steps{list-style:none;margin-bottom:0}
+.partner-steps li{display:flex;gap:16px;margin-bottom:20px;align-items:flex-start}
+.partner-steps .num{background:var(--blue);color:var(--white);width:30px;height:30px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:.85rem;flex-shrink:0;margin-top:2px}
+.partner-steps div b{display:block;margin-bottom:4px;font-size:.98rem}
+.partner-steps div span{color:var(--gray);font-size:.9rem}
+.dash-preview{background:var(--white);border:1px solid var(--border);border-radius:16px;padding:28px;color:var(--navy);box-shadow:0 12px 32px rgba(0,0,0,.06)}
+.dash-preview .top-row{display:flex;justify-content:space-between;align-items:center;margin-bottom:20px;padding-bottom:14px;border-bottom:1px solid var(--border)}
+.dash-preview .top-row b{font-size:1rem;font-weight:700}
+.dash-preview .top-row .live{font-size:.72rem;color:var(--green);font-weight:700;text-transform:uppercase;letter-spacing:.05em}
+.dash-preview .metrics{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin-bottom:20px}
+.dash-preview .metric{background:var(--light);border-radius:10px;padding:18px;text-align:center}
+.dash-preview .metric .n{font-size:1.6rem;font-weight:800;color:var(--blue)}
+.dash-preview .metric .l{font-size:.72rem;color:var(--gray);margin-top:4px;font-weight:500}
+.dash-preview .act-row{display:flex;justify-content:space-between;font-size:.84rem;padding:10px 0;border-bottom:1px solid #f1f5f9}
 .dash-preview .act-row:last-child{border-bottom:none}
 .dash-preview .act-row .ok{color:var(--green);font-weight:600}
 
-/* PARTNER APPLICATION FORM */
-.apply-form{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:16px;padding:32px;margin-top:24px}
-.apply-form h3{font-size:1.15rem;font-weight:700;margin-bottom:6px;color:var(--white)}
-.apply-form .sub{font-size:.88rem;color:#94a3b8;margin-bottom:20px}
-.apply-form .field{margin-bottom:14px}
-.apply-form .field label{display:block;font-size:.82rem;color:#cbd5e1;margin-bottom:4px;font-weight:600}
-.apply-form .field input,.apply-form .field select{width:100%;padding:11px 14px;border-radius:8px;border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.05);color:var(--white);font-size:.9rem;font-family:inherit;outline:none;transition:.2s}
-.apply-form .field input::placeholder{color:#64748b}
-.apply-form .field input:focus,.apply-form .field select:focus{border-color:var(--blue);background:rgba(255,255,255,.08)}
-.apply-form .field select option{background:var(--navy)}
-.apply-form .two-col{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.apply-form .wa-btn{width:100%;padding:14px;border-radius:10px;border:none;background:var(--green);color:var(--white);font-weight:700;font-size:.95rem;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px;transition:.2s;font-family:inherit}
-.apply-form .wa-btn:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(34,197,94,.3)}
-.apply-form .wa-btn:disabled{background:#64748b;cursor:not-allowed;transform:none;box-shadow:none}
-.apply-form .note{font-size:.78rem;color:#64748b;margin-top:10px;text-align:center}
+/* FORMS */
+.apply-form{background:var(--white);border:1px solid var(--border);border-radius:16px;padding:36px;margin-top:28px;box-shadow:0 8px 24px rgba(0,0,0,.04)}
+.apply-form h3{font-size:1.2rem;font-weight:700;margin-bottom:8px}
+.apply-form .sub{font-size:.88rem;color:var(--gray);margin-bottom:24px}
+.apply-form .field{margin-bottom:16px}
+.apply-form .field label{display:block;font-size:.82rem;color:var(--slate);margin-bottom:6px;font-weight:600}
+.apply-form .field input,.apply-form .field select{width:100%;padding:12px 16px;border-radius:8px;border:1px solid var(--border);background:var(--white);color:var(--navy);font-size:.92rem;font-family:inherit;outline:none;transition:.2s}
+.apply-form .field input::placeholder{color:#94a3b8}
+.apply-form .field input:focus,.apply-form .field select:focus{border-color:var(--blue);box-shadow:0 0 0 3px rgba(30,79,216,.1)}
+.apply-form .two-col{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.apply-form .wa-btn{width:100%;padding:15px;border-radius:10px;border:none;background:var(--green);color:var(--white);font-weight:700;font-size:.95rem;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px;transition:.25s;font-family:inherit;margin-top:8px}
+.apply-form .wa-btn:hover:not(:disabled){transform:translateY(-2px);box-shadow:0 8px 24px rgba(34,197,94,.3)}
+.apply-form .wa-btn:disabled{background:#cbd5e1;cursor:not-allowed}
+.apply-form .note{font-size:.8rem;color:var(--gray-light);margin-top:12px;text-align:center}
 
 /* FLYWHEEL */
 .flow-grid{display:flex;justify-content:space-between;align-items:stretch;gap:0;flex-wrap:wrap}
-.flow-item{flex:1;min-width:160px;text-align:center;background:var(--white);border:1px solid var(--border);border-radius:14px;padding:24px 14px}
-.flow-item .icon-wrap{width:44px;height:44px;background:var(--light);border-radius:12px;display:flex;align-items:center;justify-content:center;margin:0 auto 10px;color:var(--blue)}
-.flow-item h4{font-size:.92rem;font-weight:700;margin-bottom:4px}
-.flow-item p{font-size:.78rem;color:var(--gray)}
-.flow-connector{color:#cbd5e1;font-size:1.4rem;font-weight:800;display:flex;align-items:center;padding:0 4px}
-@media(max-width:800px){.flow-grid{flex-direction:column}.flow-connector{transform:rotate(90deg);justify-content:center;padding:8px 0}}
+.flow-item{flex:1;min-width:180px;text-align:center;background:var(--white);border:1px solid var(--border);border-radius:14px;padding:28px 18px;transition:.25s}
+.flow-item:hover{border-color:var(--blue);box-shadow:0 8px 24px rgba(0,0,0,.06)}
+.flow-item .icon-wrap{width:48px;height:48px;background:var(--light);border-radius:12px;display:flex;align-items:center;justify-content:center;margin:0 auto 14px;color:var(--blue)}
+.flow-item h4{font-size:.95rem;font-weight:700;margin-bottom:6px}
+.flow-item p{font-size:.8rem;color:var(--gray)}
+.flow-connector{color:#cbd5e1;font-size:1.5rem;font-weight:300;display:flex;align-items:center;padding:0 6px}
+@media(max-width:800px){.flow-grid{flex-direction:column}.flow-connector{transform:rotate(90deg);justify-content:center;padding:10px 0}}
 
 /* CTA */
-.cta-final{background:var(--light);text-align:center}
-.cta-final h2{font-size:2rem;font-weight:800;margin-bottom:14px}
-.cta-final p{color:var(--gray);margin-bottom:30px;font-size:1.05rem}
+.cta-final{background:var(--navy);text-align:center;color:var(--white);padding:100px 0}
+.cta-final h2{font-size:2.2rem;font-weight:800;margin-bottom:16px;letter-spacing:-.02em}
+.cta-final p{color:#94a3b8;margin-bottom:36px;font-size:1.1rem}
 .cta-final .cta-group{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
-.cta-final .btn{padding:14px 32px;border-radius:10px;font-weight:700;font-size:1rem;display:inline-flex;align-items:center;gap:8px;transition:.2s;text-decoration:none}
+.cta-final .btn{padding:15px 34px;border-radius:10px;font-weight:700;font-size:1rem;display:inline-flex;align-items:center;gap:8px;transition:.25s}
 .cta-final .btn-blue{background:var(--blue);color:var(--white)}
-.cta-final .btn-blue:hover{background:#3b6ae8;transform:translateY(-2px)}
-.cta-final .btn-navy{background:var(--navy);color:var(--white)}
-.cta-final .btn-navy:hover{background:#132a5e;transform:translateY(-2px)}
+.cta-final .btn-blue:hover{background:var(--blue-light);transform:translateY(-2px)}
+.cta-final .btn-ghost{background:transparent;color:var(--white);border:1px solid rgba(255,255,255,.2)}
+.cta-final .btn-ghost:hover{background:rgba(255,255,255,.06)}
 
 /* FOOTER */
-footer{background:var(--navy);color:#cbd5e1;padding:44px 0 24px}
-footer .container{display:flex;flex-direction:column;align-items:center;gap:14px;text-align:center}
-footer .brand{display:flex;align-items:center;gap:10px;font-size:1.15rem;font-weight:800;color:var(--white)}
-footer p{font-size:.85rem;opacity:.7}
-footer .links{display:flex;gap:22px;list-style:none;flex-wrap:wrap;justify-content:center}
-footer .links a{color:#cbd5e1;font-size:.85rem;transition:.2s}
-footer .links a:hover{color:#fff}
+footer{background:var(--navy);color:#94a3b8;padding:64px 0 32px;border-top:1px solid rgba(255,255,255,.06)}
+footer .footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px;margin-bottom:40px}
+@media(max-width:800px){footer .footer-grid{grid-template-columns:1fr 1fr;gap:32px}}
+@media(max-width:500px){footer .footer-grid{grid-template-columns:1fr}}
+footer .footer-brand .brand{display:flex;align-items:center;gap:10px;font-size:1.2rem;font-weight:800;color:var(--white);margin-bottom:12px}
+footer .footer-brand p{font-size:.88rem;line-height:1.7;margin-bottom:16px}
+footer .footer-col h5{color:var(--white);font-size:.85rem;font-weight:700;margin-bottom:16px;text-transform:uppercase;letter-spacing:.05em}
+footer .footer-col ul{list-style:none}
+footer .footer-col ul li{margin-bottom:10px}
+footer .footer-col ul a{color:#94a3b8;font-size:.88rem;transition:.2s}
+footer .footer-col ul a:hover{color:#fff}
+footer .footer-bottom{border-top:1px solid rgba(255,255,255,.06);padding-top:24px;display:flex;justify-content:space-between;align-items:center}
+@media(max-width:600px){footer .footer-bottom{flex-direction:column;gap:12px;text-align:center}}
+footer .footer-bottom p{font-size:.84rem}
 
-.fade-in{opacity:0;transform:translateY(20px);transition:.6s}
+.fade-in{opacity:0;transform:translateY(24px);transition:.6s}
 .fade-in.visible{opacity:1;transform:translateY(0)}
 </style>
 </head>
@@ -170,6 +209,7 @@ footer .links a:hover{color:#fff}
 <ul>
 <li><a href="#ecosystem">Ecosystem</a></li>
 <li><a href="#products">Products</a></li>
+<li><a href="#about">About</a></li>
 <li><a href="#partners">Partners</a></li>
 <li><a href="#how-it-works">Process</a></li>
 </ul>
@@ -181,11 +221,23 @@ footer .links a:hover{color:#fff}
 <div class="hero">
 <div class="container">
 <div class="pill"><span class="dot"></span> Gym OS is live and running in real gyms</div>
-<h1>We Build <span>Growth Systems</span> For Local Businesses</h1>
-<p>Beyond Pixels designs, builds, and deploys complete digital operating systems — websites, automation, CRM, and AI — for local businesses worldwide. Our partner program is available by invitation.</p>
+<h1>We Build <span>Digital Growth Systems</span> For Local Businesses</h1>
+<p>Beyond Pixels designs, builds, and deploys complete digital operating systems — websites, automation, CRM, and AI — for local businesses worldwide.</p>
 <div class="cta-group">
 <a href="https://somilsharma2000.github.io/gym-os/" class="btn btn-primary">Explore Gym OS</a>
-<a href="#partners" class="btn btn-outline">Apply as Partner</a>
+<a href="#partners" class="btn btn-ghost">Apply as Partner</a>
+</div>
+</div>
+</div>
+
+<!-- STATS BAR -->
+<div class="stats-bar">
+<div class="container">
+<div class="stats-grid">
+<div class="stat-item"><div class="num">1</div><div class="label">Product Live</div></div>
+<div class="stat-item"><div class="num">3</div><div class="label">In Development</div></div>
+<div class="stat-item"><div class="num">12</div><div class="label">Feature Modules</div></div>
+<div class="stat-item"><div class="num">18</div><div class="label">Automation Triggers</div></div>
 </div>
 </div>
 </div>
@@ -196,38 +248,32 @@ footer .links a:hover{color:#fff}
 <div class="section-title">
 <span class="tag">The Ecosystem</span>
 <h2>One Company, <span>Three Connected Systems</span></h2>
-<p>Beyond Pixels is not just an agency — it is a self-feeding growth engine</p>
+<p>Beyond Pixels is not an agency — it is a self-feeding growth engine</p>
 </div>
 <div class="eco-grid">
 
 <div class="eco-card">
 <div class="step-num">01</div>
-<div class="icon-wrap">
-<svg class="svg-icon" viewBox="0 0 24 24"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6M9 9h.01M15 9h.01"/></svg>
-</div>
+<div class="icon-wrap"><svg class="svg-icon" viewBox="0 0 24 24"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6M9 9h.01M15 9h.01"/></svg></div>
 <h3>Beyond Pixels</h3>
 <p>The parent company. We design, build, and sell complete digital systems for local businesses — starting with gyms, expanding to salons, clinics, and restaurants.</p>
-<a href="#products" class="link-out">See our products</a>
+<a href="#products" class="link-out">See our products &rarr;</a>
 </div>
 
 <div class="eco-card">
 <div class="step-num">02</div>
-<div class="icon-wrap">
-<svg class="svg-icon" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2M9 7a4 4 0 1 0 0 0M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-</div>
+<div class="icon-wrap"><svg class="svg-icon" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2M9 7a4 4 0 1 0 0 0M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
 <h3>Beyond Reach</h3>
 <p>Our invite-only partner platform. Field agents and referral partners get full product access, track leads, and earn commissions — all in one dashboard.</p>
-<a href="#partners" class="link-out">Apply for access</a>
+<a href="#partners" class="link-out">Apply for access &rarr;</a>
 </div>
 
 <div class="eco-card">
 <div class="step-num">03</div>
-<div class="icon-wrap">
-<svg class="svg-icon" viewBox="0 0 24 24"><path d="M6.5 6.5h11v11h-11z"/><path d="M2 9v6M22 9v6M9 2h6M9 22h6"/><path d="M6.5 10h4v3h-4zM6.5 14.5h4M12.5 10h3M12.5 14.5h3"/></svg>
-</div>
+<div class="icon-wrap"><svg class="svg-icon" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 9h6v6H9z"/><path d="M3 9h6M3 15h6M15 9h6M15 15h6M9 3v6M9 15v6M15 3v6M15 15v6"/></svg></div>
 <h3>Gym OS</h3>
 <p>Our flagship product. A complete gym management system — dashboard, QR check-in, WhatsApp automation, lead CRM, AI insights, and a synced website.</p>
-<a href="https://somilsharma2000.github.io/gym-os/" class="link-out">View live site</a>
+<a href="https://somilsharma2000.github.io/gym-os/" class="link-out">View live site &rarr;</a>
 </div>
 
 </div>
@@ -258,12 +304,12 @@ footer .links a:hover{color:#fff}
 <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Class scheduling and waitlist management</li>
 <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Trainer management and payroll</li>
 </ul>
-<a href="https://somilsharma2000.github.io/gym-os/" class="btn-live">View Live Site</a>
+<a href="https://somilsharma2000.github.io/gym-os/" class="btn-live">View Live Site &rarr;</a>
 </div>
 <div class="visual">
 <div class="mockup">
 <div class="row"><span>Active Members</span><b>247</b></div>
-<div class="row"><span>Revenue This Month</span><b>$2,847</b></div>
+<div class="row"><span>Revenue This Month</span><b>₹2,847</b></div>
 <div class="row"><span>New Leads (7d)</span><b>18</b></div>
 <div class="row"><span>Expiring Soon</span><b>9</b></div>
 <div class="row"><span>Checked In Now</span><b>34</b></div>
@@ -271,7 +317,7 @@ footer .links a:hover{color:#fff}
 </div>
 </div>
 
-<div class="section-title" style="margin-top:60px;margin-bottom:0">
+<div class="section-title" style="margin-top:72px;margin-bottom:0">
 <span class="tag">In Development</span>
 <h2>What We Are Building <span>Next</span></h2>
 </div>
@@ -295,6 +341,34 @@ footer .links a:hover{color:#fff}
 </div>
 </section>
 
+<!-- ABOUT -->
+<section class="about" id="about">
+<div class="container">
+<div class="section-title">
+<span class="tag" style="color:#60a5fa">About</span>
+<h2>How We <span>Operate</span></h2>
+<p>Three principles that guide every product we build</p>
+</div>
+<div class="about-grid">
+<div class="about-card">
+<div class="icon-wrap"><svg class="svg-icon" viewBox="0 0 24 24" style="width:28px;height:28px"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div>
+<h3>Build Once, Deploy Per Industry</h3>
+<p>We do not build custom software for every client. We build one world-class system per industry, then deploy it for every business in that sector. This keeps quality high and costs low.</p>
+</div>
+<div class="about-card">
+<div class="icon-wrap"><svg class="svg-icon" viewBox="0 0 24 24" style="width:28px;height:28px"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zM12 6v6l4 2"/></svg></div>
+<h3>Real Software, Not Dashboards</h3>
+<p>Every product we ship is a complete operating system — not a reporting tool. It handles the full workflow from lead capture to payment to retention. The business runs on it daily.</p>
+</div>
+<div class="about-card">
+<div class="icon-wrap"><svg class="svg-icon" viewBox="0 0 24 24" style="width:28px;height:28px"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2M9 7a4 4 0 1 0 0 0M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+<h3>Partners Grow With Us</h3>
+<p>Our partner program is not an affiliate link. Partners get full product access, hands-on support, and transparent commission tracking. When our partners win, we win.</p>
+</div>
+</div>
+</div>
+</section>
+
 <!-- PARTNER PROGRAM -->
 <section class="partner-section" id="partners">
 <div class="container">
@@ -305,7 +379,7 @@ footer .links a:hover{color:#fff}
 <p>Beyond Reach is our partner platform, available by personal invitation only. Partners get full product access, can refer local businesses, and earn commission on every closed deal — tracked transparently in real time.</p>
 <ul class="partner-steps">
 <li><div class="num">1</div><div><b>Apply below</b><span>Fill the form and send your application via WhatsApp</span></div></li>
-<li><div class="num">2</div><div><b>Get personally invited</b><span>Somil reviews your application and sends you access</span></div></li>
+<li><div class="num">2</div><div><b>Get personally invited</b><span>We review your application and send you access</span></div></li>
 <li><div class="num">3</div><div><b>Full product access</b><span>Explore Gym OS, Beyond Reach dashboard, and all tools</span></div></li>
 <li><div class="num">4</div><div><b>Refer and earn</b><span>Bring local businesses, earn commission per closed client</span></div></li>
 </ul>
@@ -326,7 +400,7 @@ footer .links a:hover{color:#fff}
 
 <div class="apply-form">
 <h3>Request Partner Access</h3>
-<div class="sub">Fill the form and send it directly via WhatsApp. Somil will review and personally invite you.</div>
+<div class="sub">Fill the form and send it directly via WhatsApp. We review every application personally.</div>
 <div class="two-col">
 <div class="field">
 <label>Full Name</label>
@@ -366,7 +440,7 @@ footer .links a:hover{color:#fff}
 <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.6 6.32A7.85 7.85 0 0 0 12.05 4a7.94 7.94 0 0 0-6.88 11.89L4 20l4.22-1.11a7.93 7.93 0 0 0 3.79.97h.04a7.94 7.94 0 0 0 7.93-7.94 7.86 7.86 0 0 0-2.38-5.6zm-5.6 12.2a6.55 6.55 0 0 1-3.36-.92l-.24-.14-2.5.66.67-2.44-.16-.25a6.54 6.54 0 0 1 3.34-9.78 6.54 6.54 0 0 1 6.86 1.16 6.54 6.54 0 0 1-3.79 11.7z"/></svg>
 Send Application via WhatsApp
 </button>
-<div class="note">You will be redirected to WhatsApp with your details pre-filled. Somil reviews every application personally.</div>
+<div class="note">You will be redirected to WhatsApp with your details pre-filled. We review every application personally.</div>
 </div>
 </div>
 </div>
@@ -409,14 +483,14 @@ Send Application via WhatsApp
 </div>
 </section>
 
-<!-- CTA FINAL -->
+<!-- CTA -->
 <section class="cta-final">
 <div class="container">
 <h2>Ready To Join The Ecosystem?</h2>
 <p>Whether you run a business or want to earn by referring one — there is a path for you.</p>
 <div class="cta-group">
 <a href="https://somilsharma2000.github.io/gym-os/" class="btn btn-blue">I Run A Business</a>
-<a href="#partners" class="btn btn-navy">I Want To Be A Partner</a>
+<a href="#partners" class="btn btn-ghost">I Want To Be A Partner</a>
 </div>
 </div>
 </section>
@@ -424,14 +498,40 @@ Send Application via WhatsApp
 <!-- FOOTER -->
 <footer>
 <div class="container">
+<div class="footer-grid">
+<div class="footer-brand">
 <div class="brand"><img src="logo.png" class="logo-img" alt="Beyond Pixels"> Beyond Pixels</div>
 <p>Building digital growth systems for local businesses, one industry at a time.</p>
-<ul class="links">
+</div>
+<div class="footer-col">
+<h5>Products</h5>
+<ul>
 <li><a href="https://somilsharma2000.github.io/gym-os/">Gym OS</a></li>
-<li><a href="https://github.com/somilsharma2000/gym-os">GitHub</a></li>
-<li><a href="https://beyondhub-bqxcyobv.manus.space">Beyond Reach Portal</a></li>
+<li><a href="#products">Salon OS</a></li>
+<li><a href="#products">Clinic OS</a></li>
+<li><a href="#products">Restaurant OS</a></li>
 </ul>
+</div>
+<div class="footer-col">
+<h5>Company</h5>
+<ul>
+<li><a href="#about">About</a></li>
+<li><a href="#partners">Partners</a></li>
+<li><a href="#how-it-works">Process</a></li>
+<li><a href="https://github.com/somilsharma2000/gym-os">GitHub</a></li>
+</ul>
+</div>
+<div class="footer-col">
+<h5>Portal</h5>
+<ul>
+<li><a href="https://beyondhub-bqxcyobv.manus.space">Beyond Reach</a></li>
+<li><a href="#partners">Apply as Partner</a></li>
+</ul>
+</div>
+</div>
+<div class="footer-bottom">
 <p>&copy; 2026 Beyond Pixels. All systems live and running.</p>
+</div>
 </div>
 </footer>
 
@@ -454,27 +554,23 @@ waBtn.addEventListener('click', function(e){
   const phone = document.getElementById('p-phone').value.trim();
   const interest = document.getElementById('p-interest').value || 'Not specified';
   const reason = document.getElementById('p-reason').value.trim() || 'Not specified';
-
-  // WHATSAPP_NUMBER will be replaced once Somil provides his number
   const waNumber = '917737077479';
   const msg = `Beyond Pixels — Partner Application%0A%0A*Name:* ${name}%0A*City:* ${city}%0A*Email:* ${email}%0A*Phone:* ${phone}%0A*Interest:* ${interest}%0A*Reason:* ${reason}%0A%0AI would like to request partner access to Beyond Reach.`;
-
-  const waUrl = `https://wa.me/${waNumber}?text=${msg}`;
-  window.open(waUrl, '_blank');
+  window.location.href = `https://wa.me/${waNumber}?text=${msg}`;
 });
 
 // Scroll animations
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); });
 }, {threshold: 0.1});
-document.querySelectorAll('.eco-card,.flow-item,.soon-card').forEach(el => {
+document.querySelectorAll('.eco-card,.flow-item,.soon-card,.about-card,.product-card').forEach(el => {
   el.classList.add('fade-in');
   observer.observe(el);
 });
 
 // Nav shrink
 window.addEventListener('scroll', () => {
-  document.querySelector('nav').style.padding = window.scrollY > 50 ? '8px 0' : '14px 0';
+  document.querySelector('nav').style.padding = window.scrollY > 50 ? '10px 0' : '16px 0';
 });
 </script>
 </body>
