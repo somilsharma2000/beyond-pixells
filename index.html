@@ -31,7 +31,7 @@ nav ul a:hover{color:#fff}
 nav .nav-cta{background:var(--blue);color:var(--white)!important;padding:10px 22px;border-radius:8px;font-weight:600;font-size:.9rem;transition:.2s}
 nav .nav-cta:hover{background:var(--blue-light)}
 @media(max-width:900px){nav ul{display:none}}
-@media(max-width:600px){.hero h1{font-size:2.1rem}.hero p{font-size:1rem}.section-title h2{font-size:1.8rem}}
+@media(max-width:600px){.hero h1{font-size:2.1rem}.hero p{font-size:1rem}.section-title h2{font-size:1.8rem}.dash-preview .metrics{grid-template-columns:repeat(2,1fr)}}
 .hero{background:var(--navy);color:var(--white);padding:160px 0 100px;position:relative;overflow:hidden}
 .hero::before{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background:radial-gradient(ellipse at 70% 30%,rgba(30,79,216,.25),transparent 50%),radial-gradient(ellipse at 20% 80%,rgba(19,42,94,.4),transparent 50%)}
 .hero .container{position:relative;z-index:1}
@@ -113,7 +113,7 @@ section{padding:100px 0}
 .dash-preview .top-row{display:flex;justify-content:space-between;align-items:center;margin-bottom:20px;padding-bottom:14px;border-bottom:1px solid var(--border)}
 .dash-preview .top-row b{font-size:1rem;font-weight:700}
 .dash-preview .top-row .live{font-size:.72rem;color:var(--green);font-weight:700;text-transform:uppercase;letter-spacing:.05em}
-.dash-preview .metrics{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin-bottom:20px}
+.dash-preview .metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:20px}
 .dash-preview .metric{background:var(--light);border-radius:10px;padding:18px;text-align:center}
 .dash-preview .metric .n{font-size:1.6rem;font-weight:800;color:var(--blue)}
 .dash-preview .metric .l{font-size:.72rem;color:var(--gray);margin-top:4px;font-weight:500}
@@ -445,7 +445,7 @@ footer .footer-bottom p{font-size:.84rem}
 </div>
 <div class="build-card">
 <div class="bc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="width:24px;height:24px"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div>
-<h4>Lead To Member Pipeline</h4>
+<h4>Lead To Member System</h4>
 <p>A lead fills the website form, appears in the dashboard kanban, gets called, converts to a member, gets a QR code, starts checking in, pays fees — all tracked in one connected system.</p>
 </div>
 </div>
@@ -492,12 +492,12 @@ footer .footer-bottom p{font-size:.84rem}
 <div class="left">
 <span class="tag">Partner Hub — For Existing Partners</span>
 <h2>Your Work Has Real Value</h2>
-<p>You are not selling software. You are giving a local business owner the tools to grow, compete, and win. Every gym you bring us gets a full operating system — website, CRM, member management, automated WhatsApp, and more. That changes their business. And it starts with your call.</p>
+<p>You are not selling software from scratch or doing cold door-to-door sales. We provide you with pre-scraped gym data featuring accurate phone numbers (90-95% accuracy using Google Places API). You give local gym owners the tools to grow, compete, and win with a complete operating system — website, CRM, member management, automated WhatsApp, and more. Call on your own schedule and earn on every closed deal.</p>
 <ul class="partner-steps">
-<li><div class="num">1</div><div><b>Find local businesses</b><span>Walk your territory, talk to gym owners, salon owners, clinic owners. Identify who needs a digital upgrade.</span></div></li>
-<li><div class="num">2</div><div><b>Submit the lead</b><span>Log the business in Beyond Reach with name, phone, and notes. We take it from there.</span></div></li>
-<li><div class="num">3</div><div><b>We demo and close</b><span>Our team handles the product demo, negotiation, and onboarding. You do not need to explain the software.</span></div></li>
-<li><div class="num">4</div><div><b>You get paid</b><span>Commission hits your account the same day the client pays. No waiting, no excuses.</span></div></li>
+<li><div class="num">1</div><div><b>Get scraped data</b><span>Access verified gym leads complete with accurate phone numbers and location details pre-loaded in your dashboard.</span></div></li>
+<li><div class="num">2</div><div><b>Call gyms on your schedule</b><span>Work whenever you want with complete schedule freedom, no location restrictions, and no daily call targets.</span></div></li>
+<li><div class="num">3</div><div><b>Refer interested ones</b><span>Log interested gym owners in Beyond Reach. Our team handles the product demo, negotiation, and closing.</span></div></li>
+<li><div class="num">4</div><div><b>Get paid same day</b><span>Earn 10% to 15% commission transferred directly to your account the day the client pays. No waiting, no excuses.</span></div></li>
 </ul>
 </div>
 
@@ -505,13 +505,15 @@ footer .footer-bottom p{font-size:.84rem}
 <div class="dash-preview">
 <div class="top-row"><b>Beyond Reach — Your Dashboard</b><span class="live">Live</span></div>
 <div class="metrics">
-<div class="metric"><div class="n">10</div><div class="l">Calls Today</div></div>
-<div class="metric"><div class="n">3</div><div class="l">Leads Logged</div></div>
-<div class="metric"><div class="n">1</div><div class="l">Deal Closed</div></div>
+<div class="metric"><div class="n">25</div><div class="l">Gyms To Call</div></div>
+<div class="metric"><div class="n">12</div><div class="l">Calls Made This Week</div></div>
+<div class="metric"><div class="n">3</div><div class="l">Interested</div></div>
+<div class="metric"><div class="n">1</div><div class="l">Deals Closed</div></div>
 </div>
-<div class="act-row"><span>Gold Gym Vaishali Nagar — Closed</span><span class="ok">Paid</span></div>
-<div class="act-row"><span>CrossFit Jaipur — Demo scheduled</span><span class="ok">Active</span></div>
-<div class="act-row"><span>Iron Temple — Lead submitted</span><span class="ok">New</span></div>
+<div class="act-row"><span>Gold's Gym Vaishali Nagar — Deal Closed</span><span class="ok">Paid</span></div>
+<div class="act-row"><span>FitZone Fitness Gym — Interested &amp; Referred</span><span class="ok">Demo Scheduled</span></div>
+<div class="act-row"><span>Iron Temple Gym — Scraped Lead Called</span><span class="ok">Follow-Up</span></div>
+<div class="act-row"><span>Pulse Fitness Studio — Scraped Lead Called</span><span class="ok">Interested</span></div>
 </div>
 
 <div class="commission-box">
@@ -560,17 +562,17 @@ footer .footer-bottom p{font-size:.84rem}
 </div>
 <div class="motivate-card">
 <div class="motivate-icon">
-<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="width:28px;height:28px"><path d="M3 18v-6a9 9 0 0 1 18 0v6"/><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"/></svg>
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="width:28px;height:28px"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
 </div>
-<h4>10 Calls A Day</h4>
-<p>The math is simple. 10 calls a day, 50 a week, 200 a month. Even at a 5% close rate, that is 10 new clients a month. At 15% commission on Professional plans, that is 30,000 in upfront commission alone. Show up every day and the numbers do the rest.</p>
+<h4>Your Time, Your Rules</h4>
+<p>Work whenever it fits your life — morning or evening, weekdays or weekends. There are no fixed hours, no daily call requirements, and no geographic restrictions. You decide your schedule and pace.</p>
 </div>
 <div class="motivate-card">
 <div class="motivate-icon">
 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="width:28px;height:28px"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
 </div>
 <h4>You Are Not Alone</h4>
-<p>You get full product access, the Beyond Reach dashboard to track every lead, and our team handles every demo and closing call. Your focus is finding businesses and starting conversations. We handle the rest. That is how partnerships work.</p>
+<p>You get pre-scraped gym data, access to the Beyond Reach dashboard, and our team handles every demo and closing call. Your focus is calling when you choose and referring interested gym owners. We handle the rest.</p>
 </div>
 </div>
 </div>
@@ -581,57 +583,49 @@ footer .footer-bottom p{font-size:.84rem}
 <section class="day-section">
 <div class="container">
 <div class="section-title">
-<span class="tag">The Grind</span>
+<span class="tag">Partner Workflow</span>
 <h2>A Day In The <span>Life Of A Partner</span></h2>
-<p>This is what your day looks like. It is not complicated. It is consistent.</p>
+<p>Simple, flexible steps to earn on your own schedule. No fixed hours, no daily targets.</p>
 </div>
 <div class="timeline">
 <div class="timeline-item">
-<div class="time">9:00 AM</div>
+<div class="time">Step 1</div>
 <div class="tl-content">
-<h4>Open Beyond Reach Dashboard</h4>
-<p>Check your lead pipeline. See which demos are scheduled, which leads are pending follow-up, and how many calls you made yesterday.</p>
-<span class="tl-tag">5 minutes</span>
+<h4>Get Your Gym Data</h4>
+<p>Access pre-scraped, verified gym leads complete with accurate phone numbers and owner contact details pre-loaded in your Beyond Reach dashboard.</p>
+<span class="tl-tag">Ready in portal</span>
 </div>
 </div>
 <div class="timeline-item">
-<div class="time">9:30 AM</div>
+<div class="time">Step 2</div>
 <div class="tl-content">
-<h4>Walk Your Territory</h4>
-<p>Visit gyms in your assigned area. Walk in, ask for the owner, introduce yourself. "I work with a company that builds management systems for gyms. Can I show you something?"</p>
-<span class="tl-tag">2-3 hours</span>
+<h4>Call When You Can</h4>
+<p>Reach out to gym owners whenever you choose — morning, evening, weekdays, or weekends. Work at your own pace with zero mandatory daily call requirements.</p>
+<span class="tl-tag">Flexible timeline</span>
 </div>
 </div>
 <div class="timeline-item">
-<div class="time">12:30 PM</div>
+<div class="time">Step 3</div>
 <div class="tl-content">
-<h4>Log Every Conversation</h4>
-<p>Open Beyond Reach on your phone. Log the gym name, owner name, phone number, and notes from the conversation. Every conversation is a lead, even if they said no today.</p>
-<span class="tl-tag">15 minutes</span>
+<h4>Log Interested Gyms</h4>
+<p>When a gym owner shows interest in a digital upgrade or wants to see a live demo, quickly log their details in Beyond Reach.</p>
+<span class="tl-tag">1-minute log</span>
 </div>
 </div>
 <div class="timeline-item">
-<div class="time">1:00 PM</div>
+<div class="time">Step 4</div>
 <div class="tl-content">
-<h4>Follow-Up Calls</h4>
-<p>Call leads from yesterday and last week. Most deals do not close on the first conversation. The follow-up is where the money is. "Sir, I sent you the Gym OS link. Did you get a chance to look?"</p>
-<span class="tl-tag">1 hour</span>
+<h4>Refer To Our Team</h4>
+<p>Pass interested gyms to Beyond Pixells. Our team conducts the product demo, answers questions, and completes the sale on your behalf.</p>
+<span class="tl-tag">We demo & close</span>
 </div>
 </div>
 <div class="timeline-item">
-<div class="time">3:00 PM</div>
+<div class="time">Step 5</div>
 <div class="tl-content">
-<h4>Submit Hot Leads To Our Team</h4>
-<p>When a gym owner is interested, mark the lead as "Hot" in Beyond Reach. Our team gets notified and schedules a full product demo within 24 hours. You do not need to explain the software.</p>
-<span class="tl-tag">10 minutes</span>
-</div>
-</div>
-<div class="timeline-item">
-<div class="time">5:00 PM</div>
-<div class="tl-content">
-<h4>Daily Report</h4>
-<p>Log your total calls for the day in the partner portal. Minimum expectation: 10 calls per day. The system tracks your activity, your conversion rate, and your earnings.</p>
-<span class="tl-tag">5 minutes</span>
+<h4>Get Paid Same Day</h4>
+<p>The moment a deal is closed and the client pays, your commission is transferred directly to your account the very same day.</p>
+<span class="tl-tag">Same-day payout</span>
 </div>
 </div>
 </div>
@@ -649,16 +643,15 @@ footer .footer-bottom p{font-size:.84rem}
 <div class="flow-columns">
 <div class="flow-col partner">
 <h3><span class="badge">Partner</span> Your Journey</h3>
-<div class="flow-step"><div class="fs-num">1</div><div><b>Get invited</b><span>You receive a personal invitation and access to Beyond Reach dashboard</span></div></div>
-<div class="flow-step"><div class="fs-num">2</div><div><b>Get your territory</b><span>We assign you a geographic area with target businesses to approach</span></div></div>
-<div class="flow-step"><div class="fs-num">3</div><div><b>Walk and talk</b><span>Visit businesses, start conversations, log every lead in Beyond Reach</span></div></div>
-<div class="flow-step"><div class="fs-num">4</div><div><b>Mark hot leads</b><span>When a business owner is interested, mark the lead as hot — our team takes over</span></div></div>
-<div class="flow-step"><div class="fs-num">5</div><div><b>We demo and close</b><span>Our team handles the product demo, negotiation, and onboarding</span></div></div>
-<div class="flow-step"><div class="fs-num">6</div><div><b>Get paid same day</b><span>Commission hits your account the day the client pays. 10% first 2 deals, 15% after.</span></div></div>
+<div class="flow-step"><div class="fs-num">1</div><div><b>Get scraped gym data</b><span>Access pre-verified gym leads with 90-95% accurate phone numbers right in Beyond Reach</span></div></div>
+<div class="flow-step"><div class="fs-num">2</div><div><b>Call on your schedule</b><span>Call gyms on your own time with no location limits, fixed hours, or required call targets</span></div></div>
+<div class="flow-step"><div class="fs-num">3</div><div><b>Refer interested gyms</b><span>Log interested gym owners in the dashboard and refer them to our team with a single click</span></div></div>
+<div class="flow-step"><div class="fs-num">4</div><div><b>We demo and close</b><span>Our expert team delivers the live product demo, handles questions, and closes the agreement</span></div></div>
+<div class="flow-step"><div class="fs-num">5</div><div><b>Get paid same day</b><span>Commission is transferred to your account the day the client pays — 10% on first 2 deals, 15% after</span></div></div>
 </div>
 <div class="flow-col client">
 <h3><span class="badge">Client</span> Business Owner Journey</h3>
-<div class="flow-step"><div class="fs-num">1</div><div><b>Partner visits</b><span>A partner walks in, introduces Gym OS, and shows the live product on their phone</span></div></div>
+<div class="flow-step"><div class="fs-num">1</div><div><b>Partner calls</b><span>A partner reaches out, introduces Gym OS, and connects interested gym owners with our team</span></div></div>
 <div class="flow-step"><div class="fs-num">2</div><div><b>Full demo</b><span>Our team gives a complete product demo — dashboard, website, QR check-in, WhatsApp automation</span></div></div>
 <div class="flow-step"><div class="fs-num">3</div><div><b>Choose a plan</b><span>Standard (15k/5k), Professional (20k/5k), or Premium (30k/5k) — based on gym size and needs</span></div></div>
 <div class="flow-step"><div class="fs-num">4</div><div><b>We deploy</b><span>System goes live within 48 hours — branded website, dashboard, QR codes, member import</span></div></div>
@@ -681,7 +674,7 @@ footer .footer-bottom p{font-size:.84rem}
 <div class="flow-item">
 <div class="icon-wrap"><svg class="svg-icon" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2M9 7a4 4 0 1 0 0 0M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
 <h4>Partner Refers</h4>
-<p>Partner finds a local business and submits it via Beyond Reach</p>
+<p>Partner calls pre-scraped gym leads on their schedule and refers interested ones via Beyond Reach</p>
 </div>
 <div class="flow-connector">&rarr;</div>
 <div class="flow-item">
