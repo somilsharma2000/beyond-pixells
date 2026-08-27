@@ -6,7 +6,7 @@
 <title>Beyond Pixells — Digital Growth Systems for Local Businesses</title>
 <meta name="description" content="Beyond Pixells designs, builds, and deploys complete digital operating systems for local businesses worldwide. Our flagship product, Gym OS, is live and running.">
 <meta property="og:title" content="Beyond Pixells — Digital Growth Systems">
-<meta property="og:description" content="Complete digital operating systems for local businesses worldwide. Gym OS is live. Partner program available by invitation.">
+<meta property="og:description" content="Complete digital operating systems for local businesses worldwide. Gym OS is live. Partner hub for existing partners. Commission tracking, earning potential, and motivation.">
 <meta property="og:type" content="website">
 <meta property="og:image" content="https://somilsharma2000.github.io/beyond-pixells/og-image.png">
 <link rel="icon" href="logo.png">
@@ -166,6 +166,31 @@ footer .footer-bottom{border-top:1px solid rgba(255,255,255,.06);padding-top:24p
 footer .footer-bottom p{font-size:.84rem}
 .fade-in{opacity:0;transform:translateY(24px);transition:.6s}
 .fade-in.visible{opacity:1;transform:translateY(0)}
+
+.commission-box{background:var(--white);border:1px solid var(--border);border-radius:16px;padding:28px;margin-top:28px;box-shadow:0 8px 24px rgba(0,0,0,.04)}
+.commission-box h3{font-size:1.1rem;font-weight:700;margin-bottom:18px;color:var(--navy)}
+.commission-row{display:flex;align-items:center;gap:16px;padding:14px 0;border-bottom:1px solid var(--border)}
+.commission-row:last-of-type{border-bottom:none}
+.commission-row.highlight{background:rgba(30,79,216,.05);border-radius:10px;padding:14px;margin:8px 0;border:1px solid rgba(30,79,216,.12)}
+.comm-left{display:flex;flex-direction:column;min-width:120px}
+.comm-label{font-size:.82rem;color:var(--gray);font-weight:500}
+.comm-value{font-size:1.8rem;font-weight:800;color:var(--blue);letter-spacing:-.02em}
+.comm-desc{font-size:.88rem;color:var(--gray)}
+.commission-example{margin-top:16px;padding:16px;background:var(--light);border-radius:10px}
+.ex-label{font-size:.82rem;color:var(--slate);font-weight:600;display:block;margin-bottom:10px}
+.ex-calc{display:flex;flex-direction:column;gap:6px}
+.ex-calc span{font-size:.9rem;color:var(--gray)}
+.ex-calc b{color:var(--navy);font-weight:700}
+.ex-total{font-size:.95rem!important;color:var(--blue)!important;font-weight:600!important;padding-top:8px;border-top:1px solid var(--border);margin-top:4px}
+.partner-motivation{margin-top:60px}
+.motivate-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+@media(max-width:900px){.motivate-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.motivate-grid{grid-template-columns:1fr}}
+.motivate-card{background:var(--white);border:1px solid var(--border);border-radius:14px;padding:28px 22px;transition:.25s}
+.motivate-card:hover{border-color:var(--blue);box-shadow:0 8px 24px rgba(0,0,0,.06);transform:translateY(-4px)}
+.motivate-icon{width:48px;height:48px;background:var(--light);border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:16px;color:var(--blue)}
+.motivate-card h4{font-size:1rem;font-weight:700;margin-bottom:10px;color:var(--navy)}
+.motivate-card p{font-size:.88rem;color:var(--gray);line-height:1.65}
 </style>
 </head>
 <body>
@@ -181,7 +206,7 @@ footer .footer-bottom p{font-size:.84rem}
 <li><a href="#partners">Partners</a></li>
 <li><a href="#how-it-works">Process</a></li>
 </ul>
-<a href="#partners" class="nav-cta">Apply as Partner</a>
+<a href="#partners" class="nav-cta">For Partners</a>
 </div>
 </nav>
 
@@ -193,7 +218,7 @@ footer .footer-bottom p{font-size:.84rem}
 <p>Beyond Pixells designs, builds, and deploys complete digital operating systems — websites, automation, CRM, and AI — for local businesses worldwide.</p>
 <div class="cta-group">
 <a href="https://somilsharma2000.github.io/gym-os/" class="btn btn-primary">Explore Gym OS</a>
-<a href="#partners" class="btn btn-ghost">Apply as Partner</a>
+<a href="#how-it-works" class="btn btn-ghost">How It Works</a>
 </div>
 </div>
 </div>
@@ -233,7 +258,7 @@ footer .footer-bottom p{font-size:.84rem}
 <div class="icon-wrap"><svg class="svg-icon" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2M9 7a4 4 0 1 0 0 0M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
 <h3>Beyond Reach</h3>
 <p>Our invite-only partner platform. Field agents and referral partners get full product access, track leads, and earn commissions — all in one dashboard.</p>
-<a href="#partners" class="link-out">Apply for access &rarr;</a>
+<span class="link-out" style="color:var(--gray);font-weight:500">Invite-only. Partners get full dashboard access.</span>
 </div>
 
 <div class="eco-card">
@@ -308,85 +333,99 @@ footer .footer-bottom p{font-size:.84rem}
 </div>
 <div class="about-card">
 <div class="icon-wrap"><svg class="svg-icon" viewBox="0 0 24 24" style="width:28px;height:28px"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2M9 7a4 4 0 1 0 0 0M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
-<h3>Partners Grow With Us</h3>
-<p>Our partner program is not an affiliate link. Partners get full product access, hands-on support, and transparent commission tracking. When our partners win, we win.</p>
+<h3>Built For Partners Who Grind</h3>
+<p>This is not an affiliate link or a referral button. This is a real business partnership. We invest in our partners, equip them with full product access, and pay them well — because their hustle is our growth.</p>
 </div>
 </div>
 </div>
 </section>
 
-<!-- PARTNER PROGRAM -->
+<!-- PARTNER HUB -->
 <section class="partner-section" id="partners">
 <div class="container">
 <div class="partner-grid">
 <div class="left">
-<span class="tag">Partner Program — Invite Only</span>
-<h2>Earn By Bringing Us Clients</h2>
-<p>Beyond Reach is our partner platform, available by personal invitation only. Partners get full product access, can refer local businesses, and earn commission on every closed deal — tracked transparently in real time.</p>
+<span class="tag">Partner Hub — For Existing Partners</span>
+<h2>Your Work Has Real Value</h2>
+<p>You are not selling software. You are giving a local business owner the tools to grow, compete, and win. Every gym you bring us gets a full operating system — website, CRM, member management, automated WhatsApp, and more. That changes their business. And it starts with your call.</p>
 <ul class="partner-steps">
-<li><div class="num">1</div><div><b>Apply below</b><span>Fill the form and send your application via WhatsApp</span></div></li>
-<li><div class="num">2</div><div><b>Get personally invited</b><span>We review your application and send you access</span></div></li>
-<li><div class="num">3</div><div><b>Full product access</b><span>Explore Gym OS, Beyond Reach dashboard, and all tools</span></div></li>
-<li><div class="num">4</div><div><b>Refer and earn</b><span>Bring local businesses, earn commission per closed client</span></div></li>
+<li><div class="num">1</div><div><b>Find local businesses</b><span>Walk your territory, talk to gym owners, salon owners, clinic owners. Identify who needs a digital upgrade.</span></div></li>
+<li><div class="num">2</div><div><b>Submit the lead</b><span>Log the business in Beyond Reach with name, phone, and notes. We take it from there.</span></div></li>
+<li><div class="num">3</div><div><b>We demo and close</b><span>Our team handles the product demo, negotiation, and onboarding. You do not need to explain the software.</span></div></li>
+<li><div class="num">4</div><div><b>You get paid</b><span>Commission hits your account the same day the client pays. No waiting, no excuses.</span></div></li>
 </ul>
 </div>
 
 <div>
 <div class="dash-preview">
-<div class="top-row"><b>Beyond Reach — Overview</b><span class="live">Live</span></div>
+<div class="top-row"><b>Beyond Reach — Your Dashboard</b><span class="live">Live</span></div>
 <div class="metrics">
-<div class="metric"><div class="n">2</div><div class="l">Pending Partners</div></div>
-<div class="metric"><div class="n">1</div><div class="l">Active Partners</div></div>
-<div class="metric"><div class="n">10</div><div class="l">Total Invited</div></div>
+<div class="metric"><div class="n">10</div><div class="l">Calls Today</div></div>
+<div class="metric"><div class="n">3</div><div class="l">Leads Logged</div></div>
+<div class="metric"><div class="n">1</div><div class="l">Deal Closed</div></div>
 </div>
-<div class="act-row"><span>Partner is now verified</span><span class="ok">Done</span></div>
-<div class="act-row"><span>Partner completed onboarding</span><span class="ok">Done</span></div>
-<div class="act-row"><span>Invitation access created</span><span class="ok">Done</span></div>
+<div class="act-row"><span>Gold Gym Vaishali Nagar — Closed</span><span class="ok">Paid</span></div>
+<div class="act-row"><span>CrossFit Jaipur — Demo scheduled</span><span class="ok">Active</span></div>
+<div class="act-row"><span>Iron Temple — Lead submitted</span><span class="ok">New</span></div>
 </div>
 
-<div class="apply-form">
-<h3>Request Partner Access</h3>
-<div class="sub">Fill the form and send it directly via WhatsApp. We review every application personally.</div>
-<div class="two-col">
-<div class="field">
-<label>Full Name</label>
-<input type="text" id="p-name" placeholder="Your name">
+<div class="commission-box">
+<h3>Your Commission Structure</h3>
+<div class="commission-row">
+<div class="comm-left">
+<span class="comm-label">First 2 deals</span>
+<span class="comm-value">10%</span>
 </div>
-<div class="field">
-<label>City</label>
-<input type="text" id="p-city" placeholder="Your city">
+<div class="comm-desc">Of setup fee + monthly, paid same day</div>
+</div>
+<div class="commission-row highlight">
+<div class="comm-left">
+<span class="comm-label">Deal 3 onwards</span>
+<span class="comm-value">15%</span>
+</div>
+<div class="comm-desc">Higher rate as you prove yourself</div>
+</div>
+<div class="commission-example">
+<span class="ex-label">Example: Close a Professional Plan</span>
+<div class="ex-calc">
+<span>Setup: 20,000 × 15% = <b>3,000</b></span>
+<span>Monthly: 5,000 × 15% = <b>750/mo</b></span>
+<span class="ex-total">You earn 3,000 upfront + 750 every month</span>
 </div>
 </div>
-<div class="two-col">
-<div class="field">
-<label>Email</label>
-<input type="email" id="p-email" placeholder="you@email.com">
-</div>
-<div class="field">
-<label>Phone</label>
-<input type="tel" id="p-phone" placeholder="Your phone number">
 </div>
 </div>
-<div class="field">
-<label>Area of Interest</label>
-<select id="p-interest">
-<option value="">Select your focus</option>
-<option value="Gym owners">Gym owners</option>
-<option value="Salon owners">Salon owners</option>
-<option value="Clinic owners">Clinic owners</option>
-<option value="Restaurant owners">Restaurant owners</option>
-<option value="All local businesses">All local businesses</option>
-</select>
 </div>
-<div class="field">
-<label>Why do you want to partner?</label>
-<input type="text" id="p-reason" placeholder="Brief reason (optional)">
+
+<div class="partner-motivation">
+<div class="motivate-grid">
+<div class="motivate-card">
+<div class="motivate-icon">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="width:28px;height:28px"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
 </div>
-<button class="wa-btn" id="wa-send" disabled>
-<svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.6 6.32A7.85 7.85 0 0 0 12.05 4a7.94 7.94 0 0 0-6.88 11.89L4 20l4.22-1.11a7.93 7.93 0 0 0 3.79.97h.04a7.94 7.94 0 0 0 7.93-7.94 7.86 7.86 0 0 0-2.38-5.6zm-5.6 12.2a6.55 6.55 0 0 1-3.36-.92l-.24-.14-2.5.66.67-2.44-.16-.25a6.54 6.54 0 0 1 3.34-9.78 6.54 6.54 0 0 1 6.86 1.16 6.54 6.54 0 0 1-3.79 11.7z"/></svg>
-Send Application via WhatsApp
-</button>
-<div class="note">You will be redirected to WhatsApp with your details pre-filled. We review every application personally.</div>
+<h4>The Product Sells Itself</h4>
+<p>You are not pushing a brochure. You are showing a gym owner a live system that manages members, payments, QR check-ins, classes, and WhatsApp automation. When they see it, they want it. Your job is to get them to see it.</p>
+</div>
+<div class="motivate-card">
+<div class="motivate-icon">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="width:28px;height:28px"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+</div>
+<h4>Real Money, Same Day</h4>
+<p>Close a Professional plan (20k setup, 5k/month) and you earn 3,000 upfront plus 750 every month that client stays. Close 5 gyms and you have 15,000 in upfront commission and 3,750 in monthly recurring income. That is real money.</p>
+</div>
+<div class="motivate-card">
+<div class="motivate-icon">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="width:28px;height:28px"><path d="M3 18v-6a9 9 0 0 1 18 0v6"/><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"/></svg>
+</div>
+<h4>10 Calls A Day</h4>
+<p>The math is simple. 10 calls a day, 50 a week, 200 a month. Even at a 5% close rate, that is 10 new clients a month. At 15% commission on Professional plans, that is 30,000 in upfront commission alone. Show up every day and the numbers do the rest.</p>
+</div>
+<div class="motivate-card">
+<div class="motivate-icon">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="width:28px;height:28px"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
+</div>
+<h4>You Are Not Alone</h4>
+<p>You get full product access, the Beyond Reach dashboard to track every lead, and our team handles every demo and closing call. Your focus is finding businesses and starting conversations. We handle the rest. That is how partnerships work.</p>
 </div>
 </div>
 </div>
@@ -432,11 +471,11 @@ Send Application via WhatsApp
 <!-- CTA -->
 <section class="cta-final">
 <div class="container">
-<h2>Ready To Join The Ecosystem?</h2>
-<p>Whether you run a business or want to earn by referring one — there is a path for you.</p>
+<h2>Building Together</h2>
+<p>Gym OS is live. Partners are earning. The system works.</p>
 <div class="cta-group">
-<a href="https://somilsharma2000.github.io/gym-os/" class="btn btn-blue">I Run A Business</a>
-<a href="#partners" class="btn btn-ghost">I Want To Be A Partner</a>
+<a href="https://somilsharma2000.github.io/gym-os/" class="btn btn-blue">Explore Gym OS</a>
+<a href="#partners" class="btn btn-ghost">Partner Hub</a>
 </div>
 </div>
 </section>
@@ -476,27 +515,7 @@ beyondpixells@gmail.com
 </footer>
 
 <script>
-const waBtn = document.getElementById('wa-send');
-const fields = ['p-name','p-city','p-email','p-phone'];
-function checkReady(){
-  const allFilled = fields.every(id => document.getElementById(id).value.trim() !== '');
-  waBtn.disabled = !allFilled;
-}
-fields.forEach(id => document.getElementById(id).addEventListener('input', checkReady));
-
-waBtn.addEventListener('click', function(e){
-  e.preventDefault();
-  if(waBtn.disabled) return;
-  const name = document.getElementById('p-name').value.trim();
-  const city = document.getElementById('p-city').value.trim();
-  const email = document.getElementById('p-email').value.trim();
-  const phone = document.getElementById('p-phone').value.trim();
-  const interest = document.getElementById('p-interest').value || 'Not specified';
-  const reason = document.getElementById('p-reason').value.trim() || 'Not specified';
-  const waNumber = '917737077479';
-  const msg = `Beyond Pixells — Partner Application%0A%0A*Name:* ${name}%0A*City:* ${city}%0A*Email:* ${email}%0A*Phone:* ${phone}%0A*Interest:* ${interest}%0A*Reason:* ${reason}%0A%0AI would like to request partner access to Beyond Reach.`;
-  window.location.href = `https://wa.me/${waNumber}?text=${msg}`;
-});
+// Partner hub page — no application form needed. For existing partners only.
 
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); });
