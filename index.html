@@ -186,6 +186,32 @@ footer{background:var(--navy);padding:60px 0 30px;color:#94a3b8;border-top:1px s
 .footer-bottom p{font-size:.82rem;color:#64748b}
 .fade-in{opacity:0;transform:translateY(20px);transition:.6s}
 .fade-in.visible{opacity:1;transform:translateY(0)}
+
+.dashboard-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+@media(max-width:850px){.dashboard-grid{grid-template-columns:1fr}}
+.dashboard-card{background:var(--navy);border-radius:16px;overflow:hidden;border:1px solid rgba(255,255,255,0.1);box-shadow:0 12px 32px rgba(11,27,63,0.15);display:flex;flex-direction:column}
+.db-header{background:var(--navy-light);padding:12px 18px;border-bottom:1px solid rgba(255,255,255,0.08);display:flex;justify-content:space-between;align-items:center;font-size:0.85rem;font-weight:700;color:#60a5fa}
+.db-badge{font-size:0.72rem;padding:3px 8px;border-radius:12px;font-weight:600}
+.db-badge.green{background:rgba(34,197,94,0.15);color:#4ade80}
+.db-badge.blue{background:rgba(59,130,246,0.15);color:#60a5fa}
+.db-badge.purple{background:rgba(168,85,247,0.15);color:#c084fc}
+.db-body{padding:20px;color:#fff;flex:1;display:flex;flex-direction:column;justify-content:space-between}
+.db-row-box{background:rgba(255,255,255,0.04);border-radius:8px;padding:12px;margin-bottom:12px;border:1px solid rgba(255,255,255,0.06)}
+.db-title-row{display:flex;justify-content:space-between;margin-bottom:8px;font-size:0.85rem;color:#94a3b8;font-weight:600}
+.db-list-item{display:flex;justify-content:space-between;font-weight:600;font-size:0.88rem;padding:6px 0;border-bottom:1px solid rgba(255,255,255,0.05)}
+.db-list-item:last-child{border-bottom:none}
+.db-stats-2col{display:grid;grid-template-columns:1fr 1fr;gap:8px;font-size:0.8rem}
+.db-stat-box{background:rgba(30,79,216,0.2);padding:8px;border-radius:6px;text-align:center}
+.sub-label{color:#94a3b8;font-size:0.75rem}
+.stat-val{color:#fff;font-weight:700;font-size:0.92rem;margin-top:2px}
+.db-alert-box{display:flex;justify-content:space-between;align-items:center;padding:10px 12px;border-radius:6px;font-size:0.82rem;font-weight:600}
+.db-alert-box.red-bg{background:rgba(239,68,68,0.12);border:1px solid rgba(239,68,68,0.2);color:#fca5a5}
+.db-alert-box.blue-bg{background:rgba(30,79,216,0.2);border:1px solid rgba(30,79,216,0.3);color:#cbd5e1}
+.green-text{color:#4ade80!important}
+.red-text{color:#ef4444!important}
+.blue-text{color:#60a5fa!important}
+.btn-with-sub{flex-direction:column;align-items:flex-start;justify-content:center;padding:10px 24px!important}
+.btn-subtext{display:block;font-size:0.72rem;font-weight:400;opacity:0.85;margin-top:2px}
 </style>
 </head>
 <body>
@@ -198,7 +224,7 @@ footer{background:var(--navy);padding:60px 0 30px;color:#94a3b8;border-top:1px s
 <li><a href="#pricing">Pricing</a></li>
 <li><a href="#faq">FAQ</a></li>
 </ul>
-<a href="https://wa.me/917737077479?text=Hi%2C%20I%20want%20to%20see%20a%20live%20demo%20of%20Gym%20OS" class="nav-cta">Book a Free Demo</a>
+<a href="https://wa.me/917737077479?text=Hi%20Beyond%20Pixells,%20I%20want%20to%20book%20a%20free%20demo%20of%20Gym%20OS" target="_self" class="nav-cta">Book a Free Demo</a>
 </div>
 </nav>
 
@@ -208,8 +234,8 @@ footer{background:var(--navy);padding:60px 0 30px;color:#94a3b8;border-top:1px s
 <h1>While You Run on Paper, <span>Your Competitors Are Going Digital</span></h1>
 <p>Gym OS is a complete operating system for your gym — QR check-ins, automated WhatsApp reminders, lead tracking, payment management, class scheduling, and a professional website. All connected. All automatic.</p>
 <div class="cta-group">
-<a href="https://wa.me/917737077479?text=Hi%2C%20I%20want%20to%20see%20a%20live%20demo%20of%20Gym%20OS" class="btn btn-primary">Book a Free Demo</a>
-<a href="https://somilsharma2000.github.io/gym-os-frontend/" class="btn btn-ghost">See Live Example</a>
+<a href="https://wa.me/917737077479?text=Hi%20Beyond%20Pixells,%20I%20want%20to%20book%20a%20free%20demo%20of%20Gym%20OS" target="_self" class="btn btn-primary">Book a Free Demo</a>
+<a href="https://somilsharma2000.github.io/oxigen-fitness-digital/" target="_self" class="btn btn-ghost btn-with-sub" title="See a real gym website powered by Gym OS"><span>See Live Example</span><span class="btn-subtext">See a real gym website powered by Gym OS</span></a>
 </div>
 </div>
 </div>
@@ -218,6 +244,7 @@ footer{background:var(--navy);padding:60px 0 30px;color:#94a3b8;border-top:1px s
 <div class="container">
 <div class="stats-grid">
 <div class="stat-item"><div class="num">156</div><div class="label">Members Managed Digitally</div></div>
+<div style="text-align:center;font-size:0.82rem;color:#94a3b8;margin-top:20px;font-style:italic;">Based on live demo gym data</div>
 <div class="stat-item"><div class="num">72%</div><div class="label">Renewal Rate with Automation</div></div>
 <div class="stat-item"><div class="num">83%</div><div class="label">Class Utilization Rate</div></div>
 <div class="stat-item"><div class="num">48h</div><div class="label">From Demo to Live</div></div>
@@ -275,7 +302,7 @@ footer{background:var(--navy);padding:60px 0 30px;color:#94a3b8;border-top:1px s
 <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Trainer management and payroll tracking</li>
 <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Expense tracking and profit dashboard</li>
 </ul>
-<a href="https://wa.me/917737077479?text=Hi%2C%20I%20want%20to%20see%20a%20live%20demo%20of%20Gym%20OS" class="btn-live">Book a Free Demo &rarr;</a>
+<a href="https://wa.me/917737077479?text=Hi%20Beyond%20Pixells,%20I%20want%20to%20book%20a%20free%20demo%20of%20Gym%20OS" target="_self" class="btn-live">Book a Free Demo &rarr;</a>
 </div>
 <div class="visual">
 <div class="mockup">
@@ -285,10 +312,123 @@ footer{background:var(--navy);padding:60px 0 30px;color:#94a3b8;border-top:1px s
 <div class="row"><span>Expiring Soon</span><b>9</b></div>
 <div class="row"><span>New Leads (7d)</span><b>18</b></div>
 <div class="row"><span>Class Utilization</span><b>83%</b></div>
+<div style="text-align:center;font-size:0.75rem;color:#64748b;margin-top:12px;font-style:italic;">Based on live demo gym data</div>
 </div>
 </div>
 </div>
 </div>
+
+<div class="dashboard-preview-section" style="margin-top:56px;">
+<div style="text-align:center;margin-bottom:32px;">
+<h3 style="font-size:1.6rem;font-weight:700;color:var(--navy);margin-bottom:8px;">Gym OS Dashboard Screenshots</h3>
+<p style="color:var(--gray);font-size:0.98rem;">Explore real-time member check-ins, automated WhatsApp alerts, and financial tracking</p>
+</div>
+<div class="dashboard-grid">
+<div class="dashboard-card">
+<div class="db-header">
+<span>Member Check-In & Attendance</span>
+<span class="db-badge green">LIVE SCAN</span>
+</div>
+<div class="db-body">
+<div class="db-row-box">
+<div class="db-title-row">
+<span>Recent QR Scans</span>
+<span class="blue-text">View All (34)</span>
+</div>
+<div class="db-list-item">
+<span>Rahul S. (ID: #1042)</span>
+<span class="green-text">06:14 AM</span>
+</div>
+<div class="db-list-item">
+<span>Priya M. (ID: #1089)</span>
+<span class="green-text">06:08 AM</span>
+</div>
+<div class="db-list-item">
+<span>Amit K. (ID: #1015)</span>
+<span class="green-text">05:52 AM</span>
+</div>
+</div>
+<div class="db-stats-2col">
+<div class="db-stat-box">
+<div class="sub-label">Peak Hours</div>
+<div class="stat-val">6 AM - 9 AM</div>
+</div>
+<div class="db-stat-box">
+<div class="sub-label">Today Total</div>
+<div class="stat-val">89 Visits</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="dashboard-card">
+<div class="db-header">
+<span>Revenue & Expiring Plans</span>
+<span class="db-badge blue">FINANCE</span>
+</div>
+<div class="db-body">
+<div class="db-row-box">
+<div class="db-title-row">
+<span>August Revenue</span>
+<span class="green-text">&#8377;33,500</span>
+</div>
+<div class="db-list-item">
+<span>Renewals Collected</span>
+<span>&#8377;24,000</span>
+</div>
+<div class="db-list-item">
+<span>New Memberships</span>
+<span>&#8377;9,500</span>
+</div>
+<div class="db-list-item">
+<span>Pending Due (9 members)</span>
+<span class="red-text">&#8377;13,500</span>
+</div>
+</div>
+<div class="db-alert-box red-bg">
+<span>Auto Reminder Triggered</span>
+<span class="green-text">9 WhatsApp Sent</span>
+</div>
+</div>
+</div>
+
+<div class="dashboard-card">
+<div class="db-header">
+<span>Lead CRM & WhatsApp Automation</span>
+<span class="db-badge purple">AUTOMATED</span>
+</div>
+<div class="db-body">
+<div class="db-row-box">
+<div class="db-title-row">
+<span>Inquiries Pipeline</span>
+<span class="blue-text">18 New (7d)</span>
+</div>
+<div class="db-list-item">
+<span>Website Lead Form</span>
+<span class="green-text">Auto Followed Up</span>
+</div>
+<div class="db-list-item">
+<span>Birthday Wishes</span>
+<span class="green-text">3 Sent Today</span>
+</div>
+<div class="db-list-item">
+<span>Free Trial Bookings</span>
+<span>5 Scheduled</span>
+</div>
+</div>
+<div class="db-alert-box blue-bg">
+<span>Lead Conversion Rate</span>
+<span class="blue-text">68%</span>
+</div>
+</div>
+</div>
+</div>
+
+<div style="text-align:center;margin-top:36px;">
+<a href="https://somilsharma2000.github.io/gym-os-platform/" target="_self" class="btn btn-primary" style="background:var(--blue);color:var(--white);padding:14px 32px;border-radius:10px;font-weight:600;font-size:1rem;display:inline-flex;align-items:center;gap:8px;">View Live Dashboard &rarr;</a>
+</div>
+</div>
+
 </section>
 
 <section class="build-section">
@@ -303,13 +443,13 @@ footer{background:var(--navy);padding:60px 0 30px;color:#94a3b8;border-top:1px s
 <div class="bc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="width:24px;height:24px"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
 <h4>Professional Website</h4>
 <p>A mobile-responsive website with class schedules, pricing, trainer profiles, and a lead capture form. Every visitor becomes a tracked lead in your CRM automatically.</p>
-<a href="https://somilsharma2000.github.io/gym-os-frontend/" class="bc-link">View live example &rarr;</a>
+<a href="https://somilsharma2000.github.io/oxigen-fitness-digital/" target="_self" class="bc-link" title="See a real gym website powered by Gym OS">View live example &rarr;</a>
 </div>
 <div class="build-card">
 <div class="bc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="width:24px;height:24px"><path d="M3 3h18v18H3z"/><path d="M3 9h18M9 21V9"/></svg></div>
 <h4>Management Dashboard</h4>
 <p>Members, check-ins, payments, leads, classes, trainers, expenses, and analytics — all in one dashboard. Log in and run everything from one place.</p>
-<a href="https://wa.me/917737077479?text=Show%20me%20the%20dashboard%20demo" class="bc-link">Request dashboard access &rarr;</a>
+<a href="https://wa.me/917737077479?text=Hi%20Beyond%20Pixells,%20I%20want%20to%20book%20a%20free%20demo%20of%20Gym%20OS" target="_self" class="bc-link">Request dashboard access &rarr;</a>
 </div>
 <div class="build-card">
 <div class="bc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="width:24px;height:24px"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M7 7h10v10H7z"/></svg></div>
@@ -373,7 +513,7 @@ footer{background:var(--navy);padding:60px 0 30px;color:#94a3b8;border-top:1px s
 <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> WhatsApp automation</li>
 <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Lead CRM</li>
 </ul>
-<a href="https://wa.me/917737077479?text=Hi%2C%20I%20want%20the%20Starter%20plan%20for%20my%20gym" class="pc-btn">Get Started</a>
+<a href="https://wa.me/917737077479?text=Hi%20Beyond%20Pixells,%20I%20want%20to%20book%20a%20free%20demo%20of%20Gym%20OS" target="_self" class="pc-btn">Get Started</a>
 </div>
 <div class="pricing-card popular">
 <div class="popular-badge">Most Popular</div>
@@ -391,7 +531,7 @@ footer{background:var(--navy);padding:60px 0 30px;color:#94a3b8;border-top:1px s
 <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> GST invoices</li>
 <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Priority support</li>
 </ul>
-<a href="https://wa.me/917737077479?text=Hi%2C%20I%20want%20the%20Standard%20plan%20for%20my%20gym" class="pc-btn">Get Started</a>
+<a href="https://wa.me/917737077479?text=Hi%20Beyond%20Pixells,%20I%20want%20to%20book%20a%20free%20demo%20of%20Gym%20OS" target="_self" class="pc-btn">Get Started</a>
 </div>
 <div class="pricing-card">
 <div class="pc-name">Premium</div>
@@ -408,7 +548,7 @@ footer{background:var(--navy);padding:60px 0 30px;color:#94a3b8;border-top:1px s
 <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Dedicated account manager</li>
 <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> 24/7 support</li>
 </ul>
-<a href="https://wa.me/917737077479?text=Hi%2C%20I%20want%20the%20Premium%20plan%20for%20my%20gym" class="pc-btn">Get Started</a>
+<a href="https://wa.me/917737077479?text=Hi%20Beyond%20Pixells,%20I%20want%20to%20book%20a%20free%20demo%20of%20Gym%20OS" target="_self" class="pc-btn">Get Started</a>
 </div>
 </div>
 </div>
@@ -420,7 +560,7 @@ footer{background:var(--navy);padding:60px 0 30px;color:#94a3b8;border-top:1px s
 <div class="offer-tag">Limited Time Offer</div>
 <h2>First Month Free On Standard &amp; Premium Plans</h2>
 <p>Sign up this month and your first month is on us. Plus, we'll include a custom-branded website worth &#8377;15,000 at no extra cost. We personally set up every gym — that's why we can only onboard 5 gyms per month.</p>
-<a href="https://wa.me/917737077479?text=Hi%2C%20I%20want%20to%20claim%20the%20first%20month%20free%20offer" class="btn">Claim This Offer</a>
+<a href="https://wa.me/917737077479?text=Hi%20Beyond%20Pixells,%20I%20want%20to%20book%20a%20free%20demo%20of%20Gym%20OS" target="_self" class="btn">Claim This Offer</a>
 <div class="offer-deadline">Offer valid for <b>September 2026 onboarding only</b>. 3 slots remaining.</div>
 </div>
 </div>
@@ -530,8 +670,8 @@ footer{background:var(--navy);padding:60px 0 30px;color:#94a3b8;border-top:1px s
 <h2>Stop Losing Members. <span>Start Growing.</span></h2>
 <p>Your competitors are going digital. The question is whether you'll be first — or last.</p>
 <div class="cta-group">
-<a href="https://wa.me/917737077479?text=Hi%2C%20I%20want%20to%20book%20a%20free%20demo%20of%20Gym%20OS" class="btn btn-blue">Book a Free Demo</a>
-<a href="https://somilsharma2000.github.io/gym-os-frontend/" class="btn btn-ghost">See Live Example</a>
+<a href="https://wa.me/917737077479?text=Hi%20Beyond%20Pixells,%20I%20want%20to%20book%20a%20free%20demo%20of%20Gym%20OS" target="_self" class="btn btn-blue">Book a Free Demo</a>
+<a href="https://somilsharma2000.github.io/oxigen-fitness-digital/" target="_self" class="btn btn-ghost btn-with-sub" title="See a real gym website powered by Gym OS"><span>See Live Example</span><span class="btn-subtext">See a real gym website powered by Gym OS</span></a>
 </div>
 </div>
 </section>
@@ -550,7 +690,7 @@ beyondpixells@gmail.com
 <div class="footer-col">
 <h5>Product</h5>
 <ul>
-<li><a href="https://somilsharma2000.github.io/gym-os/">Gym OS Website</a></li>
+<li><a href="https://somilsharma2000.github.io/gym-os-platform/" target="_self">Gym OS Website</a></li>
 <li><a href="#product">Features</a></li>
 <li><a href="#pricing">Pricing</a></li>
 <li><a href="#faq">FAQ</a></li>
@@ -561,7 +701,7 @@ beyondpixells@gmail.com
 <ul>
 <li><a href="#problem">The Problem</a></li>
 <li><a href="mailto:beyondpixells@gmail.com">Contact</a></li>
-<li><a href="https://wa.me/917737077479">WhatsApp Us</a></li>
+<li><a href="https://wa.me/917737077479?text=Hi%20Beyond%20Pixells,%20I%20want%20to%20book%20a%20free%20demo%20of%20Gym%20OS" target="_self">WhatsApp Us</a></li>
 </ul>
 </div>
 </div>
