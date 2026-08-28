@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Terms of Service — Beyond Pixells</title>
+<meta name="description" content="Terms of Service for Gym OS by Beyond Pixells. Platform terms, usage guidelines, billing, data ownership, and liability terms.">
+<link rel="icon" href="logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --blue:#0066FF;
+  --blue-light:#3b6ae8;
+  --navy:#0A0E27;
+  --navy-card:#111836;
+  --navy-border:rgba(255,255,255,0.08);
+  --text-main:#e2e8f0;
+  --text-muted:#94a3b8;
+  --white:#ffffff;
+}
+body{
+  font-family:'Inter',sans-serif;
+  background:var(--navy);
+  color:var(--text-main);
+  line-height:1.7;
+  -webkit-font-smoothing:antialiased;
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+}
+a{color:var(--blue);text-decoration:none;transition:color .2s}
+a:hover{color:#60a5fa}
+
+/* Navbar */
+nav{
+  position:fixed;
+  top:0;
+  width:100%;
+  background:rgba(10,14,39,0.95);
+  backdrop-filter:blur(12px);
+  z-index:100;
+  padding:16px 0;
+  border-bottom:1px solid var(--navy-border);
+}
+nav .nav-container{
+  max-width:1000px;
+  margin:0 auto;
+  padding:0 24px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+nav .brand{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  font-size:1.15rem;
+  font-weight:800;
+  color:var(--white);
+}
+nav img.logo-img{
+  width:36px;
+  height:36px;
+  border-radius:50%;
+  object-fit:cover;
+}
+nav .back-link{
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  color:var(--text-muted);
+  font-size:.9rem;
+  font-weight:500;
+  padding:8px 16px;
+  border-radius:8px;
+  background:rgba(255,255,255,0.05);
+  border:1px solid var(--navy-border);
+  transition:.2s;
+}
+nav .back-link:hover{
+  color:var(--white);
+  background:rgba(255,255,255,0.1);
+}
+
+/* Page Container */
+.main-wrapper{
+  flex:1;
+  max-width:800px;
+  width:100%;
+  margin:0 auto;
+  padding:120px 24px 80px;
+}
+.doc-header{
+  margin-bottom:40px;
+  padding-bottom:24px;
+  border-bottom:1px solid var(--navy-border);
+}
+.doc-header h1{
+  font-size:2.4rem;
+  font-weight:800;
+  color:var(--white);
+  margin-bottom:12px;
+  letter-spacing:-.02em;
+}
+.meta-badge{
+  display:inline-flex;
+  gap:16px;
+  font-size:.85rem;
+  color:var(--text-muted);
+  background:rgba(0,102,255,0.1);
+  border:1px solid rgba(0,102,255,0.2);
+  padding:6px 14px;
+  border-radius:20px;
+  font-weight:500;
+}
+
+/* Content Area */
+.doc-content{
+  background:var(--navy-card);
+  border:1px solid var(--navy-border);
+  border-radius:16px;
+  padding:40px;
+}
+.doc-content section{
+  margin-bottom:36px;
+}
+.doc-content section:last-child{
+  margin-bottom:0;
+}
+.doc-content h2{
+  font-size:1.35rem;
+  font-weight:700;
+  color:var(--white);
+  margin-bottom:16px;
+  padding-bottom:8px;
+  border-bottom:1px solid var(--navy-border);
+}
+.doc-content p{
+  margin-bottom:14px;
+  color:#cbd5e1;
+}
+.doc-content ul, .doc-content ol{
+  margin:12px 0 16px 24px;
+  color:#cbd5e1;
+}
+.doc-content li{
+  margin-bottom:8px;
+}
+.doc-content strong{
+  color:var(--white);
+}
+
+.contact-box{
+  background:rgba(0,102,255,0.08);
+  border:1px solid rgba(0,102,255,0.25);
+  border-radius:12px;
+  padding:24px;
+  margin-top:24px;
+}
+.contact-box h3{
+  font-size:1.1rem;
+  color:var(--white);
+  margin-bottom:10px;
+}
+
+/* Footer */
+footer{
+  background:#070A1C;
+  border-top:1px solid var(--navy-border);
+  padding:32px 0;
+  margin-top:auto;
+}
+.footer-container{
+  max-width:800px;
+  margin:0 auto;
+  padding:0 24px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:16px;
+  text-align:center;
+}
+.footer-links{
+  display:flex;
+  gap:24px;
+  flex-wrap:wrap;
+  justify-content:center;
+}
+.footer-links a{
+  color:var(--text-muted);
+  font-size:.88rem;
+}
+.footer-links a:hover{
+  color:var(--white);
+}
+.copyright{
+  font-size:.82rem;
+  color:#64748b;
+}
+
+@media(max-width:640px){
+  .main-wrapper{padding-top:100px;padding-bottom:50px}
+  .doc-header h1{font-size:1.8rem}
+  .doc-content{padding:24px}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-container">
+    <a href="index.html" class="brand">
+      <img src="logo.png" class="logo-img" alt="Beyond Pixells">
+      Beyond Pixells
+    </a>
+    <a href="index.html" class="back-link">&larr; Back to Home</a>
+  </div>
+</nav>
+
+<div class="main-wrapper">
+  <div class="doc-header">
+    <h1>Terms of Service</h1>
+    <div class="meta-badge">
+      <span>Effective Date: August 28, 2026</span>
+      <span>&bull;</span>
+      <span>Last Updated: August 28, 2026</span>
+    </div>
+  </div>
+
+  <div class="doc-content">
+    <section>
+      <h2>1. Service Description</h2>
+      <p><strong>Gym OS</strong> is a SaaS (Software as a Service) platform built and operated by <strong>Beyond Pixells</strong> for gym management. The platform includes tools for member management, QR check-ins, lead tracking CRM, payment management, class scheduling, automated messaging, and integrated gym website publishing.</p>
+    </section>
+
+    <section>
+      <h2>2. Acceptable Use Policy</h2>
+      <p>Users and subscribers of Gym OS must adhere to acceptable usage rules. You agree not to:</p>
+      <ul>
+        <li>Host, transmit, or distribute illegal content or material that violates local or national laws.</li>
+        <li>Send unauthorized promotional spam or bulk messages through integrated communication channels.</li>
+        <li>Attempt unauthorized access to other user accounts, databases, or platform infrastructure.</li>
+        <li>Perform automated data scraping, extraction, or reverse engineering of Gym OS code or APIs.</li>
+        <li>Violate Meta or WhatsApp Business API terms of service or messaging compliance policies.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>3. Account Responsibility</h2>
+      <p>Gym owners are responsible for keeping account access credentials secure. The gym owner bears full responsibility for all data entered into their tenant account and all staff account privileges created (including trainers and front desk operators).</p>
+    </section>
+
+    <section>
+      <h2>4. Payment Terms &amp; Taxes</h2>
+      <p>Subscription fees and payment structures are established as follows:</p>
+      <ul>
+        <li><strong>Setup Fee:</strong> The setup fee is a one-time charge for onboarding, initial configuration, and system setup.</li>
+        <li><strong>Monthly Subscription:</strong> Monthly fees are billed in advance on a recurring monthly cycle.</li>
+        <li><strong>Payment Methods:</strong> Payments are accepted via bank transfer, UPI, or credit/debit card.</li>
+        <li><strong>Taxes:</strong> Applicable Goods and Services Tax (GST) as per Indian tax law is added to billing amounts.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>5. No Lock-in Contracts</h2>
+      <p>Gym OS operates without mandatory long-term lock-in contracts. Gym owners may cancel their monthly subscription at any time with no exit fees. However, the initial setup fee is non-refundable.</p>
+    </section>
+
+    <section>
+      <h2>6. Data Ownership &amp; Processing</h2>
+      <p>Gym owners retain 100% ownership of all gym business data, member records, lead details, and operational logs. Beyond Pixells acts strictly as the data processor. Upon account termination, gym owners are provided a <strong>30-day window</strong> to export all data.</p>
+    </section>
+
+    <section>
+      <h2>7. Service Availability &amp; Uptime Target</h2>
+      <p>Beyond Pixells targets <strong>99.5% uptime</strong> for Gym OS core services. Maintenance windows are scheduled in advance whenever possible. Beyond Pixells accepts no liability for temporary downtime resulting from factors beyond reasonable control, such as third-party cloud outage or internet service provider disruptions.</p>
+    </section>
+
+    <section>
+      <h2>8. Limitation of Liability</h2>
+      <p>To the maximum extent permitted by law, Beyond Pixells' total aggregate liability arising out of or related to the use of Gym OS shall be limited strictly to the total subscription fees paid by the client in the <strong>3 months</strong> preceding the event giving rise to liability. In no event shall Beyond Pixells be liable for indirect, incidental, consequential, special damages, or loss of profits or data.</p>
+    </section>
+
+    <section>
+      <h2>9. Intellectual Property Rights</h2>
+      <p>Gym OS, Beyond Pixells, associated codebases, user interfaces, documentation, logos, and trademarks remain the sole intellectual property of Beyond Pixells. Gym clients retain ownership of their gym brand, logos, and proprietary member data.</p>
+    </section>
+
+    <section>
+      <h2>10. Termination</h2>
+      <p>Either party may terminate the agreement by providing <strong>7 days written notice</strong>. Gym owners may export all gym data prior to account deactivation. Beyond Pixells reserves the right to suspend or terminate accounts immediately for non-payment or material breaches of these terms.</p>
+    </section>
+
+    <section>
+      <h2>11. Governing Law &amp; Jurisdiction</h2>
+      <p>These Terms of Service are governed by the laws of India. Any disputes arising under or in connection with these terms shall be subject to the exclusive jurisdiction of the competent courts in <strong>Jaipur, Rajasthan, India</strong>.</p>
+    </section>
+
+    <section>
+      <h2>12. Updates to Terms</h2>
+      <p>Beyond Pixells reserves the right to modify these terms. Clients will receive <strong>14 days notice</strong> via email or system announcement before updated terms take effect.</p>
+    </section>
+
+    <div class="contact-box">
+      <h3>Contact Information</h3>
+      <p>For questions regarding these Terms of Service, please contact Beyond Pixells:</p>
+      <p><strong>Email:</strong> <a href="mailto:beyondpixells@gmail.com">beyondpixells@gmail.com</a></p>
+      <p><strong>Phone / WhatsApp:</strong> +91 77370 77479</p>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-container">
+    <div class="footer-links">
+      <a href="privacy-policy.html">Privacy Policy</a>
+      <a href="terms-of-service.html">Terms of Service</a>
+      <a href="refund-policy.html">Refund &amp; Cancellation Policy</a>
+    </div>
+    <div class="copyright">
+      &copy; 2026 Beyond Pixells. All rights reserved.
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

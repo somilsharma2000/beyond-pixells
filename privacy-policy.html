@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy — Beyond Pixells</title>
+<meta name="description" content="Privacy Policy for Gym OS by Beyond Pixells. Learn how we collect, store, protect, and process data for gym owners and members.">
+<link rel="icon" href="logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --blue:#0066FF;
+  --blue-light:#3b6ae8;
+  --navy:#0A0E27;
+  --navy-card:#111836;
+  --navy-border:rgba(255,255,255,0.08);
+  --text-main:#e2e8f0;
+  --text-muted:#94a3b8;
+  --white:#ffffff;
+}
+body{
+  font-family:'Inter',sans-serif;
+  background:var(--navy);
+  color:var(--text-main);
+  line-height:1.7;
+  -webkit-font-smoothing:antialiased;
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+}
+a{color:var(--blue);text-decoration:none;transition:color .2s}
+a:hover{color:#60a5fa}
+
+/* Navbar */
+nav{
+  position:fixed;
+  top:0;
+  width:100%;
+  background:rgba(10,14,39,0.95);
+  backdrop-filter:blur(12px);
+  z-index:100;
+  padding:16px 0;
+  border-bottom:1px solid var(--navy-border);
+}
+nav .nav-container{
+  max-width:1000px;
+  margin:0 auto;
+  padding:0 24px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+nav .brand{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  font-size:1.15rem;
+  font-weight:800;
+  color:var(--white);
+}
+nav img.logo-img{
+  width:36px;
+  height:36px;
+  border-radius:50%;
+  object-fit:cover;
+}
+nav .back-link{
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  color:var(--text-muted);
+  font-size:.9rem;
+  font-weight:500;
+  padding:8px 16px;
+  border-radius:8px;
+  background:rgba(255,255,255,0.05);
+  border:1px solid var(--navy-border);
+  transition:.2s;
+}
+nav .back-link:hover{
+  color:var(--white);
+  background:rgba(255,255,255,0.1);
+}
+
+/* Page Container */
+.main-wrapper{
+  flex:1;
+  max-width:800px;
+  width:100%;
+  margin:0 auto;
+  padding:120px 24px 80px;
+}
+.doc-header{
+  margin-bottom:40px;
+  padding-bottom:24px;
+  border-bottom:1px solid var(--navy-border);
+}
+.doc-header h1{
+  font-size:2.4rem;
+  font-weight:800;
+  color:var(--white);
+  margin-bottom:12px;
+  letter-spacing:-.02em;
+}
+.meta-badge{
+  display:inline-flex;
+  gap:16px;
+  font-size:.85rem;
+  color:var(--text-muted);
+  background:rgba(0,102,255,0.1);
+  border:1px solid rgba(0,102,255,0.2);
+  padding:6px 14px;
+  border-radius:20px;
+  font-weight:500;
+}
+
+/* Content Area */
+.doc-content{
+  background:var(--navy-card);
+  border:1px solid var(--navy-border);
+  border-radius:16px;
+  padding:40px;
+}
+.doc-content section{
+  margin-bottom:36px;
+}
+.doc-content section:last-child{
+  margin-bottom:0;
+}
+.doc-content h2{
+  font-size:1.35rem;
+  font-weight:700;
+  color:var(--white);
+  margin-bottom:16px;
+  padding-bottom:8px;
+  border-bottom:1px solid var(--navy-border);
+}
+.doc-content p{
+  margin-bottom:14px;
+  color:#cbd5e1;
+}
+.doc-content ul, .doc-content ol{
+  margin:12px 0 16px 24px;
+  color:#cbd5e1;
+}
+.doc-content li{
+  margin-bottom:8px;
+}
+.doc-content strong{
+  color:var(--white);
+}
+
+.contact-box{
+  background:rgba(0,102,255,0.08);
+  border:1px solid rgba(0,102,255,0.25);
+  border-radius:12px;
+  padding:24px;
+  margin-top:24px;
+}
+.contact-box h3{
+  font-size:1.1rem;
+  color:var(--white);
+  margin-bottom:10px;
+}
+
+/* Footer */
+footer{
+  background:#070A1C;
+  border-top:1px solid var(--navy-border);
+  padding:32px 0;
+  margin-top:auto;
+}
+.footer-container{
+  max-width:800px;
+  margin:0 auto;
+  padding:0 24px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:16px;
+  text-align:center;
+}
+.footer-links{
+  display:flex;
+  gap:24px;
+  flex-wrap:wrap;
+  justify-content:center;
+}
+.footer-links a{
+  color:var(--text-muted);
+  font-size:.88rem;
+}
+.footer-links a:hover{
+  color:var(--white);
+}
+.copyright{
+  font-size:.82rem;
+  color:#64748b;
+}
+
+@media(max-width:640px){
+  .main-wrapper{padding-top:100px;padding-bottom:50px}
+  .doc-header h1{font-size:1.8rem}
+  .doc-content{padding:24px}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-container">
+    <a href="index.html" class="brand">
+      <img src="logo.png" class="logo-img" alt="Beyond Pixells">
+      Beyond Pixells
+    </a>
+    <a href="index.html" class="back-link">&larr; Back to Home</a>
+  </div>
+</nav>
+
+<div class="main-wrapper">
+  <div class="doc-header">
+    <h1>Privacy Policy</h1>
+    <div class="meta-badge">
+      <span>Effective Date: August 28, 2026</span>
+      <span>&bull;</span>
+      <span>Last Updated: August 28, 2026</span>
+    </div>
+  </div>
+
+  <div class="doc-content">
+    <section>
+      <h2>1. Who We Are</h2>
+      <p>Beyond Pixells is the creator and provider of <strong>Gym OS</strong>, a complete digital operating system and SaaS platform for gym management. We are committed to protecting the privacy of gym owners, staff members, gym members, and prospective leads who interact with our platform.</p>
+    </section>
+
+    <section>
+      <h2>2. Data We Collect</h2>
+      <p>To deliver our services effectively, Beyond Pixells collects and processes the following categories of information:</p>
+      <ul>
+        <li><strong>Gym Owner Data:</strong> Name, email address, phone number, gym name, and business address.</li>
+        <li><strong>Gym Member Data:</strong> Name, phone number, email address, photo (for digital QR passes), attendance records, membership status, and payment records.</li>
+        <li><strong>Lead Data:</strong> Name, phone number, email address, lead source, interest details, and status.</li>
+        <li><strong>Usage Data:</strong> IP address, browser type, device information, access times, and system diagnostic logs.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>3. How We Store and Protect Your Data</h2>
+      <p>Data security is integral to our platform. All data processed by Gym OS is stored on secure cloud servers using <strong>Base44 infrastructure</strong>.</p>
+      <ul>
+        <li><strong>Encryption in Transit:</strong> All web traffic and platform communications are encrypted in transit using HTTPS and modern SSL/TLS protocols.</li>
+        <li><strong>Role-Based Access Control:</strong> Strict role-based permission systems ensure data access is restricted to authorized roles only.</li>
+        <li><strong>Infrastructure Security:</strong> Servers are protected behind firewalls with active security monitoring.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>4. Who Has Access to Data</h2>
+      <p>We enforce strict data access boundaries:</p>
+      <ul>
+        <li><strong>Gym Owners &amp; Authorized Staff:</strong> Gym owners and their authorized staff (trainers, front desk personnel) have access to their gym's records via role-based permissions granted by the gym owner.</li>
+        <li><strong>Beyond Pixells Technical Staff:</strong> Authorized Beyond Pixells technical staff access systems strictly on a need-to-know basis solely for maintenance, support, security audits, or system operation.</li>
+        <li><strong>No Data Selling:</strong> Beyond Pixells does not sell or rent personal data to third parties.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>5. Data Retention Policy</h2>
+      <p>We retain data only for as long as necessary to fulfill service commitments:</p>
+      <ul>
+        <li><strong>Member Data:</strong> Member data is retained while the gym's subscription is active. Upon subscription termination, member data is permanently deleted within <strong>30 days</strong>.</li>
+        <li><strong>Lead Data:</strong> Lead data is retained for up to <strong>12 months</strong> to enable lead tracking and conversion analytics.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>6. Member &amp; User Rights</h2>
+      <p>Gym members and users have the following rights regarding their personal data:</p>
+      <ul>
+        <li><strong>Access:</strong> Request a copy of their personal data stored in the system.</li>
+        <li><strong>Correction:</strong> Request rectification of inaccurate or incomplete personal records.</li>
+        <li><strong>Deletion:</strong> Request erasure of personal data ("right to be forgotten").</li>
+        <li><strong>Data Export:</strong> Request a portable export of their personal data.</li>
+      </ul>
+      <p>To exercise any of these rights, contact us at <a href="mailto:beyondpixells@gmail.com">beyondpixells@gmail.com</a>.</p>
+    </section>
+
+    <section>
+      <h2>7. WhatsApp Communications</h2>
+      <p>Gym OS integrates WhatsApp for notifications, digital QR passes, and automated reminders:</p>
+      <ul>
+        <li><strong>Opt-In:</strong> Members must explicitly opt-in to receive WhatsApp messages.</li>
+        <li><strong>Opt-Out:</strong> Members can opt-out at any time by notifying the gym or replying STOP.</li>
+        <li><strong>API Compliance:</strong> All messaging strictly complies with WhatsApp Business API policies.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>8. Third-Party Services</h2>
+      <p>Gym OS utilizes trusted third-party cloud infrastructure services:</p>
+      <ul>
+        <li><strong>Base44:</strong> Cloud hosting, database management, and execution infrastructure.</li>
+        <li><strong>QR Code Generation:</strong> Dynamic QR code generation via <code>api.qrserver.com</code>.</li>
+        <li><strong>WhatsApp Business API:</strong> Messaging and notification delivery platform.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>9. Regulatory Compliance (DPDP Act 2023)</h2>
+      <p>Beyond Pixells complies with India's <strong>Digital Personal Data Protection (DPDP) Act 2023</strong>. We handle data lawfully and transparently, acting as a data processor for gym member and lead records.</p>
+    </section>
+
+    <section>
+      <h2>10. Policy Updates</h2>
+      <p>This Privacy Policy may be updated periodically to reflect software improvements or legal updates. The "Last Updated" date at the top of the page indicates when updates were made.</p>
+    </section>
+
+    <div class="contact-box">
+      <h3>Contact Us</h3>
+      <p>If you have any questions or inquiries about this Privacy Policy, please contact Beyond Pixells:</p>
+      <p><strong>Email:</strong> <a href="mailto:beyondpixells@gmail.com">beyondpixells@gmail.com</a></p>
+      <p><strong>Phone / WhatsApp:</strong> +91 77370 77479</p>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-container">
+    <div class="footer-links">
+      <a href="privacy-policy.html">Privacy Policy</a>
+      <a href="terms-of-service.html">Terms of Service</a>
+      <a href="refund-policy.html">Refund &amp; Cancellation Policy</a>
+    </div>
+    <div class="copyright">
+      &copy; 2026 Beyond Pixells. All rights reserved.
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Refund &amp; Cancellation Policy — Beyond Pixells</title>
+<meta name="description" content="Refund & Cancellation Policy for Gym OS by Beyond Pixells. Clear terms on setup fees, subscriptions, cancellations, and data export window.">
+<link rel="icon" href="logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --blue:#0066FF;
+  --blue-light:#3b6ae8;
+  --navy:#0A0E27;
+  --navy-card:#111836;
+  --navy-border:rgba(255,255,255,0.08);
+  --text-main:#e2e8f0;
+  --text-muted:#94a3b8;
+  --white:#ffffff;
+}
+body{
+  font-family:'Inter',sans-serif;
+  background:var(--navy);
+  color:var(--text-main);
+  line-height:1.7;
+  -webkit-font-smoothing:antialiased;
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+}
+a{color:var(--blue);text-decoration:none;transition:color .2s}
+a:hover{color:#60a5fa}
+
+/* Navbar */
+nav{
+  position:fixed;
+  top:0;
+  width:100%;
+  background:rgba(10,14,39,0.95);
+  backdrop-filter:blur(12px);
+  z-index:100;
+  padding:16px 0;
+  border-bottom:1px solid var(--navy-border);
+}
+nav .nav-container{
+  max-width:1000px;
+  margin:0 auto;
+  padding:0 24px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+nav .brand{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  font-size:1.15rem;
+  font-weight:800;
+  color:var(--white);
+}
+nav img.logo-img{
+  width:36px;
+  height:36px;
+  border-radius:50%;
+  object-fit:cover;
+}
+nav .back-link{
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  color:var(--text-muted);
+  font-size:.9rem;
+  font-weight:500;
+  padding:8px 16px;
+  border-radius:8px;
+  background:rgba(255,255,255,0.05);
+  border:1px solid var(--navy-border);
+  transition:.2s;
+}
+nav .back-link:hover{
+  color:var(--white);
+  background:rgba(255,255,255,0.1);
+}
+
+/* Page Container */
+.main-wrapper{
+  flex:1;
+  max-width:800px;
+  width:100%;
+  margin:0 auto;
+  padding:120px 24px 80px;
+}
+.doc-header{
+  margin-bottom:40px;
+  padding-bottom:24px;
+  border-bottom:1px solid var(--navy-border);
+}
+.doc-header h1{
+  font-size:2.4rem;
+  font-weight:800;
+  color:var(--white);
+  margin-bottom:12px;
+  letter-spacing:-.02em;
+}
+.meta-badge{
+  display:inline-flex;
+  gap:16px;
+  font-size:.85rem;
+  color:var(--text-muted);
+  background:rgba(0,102,255,0.1);
+  border:1px solid rgba(0,102,255,0.2);
+  padding:6px 14px;
+  border-radius:20px;
+  font-weight:500;
+}
+
+/* Content Area */
+.doc-content{
+  background:var(--navy-card);
+  border:1px solid var(--navy-border);
+  border-radius:16px;
+  padding:40px;
+}
+.doc-content section{
+  margin-bottom:36px;
+}
+.doc-content section:last-child{
+  margin-bottom:0;
+}
+.doc-content h2{
+  font-size:1.35rem;
+  font-weight:700;
+  color:var(--white);
+  margin-bottom:16px;
+  padding-bottom:8px;
+  border-bottom:1px solid var(--navy-border);
+}
+.doc-content p{
+  margin-bottom:14px;
+  color:#cbd5e1;
+}
+.doc-content ul, .doc-content ol{
+  margin:12px 0 16px 24px;
+  color:#cbd5e1;
+}
+.doc-content li{
+  margin-bottom:8px;
+}
+.doc-content strong{
+  color:var(--white);
+}
+
+.contact-box{
+  background:rgba(0,102,255,0.08);
+  border:1px solid rgba(0,102,255,0.25);
+  border-radius:12px;
+  padding:24px;
+  margin-top:24px;
+}
+.contact-box h3{
+  font-size:1.1rem;
+  color:var(--white);
+  margin-bottom:10px;
+}
+
+/* Footer */
+footer{
+  background:#070A1C;
+  border-top:1px solid var(--navy-border);
+  padding:32px 0;
+  margin-top:auto;
+}
+.footer-container{
+  max-width:800px;
+  margin:0 auto;
+  padding:0 24px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:16px;
+  text-align:center;
+}
+.footer-links{
+  display:flex;
+  gap:24px;
+  flex-wrap:wrap;
+  justify-content:center;
+}
+.footer-links a{
+  color:var(--text-muted);
+  font-size:.88rem;
+}
+.footer-links a:hover{
+  color:var(--white);
+}
+.copyright{
+  font-size:.82rem;
+  color:#64748b;
+}
+
+@media(max-width:640px){
+  .main-wrapper{padding-top:100px;padding-bottom:50px}
+  .doc-header h1{font-size:1.8rem}
+  .doc-content{padding:24px}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-container">
+    <a href="index.html" class="brand">
+      <img src="logo.png" class="logo-img" alt="Beyond Pixells">
+      Beyond Pixells
+    </a>
+    <a href="index.html" class="back-link">&larr; Back to Home</a>
+  </div>
+</nav>
+
+<div class="main-wrapper">
+  <div class="doc-header">
+    <h1>Refund &amp; Cancellation Policy</h1>
+    <div class="meta-badge">
+      <span>Effective Date: August 28, 2026</span>
+      <span>&bull;</span>
+      <span>Last Updated: August 28, 2026</span>
+    </div>
+  </div>
+
+  <div class="doc-content">
+    <section>
+      <h2>1. Overview</h2>
+      <p>At <strong>Beyond Pixells</strong>, we are dedicated to delivering high-quality gym management software through <strong>Gym OS</strong>. This Refund &amp; Cancellation Policy details the terms governing setup fees, subscription cancellations, refunds, and data retention.</p>
+    </section>
+
+    <section>
+      <h2>2. Setup Fee Policy</h2>
+      <p>The setup fee is a one-time charge covering customized website creation, system configuration, staff account setup, and onboarding. Once setup work has commenced, the setup fee is non-refundable.</p>
+    </section>
+
+    <section>
+      <h2>3. Monthly Subscriptions</h2>
+      <p>Monthly subscriptions are billed in advance on a recurring monthly schedule:</p>
+      <ul>
+        <li>If a gym owner cancels mid-month, no prorated refund will be provided for the remaining days of that current billing cycle.</li>
+        <li>Your subscription and access will remain fully active until the end of the paid monthly period.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>4. Annual Subscriptions</h2>
+      <p>For clients enrolled in annual subscription plans:</p>
+      <ul>
+        <li><strong>Cancellation within 3 Months:</strong> If cancelled within the first 3 months of an annual subscription, a <strong>50% refund</strong> of the remaining unused months will be issued.</li>
+        <li><strong>Cancellation after 3 Months:</strong> If cancelled after 3 months, no monetary refund is provided, but your subscription and platform access will remain active for the full paid annual period.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>5. No Lock-in &amp; Easy Cancellation</h2>
+      <p>Gym OS believes in earning your business every month:</p>
+      <ul>
+        <li>There are no lock-in contracts, exit fees, or cancellation penalties.</li>
+        <li>Clients can cancel their subscription at any time by providing <strong>7 days written notice</strong> prior to their next billing date.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>6. Setup Phase Cancellation</h2>
+      <p>If you request cancellation during the initial onboarding phase:</p>
+      <ul>
+        <li><strong>Before Work Begins:</strong> If cancellation is requested before any design or configuration work has started, a <strong>50% refund</strong> of the setup fee will be granted.</li>
+        <li><strong>After Work Begins:</strong> If configuration or website creation work has already started, the setup fee is non-refundable.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>7. Data Export Grace Period</h2>
+      <p>Upon subscription cancellation, gym owners are provided a <strong>30-day grace period</strong> to export all gym data, including member records, lead lists, attendance history, and payment logs. After 30 days, all data associated with the account is permanently deleted from Beyond Pixells servers.</p>
+    </section>
+
+    <section>
+      <h2>8. Dispute Resolution</h2>
+      <p>If you experience any billing discrepancies or concerns, please contact us first at <a href="mailto:beyondpixells@gmail.com">beyondpixells@gmail.com</a>. We endeavor to resolve all billing inquiries within 3 business days. If a dispute remains unresolved, it may be escalated to the appropriate consumer forum in India.</p>
+    </section>
+
+    <div class="contact-box">
+      <h3>Contact Information</h3>
+      <p>For refund requests or cancellation notices, please contact Beyond Pixells:</p>
+      <p><strong>Email:</strong> <a href="mailto:beyondpixells@gmail.com">beyondpixells@gmail.com</a></p>
+      <p><strong>Phone / WhatsApp:</strong> +91 77370 77479</p>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-container">
+    <div class="footer-links">
+      <a href="privacy-policy.html">Privacy Policy</a>
+      <a href="terms-of-service.html">Terms of Service</a>
+      <a href="refund-policy.html">Refund &amp; Cancellation Policy</a>
+    </div>
+    <div class="copyright">
+      &copy; 2026 Beyond Pixells. All rights reserved.
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
