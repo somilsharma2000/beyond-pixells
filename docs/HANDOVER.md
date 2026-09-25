@@ -80,7 +80,7 @@ no per-member fees, UPI + GST native.
 ### Client systems (live, each = branded site + member portal + owner dashboard)
 | Client | URL |
 |---|---|
-| Betta Bodies (Manchester) | https://somilsharma2000.github.io/betta-bodies-system/ |
+| Betta Bodies (Manchester) | https://somilsharma2000.github.io/bettabodies-system/ |
 | REDS GYM (Oldham) | https://somilsharma2000.github.io/reds-gym-system/ |
 | FLEX N TONE (Salford) | https://somilsharma2000.github.io/flex-n-tone-system/ |
 | Fight Factory (Manchester) | https://somilsharma2000.github.io/fight-factory-manchester-system/ |
