@@ -1,8 +1,9 @@
 # Beyond Pixells — SEO + GEO Implementation Guide
 
 > Full templates with copy-paste JSON-LD: `research/seo_geo.md`.
-> Applied so far: brand hub + gym-os (canonical, OG, JSON-LD, robots.txt,
-> sitemap.xml, llms.txt). Client sites: queued for LocalBusiness pass.
+> Applied: brand hub + gym-os (canonical, OG, JSON-LD, robots.txt, sitemap.xml,
+> llms.txt) AND all 8 client sites (canonical, OG, HealthClub JSON-LD — honest-minimal,
+> no invented addresses; add real addresses/hours per gym as they're confirmed).
 
 ## Head formula (every site)
 - Title: `[Product] — [what it is] for [who]` under 60 chars
