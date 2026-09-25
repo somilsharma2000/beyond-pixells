@@ -50,9 +50,15 @@ and services. Business model: **services cashflow → products scale**.
 ### Lead flow (how the money pipe works)
 ```
 Client site form → gym-os-connect.js v2 (has consent + WhatsApp fallback)
-  → Vesper captureGymLead  ──(todo)──►  Gym osssss platform
+  → Gym osssss captureGymLead / createLeadWithConsent  ✅ repointed 26 Sep 2026
 Offline/failure → localStorage queue (gymos_lead_queue) + WhatsApp CTA
 ```
+**Repoint details (26 Sep 2026):** all 6 connect-v2 sites now POST to
+`https://base44.app/api/apps/6a85aadd01bc42f293723858/functions/captureGymLead`.
+Iron Forge Hyderabad (main + gh-pages) and PowerHouse Hyderabad now call
+`.../6a85aadd01bc42f293723858/functions/createLeadWithConsent` (app id swap only).
+Vesper + BEYOND PIXELLS no longer receive gym leads. End-to-end verification
+pends the Base44 credit reset (capture functions refuse calls with HTTP 402 until then).
 
 ## 3. The visual design language (v1.0 — locked)
 
@@ -101,7 +107,8 @@ Any site adds 2 lines and gets the whole system:
 
 ## 6. Open items (honest state, do not claim done)
 
-1. **Vesper → Gym osssss repoint** — leads should land in the published platform.
+1. ~~Vesper → Gym osssss repoint~~ — DONE 26 Sep 2026 (all 8 gym client sites repointed;
+   verify end-to-end once integration credits reset; then migrate old BEYOND PIXELLS leads).
 2. **Base44 integration credits exhausted** — capture API fails until reset/upgrade.
 3. **Gym OS pricing** — ₹999/₹1,999 are research-recommended, Somil hasn't confirmed.
 4. **Safe Browsing review** — sponsored sites normalized; needs Search Console review request.
