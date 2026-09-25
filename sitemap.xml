@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://somilsharma2000.github.io/gym-os/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://somilsharma2000.github.io/beyond-pixells/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://somilsharma2000.github.io/beyond-pixells/terms-of-service.html</loc><priority>0.3</priority></url>
+  <url><loc>https://somilsharma2000.github.io/beyond-pixells/privacy-policy.html</loc><priority>0.3</priority></url>
+  <url><loc>https://somilsharma2000.github.io/beyond-pixells/refund-policy.html</loc><priority>0.3</priority></url>
 </urlset>
