@@ -1,0 +1,58 @@
+/* ============================================================
+   BEYOND PIXELLS — SHARED DESIGN SYSTEM v1.0
+   The single source of truth for the studio's visual language.
+   Any site can use it:  <link rel="stylesheet"
+     href="https://somilsharma2000.github.io/beyond-pixells/assets/bp-design-system.css">
+   Spec: docs/DESIGN_LANGUAGE.md  •  Motion: assets/bp-motion.js
+   ============================================================ */
+:root{
+  /* COLOR SYSTEM */
+  --bp-canvas:#08090C; --bp-surface-1:#12141A; --bp-surface-2:#1A1D26; --bp-surface-3:#222632;
+  --bp-glass:rgba(18,20,26,.75);
+  --bp-border-subtle:rgba(255,255,255,.07); --bp-border-default:#2A2F3D; --bp-border-strong:#3D4457; --bp-border-focus:#00F2FE;
+  --bp-text-primary:#F4F5F7; --bp-text-secondary:#9DA4B4; --bp-text-muted:#5C6479; --bp-text-inverse:#08090C;
+  --bp-crimson:#FF3B30; --bp-amber:#FF7A00; --bp-cyan:#00F2FE;
+  --bp-success:#00E676; --bp-warning:#FFAB00; --bp-error:#FF3B30;
+  --bp-gradient-brand:linear-gradient(135deg,#FF3B30 0%,#FF7A00 100%);
+  --bp-gradient-subtle:linear-gradient(135deg,rgba(255,59,48,.15),rgba(255,122,0,.05));
+  --bp-gradient-glow:linear-gradient(135deg,rgba(255,59,48,.4),rgba(255,122,0,.2));
+  --bp-gradient-cyan:linear-gradient(135deg,rgba(0,242,254,.3),rgba(0,242,254,.02));
+  /* TYPOGRAPHY */
+  --bp-font-display:'Space Grotesk',-apple-system,BlinkMacSystemFont,sans-serif;
+  --bp-font-body:'Plus Jakarta Sans',-apple-system,BlinkMacSystemFont,sans-serif;
+  /* SPACING / RADIUS */
+  --bp-r-sm:8px; --bp-r-md:12px; --bp-r-lg:16px; --bp-r-xl:24px;
+  /* EASING (motion philosophy: purposeful, weightless, precise) */
+  --bp-ease-out-expo:cubic-bezier(.16,1,.3,1);
+  --bp-ease-spring:cubic-bezier(.34,1.56,.64,1);
+  --bp-ease-smooth:cubic-bezier(.4,0,.2,1);
+}
+/* ============ NAMED ANIMATION LIBRARY ============ */
+@keyframes bp-fadeUp{0%{opacity:0;transform:translateY(24px)}100%{opacity:1;transform:translateY(0)}}
+@keyframes bp-scaleIn{0%{opacity:0;transform:scale(.92)}100%{opacity:1;transform:scale(1)}}
+@keyframes bp-glowPulse{0%,100%{box-shadow:0 0 18px rgba(255,80,20,.22)}50%{box-shadow:0 0 34px rgba(255,80,20,.42)}}
+@keyframes bp-gradientShift{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
+@keyframes bp-numSlide{0%{opacity:0;transform:translateY(14px)}100%{opacity:1;transform:translateY(0)}}
+@keyframes bp-marquee{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+@keyframes bp-dotPulse{0%,100%{opacity:1}50%{opacity:.35}}
+/* scroll-reveal base (activated by bp-motion.js IntersectionObserver) */
+[data-reveal]{opacity:0;transform:translateY(24px);transition:opacity .6s var(--bp-ease-out-expo),transform .6s var(--bp-ease-out-expo)}
+[data-reveal].bp-revealed{opacity:1;transform:none}
+[data-reveal="scale"]{transform:scale(.94)}
+/* hover physics: weightless lift */
+.bp-lift{transition:transform .3s var(--bp-ease-out-expo),box-shadow .3s var(--bp-ease-out-expo),border-color .3s}
+.bp-lift:hover{transform:translateY(-4px);box-shadow:0 12px 40px rgba(0,0,0,.45),0 0 30px rgba(255,59,48,.12);border-color:rgba(255,122,0,.3)}
+/* signature gradient text */
+.bp-grad-text{background:var(--bp-gradient-brand);background-size:200% 200%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:bp-gradientShift 6s var(--bp-ease-smooth) infinite}
+/* primary CTA glow */
+.bp-glow{animation:bp-glowPulse 2.6s ease-in-out infinite}
+/* marquee ticker */
+.bp-marquee{overflow:hidden;position:relative;mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
+.bp-marquee-track{display:flex;gap:56px;width:max-content;animation:bp-marquee 28s linear infinite}
+/* ============ ACCESSIBILITY ============ */
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+  [data-reveal]{opacity:1;transform:none}
+  .bp-marquee-track{animation:none}
+}
+:focus-visible{outline:2px solid var(--bp-border-focus);outline-offset:2px}

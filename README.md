@@ -29,10 +29,19 @@ beyond-pixells/
 ├── terms-of-service.html      (legal)
 ├── privacy-policy.html        (legal)
 ├── refund-policy.html         (legal)
+├── assets/
+│   ├── bp-design-system.css  (shared design tokens + motion library — any site can link it)
+│   ├── bp-motion.js          (scroll reveals, count-up stats, reduced-motion safe)
+│   └── social-templates/     (1080×1920 reel templates made from the design language)
+├── robots.txt · sitemap.xml · llms.txt   (SEO + AI-engine optimization)
 └── docs/
-    ├── BRAND_PLAYBOOK.md      (positioning, architecture, voice, visual system)
-    ├── BUSINESS_PLAYBOOK.md   (model, pricing, survival rules, legal checklist)
-    └── research/              (12 research reports behind every decision)
+    ├── AGENT_BRAIN.md        (READ FIRST — the master project document)
+    ├── BRAND_PLAYBOOK.md     (positioning, architecture, voice, visual system)
+    ├── BUSINESS_PLAYBOOK.md  (model, pricing, survival rules, legal checklist)
+    ├── DESIGN_LANGUAGE.md    (tokens, motion, components, per-product flavors)
+    ├── SEO_GEO.md            (head templates, JSON-LD, AI-engine checklist)
+    ├── SOCIAL_SYSTEM.md      (content formats, pipeline, cadence)
+    └── research/             (15 research reports behind every decision)
 ```
 
 ## The Playbooks

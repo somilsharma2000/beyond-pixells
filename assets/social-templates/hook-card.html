@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><title>Hook Card — 1080×1920 social template</title>
+<!-- BEYOND PIXELLS SOCIAL TEMPLATE — "HOOK CARD" (Format 3): one bold hook, kinetic gradient text -->
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Plus+Jakarta+Sans:wght@400;600&display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#08090C;width:1080px;height:1920px;overflow:hidden;display:flex;align-items:center;font-family:'Plus Jakarta Sans',sans-serif}
+.frame{padding:80px 76px;box-sizing:border-box;position:relative;width:100%;height:100%;display:flex;flex-direction:column;justify-content:center}
+.frame::before{content:"";position:absolute;inset:0;background:radial-gradient(700px 500px at 90% 10%,rgba(255,59,48,.16),transparent 70%)}
+.frame::after{content:"";position:absolute;inset:40px;border:1px solid rgba(255,255,255,.08);border-radius:24px;pointer-events:none}
+.hook{font-family:'Space Grotesk';font-weight:700;font-size:110px;line-height:1.06;color:#F8FAFC;letter-spacing:-.03em}
+.hook span{background:linear-gradient(135deg,#FF3B30 0%,#FF7A00 50%,#FF3B30 100%);background-size:200% 200%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:shift 4s ease-in-out infinite}
+@keyframes shift{0%,100%{background-position:0% 50%}50%{background-position:100% 50%}}
+.hook2{font-family:'Space Grotesk';font-weight:500;font-size:96px;line-height:1.06;color:#94A3B8;margin-top:24px}
+.footer{position:absolute;bottom:110px;left:76px;right:76px;display:flex;justify-content:space-between;align-items:center}
+.brand{font-family:'Space Grotesk';font-weight:700;font-size:40px;color:#F8FAFC}
+.brand b{background:linear-gradient(135deg,#FF3B30,#FF7A00);-webkit-background-clip:text;background-clip:text;color:transparent}
+.tag{font-size:26px;color:#5C6479;font-weight:600;letter-spacing:.12em;text-transform:uppercase}
+</style></head>
+<body><div class="frame">
+  <!-- EDIT ME: the hook (span = the highlighted word) -->
+  <div class="hook">The gym across the street <span>auto-renews on WhatsApp.</span></div>
+  <div class="hook2">Are you still making calls?</div>
+  <div class="footer"><div class="brand">Gym OS <b>·</b> by Beyond Pixells</div><div class="tag">Book a free demo</div></div>
+</div></body></html>
