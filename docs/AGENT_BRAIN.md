@@ -8,6 +8,9 @@
 
 ## 1. What this is
 
+> **NEW AGENT?** Read `docs/HANDOVER.md` FIRST — the complete transfer document
+> (vision, all links, current state, priorities), then come back here for machinery.
+
 **Beyond Pixells** (spelling: always "Pixells", never "Pixels") is a modern product
 studio by **Somil Sharma** (India) that builds **operating systems for local businesses**.
 It sells: vertical SaaS products (the "OS family"), custom client rollouts,
