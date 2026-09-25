@@ -32,7 +32,11 @@ and services. Business model: **services cashflow → products scale**.
   Live: https://somilsharma2000.github.io/beyond-pixells/
 - **gym-os** — Gym OS product landing + full docs (FEATURE_SPEC 32 modules, BACKEND_MAP,
   client-kit). Live: https://somilsharma2000.github.io/gym-os/
-- **dentist-os**, **builder-os-site** — product landings.
+- **dentist-os-site** — Dentist OS product landing (research-backed rebuild, 26 Sep 2026).
+  Live: https://somilsharma2000.github.io/dentist-os-site/
+- **dentist-os** — the working SmileCraft demo clinic (public site + admin + portal).
+  Live: https://somilsharma2000.github.io/dentist-os/
+- **builder-os-site** — Builder OS product landing.
 - 8 client system repos (`bettabodies-system`, `reds-gym-system`, `flex-n-tone-system`,
   `fight-factory-manchester-system`, `oxigen-fitness-digital`, `ironforge-website`,
   `iron-forge-website` ⚠ serves from `gh-pages` branch, not `main`!, `powerhouse-fitness`).
@@ -114,7 +118,7 @@ Any site adds 2 lines and gets the whole system:
 4. **Safe Browsing review** — sponsored sites normalized; needs Search Console review request.
 5. **Custom domains** — everything still on github.io/base44.app subdomains.
 6. **Legal** — playbooks are checklists, not reviewed by a CA/lawyer yet.
-7. **Dentist OS landing rebuild** — research done (`docs/research/dentist_os.md`), build queued.
+7. ~~Dentist OS landing rebuild~~ — DONE 26 Sep 2026, live at https://somilsharma2000.github.io/dentist-os-site/ (pricing tiers on it are research-recommended, founder confirmation pending).
 
 ## 7. How to work on this project (rules for agents)
 
