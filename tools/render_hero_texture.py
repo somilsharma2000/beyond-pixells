@@ -29,7 +29,13 @@ import random
 
 from PIL import Image, ImageDraw, ImageFilter
 
-W, H = 2048, 1230
+# CLI: python3 tools/render_hero_texture.py [W] [H] [outfile]
+# default = hub landscape (2048x1230); tall variant for near-square heroes
+# (Gym OS hero element is ~1:1 — a landscape texture center-crops away the glow).
+import sys
+W = int(sys.argv[1]) if len(sys.argv) > 1 else 2048
+H = int(sys.argv[2]) if len(sys.argv) > 2 else 1230
+OUT = sys.argv[3] if len(sys.argv) > 3 else "assets/img/hero-veins.jpg"
 FOCAL = (int(W * 0.74), int(H * 0.24))  # luminous core, upper right
 FX, FY = FOCAL
 MAXD = 1600.0  # taper reference distance
@@ -246,5 +252,5 @@ r = r.point(lambda v: int(255 * (v / 255) ** 0.80) if v else 0)
 g = g.point(lambda v: int(255 * (v / 255) ** 0.82) if v else 0)
 b = b.point(lambda v: int(255 * (v / 255) ** 0.86) if v else 0)
 out = Image.merge("RGB", (r, g, b))
-out.save("assets/img/hero-veins.jpg", "JPEG", quality=86, optimize=True)
+out.save(OUT, "JPEG", quality=86, optimize=True)
 print("saved", out.size)
