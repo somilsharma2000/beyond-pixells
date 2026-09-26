@@ -165,7 +165,7 @@ export function statCard({ headline, stat, statLabel, footnote }, fonts) {
                   padding: "36px 44px",
                   borderRadius: 32,
                   border: `2px solid ${TOKENS.border}`,
-                  background: "linear-gradient(160deg, rgba(139,92,246,0.14), rgba(6,6,13,0.4))",
+                  background: "linear-gradient(160deg, rgba(0,102,255,0.14), rgba(6,6,13,0.4))",
                 },
                 children: [
                   {
@@ -206,10 +206,10 @@ export function hookCard({ badge, headline, sub, cta }, fonts) {
                   props: {
                     style: {
                       ...body(26, 700, { color: TOKENS.goldSoft }),
-                      border: `2px solid rgba(255,149,0,0.5)`,
+                      border: `2px solid rgba(33,196,93,0.5)`,
                       borderRadius: 999,
                       padding: "12px 28px",
-                      backgroundColor: "rgba(255,149,0,0.08)",
+                      backgroundColor: "rgba(33,196,93,0.08)",
                     },
                     children: badge,
                   },
@@ -279,7 +279,7 @@ export function ogHub({ title, tagline, url }) {
               width: 640,
               height: 640,
               borderRadius: 640,
-              background: `radial-gradient(circle, rgba(139,92,246,0.5) 0%, rgba(59,20,112,0.2) 45%, transparent 70%)`,
+              background: `radial-gradient(circle, rgba(0,102,255,0.45) 0%, rgba(0,82,204,0.18) 45%, transparent 70%)`,
             },
           },
         },
@@ -293,7 +293,7 @@ export function ogHub({ title, tagline, url }) {
               width: 560,
               height: 560,
               borderRadius: 560,
-              background: `radial-gradient(circle, rgba(255,149,0,0.16) 0%, transparent 65%)`,
+              background: `radial-gradient(circle, rgba(51,140,255,0.14) 0%, transparent 65%)`,
             },
           },
         },
