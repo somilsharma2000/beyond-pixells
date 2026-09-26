@@ -40,3 +40,6 @@ Audit date: 2026-09-26. Auditor: lead agent (beyond). This file states the REAL 
 - Deployment is NOT completion. Documentation is NOT research. Placeholder records are invalid.
 - EVIDENCE NOT FOUND is a valid, preferred answer to fabrication.
 - See AGENTS.md (repo root) and docs/00_MASTER_INDEX.md for operating rules.
+
+---
+**POST-RUN UPDATE (2026-09-26 later):** records 001–008 landed + founder taxonomy extension (§112–§149). Post-run state: 150 sections, 30 RESEARCHED, 25 PARTIAL, 67 NOT_STARTED. See FINAL_RESEARCH_AUDIT.md. COMPLETE: still 0 — by design.

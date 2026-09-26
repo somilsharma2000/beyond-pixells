@@ -3165,3 +3165,71 @@ INTERNAL COMPANY OS
 The goal is not to manually build every product forever.
 
 The goal is to build the MACHINE that repeatedly discovers valuable problems, researches them, designs solutions, builds them, launches them, sells them, operates them, learns from them and turns successful solutions into reusable software.
+
+---
+
+# PART 2 — DISCOVERED DOMAINS (taxonomy extension v1.1, 26 September 2026)
+
+## EXPANDABLE-TAXONOMY LAW (founder directive, 2026-09-26)
+The 111 sections above are the INITIAL taxonomy, not the boundary of company knowledge.
+Whenever any agent discovers a missing domain, dependency, risk, capability, business function,
+technology, regulation, workflow, or strategic question that materially affects the company,
+it MUST create a DISCOVERED TOPIC, add it below, and extend the coverage matrix. Agents are
+explicitly authorized and REQUIRED to discover topics the original blueprint failed to
+anticipate. "Research my list, then discover what I didn't know I needed to research."
+
+## THREE KNOWLEDGE LAYERS (WORLD → COMPANY → AI WORKFORCE)
+The knowledge system is three layers, not one pile of documents:
+
+| Layer | Question it answers | Where it lives |
+|---|---|---|
+| 1. MARKET KNOWLEDGE — the world | What is happening outside the company? | docs/research/ (radars + records 001-008: market, competitors, customers, regulation, technology, pricing) |
+| 2. COMPANY KNOWLEDGE — ourselves | What have WE learned, decided, built, failed at? | docs/research/records/ + RESEARCH_DECISIONS.md + REUSABILITY_LEDGER.md + playbooks + ADRs |
+| 3. MACHINE KNOWLEDGE — the AI workforce | What should future agents automatically know and do? | AGENTS.md, docs/AGENT_BRAIN.md, .agents/skills/, workflows, agent permission catalogs (this extension's §130-131) |
+
+## Discovered domains (§112–§149)
+Added 2026-09-26 from founder review of the research audit. Statuses live in
+MASTER_RESEARCH_COVERAGE_MATRIX.md. "(extends §N)" = deepens an existing section; the rest are new domains.
+
+| § | Domain | Priority | Extends |
+|---|---|---|---|
+| 112 | Founder & company governance: decision rights, approval thresholds, KPIs, founder dependency, succession, board/investor readiness | P0 | new |
+| 113 | Legal & IP: MSA/SOW, IP + source-code ownership, AI-generated code ownership, licensing, OSS compliance, trademarks, NDAs, DPAs, warranties, liability, indemnification, SLA, termination, data-return | P0 | new |
+| 114 | Finance operations: bookkeeping, AR/AP, cash-flow forecasting, taxes, refunds/chargebacks, revenue recognition, project/client/product profitability, AI-API cost per customer, margins, runway, controls | P0 | new |
+| 115 | Human organization: hiring, contractors, onboarding/offboarding, access provisioning, training, internal AI-usage + secrets policy, knowledge transfer | P1 | new |
+| 116 | Vendor & dependency management: AI/cloud/payment/messaging providers, lock-in, outages, pricing changes, API deprecations, replacement plans | P1 | new |
+| 117 | Business continuity: DR, backups, restore TESTING, provider/regional outage, ransomware, credential compromise, accidental deletion, key-person failure, emergency communication | P0 | new |
+| 118 | Incident management: severity levels, incident commander, escalation, postmortems, customer communication, RCA, corrective actions | P0 | extends §95 |
+| 119 | AI-specific governance: model selection/routing/evaluation, hallucination + prompt-injection + tool-abuse testing, drift, agent permissions, approval, identity, audit logs, cost controls, fallbacks, eval datasets, red teaming | P0 | extends §17,18,48 |
+| 120 | Data lifecycle: collection, classification, encryption, retention, archival, deletion, export, correction, lineage, ownership, residency, customer isolation, training-data boundaries | P0 | extends §60 |
+| 121 | Migration engineering: Excel/CSV import, legacy data, dedup, schema migration, rollback, validation, zero-downtime cutover, customer migration tooling | P1 | new |
+| 122 | Internationalization: currencies, languages, time zones, tax differences, local payment methods, RTL | P4 | new (India-first) |
+| 123 | Accessibility: WCAG, keyboard, screen readers, contrast, focus, reduced motion, captions, accessible forms/emails, testing | P2 | extends §86 |
+| 124 | Trust surface: security page, privacy center, status page, trust center, subprocessor documentation, security questionnaires, procurement readiness | P1 | new |
+| 125 | Sales engineering: discovery, qualification, technical discovery, demo environments, PoC, proposal/SOW generation, negotiation, implementation handoff | P1 | new |
+| 126 | Customer lifecycle: lead→qualification→demo→trial→proposal→contract→onboarding→activation→adoption→expansion→renewal→churn→win-back→referral | P1 | new |
+| 127 | Product lifecycle: idea→validation→prototype→MVP→beta→launch→growth→maturity→sunset→retirement | P2 | new |
+| 128 | Feature lifecycle: discovery, evidence, prioritization, spec, dev, QA, release, measurement, deprecation | P2 | new |
+| 129 | Experimentation: A/B, pricing/landing/onboarding experiments, statistical validity, registry, rollback | P2 | new |
+| 130 | AI-agent workforce architecture: internal agent catalog (research/competitor/UX/coding/QA/security/SEO/sales/support/analytics/finance/documentation/monitoring/incident), per-agent permissions, tools, data access, approval rules | P1 | new |
+| 131 | AI agent evaluation: accuracy, task completion, failure rate, hallucination rate, tool errors, cost, latency, security failures, human override rate, regression | P1 | new |
+| 132 | Internal company OS (Beyond Pixells OS): projects, clients, leads, proposals, contracts, tasks, agents, research, decisions, finances, infrastructure, incidents, deployments, knowledge, SOPs, reusable components | P1 | new |
+| 133 | Opportunity pipeline: Idea→Research→Validation→Opportunity Score→Prototype→Commercial Decision→Build→Launch→Scale/Kill | P1 | new |
+| 134 | Product discovery economics: pain severity, frequency, willingness to pay, alternatives, switching cost, implementation complexity, support burden, acquisition cost, margin, market size, expansion, reuse — scored BEFORE building | P1 | new |
+| 135 | Kill criteria: rules for "STOP BUILDING THIS" — failed validation, poor activation/retention, excessive support, bad margins, weak demand, regulatory problems, better alternative appears | P1 | new |
+| 136 | Technical debt economics: technical/product/research/documentation/security/operational/data debt — tracked with interest | P2 | new |
+| 137 | Customization debt: revenue gained vs permanent platform complexity; config/module/product/NO decision for every custom request | P1 | new |
+| 138 | IP factory: every project extracts reusable code/workflows/UI/prompts/agents/integrations/research/datasets/SOPs/templates/architecture | P1 | new |
+| 139 | Distribution as infrastructure: SEO, GEO, outbound, inbound, partners, affiliates, referrals, communities, content, email, WhatsApp, demos, case studies, programmatic landing pages — reusable systems | P1 | new |
+| 140 | Reputation system: reviews, testimonials, case studies, references, social proof, public credibility — evidence-based only | P1 | new |
+| 141 | Exit / strategic optionality: products/IP architecturally separable for spin-out, licensing, acquisition, white-label | P4 | new |
+| 142 | Knowledge decay: every knowledge item tracks source date, last verification, confidence, volatility, owner, next review, superseded state | P0 | new |
+| 143 | Research quality (meta-research): source reliability, methodology, sample size, geographic relevance, recency, vendor bias, conflicting evidence, confidence, reproducibility | P0 | new |
+| 144 | Security operations: vulnerability management, dependency + secret scanning, pen testing, threat modeling, security monitoring, access reviews, privileged access, key rotation, disclosure | P0 | extends §97 |
+| 145 | Software supply chain: SBOM, dependency provenance, package integrity, CI/CD security, signed releases, third-party code, OSS compliance | P1 | new |
+| 146 | Observability: logs, metrics, traces, alerts, uptime, latency, error rates, queue health, AI usage + cost, customer-level + business-level health | P1 | extends §46 |
+| 147 | SRE / reliability: SLOs, SLIs, error budgets, capacity planning, load/stress/chaos testing, failover, graceful degradation, rate limiting, queue recovery | P2 | new |
+| 148 | Documentation architecture: product/API/admin/customer docs, SOPs, runbooks, incident playbooks, ADRs, research records, onboarding docs, AI-agent instructions | P2 | new |
+| 149 | Trust evidence system: uptime communication, security documentation, subprocessor transparency for procurement | P2 | see §124 |
+
+**Rule:** §112–§149 enter the coverage matrix immediately; research follows the priority order (P0 first), same completion contract as everything else.

@@ -16,9 +16,10 @@ Every material decision links to its evidence. Future agents: do NOT re-research
 | D-011 | 2026-09 | Spelling law | AGENT_BRAIN.md | "Beyond Pixells" always | — | RATIFIED | n/a |
 | D-012 | 2026-09 | Deploy verification rule | AGENTS.md + AGENT_BRAIN.md | Push ≠ done: curl live URL + grep for change (iron-forge-website exception: gh-pages) | trust CI/deploy | RATIFIED; in use | continuous |
 
-## Pending decisions (evidence gathering now)
-- D-013 Platform security posture → awaiting record 001 + entity RLS audit
-- D-014 Pricing values → awaiting record 005 → FOUNDER DECISION REQUIRED
-- D-015 Multi-tenant data architecture → awaiting record 002
-- D-016 AI agent governance policy → awaiting record 003
-- D-017 WhatsApp automation economics → awaiting record 008
+## Pending decisions (evidence GATHERED 2026-09-26 — records 001-008; decision review next)
+- D-013 Platform security posture → EVIDENCE: records/001-security-privacy-legal-india.md — next: entity-by-entity RLS audit, then decision
+- D-014 Pricing values → EVIDENCE: records/005-pricing-billing-upi-recurring.md — **FOUNDER DECISION REQUIRED** (₹999/₹1,999 + setup fee); flag: GST SAC code conflict (997331/998314 vs 998315) needs CA confirmation
+- D-015 Multi-tenant data architecture → EVIDENCE: records/002-multi-tenant-architecture.md — next: map to Base44 RLS, then decision
+- D-016 AI agent governance policy → EVIDENCE: records/003-ai-agents-governance-economics.md — next: codify per-agent permission catalog (§130)
+- D-017 WhatsApp automation economics → EVIDENCE: records/008-distribution-whatsapp-growth.md — next: Meta Business API tier + template registration
+- D-018 Discovered-domains program (founder extension 2026-09-26) → taxonomy extended to §112-§149; P0 domains (governance, legal/IP, finance ops, continuity, incidents, knowledge decay, research quality, secops) queue for next research batch
