@@ -140,17 +140,17 @@ All in the **beyond-pixells** repo (github.com/somilsharma2000/beyond-pixells �
 6. **Legal unreviewed** — contracts, DPDP, GST checklists are documented but
    no CA/lawyer has signed off. Do not promise compliance.
 
-### 🟡 Queued (in priority order)
-1. Fix credits → repoint leads to the Gym OS platform → verify end-to-end
-2. Site + lead monitoring automation (daily health check of all 10 sites)
-3. New-lead instant notification (WhatsApp to founder)
-4. Dentist OS landing rebuild (research done: `docs/research/dentist_os.md`)
-5. Weekly build-log + social content generation (templates exist)
-6. Custom domains
-7. Legal professional review
-8. "Arlo" and other dormant cleanups — see AGENT_BRAIN
+### 🟡 Queued (in priority order) — updated 26 Sep 2026
+1. ~~Fix credits →~~ **repoint DONE** (leads go to Gym osssss `captureGymLead`). Credits still founder-blocked; when they reset, verify end-to-end.
+2. ~~Site + lead monitoring automation~~ **DONE** — Upptime (14 sites/5 min) + Estate Guard + daily smoke tests + "Daily estate health + lead report" workflow.
+3. ~~New-lead instant notification~~ **DONE** — "New lead analysis" entity workflow fires instantly on capture, scores and briefs the owner (needs credits reset to receive live leads).
+4. ~~Dentist OS landing rebuild~~ **DONE** — live at dentist-os-site (ONE DESIGN v7.2, motion, WhatsApp CTAs).
+5. ~~Weekly social content generation~~ **DONE** — "Weekly social content pack" workflow (Mon 10:00 IST) + launch presentation pack in `content/social/`.
+6. Custom domains — founder purchase decision.
+7. Legal professional review — Pass B rechecks done 26 Sep on DPDP/security record; founder asks remain in the record.
+8. ~~Dormant app cleanup~~ **DOCUMENTED** — full 19-app inventory classified in `docs/BACKEND_MAP.md` (active/dormant/unknown); founder decides deletions.
 
----
+
 
 ## PART 4 — WHAT MUST IMPROVE (the founder's improvement wish-list)
 

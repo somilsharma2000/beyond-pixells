@@ -23,18 +23,44 @@
 | FORTREX family | Trading vertical — deploy branch parked during Safe Browsing cleanup; repos intact | (parked) |
 | sponsored-macbook, sponsored-gt650, fortrex-* sites | Marketing experiments — Pages disabled during Safe Browsing cleanup; repos intact | (offline) |
 
-## Base44 apps
+## Base44 apps (full verified inventory, 19 apps, audited 26 Sep 2026)
+
+**Active — pivotal (never touch without founder sign-off):**
 
 | App | ID | Role |
 |---|---|---|
-| Gym osssss | `6a85aadd01bc42f293723858` | **Published Gym OS platform** — https://my-gym-os.base44.app — `captureGymLead` function is the lead-capture endpoint for all client sites (via `gym-os-connect.js`) |
-| Vesper | `6a76f719f88f2473ba879696` | Legacy lead-capture endpoint (vesper-923580a1.base44.app) — superseded, kept for history |
-| BEYOND PIXELLS | `6a700b150c8d8b8e923580a1` | Private app where website leads historically landed — migrate old leads into Gym osssss |
+| Gym osssss | `6a85aadd01bc42f293723858` | **Published Gym OS platform** — https://my-gym-os.base44.app — `captureGymLead` endpoint for all client sites |
+| Beyond agent app | `6ab65947f1ce1bb3167c9029` | This agent — Lead + LeadActivity entities, lead pipeline workflows, `captureLead` public endpoint |
+| GYMOS | `6a8949954092729194579577` | Unpublished full Gym OS entity rebuild (45+ entity model incl. TrialPass, AtRiskRule, NotificationEvent) — likely the v2 platform; **uncatalogued before 26 Sep, status needs founder confirmation** |
+| GYMOS copy? | `6a96de93b66911537d5c3466` | "Gym  osssss (Copy)" — full copy of the published platform (4 Sep 2026); assume backup/sandbox, do not use in production flows |
+
+**Dormant — legacy/experiment (safe to leave; founder decides deletion):**
+
+| App | ID | Role |
+|---|---|---|
+| Vesper | `6a76f719f88f2473ba879696` | Legacy lead-capture endpoint — superseded, kept for history |
+| BEYOND PIXELLS | `6a700b150c8d8b8e923580a1` | Historical lead landing app — old leads already migrated/closed 26 Sep |
+| fortrex | `6ab6fee1832fd6478abb6ff0` | FORTREX waitlist entities (FortrexWaitlist + snapshots) |
 | Koda | `6a73016f9b626430a0d26f88` | FORTREX trading backend |
-| Arlo | (arlo-65bf27b6) | FORTREX waitlist |
-| autolead TRAIL | — | Agency prospect scraper |
-| BloomWire | `6a60a3672c56780712cba8d5` | Flower store |
-| Beyond agent app | `6ab65947f1ce1bb3167c9029` | This agent — Lead + LeadActivity entities, lead pipeline workflows |
+| Arlo | `6a79d5cea765bcf565bf27b6` | Older FORTREX waitlist |
+| BloomWire | `6a60a3672c56780712cba8d5` | Flower store (ventures) |
+| AgencyProspect | `6a6db2c198aed086be82ebb4` | Agency outreach engine (autolead successor) |
+| autolead TRAIL | `6a6d983cbe9162a4ba7f9823` | Agency prospect scraper (trail) |
+
+**Unknown — need founder classification:**
+
+| App | ID | Notes |
+|---|---|---|
+| FORTCONTENT | `6a7cfc17a13b127d9a7b2afd` | Unknown purpose |
+| Elara | `6a72faf2ba70adb989a373b9` | Unknown purpose |
+| macbook | `6a925ce0591b907d7e7f14d1` | Likely sponsored-macbook experiment backend |
+| Solas | `6a70a9133e3cfd60b0554747` | Unknown purpose |
+| LEADS | `6a6ff403ede3f799dcb41753` | Unknown; possibly early lead experiments |
+| partnerships | `6a6d993f586ff8d89d425d9b` | Unknown purpose |
+| RepoForge | `6a979ae34bf2d22a9d0f9f74` | RepoLaunch-adjacent product (described: open-source commercialization blueprints) |
+
+> Cleanup law: agents NEVER delete Base44 apps. Dormant apps stay until the
+> founder reviews this table and says which to remove from the dashboard.
 
 ## Lead flow (as of 26 Sep 2026)
 
