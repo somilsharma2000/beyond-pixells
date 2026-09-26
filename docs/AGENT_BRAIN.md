@@ -151,3 +151,10 @@ Any site adds 2 lines and gets the whole system:
 6. When you add a new finding or decision, update the docs in THIS repo.
 7. "Beyond Pixells" spelling is sacred. Audit for "Beyond Pixels" typos.
 8. All lead-capture client sites must keep: consent capture + offline fallback.
+
+## Lead Capture Connection (26 Sep 2026)
+- Public endpoint: https://superagent-167c9029.base44.app/functions/captureLead (superagent backend function `captureLead`)
+- Accepts: name*, phone*, business, city, email, interest, notes, source. Creates a Lead entity (stage NEW) which fires the New-lead-analysis workflow.
+- Forms wired: hub `#bp-lead-form` (source: beyond-pixells hub), gym landing `#gym-lead-form` (source: gym-os landing).
+- Never-lose-a-lead: if the endpoint fails (e.g. integration credits exhausted — currently 402/limit at gateway), the form falls back to opening WhatsApp +91 77370 77479 with the enquiry prefilled. No lead is ever lost, whatever the credit state.
+- When Base44 integration credits reset/upgrade, CRM capture resumes automatically — no code change needed.
