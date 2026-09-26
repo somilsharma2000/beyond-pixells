@@ -28,11 +28,15 @@
    CSS geode, and JS droplet scatter, which read as thin flat lines and
    never matched the founder's reference photo. */
 .ov-canvas{position:absolute;inset:0;z-index:0;pointer-events:none;
-  background:#050308 url("img/hero-veins.jpg") center top/cover no-repeat}
+  background:#010102 url("img/hero-veins.jpg") center top/cover no-repeat}
 /* legibility: darken behind left-column text + fade into the page below */
 .ov-canvas::after{content:"";position:absolute;inset:0;
-  background:linear-gradient(90deg,rgba(6,6,13,.78) 0%,rgba(6,6,13,.30) 36%,rgba(6,6,13,0) 62%),
-             linear-gradient(180deg,rgba(6,6,13,0) 74%,rgba(6,6,13,.92) 100%)}
+  /* v5.4 reference-match: the 26 Sep reference glows evenly — old veils
+     (.78 left / .92 bottom) crushed it to navy-black. White-on-violet is
+     ~11:1 contrast, so text needs no black backing. Only a whisper of
+     darkening remains for the section transition. */
+  background:linear-gradient(90deg,rgba(3,3,7,.35) 0%,rgba(3,3,7,.10) 36%,rgba(3,3,7,0) 62%),
+             linear-gradient(180deg,rgba(3,3,7,0) 90%,rgba(3,3,7,.55) 100%)}
 .hero .container{position:relative;z-index:2}
 @media(max-width:760px){.ov-canvas{background-position:center 12%}}
 
