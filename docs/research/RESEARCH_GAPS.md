@@ -10,6 +10,14 @@ Status legend: research status from MASTER_RESEARCH_COVERAGE_MATRIX.md. Every ga
 6. **Pricing unconfirmed (§34)** — FOUNDER DECISION REQUIRED; record 005 (in flight) supplies evidence. Review: 2026-10-10.
 7. **Multi-tenancy/RLS architecture review (§14–§16, §61)** — record 002 in flight; review implementation against it. Review: 2026-10-10.
 
+
+## NEW CRITICAL GAPS (from PLATFORM_SECURITY_INVENTORY.md, 2026-09-26)
+26. **Secrets stored in database entities** — IntegrationConfig (api_key, webhook_token) and GymTenant (api_key) in the PUBLISHED Gym osssss platform. If exposed by any read path, tenant credentials leak wholesale. Action: verify RLS on these two entities first, then migrate secrets to platform secret storage. Owner: lead agent + founder (token rotation). Review: 2026-10-03.
+27. **password_hash in custom entity** (BEYOND PIXELLS app, GymAccount) — credentials in a custom table, hashing scheme unknown. Action: migrate to platform auth or delete entity. Review: 2026-10-03.
+28. **Health data without consent fields** — Member BCA fields (weight/body-fat/muscle) + gender + profile_photo in published platform; DPDP-sensitive. Action: consent + retention policy (record 001 supplies duties). Review: 2026-10-10.
+29. **Gold's Gym trademark reference** — platform app description names a real brand ("Gold's Gym Vaishali Nagar"). FOUNDER DECISION REQUIRED: confirm relationship or rename. Review: immediate.
+30. **RLS verification not possible via agent tools** — needs builder inspection or authenticated probe. FOUNDER ACTION or builder session; core remaining piece of gap #1. Review: 2026-10-03.
+
 ## HIGH (before product launch scale)
 8. **No product analytics (§32)** — cannot measure activation/retention/conversion; "conversion-optimized" claims unevidenceable. Action: define metrics + instrument lead→demo→customer funnel. Review: 2026-10-17.
 9. **No test suite / browser-level QA (§47)** — manual curl verification only. Action: browser-render tests for flagship + client template; form flow tests. Review: 2026-10-17.
