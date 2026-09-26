@@ -158,3 +158,12 @@ Created 2026-09-26. The 154-area "Complete Company Operating, Distribution, Comm
 
 ## New taxonomy sections created by this command (Part 3, §150–§213)
 See MASTER_RESEARCH_COVERAGE_MATRIX.md rows §150–§213 for statuses. High-priority NEW domains: §150 company operating model · §154 distribution engine · §161 offer engine · §183 internal analytics · §201 audience ownership · §210 outcome ownership. Research-worthy A-class domains are in the wave-2 research batch (records 014–017); the rest are internal design or watch items, honestly marked NOT_STARTED.
+
+## Added 26 Sep 2026 (gap closures)
+
+| Doc | Blueprint | Status |
+|---|---|---|
+| onboarding-playbook.md | §37 (gap #15) | EXISTS — delivery SOP from real rollout tooling |
+| automation-ledger.md | §91 (gap #20) | EXISTS — 11 live automations, blocked + manual sections |
+| idea-db.md | §78 (gap #20) | EXISTS — 12 ideas across Product Factory stages |
+| ../ops/BACKUP_RECOVERY.md | §96 (gap #3) | EXISTS — runbook; backups live in private beyond-pixells-data repo |
