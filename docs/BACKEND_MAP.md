@@ -79,3 +79,8 @@ Agent pipeline: Lead entity → "New lead analysis" workflow → "Daily pipeline
 2. Safe Browsing interstitial on somilsharma2000.github.io — review requests filed.
 3. Custom domain purchase pending — would fix the github.io flagging.
 4. Gym OS pricing (₹999/₹1,999) — founder confirmation pending.
+
+## Command Center (site admin) — added 26 Sep 2026
+- beyond-pixells/admin/ — client-side control panel (noindex). Tabs: overview (estate pings), content, theme (design-law guard), features, health, deploy.
+- content/site.json — single source of truth for hub copy/toggles/tokens; hub applies at runtime (HTML holds matching defaults).
+- Deploy path: GitHub Contents API PUT with browser-local fine-grained PAT (contents RW on somilsharma2000/beyond-pixells only), Pages auto-rebuilds. No servers, no secrets in repo.

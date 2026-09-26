@@ -158,3 +158,5 @@ Any site adds 2 lines and gets the whole system:
 - Forms wired: hub `#bp-lead-form` (source: beyond-pixells hub), gym landing `#gym-lead-form` (source: gym-os landing).
 - Never-lose-a-lead: if the endpoint fails (e.g. integration credits exhausted — currently 402/limit at gateway), the form falls back to opening WhatsApp +91 77370 77479 with the enquiry prefilled. No lead is ever lost, whatever the credit state.
 - When Base44 integration credits reset/upgrade, CRM capture resumes automatically — no code change needed.
+
+- 26 Sep: BP Command Center live at /beyond-pixells/admin/ — full site control (content/theme/features/health/deploy) via content/site.json data layer; design-law guard enforces v7.2 hues. style-lab.html now documents v7.2 (v4 page retired).
