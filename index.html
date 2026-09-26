@@ -130,7 +130,7 @@ footer{padding:64px 0 44px;border-top:1px solid var(--stroke-soft)}
     <a class="brand" href="#top"><img src="logo.png" alt="Beyond Pixells">Beyond Pixells</a>
     <ul>
       <li><a href="#products">Products</a></li>
-      <li><a href="#services">Services</a></li>
+      <li><a href="#start">Start a Project</a></li>
       <li><a href="#proof">Work</a></li>
       <li><a href="#process">Process</a></li>
       <li><a href="terms-of-service.html">Legal</a></li>
@@ -276,6 +276,66 @@ footer{padding:64px 0 44px;border-top:1px solid var(--stroke-soft)}
     </div>
   </div>
 </section>
+
+
+<section class="band" id="start">
+  <div class="container">
+    <h2>Start a project.</h2>
+    <p class="sub">Tell us about your business — we reply on WhatsApp within a few hours.</p>
+    <form id="bp-lead-form" class="lead-form">
+      <div class="lf-grid">
+        <label>Your name<input name="name" required maxlength="80" placeholder="Ravi Sharma"></label>
+        <label>Business / gym name<input name="business" maxlength="120" placeholder="Iron Paradise Gym"></label>
+        <label>City<input name="city" maxlength="60" placeholder="Jaipur"></label>
+        <label>Phone / WhatsApp<input name="phone" required maxlength="20" placeholder="+91 ..."></label>
+      </div>
+      <label>What do you need?
+        <select name="interest">
+          <option value="Gym OS">Gym OS — run my gym</option>
+          <option value="Dentist OS">Dentist OS — run my clinic</option>
+          <option value="Builder OS">Builder OS — run my real-estate projects</option>
+          <option value="Website">A website</option>
+          <option value="Custom software">Custom software / internal tools</option>
+          <option value="Automation / AI">Automation &amp; AI</option>
+          <option value="Not sure yet">Not sure yet — advise me</option>
+        </select>
+      </label>
+      <label>Anything else? (optional)<textarea name="notes" rows="3" maxlength="500" placeholder="Current tools, problems, timeline..."></textarea></label>
+      <label class="lf-consent"><input type="checkbox" name="consent" required> I agree to be contacted on WhatsApp about my enquiry.</label>
+      <div class="ctas">
+        <button type="submit" class="btn btn-primary bp-magnetic-btn">Send via WhatsApp</button>
+        <span class="lf-note">Opens WhatsApp with your details pre-filled — nothing is stored on this page.</span>
+      </div>
+    </form>
+  </div>
+</section>
+<style>
+.lead-form{max-width:720px;margin:0 auto;display:flex;flex-direction:column;gap:14px;text-align:left}
+.lead-form label{display:flex;flex-direction:column;gap:6px;font-size:.85rem;letter-spacing:.04em;text-transform:uppercase;color:var(--bp-muted,#8b8f9a)}
+.lead-form input,.lead-form select,.lead-form textarea{font:inherit;text-transform:none;letter-spacing:normal;color:var(--bp-ink,#f5f5f7);background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.12);border-radius:10px;padding:12px 14px;outline:none;transition:border-color .2s}
+.lead-form input:focus,.lead-form select:focus,.lead-form textarea:focus{border-color:var(--bp-crimson,#E8232D)}
+.lf-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
+.lf-consent{flex-direction:row!important;align-items:center;gap:10px!important;text-transform:none!important;letter-spacing:0!important;font-size:.8rem!important}
+.lf-note{font-size:.75rem;color:var(--bp-muted,#8b8f9a);text-transform:none;letter-spacing:0}
+</style>
+<script>
+(function(){
+  var f=document.getElementById('bp-lead-form');
+  if(!f)return;
+  f.addEventListener('submit',function(e){
+    e.preventDefault();
+    var v=function(n){var el=f.elements[n];return el?el.value.trim():'';};
+    var msg='Hi Beyond Pixells! New project enquiry —\n'
+      +'Name: '+v('name')+'\n'
+      +'Business: '+(v('business')||'-')+'\n'
+      +'City: '+v('city')+'\n'
+      +'Phone: '+v('phone')+'\n'
+      +'Needs: '+v('interest')+'\n'
+      +(v('notes')?('Notes: '+v('notes')+'\n'):'');
+    window.open('https://wa.me/917737077479?text='+encodeURIComponent(msg),'_blank');
+  });
+})();
+</script>
 
 <footer>
   <div class="container">
