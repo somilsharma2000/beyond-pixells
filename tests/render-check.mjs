@@ -19,10 +19,11 @@ await page.waitForTimeout(1500);
 
 const results = {
   geode: await page.locator(".ov-geode").count(),
-  veins: await page.locator(".ov-veins").count(),
+  veins: await page.locator(".ov-veins path").count(),
   droplets: await page.locator(".ov-droplets i").count(),
   grain: await page.locator(".ov-grain").count(),
-  meteors: await page.locator(".bp-meteors i").count(),
+  meteorsAbsent: (await page.locator(".bp-meteors i").count()) === 0,
+  gridAbsent: (await page.locator(".hero").evaluate(el => getComputedStyle(el, "::after").backgroundImage)).indexOf("linear-gradient") === -1,
   beamCard: await page.locator(".bp-beam-border").count(),
   lucideIcons: await page.locator("svg.ico-svg").count(),
   jsErrors: errors.length,
@@ -45,10 +46,11 @@ await browser.close();
 
 const pass =
   results.geode > 0 &&
-  results.veins > 0 &&
+  results.veins >= 10 &&
   results.droplets >= 5 &&
   results.grain > 0 &&
-  results.meteors >= 5 &&
+  results.meteorsAbsent &&
+  results.gridAbsent &&
   results.beamCard > 0 &&
   results.lucideIcons >= 5 &&
   results.jsErrors === 0;
