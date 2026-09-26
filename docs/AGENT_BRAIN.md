@@ -131,6 +131,7 @@ Any site adds 2 lines and gets the whole system:
 
 1. ~~Vesper → Gym osssss repoint~~ — DONE 26 Sep 2026 (all 8 gym client sites repointed;
    verify end-to-end once integration credits reset; then migrate old BEYOND PIXELLS leads).
+1b. ~~Migrate old BEYOND PIXELLS leads~~ — CLOSED 26 Sep 2026: audited all 129 legacy lead records (Gym osssss 99 + BEYOND PIXELLS 30) — 100% founder tests/demo seeds/gibberish probes, zero genuine customer leads. Nothing to migrate; pipeline starts clean. Backups live: private repo beyond-pixells-data + weekly workflow + docs/ops/BACKUP_RECOVERY.md.
 2. **Base44 integration credits exhausted** — capture API fails until reset/upgrade.
 3. **Gym OS pricing** — ₹999/₹1,999 are research-recommended, Somil hasn't confirmed.
 4. **Safe Browsing review** — sponsored sites normalized; needs Search Console review request.

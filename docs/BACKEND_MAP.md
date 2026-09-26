@@ -63,6 +63,16 @@ Agent pipeline: Lead entity → "New lead analysis" workflow → "Daily pipeline
   `.github/workflows/content-render.yml` or the `render-social-post` skill;
   outputs to `content/social/`.
 
+## Backups (as of 26 Sep 2026)
+
+- **Private repo** `somilsharma2000/beyond-pixells-data` — weekly entity
+  exports (Sundays 07:00 IST, "Estate data backup" workflow). v1 covers
+  Gym osssss tenants/plans/branches + agent pipeline. Public runbook:
+  `docs/ops/BACKUP_RECOVERY.md`.
+- **Verified finding**: all 129 legacy lead records (Gym osssss 99 + BEYOND
+  PIXELLS 30) are founder tests/demo seeds/gibberish — zero real customer
+  leads existed; old-lead migration closed with nothing to migrate.
+
 ## Known blocked / pending
 
 1. Base44 integration credits exhausted — lead capture returns 402.

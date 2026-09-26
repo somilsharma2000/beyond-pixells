@@ -62,27 +62,30 @@ jobs:
           [ "${{ steps.lh.outputs.failed }}" != "true" ] && echo "All categories above floors" || echo "BELOW FLOOR: ${{ steps.lh.outputs.bad }}"
 
   pa11y:
-    name: Accessibility (pa11y) — Brand Hub
+    name: Accessibility (pa11y) — flagships
     runs-on: ubuntu-latest
     steps:
-      - name: Run pa11y on the hub
+      - name: Run pa11y on all flagship landings
         run: |
           npm i -g pa11y
           export PUPPETEER_EXECUTABLE_PATH=$(which chromium || which chromium-browser || which google-chrome)
           set +e
-          out=$(pa11y "https://somilsharma2000.github.io/beyond-pixells/" --standard WCAG2AA --level error 2>&1)
-          code=$?
-          if [ $code -ne 0 ]; then
+          out=""
+          for u in beyond-pixells gym-os dentist-os-site builder-os-site; do
+            echo "=== pa11y: $u ==="
+            r=$(pa11y "https://somilsharma2000.github.io/$u/" --standard WCAG2AA --level error 2>&1) || out="$out $u FAILED;"
+            echo "$r" | head -20
+          done
+          if [ -n "$out" ]; then
             {
               echo "out<<EOF"
               echo "$out" | head -100
               echo "EOF"
               echo "failed=true"
             } >> "$GITHUB_OUTPUT"
-            echo "$out" | head -40
           else
             echo "failed=false" >> "$GITHUB_OUTPUT"
-            echo "pa11y: no WCAG2AA errors"
+            echo "pa11y: no WCAG2AA errors on any flagship"
           fi
         id: pa11y
 
