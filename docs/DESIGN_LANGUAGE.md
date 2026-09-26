@@ -68,7 +68,16 @@ orbs and light-beam (retired, conflicted with the flat cracked-texture language)
 - **Droplets** — procedurally scattered glossy dark circles with specular highlight, decorative depth.
 
 **Kit files:** `assets/bp-obsidian-veins.css` + `.js`. **Signature object:** `.ov-geode`
-(was `.bp-chrome-tile`). **Live on:** Hub hero + Gym OS landing (hero canvas + frontend showcase section with CSS
+(was `.bp-chrome-tile`). ### Daylight Glass (dashboard variant, 26 Sep 2026)
+The in-app/dashboard aesthetic (used inside product mockups, future owner app UI):
+glossy white-silver surfaces (linear-gradient #FBFCFE → #ECEEF4), soft depth
+shadows instead of hard borders, black "spotlight" card reserved for the single
+most important metric (money), green live-status, violet kept as the only brand
+accent on light. Dark device hardware stays dark — a light screen glowing on the
+obsidian canvas reads as "real product photo". Live on the Gym OS #showcase
+laptop mockup (spotlight KPI = Collected today).
+
+**Live on:** Hub hero + Gym OS landing (hero canvas + frontend showcase section with CSS
 laptop/phone product mockups, warm tones fully purged). **Social template:** `assets/social-templates/obsidian-veins-post.html`
 — same visual language as the site, so a screenshot of either reads as one consistent brand.
 
