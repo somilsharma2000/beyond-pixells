@@ -148,3 +148,20 @@
 }
 
 @media(prefers-reduced-motion:reduce){.bp-text-grad{animation:none}}
+
+/* ---- Sticky mobile CTA (conversion layer, estate-wide) ----------------
+   Mobile-first India traffic: the booking action must always be one tap
+   away. Hidden on desktop (pages already have inline CTAs). 26 Sep 2026. */
+.bp-mobile-cta{display:none}
+@media (max-width:768px){
+  .bp-mobile-cta{display:block;position:fixed;left:0;right:0;bottom:0;z-index:90;
+    background:rgba(20,24,51,.92);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+    border-top:1px solid #272C49;padding:10px 16px calc(10px + env(safe-area-inset-bottom))}
+  .bp-mobile-cta-in{display:flex;align-items:center;justify-content:space-between;gap:12px}
+  .bp-mct-copy b{display:block;font-size:.92rem;color:#F1F5F9}
+  .bp-mct-copy span{display:block;font-size:.72rem;color:#94A3B8;margin-top:2px}
+  .bp-mct-btn{flex:none;background:#21C45D;color:#06120B;font-weight:700;font-size:.9rem;
+    padding:11px 20px;border-radius:12px;text-decoration:none;box-shadow:0 6px 20px rgba(33,196,93,.35)}
+  .bp-mct-btn:active{transform:translateY(1px)}
+  body{padding-bottom:74px}
+}

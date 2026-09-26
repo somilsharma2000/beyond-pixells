@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>From Spreadsheets to a System: Running a Builder's Project Office | Beyond Pixells</title>
+<meta name="description" content="Builder OS: project milestones, unit inventory, broker attribution, WhatsApp buyer follow-ups and milestone-linked collections for real-estate offices.">
+<link rel="canonical" href="https://somilsharma2000.github.io/beyond-pixells/blog/builder-os-project-office.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="From Spreadsheets to a System: Running a Builder's Project Office | Beyond Pixells">
+<meta property="og:description" content="Builder OS: project milestones, unit inventory, broker attribution, WhatsApp buyer follow-ups and milestone-linked collections for real-estate offices.">
+<meta property="og:url" content="https://somilsharma2000.github.io/beyond-pixells/blog/builder-os-project-office.html">
+<meta property="og:site_name" content="Beyond Pixells Blog">
+<meta name="twitter:card" content="summary">
+<meta name="robots" content="index, follow">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://somilsharma2000.github.io/beyond-pixells/assets/bp-design-system.css">
+<link rel="icon" href="https://somilsharma2000.github.io/beyond-pixells/logo.png">
+<style>:root{--bg:#0A0E29;--bg-soft:#0F1425;--card:#141833;--surf:#242842;--line:#272C49;
+--ink:#F1F5F9;--mut:#94A3B8;--dim:#6B7280;--accent:#0066FF;--accent-soft:#338CFF;--ok:#21C45D}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Plus Jakarta Sans','Segoe UI',system-ui,sans-serif;background:var(--bg);color:var(--ink);
+line-height:1.7;-webkit-font-smoothing:antialiased;overflow-x:clip}
+.ov-grain{position:fixed;inset:0;pointer-events:none;z-index:1;opacity:.5}
+.wrap{max-width:840px;margin:0 auto;padding:0 22px;position:relative;z-index:2}
+h1,h2,h3,.site-name{font-family:'Space Grotesk','Plus Jakarta Sans',sans-serif;letter-spacing:-.01em}
+nav.top{position:sticky;top:0;z-index:50;background:rgba(10,14,41,.78);backdrop-filter:blur(16px);
+-webkit-backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
+nav.top .in{max-width:1080px;margin:0 auto;padding:14px 22px;display:flex;align-items:center;gap:22px;flex-wrap:wrap}
+.site-name{font-weight:700;font-size:1.05rem;color:var(--ink);text-decoration:none}
+.site-name span{color:var(--accent-soft)}
+nav.top a.lnk{color:var(--mut);text-decoration:none;font-size:.9rem}
+nav.top a.lnk:hover{color:var(--ink)}
+.hero{padding:76px 0 34px;background:radial-gradient(ellipse 60% 46% at 50% -8%,rgba(0,102,255,.16),transparent 70%),var(--bg)}
+.kicker{display:inline-block;font-size:.72rem;font-weight:700;letter-spacing:2.4px;text-transform:uppercase;
+color:var(--accent-soft);margin-bottom:14px}
+h1{font-size:clamp(1.75rem,4.2vw,2.6rem);line-height:1.16;max-width:22ch}
+.meta{color:var(--dim);font-size:.85rem;margin-top:14px}
+.meta b{color:var(--mut)}
+article{padding:18px 0 40px}
+h2{font-size:1.32rem;margin:38px 0 12px;color:var(--ink)}
+h3{font-size:1.05rem;margin:26px 0 8px}
+p{color:#C7D0DE;margin-bottom:14px;font-size:1.02rem}
+ul{margin:0 0 16px 22px;color:#C7D0DE}
+li{margin-bottom:8px}
+li::marker{color:var(--accent-soft)}
+a{color:var(--accent-soft)}
+blockquote{border-left:3px solid var(--accent);background:var(--card);border-radius:0 10px 10px 0;
+padding:16px 20px;margin:20px 0;color:var(--ink)}
+blockquote p{margin:0;color:var(--ink)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px 24px;margin:18px 0}
+.card b.t{display:block;font-family:'Space Grotesk',sans-serif;margin-bottom:6px}
+.btn{display:inline-block;background:var(--accent);color:#fff;font-weight:700;text-decoration:none;
+padding:13px 24px;border-radius:12px;margin:6px 10px 6px 0;font-size:.95rem}
+.btn:hover{background:#1A5AE0}
+.btn.ghost{background:transparent;border:1px solid var(--line);color:var(--ink)}
+.cta-box{margin:44px 0 8px;padding:28px;background:radial-gradient(ellipse 120% 140% at 0% 0%,rgba(0,102,255,.22),transparent 60%),var(--card);
+border:1px solid var(--line);border-radius:16px}
+.cta-box h2{margin:0 0 8px;font-size:1.2rem}
+.cta-box p{margin-bottom:14px}
+.faq h3{margin-bottom:4px}
+.faq p{margin-bottom:18px;color:var(--mut)}
+footer{border-top:1px solid var(--line);padding:30px 0 46px;margin-top:30px}
+footer p{font-size:.85rem;color:var(--dim)}
+footer a{margin-right:14px}
+.index-list{display:grid;gap:14px;margin-top:10px}
+.post-card{display:block;background:var(--card);border:1px solid var(--line);border-radius:14px;
+padding:22px 24px;text-decoration:none;transition:transform .25s ease,border-color .25s ease}
+.post-card:hover{transform:translateY(-3px);border-color:var(--accent)}
+.post-card .pc-k{font-size:.68rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--accent-soft)}
+.post-card b{display:block;font-family:'Space Grotesk',sans-serif;font-size:1.15rem;margin:8px 0 6px;color:var(--ink)}
+.post-card span{color:var(--mut);font-size:.9rem}</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "From spreadsheets to a system: the builder's project office", "description": "Builder OS: project milestones, unit inventory, broker attribution, WhatsApp buyer follow-ups and milestone-linked collections for real-estate offices.", "datePublished": "2026-09-26", "dateModified": "2026-09-26", "author": {"@type": "Organization", "@id": "https://somilsharma2000.github.io/beyond-pixells/#org", "name": "Beyond Pixells", "url": "https://somilsharma2000.github.io/beyond-pixells/"}, "publisher": {"@type": "Organization", "@id": "https://somilsharma2000.github.io/beyond-pixells/#org", "name": "Beyond Pixells", "url": "https://somilsharma2000.github.io/beyond-pixells/"}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://somilsharma2000.github.io/beyond-pixells/blog/builder-os-project-office.html"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Is Builder OS available?", "acceptedAnswer": {"@type": "Answer", "text": "It is in active development with a 90-day pilot programme for builders' offices — contact Beyond Pixells on WhatsApp to discuss the pilot."}}, {"@type": "Question", "name": "Does it handle RERA or tax filings?", "acceptedAnswer": {"@type": "Answer", "text": "No. Builder OS is a data and operations system. Legal, tax and RERA filings remain with the promoter's chartered accountant and counsel — the system keeps the records they need organised."}}, {"@type": "Question", "name": "Can it track brokers and payouts?", "acceptedAnswer": {"@type": "Answer", "text": "Yes — every lead has a source, broker payouts are attributable and pending payouts are visible."}}, {"@type": "Question", "name": "What is the pilot?", "acceptedAnswer": {"@type": "Answer", "text": "A 90-day programme where Beyond Pixells sets up Builder OS around your live projects — milestones, inventory, buyer follow-ups — and adapts it to how your office actually works."}}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Beyond Pixells", "item": "https://somilsharma2000.github.io/beyond-pixells/"}, {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://somilsharma2000.github.io/beyond-pixells/blog/"}, {"@type": "ListItem", "position": 3, "name": "From spreadsheets to a system: the builder's project office", "item": "https://somilsharma2000.github.io/beyond-pixells/blog/builder-os-project-office.html"}]}</script>
+</head>
+<body>
+<nav class="top"><div class="in">
+  <a class="site-name" href="https://somilsharma2000.github.io/beyond-pixells/">Beyond <span>Pixells</span></a>
+  <a class="lnk" href="https://somilsharma2000.github.io/gym-os/">Gym OS</a>
+  <a class="lnk" href="https://somilsharma2000.github.io/dentist-os-site/">Dentist OS</a>
+  <a class="lnk" href="https://somilsharma2000.github.io/builder-os-site/">Builder OS</a>
+  <a class="lnk" href="https://somilsharma2000.github.io/beyond-pixells/blog/">Blog</a>
+</div></nav>
+<header class="hero"><div class="wrap">
+  <span class="kicker">Builder OS · Product guide</span>
+  <h1>From spreadsheets to a system: the builder's project office</h1>
+  <p class="meta">By <b>Beyond Pixells</b> · 2026-09-26 · 5 min read</p>
+</div></header>
+<div class="wrap"><article>
+
+<p>A builder's office runs on relationships and spreadsheets — brokers who bring buyers, buyers who pay in slabs, projects that move through milestones. The spreadsheet holds it until the moment it matters: when someone asks a question it cannot answer.</p>
+
+<h2>Questions a spreadsheet cannot answer in time</h2>
+<ul>
+<li>Which units are unsold, held or booked — right now, not last Friday?</li>
+<li>Which buyer's milestone payment is due this week, and whose follow-up is late?</li>
+<li>Which broker brought which buyer, and what is owed to whom?</li>
+<li>Which project milestone is behind, and what does that mean for collections?</li>
+</ul>
+
+<h2>Builder OS: the project office as a system</h2>
+<p><a href="https://somilsharma2000.github.io/builder-os-site/">Builder OS</a> by <a href="https://somilsharma2000.github.io/beyond-pixells/">Beyond Pixells</a> turns the office into one running system:</p>
+<ul>
+<li><strong>Project milestones</strong> tracked per tower and phase, with status visible to the owner at a glance.</li>
+<li><strong>Inventory</strong> — every unit, its status, its price and its buyer, in one ledger instead of four files.</li>
+<li><strong>Buyer follow-ups</strong> with WhatsApp reminders, so a "will pay next week" becomes a dated next step, not a hope.</li>
+<li><strong>Milestone-linked collections</strong> — payment schedule slabs tied to construction progress, with dues surfaced automatically.</li>
+<li><strong>Broker management</strong> — source of every lead, payouts pending, all attributable.</li>
+</ul>
+<blockquote><p>In real estate, the money follows the milestone. When the milestone slips quietly, the money slips loudly, later.</p></blockquote>
+
+<h2>Built for builder offices, not enterprises</h2>
+<p>Builder OS is honest about scope: it is a data and operations system for the promoter's office — it does not do legal, tax or RERA filings, which stay with your chartered accountant and counsel. What it does do is make sure the office that feeds those professionals is never guessing.</p>
+
+<div class="faq"><h2>Frequently asked questions</h2>
+<h3>Is Builder OS available?</h3>
+<p>It is in active development with a 90-day pilot programme for builders' offices — contact Beyond Pixells on WhatsApp to discuss the pilot.</p>
+<h3>Does it handle RERA or tax filings?</h3>
+<p>No. Builder OS is a data and operations system. Legal, tax and RERA filings remain with the promoter's chartered accountant and counsel — the system keeps the records they need organised.</p>
+<h3>Can it track brokers and payouts?</h3>
+<p>Yes — every lead has a source, broker payouts are attributable and pending payouts are visible.</p>
+<h3>What is the pilot?</h3>
+<p>A 90-day programme where Beyond Pixells sets up Builder OS around your live projects — milestones, inventory, buyer follow-ups — and adapts it to how your office actually works.</p>
+
+</div>
+<div class="cta-box">
+  <h2>Put your project office on a system</h2>
+  <p>Talk to us about the 90-day Builder OS pilot for your projects.</p>
+  <a class="btn" href="https://wa.me/917737077479?text=Hi%20Beyond%20Pixells%2C%20I%20want%20the%2090-day%20Builder%20OS%20pilot">Chat on WhatsApp</a>
+  <a class="btn ghost" href="https://somilsharma2000.github.io/builder-os-site/">See Builder OS</a>
+</div>
+</article></div>
+<footer><div class="wrap">
+<p>
+<a href="https://somilsharma2000.github.io/beyond-pixells/">Beyond Pixells</a><a href="https://somilsharma2000.github.io/gym-os/">Gym OS</a><a href="https://somilsharma2000.github.io/dentist-os-site/">Dentist OS</a><a href="https://somilsharma2000.github.io/builder-os-site/">Builder OS</a><a href="https://somilsharma2000.github.io/beyond-pixells/blog/">Blog</a>
+</p>
+<p>Beyond Pixells builds operating systems for local businesses in India — websites, member portals, owner dashboards and WhatsApp automation. © 2026.</p>
+</div></footer>
+<script>const c=document.createElement("canvas");c.width=c.height=128;const x=c.getContext("2d");for(let i=0;i<900;i++){x.fillStyle="rgba(255,255,255,"+(Math.random()*0.028)+")";x.fillRect(Math.random()*128,Math.random()*128,1,1);}const g=document.createElement("div");g.className="ov-grain";g.style.cssText="background:url("+c.toDataURL()+")";document.body.prepend(g);</script>
+</body>
+</html>
