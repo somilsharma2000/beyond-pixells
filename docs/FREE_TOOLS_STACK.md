@@ -18,7 +18,7 @@
 | **Uptime Kuma** | All 10+ sites + lead API watched 24/7, WhatsApp alerts when anything breaks | Free, ~100MB RAM |
 | **n8n** | The automation brain — visual workflows: lead routing, notifications, syncs | Free self-hosted (Fair-code) |
 | **changedetection.io** | Detects if a client site's form or script breaks/changes — silent failure killer | Free, ~150MB |
-| **Upptime** | $0 public status page (status.beyondpixells future) via GitHub Actions | Free, zero server |
+| **Upptime** | ✅ **DEPLOYED 26 Sep 2026** — live at https://somilsharma2000.github.io/beyond-pixells-status/ (repo `beyond-pixells-status`) | Free, zero server |
 | **Healthchecks.io** | Dead-man switch: alerts if a daily job (backup, monitor) stops running | Free, ~100MB |
 | **Umami / Plausible** | Privacy-friendly analytics on every landing page, one dashboard | Free self-hosted |
 | **Listmonk** | Email nurture sequences for leads — our own free Mailchimp | Free, ~50MB |

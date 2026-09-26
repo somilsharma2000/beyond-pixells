@@ -1,0 +1,66 @@
+# Beyond Pixells — Free Stack Phase 1 (the watcher stack)
+# Runs on one cheap VPS (1GB RAM is enough; ~500MB used).
+# Part of docs/FREE_TOOLS_STACK.md blueprint. Brought up by ops/vps/setup.sh
+#   docker compose --env-file .env -f ops/vps/docker-compose.yml up -d
+#
+# NOTE: Upptime (public status page, 5-min checks) is ALREADY live at
+# https://somilsharma2000.github.io/beyond-pixells-status/ — it runs on
+# GitHub Actions, no VPS needed. This stack adds: rich internal monitoring
+# (Kuma), change detection on client sites, dead-man switches, and the
+# estate password vault.
+
+services:
+  uptime-kuma:
+    image: louislam/uptime-kuma:1
+    container_name: bp-uptime-kuma
+    restart: unless-stopped
+    ports:
+      - "${KUMA_PORT:-3001}:3001"
+    volumes:
+      - kuma-data:/data
+    environment:
+      TZ: Asia/Kolkata
+
+  changedetection:
+    image: dgtlmoon/changedetection.io:latest
+    container_name: bp-changedetection
+    restart: unless-stopped
+    ports:
+      - "${CHANGEDETECT_PORT:-5000}:5000"
+    volumes:
+      - changedetect-data:/datastore
+    environment:
+      TZ: Asia/Kolkata
+
+  healthchecks:
+    image: healthchecks/healthchecks:latest
+    container_name: bp-healthchecks
+    restart: unless-stopped
+    ports:
+      - "${HEALTHCHECKS_PORT:-8000}:8000"
+    environment:
+      SECRET_KEY: "${HEALTHCHECKS_SECRET_KEY:?set in .env}"
+      SITE_ROOT: "http://${VPS_IP:?set in .env}:${HEALTHCHECKS_PORT:-8000}"
+      SITE_NAME: "Beyond Pixells Healthchecks"
+      TZ: Asia/Kolkata
+    volumes:
+      - healthchecks-data:/data
+
+  vaultwarden:
+    image: vaultwarden/server:latest
+    container_name: bp-vaultwarden
+    restart: unless-stopped
+    ports:
+      - "${VAULTWARDEN_PORT:-8222}:80"
+    environment:
+      DOMAIN: "http://${VPS_IP:?set in .env}:${VAULTWARDEN_PORT:-8222}"
+      SIGNUPS_ALLOWED: "true"   # first admin signup; set to "false" after
+      TZ: Asia/Kolkata
+    volumes:
+      - vaultwarden-data:/data
+
+volumes:
+  kuma-data:
+  changedetect-data:
+  healthchecks-data:
+  vaultwarden-data:

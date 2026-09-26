@@ -123,6 +123,7 @@ Any site adds 2 lines and gets the whole system:
 | `DESIGN_LANGUAGE.md` | The complete UI/UX spec: tokens, motion, components, per-product flavors, a11y |
 | `SEO_GEO.md` | Head templates, JSON-LD blocks, GEO checklist for AI engines |
 | `FREE_TOOLS_STACK.md` | The free open-source tool catalog: 8 categories, deployment blueprint for the VPS |
+| `BACKEND_MAP.md` | Estate inventory: every repo, Base44 app, endpoint, lead flow, monitoring state |
 | `SOCIAL_SYSTEM.md` | 10 content formats, production pipeline, posting cadence |
 | `research/` | 15 research reports behind every decision (competitors, psychology, legal, survival, brand, dentist market, design, SEO/GEO, social) |
 
@@ -134,6 +135,7 @@ Any site adds 2 lines and gets the whole system:
 3. **Gym OS pricing** — ₹999/₹1,999 are research-recommended, Somil hasn't confirmed.
 4. **Safe Browsing review** — sponsored sites normalized; needs Search Console review request.
 5. **Custom domains** — everything still on github.io/base44.app subdomains.
+5b. ~~Free Stack Phase 1 monitoring~~ — Upptime LIVE 26 Sep 2026 (https://somilsharma2000.github.io/beyond-pixells-status/, 14 properties, 5-min checks). VPS watcher stack (Kuma, changedetection.io, Healthchecks, Vaultwarden) prepared in `ops/vps/` — runs when founder buys the VPS.
 6. **Legal** — playbooks are checklists, not reviewed by a CA/lawyer yet.
 7. ~~Dentist OS landing rebuild~~ — DONE 26 Sep 2026, live at https://somilsharma2000.github.io/dentist-os-site/ (pricing tiers on it are research-recommended, founder confirmation pending).
 
