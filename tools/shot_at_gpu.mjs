@@ -1,0 +1,11 @@
+import { chromium } from 'playwright';
+const [url, yStr, out] = process.argv.slice(2);
+const b = await chromium.launch({ args: ['--no-sandbox', '--enable-gpu-rasterization'] });
+const p = await (await b.newContext({ viewport: { width: 1400, height: 1100 } })).newPage();
+await p.goto(url, { waitUntil: 'domcontentloaded', timeout: 30000 });
+await p.waitForTimeout(4000);
+await p.evaluate((y) => { window.scrollTo(0, y); document.documentElement.style.scrollBehavior='auto'; }, parseInt(yStr));
+await p.waitForTimeout(1500);
+await p.screenshot({ path: out });
+console.log('captured at scroll', yStr, '->', out);
+await b.close();

@@ -1,0 +1,12 @@
+import { chromium } from 'playwright';
+const [url, yStr, out] = process.argv.slice(2);
+const b = await chromium.launch({ args: ['--disable-gpu', '--disable-dev-shm-usage', '--no-sandbox'] });
+const p = await (await b.newContext({ viewport: { width: 1400, height: 1100 } })).newPage();
+await p.goto(url, { waitUntil: 'domcontentloaded', timeout: 30000 });
+await p.waitForTimeout(4000);
+await p.evaluate((y) => document.body.scrollTo({ top: y, behavior: 'instant' }), parseInt(yStr));
+await p.waitForTimeout(1600);
+console.log('body.scrollTop =', await p.evaluate(() => document.body.scrollTop));
+await p.screenshot({ path: out });
+console.log('->', out);
+await b.close();

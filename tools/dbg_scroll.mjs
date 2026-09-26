@@ -1,0 +1,12 @@
+import { chromium } from 'playwright';
+const b = await chromium.launch({ args: ['--disable-gpu', '--disable-dev-shm-usage', '--no-sandbox'] });
+const p = await (await b.newContext({ viewport: { width: 1400, height: 1100 } })).newPage();
+await p.goto('https://somilsharma2000.github.io/gym-os/', { waitUntil: 'domcontentloaded', timeout: 30000 });
+await p.waitForTimeout(4000);
+await p.evaluate(() => window.scrollTo({ top: 1850, behavior: 'instant' }));
+await p.waitForTimeout(800);
+console.log('scrollY after instant:', await p.evaluate(() => window.scrollY));
+await p.waitForTimeout(1200);
+console.log('scrollY after wait:', await p.evaluate(() => window.scrollY));
+console.log('pageHeight:', await p.evaluate(() => document.body.scrollHeight));
+await b.close();

@@ -1,0 +1,12 @@
+import { chromium } from 'playwright';
+const [url, sel, out] = process.argv.slice(2);
+const b = await chromium.launch({ args: ['--disable-gpu', '--disable-dev-shm-usage', '--no-sandbox'] });
+const p = await (await b.newContext({ viewport: { width: 1400, height: 1100 } })).newPage();
+const errs=[]; p.on('pageerror', e=>errs.push(e.message));
+await p.goto(url, { waitUntil: 'domcontentloaded', timeout: 30000 });
+await p.waitForTimeout(4500);
+await p.evaluate((s) => { document.querySelector(s)?.scrollIntoView({block:'center'}); }, sel);
+await p.waitForTimeout(1500);
+await p.screenshot({ path: out });
+console.log('JS errors:', errs.length?errs:'none', '->', out);
+await b.close();
