@@ -41,7 +41,7 @@
           background: { color: 'transparent' },
           particles: {
             number: { value: 90 },
-            color: { value: ['#C4B5FD', '#A855F7', '#F5F3FF'] },
+            color: { value: ['#B5CAFD', '#5584F7', '#F3F6FF'] },
             opacity: { value: { min: 0.2, max: 0.9 }, animation: { enable: true, speed: 1.2, sync: false } },
             size: { value: { min: 0.4, max: 1.6 } },
             move: { enable: true, speed: 0.25, direction: 'none', random: true, outModes: { default: 'bounce' } },

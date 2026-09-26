@@ -9,13 +9,13 @@
    ===================================================================== */
 
 :root{
-  --ov-ink:#07070A;
-  --ov-ink2:#0B0A10;
-  --ov-violet-deep:#3B1470;
-  --ov-violet:#7C3AED;
-  --ov-violet-bright:#A855F7;
-  --ov-violet-glow:#C4B5FD;
-  --ov-sparkle:#F5F3FF;
+  --ov-ink:#07080A;
+  --ov-ink2:#0A0C10;
+  --ov-violet-deep:#142F70;
+  --ov-violet:#3A6EED;
+  --ov-violet-bright:#5584F7;
+  --ov-violet-glow:#B5CAFD;
+  --ov-sparkle:#F3F6FF;
 }
 
 /* ---- GRAIN — always-on procedural noise over the whole page ---- */
@@ -27,21 +27,19 @@
    strokes, crystal core, glossy droplets. Replaces the old SVG-line veins,
    CSS geode, and JS droplet scatter, which read as thin flat lines and
    never matched the founder's reference photo. */
-/* v6 OBSIDIAN GLOW (26 Sep 2026, founder-selected direction #1):
-   Research verdict from the top design-language study (Linear, Raycast,
-   Superlist, Vapi family): the canvas stays CALM and near-black; ONE
-   saturated violet glow field behind the headline + one quiet secondary
-   field. All richness is carried by the product UI (the Gym OS dashboard
-   mockup), glass panels and glow edges — not by texture imagery.
+/* v7 BLUE PIXEL OBSIDIAN (26 Sep 2026): v6 Obsidian Glow's calm near-black
+   canvas + ONE saturated glow field, recoloured to the founder's bp logo
+   palette — royal blue #1D4BC4 / navy #0A1C40. Violet retired estate-wide;
+   every property loading this file (CDN-shared) inherits the new palette.
    Measured benchmarks: Linear canvas avg (19,20,21), Raycast (59,25,32). */
 .ov-canvas{position:absolute;inset:0;z-index:0;pointer-events:none;
   /* founder pass 26 Sep: DARK IN ALL COLOURS — every glow halved, every
      tone pushed deeper. Benchmark target: Linear (19,20,21). */
   background:
-    radial-gradient(58% 46% at 50% -6%, rgba(76,29,149,.32), transparent 66%),
-    radial-gradient(30% 26% at 88% 22%, rgba(76,29,149,.12), transparent 68%),
-    radial-gradient(38% 32% at 6% 34%, rgba(35,12,66,.22), transparent 72%),
-    #05050A}
+    radial-gradient(58% 46% at 50% -6%, rgba(29,64,149,.32), transparent 66%),
+    radial-gradient(30% 26% at 88% 22%, rgba(29,64,149,.12), transparent 68%),
+    radial-gradient(38% 32% at 6% 34%, rgba(12,28,66,.22), transparent 72%),
+    #05060A}
 .ov-canvas::after{content:"";position:absolute;inset:0;
   /* only the section-transition fade; no text backing needed */
   background:linear-gradient(180deg,rgba(8,9,13,0) 88%,rgba(8,9,13,.65) 100%)}
@@ -49,5 +47,5 @@
 @media(max-width:760px){.ov-canvas{background-position:center 12%}}
 
 /* ---- Card + border overrides: violet-only, no warm tones ---- */
-.bcard::after{background:linear-gradient(90deg,transparent,rgba(196,181,253,.35),transparent) !important}
-.bcard:hover{border-color:rgba(168,85,247,.45) !important}
+.bcard::after{background:linear-gradient(90deg,transparent,rgba(181,202,253,.35),transparent) !important}
+.bcard:hover{border-color:rgba(85,132,247,.45) !important}
