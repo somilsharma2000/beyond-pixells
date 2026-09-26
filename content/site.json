@@ -1,0 +1,44 @@
+{
+  "_meta": {
+    "name": "Beyond Pixells site content layer",
+    "version": 1,
+    "updated": "2026-09-26",
+    "note": "Single source of truth for editable hub content + toggles. The Command Center (admin/) edits this file and deploys it via the GitHub Contents API. Pages apply these values at runtime; HTML keeps matching defaults for SEO/no-JS."
+  },
+  "hero": {
+    "pill": "Gym OS is live \u00b7 8 client systems running",
+    "headline": "We build operating systems for local businesses.",
+    "sub": "Websites, member portals, owner dashboards and WhatsApp automation \u2014 one system per business, built in India."
+  },
+  "cta": {
+    "primaryLabel": "Start a Project",
+    "waPrefill": "Hi Beyond Pixells! I want to talk about an OS for my business.",
+    "waNumber": "917737077479"
+  },
+  "contact": {
+    "email": "beyondpixells@gmail.com",
+    "phoneDisplay": "+91 77370 77479"
+  },
+  "footer": {
+    "blurb": "A modern product studio building operating systems, software and digital experiences for local businesses."
+  },
+  "features": {
+    "mobileCta": {
+      "enabled": true,
+      "head": "Start your project",
+      "sub": "WhatsApp \u00b7 free consult"
+    },
+    "blogNav": {
+      "enabled": true
+    },
+    "heroPill": {
+      "enabled": true
+    }
+  },
+  "theme": {
+    "accent": "#0066FF",
+    "accentSoft": "#338CFF",
+    "success": "#21C45D",
+    "radius": "12px"
+  }
+}

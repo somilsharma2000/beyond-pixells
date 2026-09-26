@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BP Command Center</title>
+<meta name="description" content="Beyond Pixells site control panel.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#0A0E29">
+<link rel="icon" href="../logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0A0E29;--card:#141833;--surf:#242842;--line:#272C49;--ink:#F1F5F9;--mut:#94A3B8;
+--dim:#64748B;--accent:#0066FF;--soft:#338CFF;--ok:#21C45D;--bad:#FF5F57;--warn:#F59A0A}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Plus Jakarta Sans',sans-serif;background:var(--bg);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased}
+h1,h2,h3,.brand{font-family:'Space Grotesk',sans-serif;letter-spacing:-.01em}
+.top{position:sticky;top:0;z-index:50;background:rgba(10,14,41,.85);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
+.top .in{max-width:1200px;margin:0 auto;padding:14px 22px;display:flex;align-items:center;gap:20px;flex-wrap:wrap}
+.brand{font-weight:700;font-size:1rem;text-decoration:none;color:var(--ink)}
+.brand em{color:var(--soft);font-style:normal}
+.tabs{display:flex;gap:6px;flex-wrap:wrap}
+.tabs button{background:transparent;border:1px solid transparent;color:var(--mut);font:inherit;font-size:.86rem;padding:8px 14px;border-radius:10px;cursor:pointer}
+.tabs button.on{color:var(--ink);background:var(--surf);border-color:var(--line)}
+.tabs button:hover{color:var(--ink)}
+.pill{font-size:.72rem;font-weight:700;letter-spacing:1px;color:var(--soft);border:1px solid rgba(0,102,255,.35);border-radius:100px;padding:4px 12px}
+main{max-width:1200px;margin:0 auto;padding:26px 22px 80px}
+.view{display:none}.view.on{display:block}
+h2{font-size:1.25rem;margin-bottom:4px}
+.lead{color:var(--mut);font-size:.92rem;margin-bottom:22px;max-width:760px}
+.grid{display:grid;gap:14px}
+.g2{grid-template-columns:repeat(auto-fit,minmax(340px,1fr))}
+.g3{grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px 22px}
+.card h3{font-size:.95rem;margin-bottom:10px}
+.card .k{font-size:.68rem;font-weight:700;letter-spacing:1.6px;text-transform:uppercase;color:var(--soft);display:block;margin-bottom:10px}
+label{display:block;font-size:.78rem;color:var(--mut);margin:12px 0 5px}
+input,textarea,select{width:100%;background:var(--surf);border:1px solid var(--line);color:var(--ink);
+font:inherit;font-size:.9rem;padding:10px 12px;border-radius:10px;outline:none}
+input:focus,textarea:focus{border-color:var(--accent)}
+input[type=color]{padding:4px;height:42px;cursor:pointer}
+.row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.btn{display:inline-flex;align-items:center;gap:8px;background:var(--accent);color:#fff;font-weight:700;
+font-size:.88rem;border:none;border-radius:11px;padding:11px 18px;cursor:pointer}
+.btn:hover{background:#1A5AE0}
+.btn.ghost{background:transparent;border:1px solid var(--line);color:var(--ink)}
+.btn.ok{background:var(--ok);color:#06120B}
+.btn:disabled{opacity:.5;cursor:not-allowed}
+.status{font-size:.8rem;margin-top:10px;padding:9px 12px;border-radius:9px;display:none}
+.status.ok{display:block;background:rgba(33,196,93,.12);color:#6EE7A0}
+.status.err{display:block;background:rgba(255,95,87,.12);color:#FF9C96}
+.status.warn{display:block;background:rgba(245,154,10,.12);color:#FBC75B}
+.stat{display:flex;flex-direction:column;gap:2px}
+.stat b{font-family:'Space Grotesk';font-size:1.5rem}
+.stat span{font-size:.76rem;color:var(--mut)}
+table{width:100%;border-collapse:collapse;font-size:.86rem}
+td,th{padding:9px 10px;border-bottom:1px solid var(--line);text-align:left}
+th{color:var(--mut);font-weight:600;font-size:.76rem;text-transform:uppercase;letter-spacing:1px}
+td .dot{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:8px}
+.dot.up{background:var(--ok);box-shadow:0 0 8px var(--ok)}
+.dot.down{background:var(--bad);box-shadow:0 0 8px var(--bad)}
+.dot.wait{background:var(--warn)}
+a{color:var(--soft)}
+.note{font-size:.76rem;color:var(--dim);margin-top:8px}
+.warnbox{background:rgba(245,154,10,.08);border:1px solid rgba(245,154,10,.3);border-radius:11px;padding:12px 16px;font-size:.8rem;color:#FBC75B;margin-bottom:18px}
+pre{background:var(--surf);border:1px solid var(--line);border-radius:10px;padding:14px;font-size:.76rem;overflow:auto;color:#C7D0DE;max-height:300px}
+.switch{position:relative;width:44px;height:24px;flex:none}
+.switch input{opacity:0;width:0;height:0}
+.switch i{position:absolute;inset:0;background:var(--surf);border:1px solid var(--line);border-radius:100px;cursor:pointer;transition:.2s}
+.switch i::after{content:"";position:absolute;top:3px;left:4px;width:16px;height:16px;border-radius:50%;background:var(--mut);transition:.2s}
+.switch input:checked + i{background:rgba(0,102,255,.35);border-color:var(--accent)}
+.switch input:checked + i::after{left:22px;background:#fff}
+.frow{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:10px 0;border-bottom:1px solid var(--line)}
+.frow:last-child{border-bottom:none}
+.frow div b{font-size:.88rem;display:block}
+.frow div span{font-size:.76rem;color:var(--mut)}
+.gate{position:fixed;inset:0;z-index:100;background:var(--bg);display:flex;align-items:center;justify-content:center;padding:20px}
+.gate .box{max-width:380px;width:100%}
+.hide{display:none!important}
+@media(max-width:640px){main{padding:18px 14px 80px}.top .in{padding:12px 14px}}
+</style>
+</head>
+<body>
+
+<div class="gate" id="gate">
+  <div class="box card">
+    <span class="k">Beyond Pixells · Restricted panel</span>
+    <h2 style="font-size:1.15rem">Command Center</h2>
+    <p class="note" style="margin:8px 0 16px">This page is client-side only. It holds no secrets; deploys use a GitHub token that stays in your browser. Enter your PIN to unlock.</p>
+    <label>PIN</label>
+    <input type="password" id="pinIn" placeholder="First visit? This sets your PIN" autocomplete="off">
+    <div class="row" style="margin-top:14px">
+      <button class="btn" onclick="unlock()">Unlock</button>
+      <button class="btn ghost" onclick="document.getElementById('gate').classList.add('hide');boot()">Skip (view-only)</button>
+    </div>
+    <div class="status" id="gateMsg"></div>
+  </div>
+</div>
+
+<header class="top"><div class="in">
+  <a class="brand" href="../index.html">Beyond <em>Pixells</em> · Command Center</a>
+  <nav class="tabs" id="tabs">
+    <button data-v="overview" class="on">Overview</button>
+    <button data-v="content">Content</button>
+    <button data-v="theme">Theme</button>
+    <button data-v="features">Features</button>
+    <button data-v="health">Health</button>
+    <button data-v="deploy">Deploy</button>
+  </nav>
+  <span class="pill" id="verPill">v1</span>
+</div></header>
+
+<main>
+<!-- OVERVIEW -->
+<section class="view on" id="v-overview">
+  <h2>Estate overview</h2>
+  <p class="lead">Everything Beyond Pixells runs, and its current state. Status pings run from your browser each time you open this tab.</p>
+  <div class="warnbox" id="dirtyBanner" style="display:none">You have unsaved changes — visit the Deploy tab to push them live.</div>
+  <div class="grid g3" style="margin-bottom:16px">
+    <div class="card stat"><b id="stTotal">–</b><span>properties in the estate</span></div>
+    <div class="card stat"><b id="stUp">–</b><span>responding right now</span></div>
+    <div class="card stat"><b id="stVer">–</b><span>content version deployed</span></div>
+  </div>
+  <div class="card">
+    <h3>Property status</h3>
+    <table id="estateTable"><thead><tr><th>Property</th><th>Status</th><th>Link</th></tr></thead><tbody></tbody></table>
+    <p class="note">Full uptime history: <a href="https://somilsharma2000.github.io/beyond-pixells-status/" target="_blank" rel="noopener">status page</a> (checked every 5 min).</p>
+  </div>
+</section>
+
+<!-- CONTENT -->
+<section class="view" id="v-content">
+  <h2>Content control</h2>
+  <p class="lead">Edit the live hub copy. Values deploy through <code>content/site.json</code>; the HTML keeps matching defaults so SEO and no-JS visitors always see real content. Never publish invented metrics or testimonials.</p>
+  <div class="grid g2">
+    <div class="card">
+      <span class="k">Hero</span>
+      <label>Pill text (leave empty to hide)</label><input data-f="hero.pill">
+      <label>Headline</label><textarea data-f="hero.headline" rows="2"></textarea>
+      <label>Sub-headline</label><textarea data-f="hero.sub" rows="3"></textarea>
+    </div>
+    <div class="card">
+      <span class="k">Primary CTA & contact</span>
+      <label>CTA label</label><input data-f="cta.primaryLabel">
+      <label>WhatsApp number (digits, country code, no +)</label><input data-f="cta.waNumber">
+      <label>WhatsApp pre-filled message</label><textarea data-f="cta.waPrefill" rows="2"></textarea>
+      <label>Email (shown in footer)</label><input data-f="contact.email">
+      <label>Phone display</label><input data-f="contact.phoneDisplay">
+    </div>
+    <div class="card" style="grid-column:1/-1">
+      <span class="k">Footer blurb</span>
+      <textarea data-f="footer.blurb" rows="2"></textarea>
+      <div class="row" style="margin-top:14px">
+        <button class="btn" onclick="saveDraft()">Save changes</button>
+        <button class="btn ghost" onclick="loadLive()">Reload live values</button>
+      </div>
+      <div class="status" id="contentMsg"></div>
+    </div>
+  </div>
+</section>
+
+<!-- THEME -->
+<section class="view" id="v-theme">
+  <h2>Theme control</h2>
+  <p class="lead">Guarded design tokens. The ONE DESIGN law is checked live: warm and violet hues are refused, contrast is verified before deploy.</p>
+  <div class="grid g2">
+    <div class="card">
+      <span class="k">Tokens</span>
+      <label>Primary accent</label><input type="color" data-f="theme.accent">
+      <label>Soft accent</label><input type="color" data-f="theme.accentSoft">
+      <label>Success green</label><input type="color" data-f="theme.success">
+      <label>Corner radius</label>
+      <select data-f="theme.radius"><option>8px</option><option>12px</option><option>16px</option><option>20px</option></select>
+      <div class="row" style="margin-top:14px">
+        <button class="btn" onclick="saveDraft()">Save changes</button>
+        <button class="btn ghost" onclick="checkTheme()">Run design-law check</button>
+      </div>
+      <div class="status" id="themeMsg"></div>
+    </div>
+    <div class="card">
+      <span class="k">Live preview</span>
+      <div id="themePrev" style="border-radius:14px;border:1px solid var(--line);padding:26px;background:#0A0E29">
+        <b style="font-family:'Space Grotesk';font-size:1.3rem;display:block">Operating systems for local businesses.</b>
+        <span style="color:#94A3B8;font-size:.85rem;display:block;margin:6px 0 14px">Preview updates as you pick colors.</span>
+        <span style="display:inline-block;background:var(--accent);color:#fff;font-weight:700;padding:11px 20px;border-radius:var(--radius,12px);font-size:.9rem">Primary button</span>
+        <span style="display:inline-block;margin-left:10px;background:var(--success);color:#06120B;font-weight:700;padding:11px 20px;border-radius:var(--radius,12px);font-size:.9rem">WhatsApp</span>
+      </div>
+      <p class="note">v7.2 defaults: accent #0066FF, soft #338CFF, success #21C45D, radius 12px.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section class="view" id="v-features">
+  <h2>Feature switches</h2>
+  <p class="lead">Turn site features on or off. Changes take effect on deploy; the site always falls back to safe defaults.</p>
+  <div class="card" style="max-width:640px">
+    <div class="frow"><div><b>Sticky mobile booking bar</b><span>One-tap WhatsApp CTA pinned to the bottom on phones</span></div>
+      <label class="switch"><input type="checkbox" data-f="features.mobileCta.enabled"><i></i></label></div>
+    <div class="frow"><div><b>Mobile bar heading</b><span>Shown on the sticky bar</span></div>
+      <input style="max-width:220px" data-f="features.mobileCta.head"></div>
+    <div class="frow"><div><b>Mobile bar subtext</b><span>Small line under the heading</span></div>
+      <input style="max-width:220px" data-f="features.mobileCta.sub"></div>
+    <div class="frow"><div><b>Blog link in nav</b><span>Blog entry point in the hub navigation</span></div>
+      <label class="switch"><input type="checkbox" data-f="features.blogNav.enabled"><i></i></label></div>
+    <div class="frow"><div><b>Hero status pill</b><span>"Gym OS is live" badge above the headline</span></div>
+      <label class="switch"><input type="checkbox" data-f="features.heroPill.enabled"><i></i></label></div>
+  </div>
+  <div class="row" style="margin-top:16px">
+    <button class="btn" onclick="saveDraft()">Save changes</button>
+  </div>
+  <div class="status" id="featMsg"></div>
+</section>
+
+<!-- HEALTH -->
+<section class="view" id="v-health">
+  <h2>Health checks</h2>
+  <p class="lead">Live checks from your browser. Cross-origin pages report liveness only (browsers hide status codes); same-origin pages get a deeper scan.</p>
+  <div class="row" style="margin-bottom:14px"><button class="btn" onclick="runHealth()">Run all checks</button></div>
+  <div class="card"><table id="healthTable"><thead><tr><th>Property</th><th>Reachable</th><th>Notes</th></tr></thead><tbody></tbody></table></div>
+  <div class="status" id="healthMsg"></div>
+</section>
+
+<!-- DEPLOY -->
+<section class="view" id="v-deploy">
+  <h2>Deploy console</h2>
+  <p class="lead">Push your saved changes to the live site. Deploys commit <code>content/site.json</code> via the GitHub Contents API — Pages rebuilds automatically within ~1 minute.</p>
+  <div class="grid g2">
+    <div class="card">
+      <span class="k">GitHub connection</span>
+      <label>Fine-grained PAT (contents: read+write on somilsharma2000/beyond-pixells only)</label>
+      <input type="password" id="pat" placeholder="github_pat_…">
+      <label class="row" style="margin-top:10px"><input type="checkbox" id="patRemember" style="width:auto"> <span style="margin:0">Remember in this browser (localStorage)</span></label>
+      <div class="row" style="margin-top:14px">
+        <button class="btn" onclick="deploy()">Deploy to live site</button>
+        <button class="btn ghost" onclick="copyCmds()">Copy git commands instead</button>
+      </div>
+      <div class="status" id="deployMsg"></div>
+      <p class="note">The token never leaves your browser and is never stored in the repo. Scope it to Contents read/write on this one repository, and set an expiry.</p>
+    </div>
+    <div class="card">
+      <span class="k">Change preview (site.json)</span>
+      <pre id="jsonPrev">loading…</pre>
+      <p class="note">Diff against live: <span id="diffCount">0</span> field(s) changed.</p>
+    </div>
+  </div>
+</section>
+</main>
+
+<script>
+/* ============ BP Command Center — client-side admin for a static estate ============
+   No secrets in the repo. PAT (if used) lives in localStorage only, and deploys
+   only touch content/site.json on somilsharma2000/beyond-pixells. */
+const LS_DRAFT = "bpcc.draft", LS_PIN = "bpcc.pin", LS_PAT = "bpcc.pat";
+const REPO = "somilsharma2000/beyond-pixells";
+const RAW = "https://somilsharma2000.github.io/beyond-pixells/content/site.json";
+const ESTATE = [
+  ["Beyond Pixells (hub)", "https://somilsharma2000.github.io/beyond-pixells/"],
+  ["Gym OS", "https://somilsharma2000.github.io/gym-os/"],
+  ["Dentist OS", "https://somilsharma2000.github.io/dentist-os-site/"],
+  ["Dentist OS demo app", "https://somilsharma2000.github.io/dentist-os/"],
+  ["Builder OS", "https://somilsharma2000.github.io/builder-os-site/"],
+  ["Blog", "https://somilsharma2000.github.io/beyond-pixells/blog/"],
+  ["Status page", "https://somilsharma2000.github.io/beyond-pixells-status/"],
+];
+let live = null, draft = null;
+
+const $ = (s) => document.querySelector(s);
+const $$ = (s) => [...document.querySelectorAll(s)];
+const get = (o, p) => p.split(".").reduce((a,k)=>a?.[k], o);
+const set = (o, p, v) => { const ks = p.split("."); let t = o; for (let i=0;i<ks.length-1;i++) t = t[ks[i]]; t[ks.at(-1)] = v; };
+const msg = (id, txt, cls) => { const el = $("#"+id); el.textContent = txt; el.className = "status "+cls; };
+
+/* ---------- gate ---------- */
+function unlock(){
+  const p = $("#pinIn").value, saved = localStorage.getItem(LS_PIN);
+  if (!saved) { if (p.length < 4) return msg("gateMsg","PIN must be at least 4 characters","err");
+    localStorage.setItem(LS_PIN, btoa(p)); $("#gate").classList.add("hide"); boot(); return; }
+  if (btoa(p) === saved) { $("#gate").classList.add("hide"); boot(); }
+  else msg("gateMsg","Wrong PIN","err");
+}
+$("#pinIn").addEventListener("keydown", e => { if (e.key === "Enter") unlock(); });
+
+/* ---------- data ---------- */
+async function fetchLive(){
+  for (const u of [RAW + "?t=" + Date.now(), "../content/site.json?t=" + Date.now()]){
+    const r = await fetch(u);
+    if (r.ok) return r.json();
+  }
+  throw new Error("site.json unreachable");
+}
+function hydrate(){
+  $$("[data-f]").forEach(el => {
+    const f = el.dataset.f, v = get(draft, f);
+    if (el.type === "checkbox") el.checked = !!v; else el.value = v ?? "";
+    el.addEventListener(el.type === "color" ? "input" : "input", () => {
+      set(draft, f, el.type === "checkbox" ? el.checked : el.value);
+      dirty(true);
+      if (f.startsWith("theme.")) previewTheme();
+      if (f.startsWith("features.")) previewTheme();
+      refreshJson();
+    });
+  });
+  previewTheme(); refreshJson();
+  $("#stVer").textContent = "v" + (draft._meta?.version ?? 1);
+  $("#verPill").textContent = "v" + (draft._meta?.version ?? 1);
+}
+function dirty(on){ $("#dirtyBanner").style.display = on ? "block" : "none"; }
+async function loadLive(){ try { live = await fetchLive(); draft = JSON.parse(JSON.stringify(live)); hydrate(); dirty(false); msg("contentMsg","Live values loaded","ok"); } catch(e){ msg("contentMsg","Could not load live site.json","err"); } }
+function saveDraft(){ localStorage.setItem(LS_DRAFT, JSON.stringify(draft)); dirty(true);
+  msg("contentMsg","Saved locally. Deploy to push live.","ok"); refreshJson(); }
+function refreshJson(){ $("#jsonPrev").textContent = JSON.stringify(draft, null, 2);
+  let n = 0; (function cmp(a,b){ for (const k in a){ if (typeof a[k] === "object" && a[k] && !Array.isArray(a[k])) cmp(a[k], b?.[k]); else if (a[k] !== b?.[k]) n++; } })(draft, live);
+  $("#diffCount").textContent = n; }
+
+/* ---------- theme guard ---------- */
+function hexHue(h){ const n = parseInt(h.slice(1),16), r=((n>>16)&255)/255,g=((n>>8)&255)/255,b=(n&255)/255;
+  const mx=Math.max(r,g,b),mn=Math.min(r,g,b),d=mx-mn; if(!d) return [0,0];
+  let t = mx===r?((g-b)/d)%6 : mx===g?(b-r)/d+2 : (r-g)/d+4; return [((t*60)+360)%360, mx]; }
+function checkTheme(){
+  const [ah] = hexHue(draft.theme.accent), [sh] = hexHue(draft.theme.accentSoft), [gh] = hexHue(draft.theme.success);
+  const bad = [];
+  for (const [h,n] of [[ah,"accent"],[sh,"soft accent"]]) if (!(h >= 200 && h <= 250)) bad.push(n + " off-law (hue " + Math.round(h) + "° — ONE DESIGN allows only 200–250° blue)");
+  if (!(gh >= 95 && gh <= 160)) bad.push("success green off-law (hue " + Math.round(gh) + "° — must be green)");
+  if (bad.length) return msg("themeMsg", bad.join(" · "), "err");
+  msg("themeMsg","Design law check passed: hues within ONE DESIGN law.", "ok");
+}
+function previewTheme(){
+  const r = document.documentElement.style;
+  r.setProperty("--accent", draft.theme.accent); r.setProperty("--soft", draft.theme.accentSoft);
+  r.setProperty("--ok", draft.theme.success); r.setProperty("--radius", draft.theme.radius);
+  $("#themePrev").style.setProperty("--accent", draft.theme.accent);
+  $("#themePrev").style.setProperty("--success", draft.theme.success);
+  $("#themePrev").style.setProperty("--radius", draft.theme.radius);
+}
+
+/* ---------- health ---------- */
+async function ping(url){
+  try { await fetch(url, {mode:"no-cors", cache:"no-store"}); return true; } catch(e){ return false; }
+}
+async function runHealth(){
+  const tb = $("#healthTable tbody"); tb.innerHTML = "";
+  msg("healthMsg","Running checks…","warn");
+  let up = 0;
+  for (const [name,url] of ESTATE){
+    const ok = await ping(url); if (ok) up++;
+    tb.insertAdjacentHTML("beforeend", `<tr><td>${name}</td><td><span class="dot ${ok?"up":"down"}"></span>${ok?"reachable":"no response"}</td><td><a href="${url}" target="_blank" rel="noopener">open</a></td></tr>`);
+  }
+  msg("healthMsg", `${up}/${ESTATE.length} properties reachable from this browser.`, up === ESTATE.length ? "ok" : "err");
+}
+
+/* ---------- deploy ---------- */
+function pat(){ const t = $("#pat").value.trim(); if ($("#patRemember").checked && t) localStorage.setItem(LS_PAT, t); return t || localStorage.getItem(LS_PAT) || ""; }
+async function deploy(){
+  checkTheme();
+  const token = pat();
+  if (!token) return msg("deployMsg","Enter a GitHub token (contents: read+write on beyond-pixells) or use the git commands.","warn");
+  msg("deployMsg","Deploying…","warn");
+  try {
+    const api = "https://api.github.com/repos/" + REPO + "/contents/content/site.json";
+    const cur = await fetch(api, {headers:{Authorization:"Bearer "+token, Accept:"application/vnd.github+json"}}).then(r=>{ if(!r.ok) throw new Error("token rejected ("+r.status+") — check scopes"); return r.json(); });
+    const body = { message: "content: command center update", content: btoa(unescape(encodeURIComponent(JSON.stringify(draft, null, 2)))), sha: cur.sha };
+    const res = await fetch(api, {method:"PUT", headers:{Authorization:"Bearer "+token, Accept:"application/vnd.github+json"}, body: JSON.stringify(body)});
+    if (!res.ok) throw new Error("commit failed ("+res.status+")");
+    const j = await res.json();
+    live = JSON.parse(JSON.stringify(draft));
+    live._meta.version = (live._meta.version||1) + 1; draft = JSON.parse(JSON.stringify(live));
+    hydrate(); dirty(false);
+    msg("deployMsg","Deployed ✓ commit " + j.commit.sha.slice(0,7) + ". Pages rebuilds in ~1 min.", "ok");
+  } catch(e){ msg("deployMsg", e.message, "err"); }
+}
+function copyCmds(){
+  const t = JSON.stringify(draft, null, 2);
+  navigator.clipboard.writeText(t).then(() => msg("deployMsg","site.json copied. Paste it into content/site.json, then commit and push.","ok"));
+}
+
+/* ---------- overview ---------- */
+async function fillOverview(){
+  const tb = $("#estateTable tbody"); tb.innerHTML = ""; let up = 0;
+  for (const [name,url] of ESTATE){
+    tb.insertAdjacentHTML("beforeend", `<tr><td>${name}</td><td><span class="dot wait"></span>checking…</td><td><a href="${url}" target="_blank" rel="noopener">open</a></td></tr>`);
+  }
+  $("#stTotal").textContent = ESTATE.length;
+  $("#stUp").textContent = "…";
+  const rows = [...tb.querySelectorAll("tr")];
+  await Promise.all(ESTATE.map(async ([name,url], i) => {
+    const ok = await ping(url); if (ok) up++;
+    const dot = rows[i].querySelector(".dot");
+    dot.className = "dot " + (ok ? "up" : "down");
+    dot.parentElement.innerHTML = `<span class="dot ${ok?"up":"down"}"></span>${ok?"live":"down"}`;
+  }));
+  $("#stUp").textContent = up;
+}
+
+/* ---------- boot ---------- */
+function boot(){
+  live = null; const saved = localStorage.getItem(LS_DRAFT);
+  fetchLive().then(l => { live = l; draft = saved ? JSON.parse(saved) : JSON.parse(JSON.stringify(live)); hydrate(); dirty(!!saved); fillOverview(); })
+    .catch(() => { draft = {}; msg("contentMsg","Offline — could not load live content","err"); });
+  const t = localStorage.getItem(LS_PAT); if (t) { $("#pat").value = t; $("#patRemember").checked = true; }
+  runHealth();
+}
+$$(".tabs button").forEach(b => b.addEventListener("click", () => {
+  $$(".tabs button").forEach(x => x.classList.remove("on")); b.classList.add("on");
+  $$(".view").forEach(v => v.classList.remove("on")); $("#v-" + b.dataset.v).classList.add("on");
+}));
+if (!localStorage.getItem(LS_PIN)) { $("#pinIn").placeholder = "Choose a 4+ character PIN"; }
+</script>
+</body>
+</html>

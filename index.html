@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Beyond Pixells — We Build Operating Systems for Local Businesses</title>
+<title>Beyond Pixells | OS for Local Businesses in India</title>
 <meta name="description" content="Beyond Pixells builds operating systems for local businesses — Gym OS, Dentist OS, Builder OS — plus custom software, websites and marketing automation.">
 <meta property="og:title" content="Beyond Pixells — Product Studio for Local Business">
 <meta property="og:description" content="We build operating systems for local businesses. Gym OS. Dentist OS. Builder OS. Custom software, websites and automation.">
@@ -268,7 +268,7 @@ footer .brand{color:#fff}
       <li><a href="#start">Start a Project</a></li>
       <li><a href="#proof">Work</a></li>
       <li><a href="#process">Process</a></li>
-      <li><a href="blog/">Blog</a></li>
+      <li data-bp="blognav"><a href="blog/">Blog</a></li>
       <li><a href="terms-of-service.html">Legal</a></li>
       <li><a class="btn btn-accent btn-sm" href="#contact">Start a Project</a></li>
     </ul>
@@ -278,9 +278,9 @@ footer .brand{color:#fff}
 <header data-bp-meteors="5" class="hero" id="top">
   <div class="ov-canvas" aria-hidden="true"></div>
   <div class="container">
-    <div class="pill bp-hero-step" style="--bp-hero-delay:0ms"><span class="dot"></span>Gym OS is live &middot; 8 client systems running</div>
-    <h1 class="bp-hero-step" style="--bp-hero-delay:100ms">We build operating systems for <span class="hl">local businesses.</span></h1>
-    <p class="bp-hero-step" style="--bp-hero-delay:220ms">Beyond Pixells is a modern product studio. We craft sector-specific software platforms — plus websites, marketing automation and digital products — that turn local operations into automated market leaders.</p>
+    <div class="pill bp-hero-step" id="bp-pill" style="--bp-hero-delay:0ms"><span class="dot"></span>Gym OS is live &middot; 8 client systems running</div>
+    <h1 class="bp-hero-step" id="bp-headline" style="--bp-hero-delay:100ms">We build operating systems for <span class="hl">local businesses.</span></h1>
+    <p class="bp-hero-step" id="bp-sub" style="--bp-hero-delay:220ms">Beyond Pixells is a modern product studio. We craft sector-specific software platforms — plus websites, marketing automation and digital products — that turn local operations into automated market leaders.</p>
     <div class="ctas bp-hero-step" style="--bp-hero-delay:340ms">
       <a class="btn btn-primary bp-magnetic-btn" href="#products">Explore the OS Family</a>
       <a class="btn btn-ghost bp-magnetic-btn" href="#contact">Book a Studio Call</a>
@@ -522,7 +522,7 @@ footer .brand{color:#fff}
     <div class="f-grid">
       <div class="f-col">
         <a class="brand" href="#top"><img src="logo.png" alt="Beyond Pixells">Beyond Pixells</a>
-        <p>A modern product studio building operating systems, software and digital experiences for local businesses.</p>
+        <p id="bp-blurb">A modern product studio building operating systems, software and digital experiences for local businesses.</p>
       </div>
       <div class="f-col"><b>Products</b>
         <a href="https://somilsharma2000.github.io/gym-os/">Gym OS</a>
@@ -685,11 +685,65 @@ footer{box-shadow:inset 0 1px 0 rgba(255,255,255,.04)}
 </style>
 <script src="assets/bp-effects-kit.js"></script>
 <script src="assets/bp-obsidian-veins.js"></script>
-<div class="bp-mobile-cta" role="complementary" aria-label="Book a demo">
+<div class="bp-mobile-cta" id="bp-mcta" role="complementary" aria-label="Book a demo">
   <div class="bp-mobile-cta-in">
-    <div class="bp-mct-copy"><b>Start your project</b><span>WhatsApp · free consult</span></div>
+    <div class="bp-mct-copy"><b id="bp-mct-head">Start your project</b><span id="bp-mct-sub">WhatsApp · free consult</span></div>
     <a class="bp-mct-btn" href="https://wa.me/917737077479?text=Hi%20Beyond%20Pixells!%20I%20want%20to%20talk%20about%20an%20OS%20for%20my%20business.">Chat now</a>
   </div>
 </div>
+
+<script>
+/* BP content layer: applies content/site.json overrides (edited via admin/). HTML keeps matching defaults. */
+(function(){
+  fetch('content/site.json').then(r=>r.ok?r.json():null).then(function(c){
+    if(!c) return;
+    try{
+      var wa = c.cta && c.cta.waNumber ? c.cta.waNumber : '917737077479';
+      if(c.hero){
+        var p=document.getElementById('bp-pill');
+        if(p){ if(c.features && c.features.heroPill && c.features.heroPill.enabled===false){ p.style.display='none'; }
+               else if(c.hero.pill!=null){ p.innerHTML='<span class="dot"></span>'+c.hero.pill; } }
+        var h=document.getElementById('bp-headline');
+        if(h && c.hero.headline){ var hl = c.hero.headline; var m = hl.match(/(.*?)( local businesses\.|\.|$)/);
+          if(m && /local businesses/.test(hl)) h.innerHTML = m[1]+' <span class="hl">local businesses.</span>'; else h.textContent = hl; }
+        var sub=document.getElementById('bp-sub'); if(sub && c.hero.sub) sub.textContent = c.hero.sub;
+      }
+      if(c.cta){
+        document.querySelectorAll('a[href*="wa.me/917737077479"]').forEach(function(a){
+          if(a.id==='bp-mct-btn'||a.classList.contains('bp-mct-btn')||/wa\.me\/917737077479/.test(a.getAttribute('href'))){
+            a.href='https://wa.me/'+wa+'?text='+encodeURIComponent(c.cta.waPrefill||'Hi Beyond Pixells!');
+          }
+        });
+        var btn=document.querySelector('.hero .btn-accent.bp-magnetic-btn');
+        if(btn && c.cta.primaryLabel) btn.textContent = c.cta.primaryLabel;
+      }
+      if(c.contact && c.contact.email){
+        document.querySelectorAll('a[href^="mailto:"]').forEach(function(a){ a.href='mailto:'+c.contact.email; a.textContent=c.contact.email; });
+      }
+      if(c.footer && c.footer.blurb){ var b=document.getElementById('bp-blurb'); if(b) b.textContent=c.footer.blurb; }
+      if(c.features){
+        if(c.features.blogNav && c.features.blogNav.enabled===false){
+          document.querySelectorAll('[data-bp="blognav"]').forEach(function(el){el.style.display='none';});
+        }
+        var mc=document.getElementById('bp-mcta');
+        if(mc){
+          if(c.features.mobileCta){
+            if(c.features.mobileCta.enabled===false) mc.style.display='none';
+            var mh=document.getElementById('bp-mct-head'), ms=document.getElementById('bp-mct-sub');
+            if(mh&&c.features.mobileCta.head) mh.textContent=c.features.mobileCta.head;
+            if(ms&&c.features.mobileCta.sub) ms.textContent=c.features.mobileCta.sub;
+          }
+        }
+      }
+      if(c.theme){
+        var r=document.documentElement.style;
+        var t=c.theme;
+        if(t.accent) { r.setProperty('--accent',t.accent); r.setProperty('--accent-soft',t.accentSoft||t.accent); }
+        if(t.success) r.setProperty('--ok',t.success);
+      }
+    }catch(e){ /* content layer never breaks the page */ }
+  });
+})();
+</script>
 </body>
 </html>

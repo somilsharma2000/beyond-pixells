@@ -1,0 +1,10 @@
+import { chromium } from 'playwright';
+const browser = await chromium.launch({args:['--disable-gpu','--disable-dev-shm-usage']});
+const ad = await browser.newPage();
+ad.on('pageerror', e => console.log('PAGEERROR:', e.message));
+ad.on('console', m => { if (m.type()==='error') console.log('CONSOLE:', m.text().slice(0,150)); });
+await ad.goto('http://localhost:8123/admin/', {waitUntil:'networkidle'});
+await ad.click('text=Skip');
+await ad.waitForTimeout(2000);
+console.log('jsonPrev:', await ad.evaluate(() => document.getElementById('jsonPrev')?.textContent.slice(0,60)));
+await browser.close();
