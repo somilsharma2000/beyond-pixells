@@ -43,6 +43,7 @@ $$\text{Idea} \longrightarrow \text{Research} \longrightarrow \text{Validation} 
 | **Digital V-Card & NFC** | Digital business cards with link/QR/NFC sharing for professionals. | `idea-db.md` §15, saasyaari.ai demand signal | `idea` | **Idea** |
 | **AI Reviews & GMB Automation** | Review request automation, AI replies, and Google Business Profile management for local businesses. | `idea-db.md` §16, saasyaari.ai demand signal | `idea` | **Idea** |
 | **QR Loyalty & Rewards** | Digital stamp cards and loyalty programs for repeat-visit businesses. | `idea-db.md` §17, saasyaari.ai demand signal | `idea` | **Idea** |
+| **Gym Setup & Equipment Partner Channel** | Referral channel: gym setup companies and equipment manufacturers refer Gym OS to new gyms for a commission; we build everything digital. | `idea-db.md` §18, founder directive 27 Sep 2026 | `validation` | **Validation** |
 
 ---
 
@@ -165,3 +166,10 @@ $$\text{Idea} \longrightarrow \text{Research} \longrightarrow \text{Validation} 
 > is the brand architecture (endorsed hybrid, OS family) and a DPDP necessity
 > (processor contracts, Sec 8(2)); renting tech we can build in weeks would add
 > an unkillable dependency for commodity features.
+
+### 18. Gym Setup & Equipment Partner Channel
+- **One-Line Pitch:** Gym setup companies and equipment manufacturers earn a commission for referring Gym OS to the gyms they build out; Beyond Pixells builds everything digital the gym needs (website, member portal, WhatsApp automation, QR check-in, UPI billing, lead CRM).
+- **Why It's on the Radar:** Founder directive 27 Sep 2026 — actively pursuing this channel. Setup companies are present at the exact moment a gym is born (before it needs software), making them a natural distribution partner.
+- **Possible Shape:** Commission per closed deal (structure being proposed — see partner one-pager in `content/brochures/`); partner obligations are intros only; we handle demo, build, and support.
+- **Status:** `validation` | **Pipeline Stage:** **Validation** (partner one-pager drafted; commission structure proposed pending founder approval; first real partner conversations will validate).
+- **Depends On:** Gym OS (§1) — the product being referred.

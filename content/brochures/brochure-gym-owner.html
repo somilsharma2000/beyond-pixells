@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gym OS — Gym Owner Brochure | Beyond Pixells</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--canvas:#0A0E29;--surface:#141833;--surface2:#242842;--border:#272C49;--accent:#0066FF;--text:#F1F5F9;--muted:#94A3B8;--green:#21C45D}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#05070f;font-family:'Plus Jakarta Sans',sans-serif;color:var(--text)}
+.page{width:210mm;min-height:297mm;margin:10mm auto;background:var(--canvas);padding:16mm 15mm;position:relative;overflow:hidden;background-image:radial-gradient(700px 400px at 85% -5%,#10173a 0%,transparent 60%),radial-gradient(500px 300px at -10% 105%,#0e1636 0%,transparent 55%)}
+.brand{display:flex;align-items:center;gap:10px;font-family:'Space Grotesk';font-weight:700;font-size:15px}
+.brand b{color:var(--accent)}
+.brand .mono{margin-left:auto;font-size:9px;color:var(--muted);letter-spacing:.14em;font-weight:600}
+.pill{display:inline-flex;align-items:center;gap:6px;font-size:10px;font-weight:600;color:var(--green);border:1px solid #1d4d33;background:#0c1b16;border-radius:99px;padding:4px 12px;margin:14px 0 10px}
+h1{font-family:'Space Grotesk';font-size:37px;line-height:1.08;font-weight:700;letter-spacing:-.01em}
+h1 em{font-style:normal;color:var(--accent)}
+.sub{color:var(--muted);font-size:12.5px;line-height:1.6;margin:10px 0 0;max-width:150mm}
+.feat{display:grid;grid-template-columns:1fr 1fr;gap:4mm 8mm;margin:9mm 0 0}
+.f{background:var(--surface);border:1px solid var(--border);border-radius:4mm;padding:5mm 6mm}
+.f b{display:block;font-size:11.5px;font-weight:700;margin-bottom:1.5mm}
+.f b i{font-style:normal;color:var(--accent)}
+.f p{font-size:10px;color:var(--muted);line-height:1.5}
+.check{background:var(--surface);border:1px solid var(--border);border-radius:4mm;padding:6mm 7mm;margin-top:8mm}
+.check h2{font-family:'Space Grotesk';font-size:15px;margin-bottom:4mm}
+.check ul{list-style:none;columns:2;column-gap:8mm}
+.check li{font-size:10.5px;padding:1.6mm 0;color:var(--text);break-inside:avoid;display:flex;gap:7px}
+.check li::before{content:"✓";color:var(--green);font-weight:800}
+.mock{width:100%;border-radius:5mm;border:1px solid var(--border);margin-top:8mm;display:block}
+.price{display:flex;gap:6mm;margin-top:8mm}
+.pc{flex:1.35;background:var(--surface);border:1px solid var(--border);border-radius:4mm;padding:5mm 6mm}
+.pc small{font-size:9px;color:var(--muted);letter-spacing:.12em;font-weight:700}
+.pc b{display:block;font-family:'Space Grotesk';font-size:22px;margin:2mm 0}
+.pc span{font-size:9.5px;color:var(--muted);line-height:1.5;display:block}
+.pc.hl{border-color:var(--accent);background:linear-gradient(160deg,#10173a,#0d1533)}
+.cta{margin-top:8mm;background:linear-gradient(140deg,#0d2a5e,#0A0E29);border:1px solid #1d4bc4;border-radius:5mm;padding:7mm 8mm;display:flex;align-items:center;gap:8mm}
+.cta h3{font-family:'Space Grotesk';font-size:16px}
+.cta p{font-size:10px;color:var(--muted);margin-top:1.5mm}
+.cta .btn{margin-left:auto;background:var(--accent);color:#fff;font-weight:700;font-size:12px;padding:4mm 6mm;border-radius:3mm;white-space:nowrap}
+.foot{position:absolute;left:15mm;right:15mm;bottom:10mm;font-size:8.5px;color:#64748b;border-top:1px solid var(--border);padding-top:3mm;display:flex;justify-content:space-between}
+.p2 .gyms{font-size:10.5px;color:var(--muted);margin-top:3mm;line-height:1.6}
+@media print{body{background:none}.page{margin:0;border-radius:0}}
+</style></head><body>
+<div class="page">
+  <div class="brand">Beyond <b>Pixells</b> <span class="mono">GYM OS · GYM OWNER BROCHURE</span></div>
+  <div class="pill">● Live in 8 gyms across India</div>
+  <h1>Stop chasing renewals.<br>Run your entire gym on <em>WhatsApp.</em></h1>
+  <p class="sub">The complete operating system for Indian gym owners — automated WhatsApp renewal reminders, 1-second QR check-ins, instant UPI payment collection, lead CRM and a branded website. Flat monthly pricing. Unlimited members.</p>
+  <img class="mock" src="mockup-owner-dashboard.png" alt="Gym OS owner dashboard">
+  <div class="cta"><div><h3>See it running in a real gym.</h3><p>Free 15-minute live demo on WhatsApp — we'll show your gym's own numbers in the dashboard.</p></div><span class="btn">WhatsApp: +91 77370 77479</span></div>
+</div>
+<div class="page p2">
+  <div class="brand">Beyond <b>Pixells</b> <span class="mono">PAGE 2 / 2</span></div>
+  <h1 style="font-size:22px;margin-top:8mm">Everything your gym needs. One system.</h1>
+  <div class="feat">
+    <div class="f"><b><i>Fees stuck?</i> Automated WhatsApp collections</b><p>Renewal alerts with instant UPI payment links, sent 3 days before expiry. No awkward calls.</p></div>
+    <div class="f"><b><i>Leads lost?</i> One unified lead CRM</b><p>Website, WhatsApp and walk-in enquiries in one pipeline with automated follow-ups.</p></div>
+    <div class="f"><b><i>No app downloads?</i> WhatsApp-first members</b><p>Digital passes, class bookings and receipts delivered inside WhatsApp — nothing to install.</p></div>
+    <div class="f"><b><i>Desk queues?</i> 1-second QR check-in</b><p>Scan and in. Real-time attendance, streaks and daily headcount — no paper register.</p></div>
+    <div class="f"><b><i>Silent churn?</i> At-risk member alerts</b><p>Attendance tracking flags inactive members early so staff can re-engage before expiry.</p></div>
+    <div class="f"><b><i>Multi-branch?</i> One owner dashboard</b><p>Live collections, attendance and renewal pipelines for every location — from your phone.</p></div>
+  </div>
+  <div class="check"><h2>What you get</h2><ul>
+    <li>Branded gym website &amp; member portal</li><li>WhatsApp automation suite</li><li>UPI collection &amp; auto-renewal links</li><li>QR check-in &amp; attendance tracking</li><li>Lead CRM &amp; trial pass management</li><li>Owner dashboard &amp; AI insights</li><li>Classes &amp; slot booking engine</li><li>Member loyalty points &amp; tiers</li><li>Trainer &amp; staff management</li><li>Multi-branch support</li>
+  </ul></div>
+  <div class="price">
+    <div class="pc hl"><small>FLAT MONTHLY PRICING</small><b>From ₹999/month</b><span>Unlimited members. No per-member fees ever. +18% GST. One-time setup separate — covers site build, member import &amp; staff training.</span></div>
+    <div class="pc"><small>PRO TIER</small><b>₹1,999/month</b><span>Everything in Starter plus multi-branch, advanced reports and priority automation tuning.</span></div>
+  </div>
+  <p class="gyms"><b>Running live in:</b> Bettabodies · Red's Gym · Flex N Tone · Fight Factory Manchester · Oxigen Fitness Jaipur · IronForge Bengaluru · Iron Forge Hyderabad · PowerHouse Hyderabad</p>
+  <div class="foot"><span> beyondpixells · Gym OS — operating system for Indian gyms</span><span>Book your free demo → WhatsApp +91 77370 77479</span></div>
+</div>
+</body></html>
