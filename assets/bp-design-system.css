@@ -42,8 +42,8 @@
   --bp-gloss-top:linear-gradient(180deg,rgba(255,255,255,.09),rgba(255,255,255,0) 42%);
 
   /* TYPE */
-  --bp-font-display:'Space Grotesk',-apple-system,BlinkMacSystemFont,sans-serif;
-  --bp-font-body:'Plus Jakarta Sans',-apple-system,BlinkMacSystemFont,sans-serif;
+  --bp-font-display:'Space Grotesk',-apple-system,blinkmacsystemfont,sans-serif;
+  --bp-font-body:'Plus Jakarta Sans',-apple-system,blinkmacsystemfont,sans-serif;
 
   /* RADIUS & MOTION */
   --bp-r-sm:10px; --bp-r-md:14px; --bp-r-lg:20px; --bp-r-xl:28px;
@@ -63,23 +63,30 @@
 
   /* NOISE */
   --bp-noise-url:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.045'/%3E%3C/svg%3E");
-
   --bp-hero-delay:0ms;
 }
 
 /* ============ KEYFRAMES ============ */
 @keyframes bp-fadeUp{0%{opacity:0;transform:translateY(24px)}100%{opacity:1;transform:translateY(0)}}
+
 @keyframes bp-scaleIn{0%{opacity:0;transform:scale(.92)}100%{opacity:1;transform:scale(1)}}
+
 @keyframes bp-glowPulse{0%,100%{box-shadow:0 0 22px rgba(124,58,237,.28)}50%{box-shadow:0 0 44px rgba(255,149,0,.32)}}
+
 @keyframes bp-gradientShift{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
+
 @keyframes bp-numSlide{0%{opacity:0;transform:translateY(14px)}100%{opacity:1;transform:translateY(0)}}
+
 @keyframes bp-marquee{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+
 @keyframes bp-shimmer{0%{background-position:-200% 50%}100%{background-position:200% 50%}}
+
 @keyframes bp-spin{to{transform:rotate(360deg)}}
 
 /* ============ HERO CHOREOGRAPHY ============ */
 .bp-hero-step{opacity:0;animation:bp-fadeUp .9s var(--bp-ease-out-expo) forwards;animation-delay:calc(var(--bp-hero-delay) + var(--bp-d,0ms))}
 .bp-hero-delay{opacity:0;animation:bp-fadeUp .9s var(--bp-ease-out-expo) forwards;animation-delay:var(--bp-hero-delay)}
+
 @media(prefers-reduced-motion:reduce){.bp-hero-step,.bp-hero-delay{animation:none;opacity:1}}
 
 /* ============ SPOTLIGHT CARDS — glossy chrome tile ============ */
@@ -100,8 +107,8 @@
 .bp-spotlight-card::after{
   content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;
   background:radial-gradient(240px circle at var(--bp-mouse-x) var(--bp-mouse-y),var(--bp-spotlight-border),transparent 45%);
-  -webkit-mask:linear-gradient(#000,#000) content-box,linear-gradient(#000,#000);
-  -webkit-mask-composite:xor;mask-composite:exclude;
+  mask:linear-gradient(#000,#000) content-box,linear-gradient(#000,#000);
+  mask-composite:xor;mask-composite:exclude;
   padding:1px;opacity:0;transition:opacity .4s var(--bp-ease-smooth);
 }
 .bp-spotlight-card:hover{transform:translateY(-4px);border-color:var(--bp-border-default);box-shadow:0 24px 70px rgba(0,0,0,.5),0 0 42px rgba(124,58,237,.16)}
@@ -120,7 +127,7 @@
 /* ============ NAV — glass, scroll-shrink ============ */
 .bp-nav-sticky{
   position:fixed;top:0;left:0;right:0;z-index:100;
-  background:var(--bp-glass-bg);backdrop-filter:var(--bp-glass-blur);-webkit-backdrop-filter:var(--bp-glass-blur);
+  background:var(--bp-glass-bg);backdrop-filter:var(--bp-glass-blur);backdrop-filter:var(--bp-glass-blur);
   border-bottom:1px solid var(--bp-glass-border);
   transition:padding .35s var(--bp-ease-smooth),background .35s ease,border-color .35s ease;
 }
@@ -142,8 +149,8 @@
 
 /* ============ SIGNATURE TEXT TREATMENTS ============ */
 .bp-text-grad{
-  background:linear-gradient(110deg,#C4B5FD 20%,#FFFFFF 42%,#FFB86B 58%,#A78BFA 80%);
-  background-size:200% auto;-webkit-background-clip:text;background-clip:text;color:transparent;
+  background:linear-gradient(110deg,#C4B5FD 20%,#FFF 42%,#FFB86B 58%,#A78BFA 80%);
+  background-size:200% auto;background-clip:text;background-clip:text;color:transparent;
   animation:bp-shimmer 6s linear infinite;
 }
 .bp-rim-badge{
@@ -153,4 +160,5 @@
   color:var(--bp-violet-200);font-weight:700;letter-spacing:.02em;
   box-shadow:0 0 24px rgba(124,58,237,.18),inset 0 1px 0 rgba(255,255,255,.12);
 }
+
 @media(prefers-reduced-motion:reduce){.bp-text-grad{animation:none}}
