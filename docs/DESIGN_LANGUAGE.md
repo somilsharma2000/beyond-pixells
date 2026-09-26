@@ -68,7 +68,8 @@ orbs and light-beam (retired, conflicted with the flat cracked-texture language)
 - **Droplets** — procedurally scattered glossy dark circles with specular highlight, decorative depth.
 
 **Kit files:** `assets/bp-obsidian-veins.css` + `.js`. **Signature object:** `.ov-geode`
-(was `.bp-chrome-tile`). **Live on:** Hub hero. **Social template:** `assets/social-templates/obsidian-veins-post.html`
+(was `.bp-chrome-tile`). **Live on:** Hub hero + Gym OS landing (hero canvas + frontend showcase section with CSS
+laptop/phone product mockups, warm tones fully purged). **Social template:** `assets/social-templates/obsidian-veins-post.html`
 — same visual language as the site, so a screenshot of either reads as one consistent brand.
 
 **Verification:** `npm run test:render` asserts geode/veins/droplets/grain/meteors/beam/icons

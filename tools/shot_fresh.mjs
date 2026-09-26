@@ -1,0 +1,14 @@
+import { chromium } from 'playwright';
+const b = await chromium.launch({ args: ['--disable-gpu', '--disable-dev-shm-usage', '--no-sandbox'] });
+const ctx = await b.newContext({ viewport: { width: 1400, height: 1000 }, deviceScaleFactor: 1 });
+const p = await ctx.newPage();
+await p.goto('https://somilsharma2000.github.io/gym-os/', { waitUntil: 'domcontentloaded', timeout: 30000 });
+await p.waitForTimeout(5000);
+await p.screenshot({ path: '/tmp/fresh-hero.png' });
+const ok = await p.evaluate(() => !!document.querySelector('#showcase'));
+console.log('showcase:', ok);
+await p.evaluate(() => { document.querySelector('#showcase').scrollIntoView(); });
+await p.waitForTimeout(2500);
+await p.screenshot({ path: '/tmp/fresh-showcase.png' });
+await b.close();
+console.log('done');
