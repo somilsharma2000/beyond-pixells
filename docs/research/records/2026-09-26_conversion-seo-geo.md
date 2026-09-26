@@ -32,3 +32,16 @@ verify with git log before claiming a push.
 Security/Privacy/Legal: none. Content honesty rules enforced (no invented
 stats/testimonials; Builder OS pilot described accurately; pricing kept
 generic "flat monthly" pending founder confirmation).
+
+## Addendum (same day — founder gap-hunt request)
+Found + fixed: (a) ogHub render template still carried violet+orange
+inline gradients — purged, re-rendered 5 OG images (hub, gym, dentist,
+builder, blog) in unified v7.2, all verified 0% violet/warm, 1200x630
+(dentist was 1200x1200). (b) og:image tags missing on blog pages and
+builder-os — wired, twitter:card upgraded to summary_large_image.
+(c) 8 client gym sites had no robots.txt/sitemap.xml — added to all
+(iron-forge-website deploys from gh-pages branch, ported there).
+Client sites already carry solid ExerciseGym/HealthClub LocalBusiness
+JSON-LD with real addresses — no change needed. Remaining known gaps:
+Google Search Console verification (needs founder), analytics (VPS or
+free tier decision), blog RSS feed (nice-to-have).
