@@ -38,6 +38,11 @@ $$\text{Idea} \longrightarrow \text{Research} \longrightarrow \text{Validation} 
 | **Bloomwire Flower Platform** | Headless e-commerce storefront and order fulfillment platform for floral commerce. | `opportunity-radar.md`, `BACKEND_MAP.md` (Base44 app BloomWire), `FREE_TOOLS_STACK.md` | `parked` | **Prototype** |
 | **Paperclip Agent Workforce HQ** | Self-hosted agent-company management dashboard for coordinating multi-agent sub-agent workflows. | `FREE_TOOLS_STACK.md` (Category 7 / Phase 5), `research/tools_automation.md` | `idea` | **Idea** |
 | **ViewBoost / RepoLaunch Growth Tools** | Micro-SaaS tools for GitHub repo launch amplification and developer content engagement. | `opportunity-radar.md`, `HANDOVER.md` | `parked` | **Idea** |
+| **Restaurant QR Menu & Ordering** | QR digital menus and online ordering for restaurants and takeaways. | `idea-db.md` §13, saasyaari.ai demand signal (26 Sep 2026) | `idea` | **Idea** |
+| **AI Single-Page Website Builder** | AI-generated single-page websites for local businesses, from our own templates. | `idea-db.md` §14, saasyaari.ai demand signal | `idea` | **Idea** |
+| **Digital V-Card & NFC** | Digital business cards with link/QR/NFC sharing for professionals. | `idea-db.md` §15, saasyaari.ai demand signal | `idea` | **Idea** |
+| **AI Reviews & GMB Automation** | Review request automation, AI replies, and Google Business Profile management for local businesses. | `idea-db.md` §16, saasyaari.ai demand signal | `idea` | **Idea** |
+| **QR Loyalty & Rewards** | Digital stamp cards and loyalty programs for repeat-visit businesses. | `idea-db.md` §17, saasyaari.ai demand signal | `idea` | **Idea** |
 
 ---
 
@@ -114,3 +119,49 @@ $$\text{Idea} \longrightarrow \text{Research} \longrightarrow \text{Validation} 
 - **Where It's Evidenced:** `docs/company/opportunity-radar.md`, `docs/HANDOVER.md`.
 - **Status:** `parked`
 - **Pipeline Stage:** **Idea** (Exploratory repos intact; unvalidated).
+
+---
+
+## Seeded Ideas — Local-Business Micro-SaaS Set (added 26 Sep 2026)
+
+> Source: competitive scan of saasyaari.ai (white-label SaaS reseller, India).
+> Demand signal: they bundle these 5 tools and sell white-label access to
+> agencies via IG ads. Their model = rent-the-tech-and-resell. Our model =
+> build-and-own on Base44, either as OS-family modules or standalone micro-SaaS.
+> Decision on which/how comes when picked up from `idea` stage. Per the factory
+> law, each needs its own market research record before any engineering.
+
+### 13. Restaurant QR Menu & Ordering
+- **One-Line Pitch:** QR digital menus with online ordering and order management for Indian restaurants and takeaways.
+- **Why It's on the Radar:** SaaS Yaari's bundle proves agency-facing demand; Indian F&B digitization is broad and shallow-served.
+- **Possible Shape:** Standalone vertical play (Restaurant OS) or sell as a productized setup service to F&B clients via the agency arm.
+- **Status:** `idea` | **Pipeline Stage:** **Idea** — needs market research (competitors: Petpooja, POSist, DotPez-type QR menu tools) before any build.
+
+### 14. AI Single-Page Website Builder
+- **One-Line Pitch:** AI-generated one-page sites for local businesses from our own template system (we already ship 8 client sites).
+- **Why It's on the Radar:** We have the deepest existing capability here — template + brand kit + lead capture already built; the AI generation layer is the only new piece.
+- **Possible Shape:** Productized "site in 48 hours" offer, or an AI-assist inside the client-site factory.
+- **Status:** `idea` | **Pipeline Stage:** **Idea** — research record required (pricing model, AI copy cost, support load).
+
+### 15. Digital V-Card & NFC
+- **One-Line Pitch:** Digital visiting cards with link/QR/NFC sharing for Indian professionals and SMBs.
+- **Why It's on the Radar:** Low-complexity commodity product with clear one-time/setup revenue; good cheap entry product for the services-cashflow model.
+- **Possible Shape:** Micro-SaaS or a ₹X setup SKU sold alongside client sites.
+- **Status:** `idea` | **Pipeline Stage:** **Idea** — verify margin and differentiation (extremely crowded commodity space).
+
+### 16. AI Reviews & GMB Automation
+- **One-Line Pitch:** Automated review requests, AI replies, and Google Business Profile management for local businesses.
+- **Why It's on the Radar:** Directly relevant to our existing verticals (gyms, dentists, builders all need reviews); pairs with the WhatsApp automation engine (idea §5).
+- **Possible Shape:** Gym OS / Dentist OS module first, standalone agency service second.
+- **Status:** `idea` | **Pipeline Stage:** **Idea** — needs Google Business Profile API + WhatsApp opt-in research (ties to records 001, 008).
+
+### 17. QR Loyalty & Rewards
+- **One-Line Pitch:** Digital stamp cards and loyalty rewards for repeat-visit businesses.
+- **Why It's on the Radar:** Gym OS already has loyalty_points/loyalty_tier fields in its entity model — this is partially specced inside our flagship; a generalized version could serve salons, cafes, boutiques.
+- **Possible Shape:** Gym OS module first (finish what exists), then evaluate standalone.
+- **Status:** `idea` | **Pipeline Stage:** **Idea** — research record required.
+
+> Standing note (law): do NOT buy/rent SaaS Yaari's white-label. Owning the code
+> is the brand architecture (endorsed hybrid, OS family) and a DPDP necessity
+> (processor contracts, Sec 8(2)); renting tech we can build in weeks would add
+> an unkillable dependency for commodity features.
