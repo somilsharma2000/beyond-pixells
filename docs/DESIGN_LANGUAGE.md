@@ -96,3 +96,42 @@ Benchmark study (Linear, Raycast, Superlist, Vapi — measured) locked the law:
 - Accent discipline: violet `#7C3AED`-family only for glow/edges; warm rim light reserved for the single primary CTA
 - Motion: fade/slide entrances, gentle mock float, one beam border — restraint at rest
 - Research record: docs/research/records/2026-09-26_design-language-benchmark.md
+
+## v7 BLUE PIXEL (26 Sep 2026, founder logo drop — supersedes v4/v6 violet)
+
+Founder supplied the real bp logo: lowercase "b" + "p" mark in royal blue
+and navy, on a white badge, with a small blue/navy pixel-checker accent
+(top right). Measured exact hex from the source PNG (foreground pixels,
+background/badge excluded):
+- **Royal blue `#1D4BC4`** — primary accent (was violet `#7C3AED`)
+- **Navy `#0A1C40`** — deep/ink tone (was violet-deep `#3B1470`)
+
+Violet (Chrome Violet v4, Obsidian Glow v6) is retired estate-wide. Method:
+automated hue-shift script (colorsys) rotated every violet/purple/magenta
+hex and rgba() (hue 232-305°) to the logo's measured hue (~222.5°),
+preserving lightness/saturation/alpha — applied across
+`assets/bp-design-system.css`, `assets/bp-obsidian-veins.css`,
+`assets/bp-obsidian-veins.js`, `assets/bp-effects-kit.css`, and each
+property's own `index.html`. Greys, blacks, whites, cyan status accents
+and the emerald "live" dot were left untouched (out of the violet hue
+range). `logo.png` at hub root replaced with the new mark
+(`assets/img/bp-logo-mark.png` holds the source).
+
+Because `bp-design-system.css` and `bp-obsidian-veins.css` are CDN-shared
+from the hub, every property loading them inherits the new blue palette
+automatically. Gym OS additionally had a local violet texture override
+(`hero-veins-tall.jpg`) and inline violet hexes in its Daylight Glass
+showcase — both fixed directly in that repo.
+
+Canvas structure (v6 Obsidian Glow: calm near-black + one glow field +
+product-UI-carries-richness) is unchanged — only the hue moved from
+violet to blue. Verified live (measured pixel samples):
+- Hub hero glow: RGB (15,29,69) — blue-dominant
+- Gym OS hero glow: RGB (11,18,37) — blue-dominant
+- Zero `#7C3AED`/`#A855F7`/`#C4B5FD` (old violet hexes) remaining in
+  either live page's HTML/CSS/JS
+
+Still needed (not yet reskinned this pass): Dentist OS, Builder OS
+flagships (inherit CDN files automatically, but should be individually
+verified); the 8 client gym sites (out of scope per earlier founder
+directive to focus reskins on Beyond Pixells + OS flagships only).
