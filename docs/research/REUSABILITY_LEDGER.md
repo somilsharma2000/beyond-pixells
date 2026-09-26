@@ -4,7 +4,7 @@ Every meaningful implementation, classified: CLIENT_ONLY / CONFIGURABLE / TEMPLA
 | Built | Where | Classification | Reuse path | Notes |
 |---|---|---|---|---|
 | bp-design-system.css + bp-motion.js v2.0 | beyond-pixells/assets | **CORE_IP** | Hot-linked by all 15+ sites; 2-line include | Estate-wide visual consistency; version-pinned by URL |
-| Canonical client template (index/styles/script/site.config pattern) | oxigen-fitness-digital, reds-gym-system | **TEMPLATE** | 2 of 8 rolled (Oxigen, REDS GYM); 6 remaining; new client = 1 config file + accent flavor | Config slots: contact/plans/trainers/classes/reviews/UPI |
+| Canonical client template (index/styles/script/site.config pattern) | all 8 client repos | **TEMPLATE** | **8 of 8 rolled** (Oxigen, REDS, Flex N Tone, Fight Factory, Betta Bodies, IronForge BLR, Iron Forge HYD, PowerHouse); new client = 1 JSON + factory run | Config slots: contact/plans/trainers/classes/reviews/UPI |
 | OWNER_CONTENT_CHECKLIST pattern | oxigen | **TEMPLATE** | Copy per client site | Owner self-serve content completion |
 | gym-os-connect.js v2 (consent + offline queue + WhatsApp fallback) | 8 client repos | **PLATFORM** | Any new lead-capture site | Offline queue key: gymos_lead_queue |
 | Lead capture endpoints (captureGymLead → Gym osssss repoint) | Vesper/Base44 | **PLATFORM** | All verticals (gym now; dentist later) | Repoint pending (D-008) |

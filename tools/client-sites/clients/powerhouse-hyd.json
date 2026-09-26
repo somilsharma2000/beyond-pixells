@@ -1,0 +1,123 @@
+{
+  "brandName": "PowerHouse Fitness",
+  "brandNameUpper": "POWERHOUSE",
+  "brandMark": "PH",
+  "configVar": "POWERHOUSE_SITE_CONFIG",
+  "siteUrl": "https://somilsharma2000.github.io/powerhouse-fitness/",
+  "title": "PowerHouse Fitness Gachibowli Hyderabad | Premium Gym & Training",
+  "metaDescription": "PowerHouse Fitness — premium gym in Gachibowli, Hyderabad. Smart QR check-in, expert training, 50+ weekly classes, member app, diet plans. From ₹2,999/month.",
+  "ogTitle": "PowerHouse Fitness — Gachibowli, Hyderabad",
+  "ogDescription": "Premium gym & training in Gachibowli, Hyderabad. 50+ weekly classes, member app, custom diet plans, automated reminders.",
+  "locationLabel": "HYDERABAD · GACHIBOWLI",
+  "heroH1": "Everything you need<br />to <span class=\"hl\">transform.</span>",
+  "heroDescription": "Premium gym in Gachibowli: expert trainers, 50+ weekly classes, a member app with smart QR check-in, custom diet plans and automated reminders. No long contracts — just results.",
+  "heroPrimaryCta": "Start your free trial",
+  "heroMicroCopy": "⚡ Gym OS connected &nbsp;·&nbsp; Smart QR check-in &nbsp;·&nbsp; Member app &nbsp;·&nbsp; Open 5am–11pm daily",
+  "heroCardQuote": "“No long contracts.<br />Just <span class=\"hl\">results.”</span>",
+  "heroCardNote": "Your membership, bookings and check-ins run on the Gym OS member portal.",
+  "aboutEyebrow": "PREMIUM GYM, GACHIBOWLI",
+  "aboutH2": "Find your perfect workout.",
+  "aboutP": "PowerHouse Fitness is a premium gym in Gachibowli with coaches who actually care — 50+ weekly classes, personal training, custom diet plans and body composition analysis — integrated with Gym OS for instant lead response, QR check-in and member tracking.",
+  "stat1": "<span class=\"stat-num\">50+</span><span class=\"stat-label\">Weekly classes</span>",
+  "stat2": "<span class=\"stat-num\">18h</span><span class=\"stat-label\">Open 5am–11pm, 7 days</span>",
+  "stat3": "<span class=\"stat-num\">App</span><span class=\"stat-label\">Member app + automated reminders</span>",
+  "programsEyebrow": "02 / TRAINING PROGRAMS",
+  "programsH2": "Plans that<br /><span class=\"hl\">work for you.</span>",
+  "programsP": "Group classes, personal training and nutrition — coached by specialists, tracked in your member app.",
+  "programCards": [
+    { "name": "Group Training", "desc": "50+ weekly classes across strength, conditioning and cardio — with priority booking on premium tiers." },
+    { "name": "Personal Training", "desc": "Expert trainers who actually care: 1-to-1 PT sessions, from monthly to unlimited depending on your tier." },
+    { "name": "Nutrition & Recovery", "desc": "Custom diet plans, body composition analysis, monthly progress reviews, and recovery & spa access." }
+  ],
+  "timetableEyebrow": "03 / CLASS SCHEDULE",
+  "timetableH2": "Classes for<br /><span class=\"hl\">every level.</span>",
+  "timetableP": "50+ classes every week across the 5am–11pm window. Book your spot on WhatsApp — it lands directly with the team.",
+  "trainersP": "Certified coaches run every session on the floor — strength, conditioning and mobility. Meet them on a trial visit.",
+  "membershipP": "Three honest tiers: Starter ₹2,999, Standard ₹4,999, Premium ₹7,999 per month — all with QR check-in, member app and automated reminders.",
+  "facilitiesP": "Premium environment on the 2nd floor of DLF Cyber City: locker facility, recovery & spa access, and a Gym OS-connected member experience.",
+  "equipmentLines": ["EXPERT TRAINING FLOOR &amp; LOCKER FACILITY", "SMART QR CHECK-IN + MEMBER APP", "RECOVERY &amp; SPA ACCESS"],
+  "recoveryKicker": "TRACKING",
+  "recoveryTitle": "Progress Review",
+  "recoveryP": "Body composition analysis and monthly progress reviews, with automated reminders through the member app.",
+  "fourthPanelKicker": "OPENING HOURS",
+  "fourthPanelTitle": "5:00 AM – 11:00 PM",
+  "fourthPanelP": "Seven days a week. 2nd Floor, DLF Cyber City, Gachibowli.",
+  "trialH2": "Start your<br /><span class=\"hl\">free trial today.</span>",
+  "trialP": "Book a free trial, tour the floor, meet the coaches — then decide with total clarity.",
+  "footerTagline": "Premium gym & training in Gachibowli, Hyderabad. Expert trainers, 50+ classes, member app.",
+  "address": "2nd Floor, DLF Cyber City, Gachibowli, Hyderabad 500032",
+  "phoneDisplay": "+91 77370 77479",
+  "jsonld": {
+    "@context": "https://schema.org",
+    "@type": "HealthClub",
+    "name": "PowerHouse Fitness",
+    "url": "https://somilsharma2000.github.io/powerhouse-fitness/",
+    "description": "Premium gym & training in Gachibowli, Hyderabad. 50+ weekly classes, member app, diet plans.",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "2nd Floor, DLF Cyber City, Gachibowli",
+      "addressLocality": "Hyderabad",
+      "postalCode": "500032",
+      "addressCountry": "IN"
+    },
+    "openingHoursSpecification": [
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"], "opens": "05:00", "closes": "23:00" }
+    ],
+    "sameAs": ["https://instagram.com/powerhousefitnesshyd", "https://facebook.com/powerhousefitness"],
+    "publisher": { "@type": "Organization", "name": "Beyond Pixells", "url": "https://somilsharma2000.github.io/beyond-pixells/" }
+  },
+  "config": {
+    "brandName": "PowerHouse Fitness",
+    "publicSlug": "powerhouse-hyd",
+    "locationLabel": "GACHIBOWLI · HYDERABAD",
+    "tagline": "PowerHouse",
+    "description": "Premium gym in Gachibowli, Hyderabad. Expert trainers, 50+ weekly classes, member app, diet plans.",
+    "whatsapp": "917737077479",
+    "whatsappName": "PowerHouse",
+    "whatsappPreFill": "Hi PowerHouse Fitness! I'd like to start my free trial.",
+    "instagram": "https://instagram.com/powerhousefitnesshyd",
+    "email": "",
+    "address": "2nd Floor, DLF Cyber City, Gachibowli, Hyderabad 500032",
+    "phone": "+91 77370 77479",
+    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=PowerHouse+Fitness+DLF+Cyber+City+Gachibowli+Hyderabad+500032",
+    "googleRating": 0,
+    "googleReviewCount": 0,
+    "trialPass": { "label": "Free Trial", "price": 0, "note": "Book via WhatsApp" },
+    "plans": [
+      {
+        "kicker": "STARTER",
+        "name": "Starter",
+        "price": "₹2,999",
+        "period": "/month",
+        "popular": false,
+        "desc": "Full access to start your transformation.",
+        "features": ["Full gym access", "2 group classes/week", "QR check-in & member app", "Locker facility"]
+      },
+      {
+        "kicker": "STANDARD",
+        "name": "Standard",
+        "price": "₹4,999",
+        "period": "/month",
+        "popular": true,
+        "desc": "Everything in Starter, plus coaching depth.",
+        "features": ["Everything in Starter", "Unlimited group classes", "1 PT session/month", "Custom diet plan", "Body composition analysis", "Guest passes (2/month)"]
+      },
+      {
+        "kicker": "PREMIUM",
+        "name": "Premium",
+        "price": "₹7,999",
+        "period": "/month",
+        "popular": false,
+        "desc": "Everything in Standard, plus full coaching.",
+        "features": ["Everything in Standard", "4 PT sessions", "Priority class booking", "Monthly progress review", "Unlimited guest passes", "Recovery & spa access"]
+      }
+    ],
+    "trainers": [],
+    "classes": [
+      { "category": "Group", "name": "50+ Weekly Classes", "time": "Daily 5am–11pm window", "desc": "Group classes across strength, conditioning and cardio for every level." },
+      { "category": "Coaching", "name": "Personal Training", "time": "Flexible · book via WhatsApp", "desc": "1-to-1 PT with expert trainers — from 1 session/month to unlimited." },
+      { "category": "Nutrition", "name": "Custom Diet Plans", "time": "Monthly review", "desc": "Custom diet plans with body composition analysis." },
+      { "category": "Recovery", "name": "Recovery & Spa", "time": "Premium tier", "desc": "Recovery and spa access for premium members." }
+    ]
+  }
+}

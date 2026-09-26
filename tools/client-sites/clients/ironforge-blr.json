@@ -1,0 +1,123 @@
+{
+  "brandName": "IronForge Fitness",
+  "brandNameUpper": "IRONFORGE",
+  "brandMark": "IF",
+  "configVar": "IRONFORGE_BLR_SITE_CONFIG",
+  "siteUrl": "https://somilsharma2000.github.io/ironforge-website/",
+  "title": "IronForge Fitness Indiranagar, Bengaluru | Gym OS Connected Fitness Center",
+  "metaDescription": "IronForge Fitness — premium fitness center in Indiranagar, Bengaluru. State-of-the-art equipment, personal training, group classes, and nutrition coaching. Monthly ₹3,500.",
+  "ogTitle": "IronForge Fitness — Bengaluru",
+  "ogDescription": "Premium fitness center in Indiranagar, Bengaluru. PT, group classes, nutrition coaching, Gym OS QR check-in.",
+  "locationLabel": "BENGALURU · INDIRANAGAR",
+  "heroH1": "Forge your<br /><span class=\"hl\">strongest self.</span>",
+  "heroDescription": "State-of-the-art equipment, personal training, 7 weekly group classes, and nutrition coaching — connected through Gym OS with QR-based check-in and a member dashboard.",
+  "heroPrimaryCta": "Book a free trial on WhatsApp",
+  "heroMicroCopy": "⚡ Gym OS connected &nbsp;·&nbsp; QR-based check-in &nbsp;·&nbsp; Member dashboard &nbsp;·&nbsp; Open 5am–11pm, 7 days",
+  "heroCardQuote": "“Built in the forge,<br />not <span class=\"hl\">photographed.”</span>",
+  "heroCardNote": "Your membership, bookings and check-ins run on the Gym OS member portal.",
+  "aboutEyebrow": "A CONNECTED FITNESS CENTER",
+  "aboutH2": "Everything you need to train, connected.",
+  "aboutP": "IronForge brings together state-of-the-art equipment, personal training, seven weekly classes and nutrition coaching — integrated with Gym OS for instant lead response, QR-based check-in and member tracking.",
+  "stat1": "<span class=\"stat-num\">7</span><span class=\"stat-label\">Weekly group classes</span>",
+  "stat2": "<span class=\"stat-num\">QR</span><span class=\"stat-label\">Check-in & Gym OS dashboard</span>",
+  "stat3": "<span class=\"stat-num\">18h</span><span class=\"stat-label\">Open 5am–11pm, seven days</span>",
+  "programsEyebrow": "02 / TRAINING PROGRAMS",
+  "programsH2": "Personal training,<br /><span class=\"hl\">nutrition, classes.</span>",
+  "programsP": "Choose a starting point that matches your goal. Your coach helps you build consistency from day one.",
+  "programCards": [
+    { "name": "Personal Training", "desc": "Strength & conditioning coaching built around your goal — from first session to full transformation, with trainer consultations included in every plan." },
+    { "name": "Group Classes", "desc": "Seven weekly classes from morning HIIT to Sunday recovery yoga — something for every fitness level, every day of the week." },
+    { "name": "Nutrition Coaching", "desc": "Custom diet plans and nutrition coaching with monthly trainer check-ins as you progress through your membership tier." }
+  ],
+  "timetableEyebrow": "03 / CLASS SCHEDULE",
+  "timetableH2": "Seven classes.<br /><span class=\"hl\">Every level.</span>",
+  "timetableP": "From Morning HIIT Blast to Sunday Recovery Yoga. Book your spot on WhatsApp — it lands directly with the team.",
+  "trainersP": "Certified coaches run every session on the floor — strength, conditioning and mobility. Meet them on a trial visit.",
+  "membershipP": "Transparent tiers: ₹3,500 monthly, ₹10,500 quarterly, ₹42,000 annual — all with QR check-in, Gym OS dashboard access and trainer consultations.",
+  "facilitiesP": "State-of-the-art equipment, premium environment, and a Gym OS-connected member experience from door to dashboard.",
+  "equipmentLines": ["STATE-OF-THE-ART STRENGTH &amp; CARDIO EQUIPMENT", "QR-BASED CHECK-IN", "GYM OS MEMBER DASHBOARD"],
+  "recoveryKicker": "NUTRITION",
+  "recoveryTitle": "Nutrition Coaching",
+  "recoveryP": "Custom diet plans and monthly trainer check-ins included from the Quarterly tier upward.",
+  "fourthPanelKicker": "OPENING HOURS",
+  "fourthPanelTitle": "5am – 11pm",
+  "fourthPanelP": "Open seven days a week. Walk in for a tour anytime.",
+  "trialH2": "Start with<br /><span class=\"hl\">a free trial.</span>",
+  "trialP": "Book a free trial visit, tour the floor, meet the team — then decide with total clarity.",
+  "footerTagline": "Premium fitness center in Indiranagar, Bengaluru. Equipment, PT, classes and nutrition coaching.",
+  "address": "Shop 12, MG Road, Indiranagar, Bengaluru, KA 560038",
+  "phoneDisplay": "+91 77370 77479",
+  "jsonld": {
+    "@context": "https://schema.org",
+    "@type": "HealthClub",
+    "name": "IronForge Fitness",
+    "url": "https://somilsharma2000.github.io/ironforge-website/",
+    "description": "Premium fitness center in Indiranagar, Bengaluru. State-of-the-art equipment, personal training, group classes, and nutrition coaching.",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Shop 12, MG Road, Indiranagar",
+      "addressLocality": "Bengaluru",
+      "addressRegion": "KA",
+      "postalCode": "560038",
+      "addressCountry": "IN"
+    },
+    "openingHoursSpecification": [
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"], "opens": "05:00", "closes": "23:00" }
+    ],
+    "publisher": { "@type": "Organization", "name": "Beyond Pixells", "url": "https://somilsharma2000.github.io/beyond-pixells/" }
+  },
+  "config": {
+    "brandName": "IronForge Fitness",
+    "publicSlug": "ironforge-blr",
+    "locationLabel": "INDIRANAGAR · BENGALURU",
+    "tagline": "Forge Your Strongest Self",
+    "description": "Premium fitness center in Indiranagar, Bengaluru. Equipment, PT, 7 weekly classes, nutrition coaching, Gym OS connected.",
+    "whatsapp": "917737077479",
+    "whatsappName": "IronForge",
+    "whatsappPreFill": "Hi IronForge Fitness! I'd like to book a free trial.",
+    "instagram": "",
+    "email": "",
+    "address": "Shop 12, MG Road, Indiranagar, Bengaluru, KA 560038",
+    "phone": "+91 77370 77479",
+    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=IronForge+Fitness+MG+Road+Indiranagar+Bengaluru+560038",
+    "googleRating": 0,
+    "googleReviewCount": 0,
+    "trialPass": { "label": "Free Trial", "price": 0, "note": "Book via WhatsApp" },
+    "plans": [
+      {
+        "kicker": "MONTHLY",
+        "name": "Monthly",
+        "price": "₹3,500",
+        "period": "/mo",
+        "popular": false,
+        "desc": "30 days · cancel anytime.",
+        "features": ["Full gym access", "All 7 weekly classes", "QR-based check-in", "Gym OS dashboard access", "1 trainer consultation"]
+      },
+      {
+        "kicker": "QUARTERLY",
+        "name": "Quarterly",
+        "price": "₹10,500",
+        "period": "/3mo",
+        "popular": true,
+        "desc": "90 days · save ₹1,500.",
+        "features": ["Everything in Monthly", "Custom diet plan", "Monthly trainer check-ins", "Priority class booking", "2 trainer consultations"]
+      },
+      {
+        "kicker": "ANNUAL",
+        "name": "Annual",
+        "price": "₹42,000",
+        "period": "/yr",
+        "popular": false,
+        "desc": "365 days · save ₹6,000.",
+        "features": ["Everything in Quarterly", "Personal training sessions", "Weekly trainer check-ins", "Unlimited consultations", "Free guest passes (4/mo)"]
+      }
+    ],
+    "trainers": [],
+    "classes": [
+      { "category": "HIIT", "name": "Morning HIIT Blast", "time": "Weekday mornings · book via WhatsApp", "desc": "High-intensity intervals to open the day — something for every fitness level." },
+      { "category": "Recovery", "name": "Sunday Recovery Yoga", "time": "Sunday · book via WhatsApp", "desc": "Recovery-focused yoga to close the week." },
+      { "category": "Coaching", "name": "Personal Training", "time": "Flexible · book via WhatsApp", "desc": "Strength & conditioning coaching with trainer consultations." },
+      { "category": "Nutrition", "name": "Nutrition Coaching", "time": "Monthly check-ins", "desc": "Custom diet plans with monthly trainer reviews." }
+    ]
+  }
+}

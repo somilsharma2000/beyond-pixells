@@ -1,0 +1,121 @@
+{
+  "brandName": "IRON FORGE",
+  "brandNameUpper": "IRON FORGE",
+  "brandMark": "IF",
+  "configVar": "IRONFORGE_HYD_SITE_CONFIG",
+  "siteUrl": "https://somilsharma2000.github.io/iron-forge-website/",
+  "title": "IRON FORGE Jubilee Hills Hyderabad | Premium Fitness — 50+ Classes, 5AM–11PM",
+  "metaDescription": "IRON FORGE — premium fitness in Jubilee Hills, Hyderabad. 50+ group classes, smart QR check-in, expert coaching, personal diet plans. Open 5AM–11PM. From ₹2,999/month.",
+  "ogTitle": "IRON FORGE — Jubilee Hills, Hyderabad",
+  "ogDescription": "Premium fitness in Jubilee Hills: 50+ group classes, smart QR check-in, personal diet plans. Open 5AM–11PM daily.",
+  "locationLabel": "HYDERABAD · JUBILEE HILLS",
+  "heroH1": "Forge your<br /><span class=\"hl\">strongest self.</span>",
+  "heroDescription": "Premium fitness in Jubilee Hills: 50+ group classes from HIIT to Power Yoga, smart QR check-in, and personal diet plans — open 5AM–11PM, 18 hours a day.",
+  "heroPrimaryCta": "Book your free trial",
+  "heroMicroCopy": "⚡ Gym OS connected &nbsp;·&nbsp; Smart QR check-in &nbsp;·&nbsp; 50+ group classes &nbsp;·&nbsp; Open 5am–11pm daily",
+  "heroCardQuote": "“Built different.<br />Trained <span class=\"hl\">here.”</span>",
+  "heroCardNote": "Your membership, bookings and check-ins run on the Gym OS member portal.",
+  "aboutEyebrow": "PREMIUM FITNESS, JUBILEE HILLS",
+  "aboutH2": "Find your tribe. Build your transformation.",
+  "aboutP": "IRON FORGE is a premium AC environment with ventilation, 50+ group classes, expert coaching and personal diet plans — integrated with Gym OS for instant lead response, smart QR check-in and member tracking.",
+  "stat1": "<span class=\"stat-num\">50+</span><span class=\"stat-label\">Group classes</span>",
+  "stat2": "<span class=\"stat-num\">18h</span><span class=\"stat-label\">Open 5AM–11PM, 7 days</span>",
+  "stat3": "<span class=\"stat-num\">QR</span><span class=\"stat-label\">Smart check-in & member portal</span>",
+  "programsEyebrow": "02 / TRAINING PROGRAMS",
+  "programsH2": "Every discipline.<br /><span class=\"hl\">One forge.</span>",
+  "programsP": "HIIT, Power Yoga, Spin, Strength & Conditioning, CrossFit, Zumba, Boxing and more — book your spot in seconds from your phone.",
+  "programCards": [
+    { "name": "Strength & Conditioning", "desc": "Strength and conditioning classes plus premium equipment for serious training — from beginner technique to athletic performance." },
+    { "name": "HIIT, Yoga & Spin", "desc": "Morning HIIT, Power Yoga and Evening Spin — cardio, mobility and recovery across 50+ weekly classes." },
+    { "name": "CrossFit, Zumba & Boxing", "desc": "Find your tribe: CrossFit, Zumba and Boxing classes for every level and every energy." }
+  ],
+  "timetableEyebrow": "03 / CLASS SCHEDULE",
+  "timetableH2": "Plan your week.<br /><span class=\"hl\">Book in seconds.</span>",
+  "timetableP": "Classes run across the full 5AM–11PM window, seven days a week. Book your spot on WhatsApp — it lands directly with the team.",
+  "trainersP": "Certified coaches run every session on the floor — strength, conditioning and mobility. Meet them on a trial visit.",
+  "membershipP": "Three tiers from ₹2,999/month, with annual plans saving 2 months, corporate plans available, and EMI options on all plans. QR check-in and member portal included.",
+  "facilitiesP": "Premium AC environment with ventilation, open 18 hours a day, 7 days a week — early birds and night owls covered.",
+  "equipmentLines": ["PREMIUM EQUIPMENT &amp; AC ENVIRONMENT", "SMART QR CHECK-IN", "50+ WEEKLY GROUP CLASSES"],
+  "recoveryKicker": "RECOVERY",
+  "recoveryTitle": "Recovery & Spa Access",
+  "recoveryP": "Recovery and spa access plus quarterly health checkups on premium tiers.",
+  "fourthPanelKicker": "OPENING HOURS",
+  "fourthPanelTitle": "5AM – 11PM",
+  "fourthPanelP": "18 hours a day, 7 days a week. Guest passes on annual tiers.",
+  "trialH2": "Start your<br /><span class=\"hl\">transformation.</span>",
+  "trialP": "Book a free trial, tour the floor, find your tribe — then decide with total clarity.",
+  "footerTagline": "Premium fitness in Jubilee Hills, Hyderabad. 50+ classes, expert coaching, personal diet plans.",
+  "address": "Jubilee Hills, Hyderabad",
+  "phoneDisplay": "+91 77370 77479",
+  "jsonld": {
+    "@context": "https://schema.org",
+    "@type": "HealthClub",
+    "name": "IRON FORGE",
+    "url": "https://somilsharma2000.github.io/iron-forge-website/",
+    "description": "Premium fitness in Jubilee Hills, Hyderabad. 50+ group classes, smart QR check-in, personal diet plans. Open 5AM-11PM.",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Jubilee Hills, Hyderabad",
+      "addressCountry": "IN"
+    },
+    "openingHoursSpecification": [
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"], "opens": "05:00", "closes": "23:00" }
+    ],
+    "publisher": { "@type": "Organization", "name": "Beyond Pixells", "url": "https://somilsharma2000.github.io/beyond-pixells/" }
+  },
+  "config": {
+    "brandName": "IRON FORGE",
+    "publicSlug": "iron-forge-hyd",
+    "locationLabel": "JUBILEE HILLS · HYDERABAD",
+    "tagline": "Built Different",
+    "description": "Premium fitness in Jubilee Hills, Hyderabad. 50+ group classes, smart QR check-in, personal diet plans. Open 5AM-11PM.",
+    "whatsapp": "917737077479",
+    "whatsappName": "IRON FORGE",
+    "whatsappPreFill": "Hi IRON FORGE! I'd like to book a free trial.",
+    "instagram": "",
+    "email": "",
+    "address": "Jubilee Hills, Hyderabad",
+    "phone": "+91 77370 77479",
+    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=IRON+FORGE+Jubilee+Hills+Hyderabad",
+    "googleRating": 0,
+    "googleReviewCount": 0,
+    "trialPass": { "label": "Free Trial", "price": 0, "note": "Book via WhatsApp" },
+    "plans": [
+      {
+        "kicker": "STARTER",
+        "name": "Starter",
+        "price": "₹2,999",
+        "period": "/month",
+        "popular": false,
+        "desc": "Perfect for beginners.",
+        "features": ["Full gym access (5AM–11PM)", "QR check-in & member portal", "Group classes", "Locker facility"]
+      },
+      {
+        "kicker": "POPULAR",
+        "name": "Standard",
+        "price": "₹4,999",
+        "period": "/month",
+        "popular": true,
+        "desc": "For regular gym-goers.",
+        "features": ["Everything in Starter", "Personal diet plan", "Monthly PT check-ins", "Quarterly health checkup"]
+      },
+      {
+        "kicker": "PREMIUM",
+        "name": "Premium",
+        "price": "₹7,999",
+        "period": "/month",
+        "popular": false,
+        "desc": "The ultimate experience.",
+        "features": ["Everything in Standard", "Unlimited PT sessions", "Recovery & spa access", "Guest passes (2/month)", "EMI options available"]
+      }
+    ],
+    "trainers": [],
+    "classes": [
+      { "category": "HIIT", "name": "Morning HIIT", "time": "Mon, Wed, Fri · 7:00 AM", "desc": "High-intensity interval training to open the day." },
+      { "category": "Yoga", "name": "Power Yoga", "time": "Weekly · book via WhatsApp", "desc": "Power Yoga for strength and mobility." },
+      { "category": "Strength", "name": "Strength and Conditioning", "time": "Weekly · book via WhatsApp", "desc": "Structured S&C for every level." },
+      { "category": "Spin", "name": "Evening Spin", "time": "Sat · 5:00 PM", "desc": "Cardio on the bikes to close the week." },
+      { "category": "Variety", "name": "CrossFit, Zumba & Boxing", "time": "Weekly · book via WhatsApp", "desc": "50+ weekly classes across every discipline." }
+    ]
+  }
+}
