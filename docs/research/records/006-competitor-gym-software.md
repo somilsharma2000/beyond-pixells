@@ -182,7 +182,7 @@ Managing WhatsApp API infrastructure centrally requires Gym OS to manage templat
 DONE 2026-09-26 (lead agent) — see Recheck block at end of file
 
 ### 40. Recheck #2
-PENDING
+DONE 2026-09-26 (Pass B worker) — see Pass B Recheck block at end of file
 
 ### 41. Last Verified
 2026-09-26
@@ -195,3 +195,35 @@ Lead Research Worker (Beyond Pixells)
 
 ## Recheck #1 — lead agent, 2026-09-26
 PASSED. 43 fields; 9 URLs; 2 honest 'EVIDENCE NOT FOUND' entries (Indian gym-software pricing where official pricing pages absent) — exactly the discipline required. No fabricated weaknesses spotted; interpretations labeled ANALYST INTERPRETATION.
+
+
+## Pass B Recheck (2026-09-26)
+
+### 1. Verification & Recheck Status
+- **Re-verified Current Landscape**:
+  - Global platforms (Zen Planner $99–$250+/mo, Wellyx $99–$299/mo, Glofox quote-only, Exercise.com quote-only) continue to target Western boutique markets with USD pricing and lack localized Indian payment rails (UPI deep links, GST invoices).
+  - Okfit continues to publish transparent INR pricing plans (Lite at ₹500/mo, Basic at ₹1,000/mo, Essential at ₹2,000/mo, Growth at ₹3,000/mo) with native WhatsApp integration via MSG91 API configuration.
+  - FitnessForce retains its quote-only enterprise positioning targeting mid-to-large Indian chains with biometric hardware integrations and PT management.
+- **What Changed / Market Updates**:
+  - **GymVale Pricing Slash**: GymVale updated its public website pricing to ₹3,999/year (discounted from ₹4,999/yr) for unlimited users, and introduced a promotional re-branding tier at ₹29,999 for 3 years (down from ₹40,000/yr).
+  - **UPI AutoPay Adoption**: Indian gym tech stack providers (e.g. Torzil / GymForce alternatives) are shifting towards Razorpay UPI AutoPay recurring mandate collections to reduce monthly manual renewal outreach friction.
+  - **Expansion of Low-Cost Competitors**: Domestic platforms like *YourDigitalLift* (YDL, boasting 3,000+ gyms in Tier 1/2 hubs), *Traqade* (by Gympik), and micro-SaaS offerings like *GYMS24* (₹399/mo) are actively targeting independent Indian gym owners.
+- **Corrections to Prior Claims**:
+  - GymVale's promotional white-label offer listed as ₹40,000/yr in Section 12 is now offered at ₹29,999 for 3 years on their official site (`gymvale.com/app/`).
+  - Standard GymVale mobile tier pricing listed in directories as ₹5,999–₹12,000/yr is currently priced at ₹3,999/yr on their official web portal.
+- **Unverified Claims / Information**:
+  - Official tier-by-tier enterprise pricing for FitnessForce NxT remains UNVERIFIED on official channels (`EVIDENCE NOT FOUND` on official site; quote-only sales process).
+  - Official site pricing for Glofox and Exercise.com remains UNVERIFIED (`EVIDENCE NOT FOUND` on official site; quote-only sales process).
+
+### 2. Pass B Operational & Systems Analysis ("Pass B Law Checks")
+- **Edge Cases & Segment Nuances**:
+  - *Micro-Gyms / Solo Centers (<150 members)*: Highly sensitive to recurring costs. Require instant setup, simple cash/UPI logging, and zero-learning-curve mobile interface. GST invoicing and complex multi-role permissions are irrelevant for them.
+  - *Multi-Branch Chains (5+ locations)*: Require cross-location member check-in validation ("roaming access"), unified franchise billing dashboards, centralized staff permission controls, and multi-location WhatsApp template management.
+- **Ops & Support Load**:
+  - Meta WhatsApp Business API onboarding (Meta Business Manager verification, phone number display name approval, and template compliance) is the single highest support burden. Gym OS must provide turnkey Meta API onboarding or insulated dispatch queues to avoid overwhelming support channels during client setup.
+- **Scalability & Technical Bottlenecks**:
+  - Peak morning (6:00 AM – 8:30 AM) and evening (6:00 PM – 9:00 PM) check-in spikes create heavy concurrency on QR scanning endpoints and WhatsApp webhook receivers. Reception offline caching is necessary during internet dropouts.
+- **UX Gaps Missed in Initial Record**:
+  - *Family & Couple Packages*: The record assumes 1-to-1 member accounts, missing the common Indian gym pattern of family/couple memberships (1 primary billing contact funding multiple sub-members).
+  - *Cash & Hybrid Payment Receipts*: A large fraction of renewal payments in Tier 2/3 markets remains cash-based. The system must support immediate front-desk cash logging with auto-dispatched WhatsApp GST receipts.
+  - *Role-Based UI Separation*: Missing explicit distinction between a high-speed reception check-in kiosk UI, a trainer client-tracking UI, and an owner analytics view.

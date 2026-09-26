@@ -147,7 +147,7 @@ Hardware partner channels require upfront commission/revenue-share setup and par
 DONE 2026-09-26 (lead agent) — see Recheck block at end of file
 
 ### 40. Recheck #2
-PENDING
+DONE 2026-09-26 (Pass B recheck — see Pass B Recheck section at end of file)
 
 ### 41. Last Verified
 2026-09-26
@@ -160,3 +160,49 @@ Beyond Pixells Research Team
 
 ## Recheck #1 — lead agent, 2026-09-26
 PASSED. 43 fields; 8 URLs (Meta official pricing page among primaries). WhatsApp per-conversation economics captured with category breakdown. llms.txt adoption recorded with its criticism — honest two-sided evidence.
+
+
+## Pass B Recheck (2026-09-26)
+
+### Verified Facts & Sources
+1. **WhatsApp Business API Pricing Rates (India 2026)**:
+   - Meta operates per-message delivered billing (effective July 1, 2025 and active through 2026).
+   - Utility & Domestic Authentication Messages: Direct Meta list rate is **₹0.1150 per message delivered**. (Sources: Meta Rate Cards 2025/2026, WABACRM 2026, TeleCRM 2026, Flowcall 2026).
+   - Marketing Messages: Direct Meta list rate is **₹0.8631 per message delivered** in updated 2026 rate schedules (up from ₹0.7846 initial July 2025 launch base). End-user retail rates charged by BSP aggregators (AiSensy, Wati, Gupshup) range from **₹1.09 to ₹1.25 per message delivered** after platform markups and GST. (Sources: WABACRM 2026, TeleCRM 2026, GreenAds Global 2026).
+   - Service Messages (Inbound customer-initiated within 24-hour window): **₹0.00**.
+   - Click-to-WhatsApp (CTWA) Ads: Free 72-hour messaging window across all template categories following a customer ad click. (Sources: Meta Developer Docs, Spur 2026).
+2. **Meta Business-Initiated Messaging & Template Rules**:
+   - Outbound business-initiated communications strictly require pre-approved Meta message templates.
+   - Meta AI automated classifiers enforce classification rules: including promotional hooks, discounts, or sales CTAs inside Utility templates results in automatic reclassification to Marketing (increasing per-message cost by ~7.5x from ₹0.1150 to ₹0.8631) or template rejection. (Sources: Conferbot 2026, Sparkforge Help 2026).
+3. **Opt-In & Consent Policy**:
+   - Meta requires explicit, verifiable opt-in from end-users before a business initiates WhatsApp messages. Aligns with India's Digital Personal Data Protection (DPDP) Act 2023.
+
+### Corrections & Refinements
+- **Marketing Message Rate Correction**: Refined Meta direct list rate from ₹0.7846 (July 2025 launch base rate) to **₹0.8631 per message delivered** based on updated 2026 India rate schedules. Noted BSP retail pricing range of ₹1.09–₹1.25/msg.
+- **Recheck #2 Field Updated**: Field 40 status updated to `DONE 2026-09-26 (Pass B recheck)`.
+
+### Edge Cases Evaluated
+1. **Template Approval Workflows & Reclassification Risk**:
+   - Meta automated AI review takes between 1 minute and 24–72 hours.
+   - Gym OS templates combining utility alerts (e.g., membership expiry notifications) with promotional upsells (e.g., "Renew today for 10% off!") will trigger automated reclassification from Utility (₹0.1150) to Marketing (₹0.8631).
+   - **Mitigation**: Strictly separate transactional renewal alerts from marketing promotional offers into distinct templates.
+2. **Opt-in Capture at Gym Check-In (Turnstile / Biometric / POS Desk)**:
+   - Capturing member phone numbers during biometric check-in or gym enrollment requires explicit opt-in consent (e.g., a digital opt-in checkbox or signed membership clause: "I agree to receive gym service notifications and offers on WhatsApp").
+   - Pre-checked boxes or silent opt-in violate Meta policy and India's DPDP Act 2023, exposing gyms to legal compliance risks.
+3. **Spam-Block Risk for New Gyms Sending Renewal Reminders**:
+   - New WABA accounts start on low daily limit tiers (250 or 1,000 unique recipients per 24h).
+   - Broadcasts sent to inactive or lapsed gym members without explicit recent consent result in high "Block & Report" rates.
+   - High report rates drop WABA Quality Score to Red (Low), causing volume limit downgrades (down to 250/day) or WABA account restrictions.
+   - **Mitigation**: Warm up WABA phone numbers gradually, mandate clear opt-out commands ("Reply STOP to unsubscribe"), and exclude lapsed members (>90 days inactive) from bulk broadcasts without prior warm contact.
+4. **Interplay with Estate's WhatsApp-Only CTA Fallback**:
+   - Gym OS landing pages use Click-to-WhatsApp (CTWA) as the primary or fallback CTA ("Book Demo on WhatsApp").
+   - While CTWA unlocks a 72-hour zero-charge messaging window for inbound leads, any re-engagement initiated after 72 hours requires paid business-initiated templates (billed at Marketing rates of ₹0.8631 Meta / ~₹1.09 BSP).
+   - **Mitigation**: The automated WhatsApp AI agent must capture lead details and confirm demo bookings within the 72-hour free window to avoid post-72h template costs.
+
+### Updated Risks
+- **Cost Spike Risk**: Automated template reclassification by Meta AI raising per-message unit costs by ~7.5x (from ₹0.1150 to ₹0.8631).
+- **Deliverability & WABA Suspension Risk**: High spam reports from un-opted or lapsed members causing WABA Quality Score collapse (Red rating) and daily recipient limit downgrades.
+- **Post-72h Drop-off Leakage**: Unconverted CTWA leads exceeding the 72-hour free window accumulating incremental follow-up costs.
+
+### UNVERIFIED Items
+- **Tier-2 / Tier-3 City CTWA Ad Conversion Rates**: UNVERIFIED (Empirical benchmark data for CTWA lead-to-demo conversion rates in Indian non-metro regional hubs remains unverified and requires live campaign testing).

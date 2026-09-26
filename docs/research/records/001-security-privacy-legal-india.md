@@ -149,7 +149,7 @@ Delegating payment processing to third-party aggregators incurs a modest transac
 DONE 2026-09-26 (lead agent) — see Recheck block at end of file
 
 ### 40. Recheck #2
-PENDING
+DONE 2026-09-26 (Pass B recheck worker)
 
 ### 41. Last Verified
 2026-09-26
@@ -164,3 +164,40 @@ Lead agent via research worker
 PASSED (format + evidence spot-check). 43 fields present; 9 source URLs (MeitY/DPDP, RBI/NPCI/official GST sources verified as primary-type).
 CONFLICT FLAGGED: this record classifies SaaS GST under SAC 998315; record 005 found SAC 997331/998314. SAC classification for SaaS is genuinely contested across sources. Resolution: CA review required before any invoice is issued — FOUNDER ACTION (counsel review, gap #2).
 Note: CERT-In 6-hour breach reporting and DPDP duties captured correctly. This record RESEARCHED; implementation (consent flows, retention policy) NOT started.
+
+
+## Pass B Recheck (2026-09-26)
+
+### 1. Verified DPDP Act & Rules 2026 Legal Status
+- **DPDP Rules Notification**: The Digital Personal Data Protection Rules, 2025 were officially notified in the Gazette of India on 13 November 2025 (G.S.R. 843(E) / G.S.R. 846(E)). As of September 2026, the operational rules are actively enforced across Indian commercial entities.
+- **Phased Enforcement & Deadlines**: Core operational obligations (itemized consent notices, Data Fiduciary-Processor contracts under Sec 8(2), and personal data breach intimations under Rule 7) are active in 2026. Registration for the Consent Manager framework (Rule 4) opens on 13 November 2026, with full compliance phased through May 2027.
+- **Data Protection Board (DPBI)**: The Data Protection Board of India is functional and handling digital breach complaints and adjudication workflows.
+- **Sources**: Gazette of India Notification G.S.R. 843(E) / G.S.R. 846(E) (Nov 13, 2025); MeitY Press Information Bureau Releases; EY / Legal500 Compliance Framework Analyses (2025-2026).
+
+### 2. Pass B Edge-Case Findings for Gym OS SaaS
+- **Client Gyms as Data Fiduciaries vs Beyond Pixells as Processor (DPDP Act Sec 8(2))**: Client gyms determine the purpose and means of processing member personal data (making them **Data Fiduciaries**). Beyond Pixells processes data on behalf of client gyms (making it a **Data Processor**). Under Sec 8(2), a mandatory written Data Processing Agreement (DPA) must govern this processing. Statutory fine exposure under the DPDP Act rests directly on the Data Fiduciary, but the DPA must enforce security safeguards, incident reporting, and data deletion duties on Beyond Pixells.
+- **Dual Breach Notification Obligations**:
+  - *CERT-In (Cybersecurity)*: Mandatory **6-hour** reporting window from time of detection for system logs / IT infrastructure incidents (CERT-In Directions 2022).
+  - *DPDP Act / DPDP Rules 2025 (Rule 7)*: Data Processor (Beyond Pixells) must notify the Data Fiduciary (Gym) immediately upon detecting a personal data breach. The Data Fiduciary must intimate the DPBI and affected Data Principals (gym members) within **72 hours** detailing breach nature, impact, and mitigation steps.
+- **Data Retention for Ex-Members & Statutory Tax Overrides (Sec 8(7) vs CGST Act Sec 36)**:
+  - *DPDP Sec 8(7)* mandates data erasure when a member exits / withdraws consent or purpose ceases, *except* where retention is required by applicable law.
+  - *CGST Act 2017 Sec 36* mandates retention of tax invoices, accounting records, and payment logs for **72 months (6 years)** from due date of annual return.
+  - *Resolution*: Gym OS must immediately purge or anonymize ex-member health/fitness metrics (BCA, body fat, attendance logs), while isolating financial transaction and GST invoice records into encrypted cold storage retained for 72 months strictly for tax compliance audit.
+- **Health-Adjacent Personal Data Handling**:
+  - *Unified Standard*: DPDP Act 2023 does *not* create a separate statutory sub-category for "sensitive personal data" or health data (unlike GDPR or legacy SPDI Rules 2011). All digital personal data is governed under one uniform standard.
+  - *Purpose Limitation*: Processing member body metrics (Bioelectrical Impedance Analysis / BCA, body fat %, weight, health conditions) requires explicit, itemized purpose-specific consent notices under Sec 6. Processing health data outside disclosed purposes violates DPDP Sec 6.
+- **WhatsApp Marketing & TRAI DLT 2026 Status**:
+  - *DPDP Consent*: Automated marketing/promotional WhatsApp messages require explicit, affirmative prior opt-in with timestamped audit logs (DPDP Sec 4 & 6).
+  - *TRAI DLT Framework*: Messages must utilize registered headers and DLT-approved templates under TRAI regulations. An automated 'STOP' opt-out handler must immediately update consent records and suppression lists across SaaS and WhatsApp API webhooks.
+
+### 3. Unverified Items
+- **Early-Stage SME DPO Exemption**: UNVERIFIED. Specific statutory threshold exemptions for early-stage SaaS startups regarding formal Data Protection Officer (DPO) appointment or DPIA requirements remain pending further administrative notifications.
+- **CBIC E-Invoicing Threshold Lowering**: UNVERIFIED. Proposed CBIC lowering of mandatory e-invoicing (IRN) thresholds below ₹5 Crore turnover remains unconfirmed for FY2026-27.
+
+### 4. What the Founder Must Ask the Lawyer (Max 6 Items)
+1. **DPA Architecture & Penalty Indemnity**: How should the DPA between client gyms (Data Fiduciaries) and Beyond Pixells (Data Processor) be structured to enforce DPDP Sec 8(2) compliance while capping Beyond Pixells' contractual liability and indemnifying against gym-originated consent failures?
+2. **Data Retention vs Tax Override Protocol**: Does our proposed retention policy—purging ex-member BCA/health metrics immediately while locking GST invoices in cold storage for 72 months—fully satisfy both DPDP Act Sec 8(7) and CGST Act Sec 36?
+3. **GST SAC Classification Resolution**: Should Gym OS subscription revenue be invoiced under SAC 998315 ("Hosting and IT infrastructure provisioning / SaaS") or SAC 998314 / 997331 (resolving the conflict between Record 001 and Record 005)?
+4. **WhatsApp & Consent Audit Evidence**: Does an un-checked consent toggle on member onboarding combined with timestamped DB logging satisfy both DPDP Sec 6 consent standards and TRAI / Meta Business API opt-in rules in an audit?
+5. **AI Code IP Assignment & Defense**: What specific human-in-the-loop review clauses must be included in MSA/SOW contracts to ensure Beyond Pixells' AI-assisted code deliverables retain full copyright protection under Indian Copyright Act 1957 (Sec 2(d)(vi)) and international standards?
+6. **Breach Notification Escalation Protocol**: What exact timeline and notification template should Beyond Pixells execute to alert client gyms of a security incident without triggering premature false alarm liabilities or violating DPDP Rule 7 / CERT-In 6-hour windows?
