@@ -12,9 +12,9 @@
   --ov-ink:#07080A;
   --ov-ink2:#0A0C10;
   --ov-violet-deep:#142F70;
-  --ov-violet:#3A6EED;
-  --ov-violet-bright:#5584F7;
-  --ov-violet-glow:#B5CAFD;
+  --ov-violet:#0066FF;
+  --ov-violet-bright:#0066FF;
+  --ov-violet-glow:#9CC0FF;
   --ov-sparkle:#F3F6FF;
 }
 
@@ -29,7 +29,7 @@
    never matched the founder's reference photo. */
 /* v7 BLUE PIXEL OBSIDIAN (26 Sep 2026): v6 Obsidian Glow's calm near-black
    canvas + ONE saturated glow field, recoloured to the founder's bp logo
-   palette — royal blue #1D4BC4 / navy #0A1C40. Violet retired estate-wide;
+   palette — royal blue #0066FF / navy #0A1C40. Violet retired estate-wide;
    every property loading this file (CDN-shared) inherits the new palette.
    Measured benchmarks: Linear canvas avg (19,20,21), Raycast (59,25,32). */
 .ov-canvas{position:absolute;inset:0;z-index:0;pointer-events:none;
@@ -47,5 +47,5 @@
 @media(max-width:760px){.ov-canvas{background-position:center 12%}}
 
 /* ---- Card + border overrides: violet-only, no warm tones ---- */
-.bcard::after{background:linear-gradient(90deg,transparent,rgba(181,202,253,.35),transparent) !important}
-.bcard:hover{border-color:rgba(85,132,247,.45) !important}
+.bcard::after{background:linear-gradient(90deg,transparent,rgba(156, 192, 255,.35),transparent) !important}
+.bcard:hover{border-color:rgba(0, 102, 255,.45) !important}

@@ -9,10 +9,10 @@
 /* ---- BP METEORS (shooting stars) ---- */
 .bp-meteors{position:absolute;inset:0;overflow:hidden;pointer-events:none;z-index:1}
 .bp-meteors i{position:absolute;width:2px;height:2px;border-radius:50%;background:#fff;
-  box-shadow:0 0 6px 1px rgba(181,202,253,.8);opacity:0;
+  box-shadow:0 0 6px 1px rgba(156, 192, 255,.8);opacity:0;
   animation:bp-meteor 3.6s linear infinite}
 .bp-meteors i::before{content:"";position:absolute;top:50%;right:0;width:110px;height:1px;
-  transform:translateY(-50%);background:linear-gradient(90deg,rgba(181,202,253,.9),transparent)}
+  transform:translateY(-50%);background:linear-gradient(90deg,rgba(156, 192, 255,.9),transparent)}
 
 @keyframes bp-meteor{
   0%{transform:translate(0,0) rotate(215deg) scale(1);opacity:1}
@@ -27,15 +27,15 @@
    gold rim light bottom-right, diagonal gloss sweep, colored contact glow. */
 .bp-chrome-tile{position:relative;border-radius:22px;
   background:
-    linear-gradient(235deg,rgba(85,132,247,.55),rgba(85,132,247,0) 34%),           /* gold rim light, bottom-right */
+    linear-gradient(235deg,rgba(0, 102, 255,.55),rgba(0, 102, 255,0) 34%),           /* gold rim light, bottom-right */
     linear-gradient(150deg,rgba(255,255,255,.28),rgba(255,255,255,0) 42%),        /* top gloss */
-    linear-gradient(160deg,#5C89F6 0%,#285CD9 48%,#142F70 100%);                  /* violet chrome body */
+    linear-gradient(160deg,#0066FF 0%,#0066FF 48%,#142F70 100%);                  /* violet chrome body */
 
   box-shadow:
     inset 0 2px 1px rgba(255,255,255,.5),                                         /* chrome edge, top */
     inset 0 -2px 1px rgba(20,47,112,.9),
     inset 2px 0 1px rgba(255,255,255,.18),
-    inset -2px 0 1px rgba(85,132,247,.25),                                        /* gold edge, right */
+    inset -2px 0 1px rgba(0, 102, 255,.25),                                        /* gold edge, right */
     0 22px 60px rgba(58,110,237,.45),                                            /* violet scatter glow */
     0 34px 80px rgba(6,8,13,.7);                                                 /* contact shadow */
 
@@ -54,7 +54,7 @@
 .bp-beam-border{position:relative;overflow:hidden}
 .bp-beam-border::before{content:"";position:absolute;inset:0;border-radius:inherit;padding:1.6px;
   background:conic-gradient(from var(--bp-beam-ang,0deg),
-    transparent 0deg,transparent 300deg,#B5CAFD 330deg,#B5CAFD 348deg,#B5CAFD 360deg);
+    transparent 0deg,transparent 300deg,#9CC0FF 330deg,#9CC0FF 348deg,#9CC0FF 360deg);
   mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);
   mask-composite:xor;mask-composite:exclude;
   animation:bp-beam-rotate 4.5s linear infinite;z-index:3;pointer-events:none}
@@ -74,5 +74,5 @@
 .bp-spot{position:absolute;inset:0;border-radius:inherit;pointer-events:none;opacity:0;
   transition:opacity .3s;z-index:1;
   background:radial-gradient(300px circle at var(--bp-mx,50%) var(--bp-my,50%),
-    rgba(181,202,253,.28),rgba(85,132,247,.09) 45%,transparent 70%)}
+    rgba(156, 192, 255,.28),rgba(0, 102, 255,.09) 45%,transparent 70%)}
 .bp-spot-host:hover .bp-spot{opacity:1}

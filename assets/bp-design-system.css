@@ -16,29 +16,29 @@
 
 :root{
   /* CORE CANVAS */
-  --bp-canvas:#06080D; --bp-surface-1:#0C0F17; --bp-surface-2:#121620; --bp-surface-3:#192030;
+  --bp-canvas:#0A0E29; --bp-surface-1:#0A0E29; --bp-surface-2:#121620; --bp-surface-3:#192030;
   --bp-glass:rgba(12,15,23,.78);
 
   /* CHROME VIOLET BRAND SPECTRUM */
   --bp-violet-950:#102965; --bp-violet-900:#142F70; --bp-violet-800:#1D4095;
-  --bp-violet-700:#214CB6; --bp-violet-600:#285CD9; --bp-violet-500:#3A6EED;
-  --bp-violet-400:#5C89F6; --bp-violet-300:#8BABFA; --bp-violet-200:#B5CAFD;
-  --bp-gold-500:#5584F7; --bp-gold-400:#FFA733; --bp-gold-300:#B5CAFD;
+  --bp-violet-700:#214CB6; --bp-violet-600:#0066FF; --bp-violet-500:#0066FF;
+  --bp-violet-400:#0066FF; --bp-violet-300:#9CC0FF; --bp-violet-200:#9CC0FF;
+  --bp-gold-500:#0066FF; --bp-gold-400:#FFA733; --bp-gold-300:#9CC0FF;
 
   /* SEMANTIC */
-  --bp-text-primary:#F2F5FB; --bp-text-secondary:#A6B0C7; --bp-text-muted:#68738F; --bp-text-inverse:#06080D;
+  --bp-text-primary:#F2F5FB; --bp-text-secondary:#94A3B8; --bp-text-muted:#94A3B8; --bp-text-inverse:#0A0E29;
   --bp-border-subtle:rgba(139,171,250,.12); --bp-border-default:rgba(139,171,250,.2);
   --bp-border-strong:rgba(139,171,250,.34);
-  --bp-rim-light:linear-gradient(135deg,rgba(85,132,247,.55),rgba(139,171,250,.28) 55%,rgba(58,110,237,.15));
-  --bp-success:#34D399; --bp-warning:#B5CAFD; --bp-error:#FB7185;
+  --bp-rim-light:linear-gradient(135deg,rgba(0, 102, 255,.55),rgba(139,171,250,.28) 55%,rgba(58,110,237,.15));
+  --bp-success:#34D399; --bp-warning:#9CC0FF; --bp-error:#FB7185;
 
   /* GRADIENTS — the signature */
-  --bp-gradient-brand:linear-gradient(135deg,#3A6EED 0%,#8BABFA 55%,#B5CAFD 100%);
-  --bp-gradient-gold:linear-gradient(135deg,#5584F7 0%,#B5CAFD 100%);
-  --bp-gradient-chrome:linear-gradient(160deg,#5C89F6 0%,#285CD9 45%,#142F70 100%);
+  --bp-gradient-brand:linear-gradient(135deg,#0066FF 0%,#9CC0FF 55%,#9CC0FF 100%);
+  --bp-gradient-gold:linear-gradient(135deg,#0066FF 0%,#9CC0FF 100%);
+  --bp-gradient-chrome:linear-gradient(160deg,#0066FF 0%,#0066FF 45%,#142F70 100%);
   --bp-gradient-hero:radial-gradient(ellipse 60% 55% at 50% -10%,rgba(58,110,237,.32),transparent 70%);
-  --bp-gradient-subtle:linear-gradient(135deg,rgba(58,110,237,.16),rgba(85,132,247,.05));
-  --bp-gradient-glow:linear-gradient(135deg,rgba(58,110,237,.45),rgba(85,132,247,.18));
+  --bp-gradient-subtle:linear-gradient(135deg,rgba(58,110,237,.16),rgba(0, 102, 255,.05));
+  --bp-gradient-glow:linear-gradient(135deg,rgba(58,110,237,.45),rgba(0, 102, 255,.18));
   --bp-gloss-top:linear-gradient(180deg,rgba(255,255,255,.09),rgba(255,255,255,0) 42%);
 
   /* TYPE */
@@ -54,7 +54,7 @@
   /* LIGHTING & SPOTLIGHT */
   --bp-mouse-x:50%; --bp-mouse-y:50%;
   --bp-spotlight-color:rgba(92,137,246,.14);
-  --bp-spotlight-border:rgba(181,202,253,.28);
+  --bp-spotlight-border:rgba(156, 192, 255,.28);
 
   /* GLASS */
   --bp-glass-bg:rgba(12,15,23,.72);
@@ -71,7 +71,7 @@
 
 @keyframes bp-scaleIn{0%{opacity:0;transform:scale(.92)}100%{opacity:1;transform:scale(1)}}
 
-@keyframes bp-glowPulse{0%,100%{box-shadow:0 0 22px rgba(58,110,237,.28)}50%{box-shadow:0 0 44px rgba(85,132,247,.32)}}
+@keyframes bp-glowPulse{0%,100%{box-shadow:0 0 22px rgba(58,110,237,.28)}50%{box-shadow:0 0 44px rgba(0, 102, 255,.32)}}
 
 @keyframes bp-gradientShift{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
 
@@ -116,7 +116,7 @@
 
 /* ============ MAGNETIC BUTTONS ============ */
 .bp-magnetic-btn{transition:transform .3s var(--bp-ease-spring),box-shadow .3s var(--bp-ease-smooth);will-change:transform}
-.bp-magnetic-btn:hover{box-shadow:0 10px 34px rgba(85,132,247,.24),0 0 60px rgba(58,110,237,.28)}
+.bp-magnetic-btn:hover{box-shadow:0 10px 34px rgba(0, 102, 255,.24),0 0 60px rgba(58,110,237,.28)}
 
 /* ============ LIFT & HOVER ============ */
 .bp-lift{transition:transform .4s var(--bp-ease-out-expo),box-shadow .4s var(--bp-ease-smooth)}
@@ -140,8 +140,8 @@
 /* ============ SCROLL PROGRESS ============ */
 .bp-scroll-progress-bar{
   position:fixed;top:0;left:0;height:2px;z-index:200;width:0;
-  background:linear-gradient(90deg,#3A6EED,#8BABFA,#5584F7);
-  box-shadow:0 0 12px rgba(85,132,247,.55);
+  background:linear-gradient(90deg,#0066FF,#9CC0FF,#0066FF);
+  box-shadow:0 0 12px rgba(0, 102, 255,.55);
 }
 
 /* ============ NOISE CANVAS ============ */
@@ -149,7 +149,7 @@
 
 /* ============ SIGNATURE TEXT TREATMENTS ============ */
 .bp-text-grad{
-  background:linear-gradient(110deg,#B5CAFD 20%,#FFF 42%,#B5CAFD 58%,#8BABFA 80%);
+  background:linear-gradient(110deg,#9CC0FF 20%,#FFF 42%,#9CC0FF 58%,#9CC0FF 80%);
   background-size:200% auto;background-clip:text;background-clip:text;color:transparent;
   animation:bp-shimmer 6s linear infinite;
 }
