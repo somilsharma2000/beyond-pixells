@@ -71,7 +71,7 @@ pends the Base44 credit reset (capture functions refuse calls with HTTP 402 unti
 
 ## 3. The visual design language (v4.0 CHROME VIOLET — locked 26 Sep 2026)
 
-Single source of truth: **`assets/bp-design-system.css`** + **`assets/bp-motion.js`**.
+Single source of truth: **`assets/bp-design-system.css`** + **`assets/bp-motion.js`** + **`assets/bp-effects-kit.css/.js`** (chrome tile, border beam, meteors, spotlight, 3D tilt — Magic UI patterns ported to vanilla). Apply via the `visual-effects-kit` skill.
 Any site adds 2 lines and gets the whole system:
 
 ```html
