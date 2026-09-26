@@ -122,6 +122,7 @@ Any site adds 2 lines and gets the whole system:
 | `BUSINESS_PLAYBOOK.md` | The model, pricing architecture, vertical launch playbook, survival rules, metrics, legal checklist |
 | `DESIGN_LANGUAGE.md` | The complete UI/UX spec: tokens, motion, components, per-product flavors, a11y |
 | `SEO_GEO.md` | Head templates, JSON-LD blocks, GEO checklist for AI engines |
+| `FREE_TOOLS_STACK.md` | The free open-source tool catalog: 8 categories, deployment blueprint for the VPS |
 | `SOCIAL_SYSTEM.md` | 10 content formats, production pipeline, posting cadence |
 | `research/` | 15 research reports behind every decision (competitors, psychology, legal, survival, brand, dentist market, design, SEO/GEO, social) |
 
