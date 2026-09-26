@@ -1,5 +1,10 @@
 # 🧠 Beyond Pixells — AGENT BRAIN
 
+> **OPERATING RULES (26 Sep 2026):** `AGENTS.md` (repo root) is law — research before
+> material decisions, no invention, no shallow completion. `docs/00_MASTER_INDEX.md` is the
+> master research/execution index. Every material decision needs a research record in
+> `docs/research/records/` (format: 00_MASTER_INDEX §103) and two rechecks before COMPLETE.
+
 > **READ THIS FIRST.** This is the master document for the entire Beyond Pixells
 > project. Any agent (or human) who reads this file + the docs it links can
 > understand and continue every part of the project. Last updated: 2026-09-26.
