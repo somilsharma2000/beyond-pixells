@@ -95,6 +95,15 @@ Any site adds 2 lines and gets the whole system:
 - **Social content**: generated FROM the design system —
   `assets/social-templates/` (stat-drop.html, hook-card.html are 1080×1920
   screen-record templates). Full system: `docs/SOCIAL_SYSTEM.md`.
+- **Message design pack (26 Sep 2026)**: brand-consistent automation copy + email skeleton —
+  `assets/message-templates/gym-os-whatsapp.md` (7 message types),
+  `assets/message-templates/dentist-os-whatsapp.md` (6 types),
+  `assets/message-templates/email-dark-base.html` (dark-premium transactional skeleton).
+  Full research: `docs/research/message_design_pack.md`.
+- **Design system v2.0 (26 Sep 2026)**: spotlight cards, hero choreography, nav frost,
+  noise canvas, magnetic/tilt engines — opt-in utilities documented in
+  `docs/DESIGN_LANGUAGE.md` (v2.0 section); applied to hub, Gym OS landing,
+  Dentist OS landing. Client-system rollout queued.
 - **SEO/GEO**: robots.txt + sitemap.xml + llms.txt + JSON-LD on the flagships;
   canonical + OG + schema on every site. Full guide: `docs/SEO_GEO.md`.
 
