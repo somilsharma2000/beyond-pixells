@@ -43,3 +43,5 @@ Audit date: 2026-09-26. Auditor: lead agent (beyond). This file states the REAL 
 
 ---
 **POST-RUN UPDATE (2026-09-26 later):** records 001–008 landed + founder taxonomy extension (§112–§149). Post-run state: 150 sections, 30 RESEARCHED, 25 PARTIAL, 67 NOT_STARTED. See FINAL_RESEARCH_AUDIT.md. COMPLETE: still 0 — by design.
+
+**EXTENSION (2026-09-26, master command v2):** taxonomy extended with Part 3 (§150–§213, company operating/distribution/community/scale domains). Total: **214 sections**. Post-extension: 30 RESEARCHED, 7 RESEARCHING (wave 2 in flight), 52 PARTIAL, 96 NOT_STARTED, 29 internal. COMPLETE: still 0.
