@@ -561,7 +561,18 @@ footer .brand{color:#fff}
       +'Phone: '+v('phone')+'\n'
       +'Needs: '+v('interest')+'\n'
       +(v('notes')?('Notes: '+v('notes')+'\n'):'');
-    window.open('https://wa.me/917737077479?text='+encodeURIComponent(msg),'_blank');
+    var wa=function(){window.open('https://wa.me/917737077479?text='+encodeURIComponent(msg),'_blank');};
+    var btn=f.querySelector('button[type=submit]');
+    var t=btn?btn.innerText:'';
+    if(btn){btn.disabled=true;btn.innerText='Sending…';}
+    fetch('https://superagent-167c9029.base44.app/functions/captureLead',{
+      method:'POST',headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({name:v('name'),business:v('business'),city:v('city'),phone:v('phone'),interest:v('interest'),notes:v('notes'),source:'beyond-pixells hub'})
+    }).then(function(r){return r.json();}).then(function(j){
+      if(j&&j.ok){
+        f.innerHTML='<div class="lead-ok"><b>✓ Received — you are in the system.</b><br>We review every enquiry ourselves and will reach out today. Want to talk right now?</div><a class="btn btn-primary" style="margin-top:14px" target="_blank" rel="noopener" href="https://wa.me/917737077479?text='+encodeURIComponent(msg)+'">Continue on WhatsApp →</a>';
+      }else{wa();}
+    }).catch(function(){wa();});
   });
 })();
 </script>
