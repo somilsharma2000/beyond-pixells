@@ -163,3 +163,28 @@ navy (#2563eb interactive accent), matching the app users actually get.
 
 Ops note: fixed body scroll lock on Gym OS (bp-noise-canvas class on body +
 overflow-x:hidden) found and fixed; smoke tests must assert scrollY.
+
+## v7.2 ONE DESIGN + INTERACTION LAW (26 Sep 2026, founder directive)
+
+**One design language estate-wide.** All previous design concepts
+(Chrome Violet v4, Obsidian Glow v6 gold rims, legacy gold/violet
+Builder OS, violet/crimson/amber Dentist OS) are retired. Every
+flagship page — hub, Gym OS, Dentist OS, Builder OS — now runs the
+same system: navy obsidian canvas #0A0E29, app-true accent #0066FF,
+surfaces #141833/#242842, borders #272C49, slate text ramp
+(#F1F5F9/#94A3B8/#6B7280), success #21C45D, Space Grotesk display +
+Plus Jakarta Sans body, shared assets (bp-design-system.css,
+bp-obsidian-veins.css, bp-motion.js) and the .ov-grain overlay.
+
+**Interaction law (founder): effects stay, but smooth, normal,
+user-friendly.**
+- NO cursor-follow glow anywhere: `.bp-spotlight-card` radial spotlight
+  pseudo-elements and the effects-kit `bp-spot-host` pattern are deleted
+  from the shared kit. Cards get a clean lift on hover only.
+- 3D tilt softened 8° -> 3° max.
+- Hover shadows softened (no neon halos).
+
+**Base44 Gym OS delink (founder directive):** the estate no longer
+references my-gym-os.base44.app on any public page. CTAs point to the
+on-page showcase (#showcase); the hub pframe chrome shows the product
+name, not the hosted URL. Lead capture remains a separate pipeline.

@@ -60,6 +60,22 @@ jobs:
             // hero section must actually paint (not a blank page)
             const visible = await page.locator("h1, h2").first().isVisible().catch(() => false);
             if (!visible) fails.push("no visible heading rendered");
+            // scroll must work (guards against fixed-body scroll locks — the
+            // 26 Sep gym-os incident) — wait out smooth scrolling before reading
+            const scrollY = await page.evaluate(async () => {
+              window.scrollTo(0, 1500);
+              await new Promise(r => setTimeout(r, 800));
+              return window.scrollY;
+            });
+            if (scrollY < 100) fails.push(`scroll locked (scrollY=${scrollY})`);
+            // cursor-follow spotlight glow must stay removed estate-wide
+            const spot = await page.evaluate(() => {
+              const c = document.querySelector(".bp-spotlight-card");
+              if (!c) return "none";
+              const bg = getComputedStyle(c, "::before").backgroundImage;
+              return bg && bg !== "none" && bg.includes("radial-gradient") ? "GLOW" : "clean";
+            });
+            if (spot === "GLOW") fails.push("cursor spotlight glow is back");
           } catch (e) { fails.push(`navigation: ${String(e).slice(0, 120)}`); }
           await browser.close();
           if (errors.length) fails.push(`console errors: ${errors.slice(0, 3).join(" | ")}`);
