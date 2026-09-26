@@ -14,7 +14,8 @@ body{margin:0;background:var(--ink);width:1080px;height:1920px;overflow:hidden;f
   background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>")}
 .veins{position:absolute;inset:0;z-index:1}
 .veins .glow{fill:none;stroke:var(--violet-bright);stroke-linecap:round;filter:blur(9px);opacity:.55}
-.veins .core{fill:none;stroke:var(--violet-glow);stroke-linecap:round;opacity:.92;stroke-dasharray:6 16;animation:flow 6s linear infinite}
+.veins .core{fill:none;stroke:var(--violet-glow);stroke-linecap:round;opacity:.95;stroke-dasharray:6 16;animation:flow 6s linear infinite}
+.ambient{position:absolute;inset:0;z-index:0;background:radial-gradient(900px 1100px at 55% 55%,rgba(124,58,237,.28),transparent 65%),radial-gradient(600px 700px at 80% 15%,rgba(168,85,247,.22),transparent 70%)}
 @keyframes flow{to{stroke-dashoffset:-220}}
 .droplets i{position:absolute;border-radius:50%;
   background:radial-gradient(circle at 32% 28%,rgba(230,220,255,.75),rgba(20,14,30,.9) 38%,rgba(4,3,7,.98) 72%);
@@ -44,11 +45,22 @@ body{margin:0;background:var(--ink);width:1080px;height:1920px;overflow:hidden;f
 <body>
 <div class="grain"></div>
 <svg class="veins" viewBox="0 0 1080 1920" preserveAspectRatio="none" aria-hidden="true">
-  <path class="glow" d="M-10 1750 C 160 1600, 120 1400, 320 1300 C 480 1220, 440 1050, 620 950 C 780 860, 720 650, 900 520 C 1000 450, 980 300, 1120 220" stroke-width="12"/>
-  <path class="glow" d="M-30 300 C 140 380, 200 500, 380 480 C 520 465, 560 600, 620 950" stroke-width="10"/>
-  <path class="core" d="M-10 1750 C 160 1600, 120 1400, 320 1300 C 480 1220, 440 1050, 620 950 C 780 860, 720 650, 900 520 C 1000 450, 980 300, 1120 220" stroke-width="2.6"/>
-  <path class="core" d="M-30 300 C 140 380, 200 500, 380 480 C 520 465, 560 600, 620 950" stroke-width="2.2"/>
+  <path class="glow" d="M-10 1750 C 160 1600, 120 1400, 320 1300 C 480 1220, 440 1050, 620 950 C 780 860, 720 650, 900 520 C 1000 450, 980 300, 1120 220" stroke-width="14"/>
+  <path class="glow" d="M-30 300 C 140 380, 200 500, 380 480 C 520 465, 560 600, 620 950" stroke-width="12"/>
+  <path class="glow" d="M1100 900 C 900 880, 860 780, 700 800 C 560 818, 540 900, 620 950" stroke-width="11"/>
+  <path class="glow" d="M-40 1050 C 120 1000, 180 1120, 340 1100 C 460 1085, 480 1180, 620 950" stroke-width="10"/>
+  <path class="glow" d="M900 520 C 1020 560, 1120 540, 1140 650" stroke-width="9"/>
+  <path class="glow" d="M320 1300 C 220 1420, 100 1440, -20 1560" stroke-width="9"/>
+  <path class="glow" d="M780 860 C 900 900, 980 980, 1120 1000" stroke-width="8"/>
+  <path class="core" d="M-10 1750 C 160 1600, 120 1400, 320 1300 C 480 1220, 440 1050, 620 950 C 780 860, 720 650, 900 520 C 1000 450, 980 300, 1120 220" stroke-width="3"/>
+  <path class="core" d="M-30 300 C 140 380, 200 500, 380 480 C 520 465, 560 600, 620 950" stroke-width="2.6"/>
+  <path class="core" d="M1100 900 C 900 880, 860 780, 700 800 C 560 818, 540 900, 620 950" stroke-width="2.4"/>
+  <path class="core" d="M-40 1050 C 120 1000, 180 1120, 340 1100 C 460 1085, 480 1180, 620 950" stroke-width="2.2"/>
+  <path class="core" d="M900 520 C 1020 560, 1120 540, 1140 650" stroke-width="2"/>
+  <path class="core" d="M320 1300 C 220 1420, 100 1440, -20 1560" stroke-width="2"/>
+  <path class="core" d="M780 860 C 900 900, 980 980, 1120 1000" stroke-width="1.8"/>
 </svg>
+<div class="ambient"></div>
 <div class="droplets" id="dp"></div>
 <div class="geode">
   <div class="shard"></div>
