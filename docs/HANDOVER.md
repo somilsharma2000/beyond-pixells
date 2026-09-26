@@ -201,3 +201,6 @@ When this estate is finished, a single non-technical operator's day looks like:
 *Handover authored by the previous lead agent, 26 September 2026. Everything in
 this document was verified live at the time of writing except where explicitly
 marked broken or pending.*
+
+## 27 Sep — Deleted
+- 8 client gym pitch sites + repos (bettabodies, reds-gym, flex-n-tone, fight-factory-mcr, oxigen-fitness, ironforge-blr, iron-forge-hyd, powerhouse) — founder directive, gone from GitHub.

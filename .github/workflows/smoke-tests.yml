@@ -30,7 +30,6 @@ jobs:
           - { name: "Gym OS Landing", url: "https://somilsharma2000.github.io/gym-os/", needs_form: false, hero: "Gym OS" }
           - { name: "Dentist OS Landing", url: "https://somilsharma2000.github.io/dentist-os-site/", needs_form: false, hero: "Dentist OS" }
           - { name: "Builder OS", url: "https://somilsharma2000.github.io/builder-os-site/", needs_form: false, hero: "Builder OS" }
-          - { name: "Client Template (Bettabodies)", url: "https://somilsharma2000.github.io/bettabodies-system/", needs_form: true, hero: "" }
     steps:
       - name: Render and assert
         id: smoke

@@ -11,6 +11,8 @@
 
 ---
 
+## IMPORTANT (27 Sep 2026): 8 client gym pitch sites + repos deleted per founder directive — do not reference bettabodies/reds-gym/flex-n-tone/fight-factory/oxigen/ironforge/iron-forge/powerhouse as live properties.
+
 ## 1. What this is
 
 > **NEW AGENT?** Read `docs/HANDOVER.md` FIRST — the complete transfer document
