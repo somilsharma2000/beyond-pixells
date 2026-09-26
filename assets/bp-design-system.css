@@ -1,223 +1,156 @@
 /* ============================================================
-   BEYOND PIXELLS — SHARED DESIGN SYSTEM v2.0
-   Dark-Premium OS Motion & Lighting Infrastructure
+   BEYOND PIXELLS — SHARED DESIGN SYSTEM v4.0
+   "CHROME VIOLET" — Glossy dark premium OS language
+
+   Deep violet/purple gradient surfaces, orange-gold rim light,
+   glass blur, spotlight cards, cinematic glow.
 
    Include on any site (2 lines and it inherits everything):
    <link rel="stylesheet"
      href="https://somilsharma2000.github.io/beyond-pixells/assets/bp-design-system.css">
    <script src="https://somilsharma2000.github.io/beyond-pixells/assets/bp-motion.js"></script>
 
-   Spec: docs/DESIGN_LANGUAGE.md  •  Motion: assets/bp-motion.js
-   v2.0 adds: spotlight cards, nav frost/scroll-shrink, hero load
-   choreography, shimmer text, scroll progress, skeleton, tilt,
-   magnetic buttons, noise canvas — all opt-in utilities, fully
-   backward-compatible with v1.0 markup.
+   Class names are stable from v2/v3 (bp-* utilities kept) so
+   existing markup upgrades in place.
    ============================================================ */
 
 :root{
-  /* CORE TOKENS (v1.0 — locked) */
-  --bp-canvas:#08090C; --bp-surface-1:#12141A; --bp-surface-2:#1A1D26; --bp-surface-3:#222632;
-  --bp-glass:rgba(18,20,26,.75);
-  --bp-border-subtle:rgba(255,255,255,.07); --bp-border-default:#2A2F3D; --bp-border-strong:#3D4457; --bp-border-focus:#00F2FE;
-  --bp-text-primary:#F4F5F7; --bp-text-secondary:#9DA4B4; --bp-text-muted:#5C6479; --bp-text-inverse:#08090C;
-  --bp-crimson:#FF3B30; --bp-amber:#FF7A00; --bp-cyan:#00F2FE;
-  --bp-success:#00E676; --bp-warning:#FFAB00; --bp-error:#FF3B30;
-  --bp-gradient-brand:linear-gradient(135deg,#FF3B30 0%,#FF7A00 100%);
-  --bp-gradient-subtle:linear-gradient(135deg,rgba(255,59,48,.15),rgba(255,122,0,.05));
-  --bp-gradient-glow:linear-gradient(135deg,rgba(255,59,48,.4),rgba(255,122,0,.2));
-  --bp-gradient-cyan:linear-gradient(135deg,rgba(0,242,254,.3),rgba(0,242,254,.02));
+  /* CORE CANVAS */
+  --bp-canvas:#06060D; --bp-surface-1:#0C0C17; --bp-surface-2:#121220; --bp-surface-3:#191930;
+  --bp-glass:rgba(12,12,23,.78);
+
+  /* CHROME VIOLET BRAND SPECTRUM */
+  --bp-violet-950:#2E1065; --bp-violet-900:#3B1470; --bp-violet-800:#4C1D95;
+  --bp-violet-700:#5B21B6; --bp-violet-600:#6D28D9; --bp-violet-500:#7C3AED;
+  --bp-violet-400:#8B5CF6; --bp-violet-300:#A78BFA; --bp-violet-200:#C4B5FD;
+  --bp-gold-500:#FF9500; --bp-gold-400:#FFA733; --bp-gold-300:#FFB86B;
+
+  /* SEMANTIC */
+  --bp-text-primary:#F4F2FB; --bp-text-secondary:#ABA6C7; --bp-text-muted:#6E688F; --bp-text-inverse:#06060D;
+  --bp-border-subtle:rgba(167,139,250,.12); --bp-border-default:rgba(167,139,250,.2);
+  --bp-border-strong:rgba(167,139,250,.34);
+  --bp-rim-light:linear-gradient(135deg,rgba(255,149,0,.55),rgba(167,139,250,.28) 55%,rgba(124,58,237,.15));
+  --bp-success:#34D399; --bp-warning:#FFB86B; --bp-error:#FB7185;
+
+  /* GRADIENTS — the signature */
+  --bp-gradient-brand:linear-gradient(135deg,#7C3AED 0%,#A78BFA 55%,#C4B5FD 100%);
+  --bp-gradient-gold:linear-gradient(135deg,#FF9500 0%,#FFB86B 100%);
+  --bp-gradient-chrome:linear-gradient(160deg,#8B5CF6 0%,#6D28D9 45%,#3B1470 100%);
+  --bp-gradient-hero:radial-gradient(ellipse 60% 55% at 50% -10%,rgba(124,58,237,.32),transparent 70%);
+  --bp-gradient-subtle:linear-gradient(135deg,rgba(124,58,237,.16),rgba(255,149,0,.05));
+  --bp-gradient-glow:linear-gradient(135deg,rgba(124,58,237,.45),rgba(255,149,0,.18));
+  --bp-gloss-top:linear-gradient(180deg,rgba(255,255,255,.09),rgba(255,255,255,0) 42%);
+
+  /* TYPE */
   --bp-font-display:'Space Grotesk',-apple-system,BlinkMacSystemFont,sans-serif;
   --bp-font-body:'Plus Jakarta Sans',-apple-system,BlinkMacSystemFont,sans-serif;
-  --bp-r-sm:8px; --bp-r-md:12px; --bp-r-lg:16px; --bp-r-xl:24px;
+
+  /* RADIUS & MOTION */
+  --bp-r-sm:10px; --bp-r-md:14px; --bp-r-lg:20px; --bp-r-xl:28px;
   --bp-ease-out-expo:cubic-bezier(.16,1,.3,1);
   --bp-ease-spring:cubic-bezier(.34,1.56,.64,1);
   --bp-ease-smooth:cubic-bezier(.4,0,.2,1);
 
-  /* v2.0 — LIGHTING & SPOTLIGHT TOKENS */
+  /* LIGHTING & SPOTLIGHT */
   --bp-mouse-x:50%; --bp-mouse-y:50%;
-  --bp-spotlight-color:rgba(255,122,0,.12);
-  --bp-spotlight-border:rgba(255,255,255,.18);
+  --bp-spotlight-color:rgba(139,92,246,.14);
+  --bp-spotlight-border:rgba(196,181,253,.28);
 
-  /* v2.0 — ELEVATED SURFACES & GLASS TOKENS */
-  --bp-surface-4:#2A2F3D;
-  --bp-glass-bg:rgba(18,20,26,.72);
-  --bp-glass-border:rgba(255,255,255,.08);
-  --bp-glass-blur:blur(16px) saturate(180%);
+  /* GLASS */
+  --bp-glass-bg:rgba(12,12,23,.72);
+  --bp-glass-border:rgba(167,139,250,.14);
+  --bp-glass-blur:blur(18px) saturate(160%);
 
-  /* v2.0 — CANVAS TACTILE NOISE */
-  --bp-noise-url:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.035'/%3E%3C/svg%3E");
+  /* NOISE */
+  --bp-noise-url:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.045'/%3E%3C/svg%3E");
 
-  /* v2.0 — TIMING & DELAY TOKENS */
   --bp-hero-delay:0ms;
 }
 
-/* ============ v1.0 KEYFRAMES (kept) ============ */
+/* ============ KEYFRAMES ============ */
 @keyframes bp-fadeUp{0%{opacity:0;transform:translateY(24px)}100%{opacity:1;transform:translateY(0)}}
 @keyframes bp-scaleIn{0%{opacity:0;transform:scale(.92)}100%{opacity:1;transform:scale(1)}}
-@keyframes bp-glowPulse{0%,100%{box-shadow:0 0 18px rgba(255,80,20,.22)}50%{box-shadow:0 0 34px rgba(255,80,20,.42)}}
+@keyframes bp-glowPulse{0%,100%{box-shadow:0 0 22px rgba(124,58,237,.28)}50%{box-shadow:0 0 44px rgba(255,149,0,.32)}}
 @keyframes bp-gradientShift{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
 @keyframes bp-numSlide{0%{opacity:0;transform:translateY(14px)}100%{opacity:1;transform:translateY(0)}}
 @keyframes bp-marquee{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
-@keyframes bp-dotPulse{0%,100%{opacity:1}50%{opacity:.35}}
+@keyframes bp-shimmer{0%{background-position:-200% 50%}100%{background-position:200% 50%}}
+@keyframes bp-spin{to{transform:rotate(360deg)}}
 
-/* scroll-reveal base (activated by bp-motion.js IntersectionObserver) */
-[data-reveal]{opacity:0;transform:translateY(24px);transition:opacity .6s var(--bp-ease-out-expo),transform .6s var(--bp-ease-out-expo)}
-[data-reveal="scale"]{transform:scale(.94)}
-[data-reveal="left"]{transform:translateX(-28px)}
-[data-reveal="right"]{transform:translateX(28px)}
-[data-reveal].bp-revealed{opacity:1;transform:none}
+/* ============ HERO CHOREOGRAPHY ============ */
+.bp-hero-step{opacity:0;animation:bp-fadeUp .9s var(--bp-ease-out-expo) forwards;animation-delay:calc(var(--bp-hero-delay) + var(--bp-d,0ms))}
+.bp-hero-delay{opacity:0;animation:bp-fadeUp .9s var(--bp-ease-out-expo) forwards;animation-delay:var(--bp-hero-delay)}
+@media(prefers-reduced-motion:reduce){.bp-hero-step,.bp-hero-delay{animation:none;opacity:1}}
 
-/* ============ v1.0 UTILITIES (kept) ============ */
-.bp-lift{transition:transform .3s var(--bp-ease-out-expo),box-shadow .3s var(--bp-ease-out-expo),border-color .3s}
-.bp-lift:hover{transform:translateY(-4px);box-shadow:0 12px 40px rgba(0,0,0,.45),0 0 30px rgba(255,59,48,.12);border-color:rgba(255,122,0,.3)}
-.bp-grad-text{background:var(--bp-gradient-brand);background-size:200% 200%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:bp-gradientShift 6s var(--bp-ease-smooth) infinite}
-.bp-glow{animation:bp-glowPulse 2.6s ease-in-out infinite}
-.bp-marquee{overflow:hidden;position:relative;mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
-.bp-marquee-track{display:flex;gap:56px;width:max-content;animation:bp-marquee 28s linear infinite}
-.bp-marquee:hover .bp-marquee-track{animation-play-state:paused}
-
-/* ============================================================
-   v2.0 — SHARED DESIGN SYSTEM EXTENSIONS
-   ============================================================ */
-
-/* ============ CANVAS TACTILE NOISE OVERLAY ============ */
-/* Add class="bp-noise-canvas" to <body> for a sub-perceptual film-grain
-   layer that kills banding and adds tactile weight. */
-.bp-noise-canvas{position:relative}
-.bp-noise-canvas::before{
-  content:"";
-  position:fixed;
-  top:0;left:0;width:100vw;height:100vh;
-  background-image:var(--bp-noise-url);
-  pointer-events:none;
-  z-index:9999;
-  opacity:.8;
-}
-
-/* ============ CARD SPOTLIGHT & HOVER BORDER GLOW ============ */
-/* Mouse-following spotlight + 1px glowing border (Linear-style).
-   Use on any card: class="bp-spotlight-card". Auto-tracked by bp-motion.js. */
+/* ============ SPOTLIGHT CARDS — glossy chrome tile ============ */
 .bp-spotlight-card{
-  position:relative;
-  background-color:var(--bp-surface-1);
+  position:relative;border-radius:var(--bp-r-lg);
+  background:
+    var(--bp-gloss-top),
+    linear-gradient(165deg,var(--bp-surface-2),var(--bp-surface-1));
   border:1px solid var(--bp-border-subtle);
-  border-radius:var(--bp-r-lg);
   overflow:hidden;
-  transition:border-color .3s var(--bp-ease-out-expo),transform .3s var(--bp-ease-out-expo),box-shadow .3s var(--bp-ease-out-expo);
+  transition:transform .45s var(--bp-ease-out-expo),border-color .45s var(--bp-ease-smooth),box-shadow .45s var(--bp-ease-smooth);
 }
 .bp-spotlight-card::before{
-  content:"";
-  position:absolute;
-  top:0;left:0;right:0;bottom:0;
-  border-radius:inherit;
-  background:radial-gradient(600px circle at var(--bp-mouse-x) var(--bp-mouse-y),var(--bp-spotlight-color),transparent 40%);
-  opacity:0;
-  transition:opacity .4s var(--bp-ease-smooth);
-  pointer-events:none;
-  z-index:1;
+  content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;
+  background:radial-gradient(420px circle at var(--bp-mouse-x) var(--bp-mouse-y),var(--bp-spotlight-color),transparent 55%);
+  opacity:0;transition:opacity .4s var(--bp-ease-smooth);
 }
 .bp-spotlight-card::after{
-  content:"";
-  position:absolute;
-  inset:-1px;
-  border-radius:inherit;
-  padding:1px;
-  background:radial-gradient(400px circle at var(--bp-mouse-x) var(--bp-mouse-y),var(--bp-spotlight-border),transparent 40%);
-  -webkit-mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);
-  -webkit-mask-composite:xor;
-  mask-composite:exclude;
-  opacity:0;
-  transition:opacity .4s var(--bp-ease-smooth);
-  pointer-events:none;
-  z-index:2;
+  content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;
+  background:radial-gradient(240px circle at var(--bp-mouse-x) var(--bp-mouse-y),var(--bp-spotlight-border),transparent 45%);
+  -webkit-mask:linear-gradient(#000,#000) content-box,linear-gradient(#000,#000);
+  -webkit-mask-composite:xor;mask-composite:exclude;
+  padding:1px;opacity:0;transition:opacity .4s var(--bp-ease-smooth);
 }
-.bp-spotlight-card:hover::before,
-.bp-spotlight-card:hover::after{opacity:1}
+.bp-spotlight-card:hover{transform:translateY(-4px);border-color:var(--bp-border-default);box-shadow:0 24px 70px rgba(0,0,0,.5),0 0 42px rgba(124,58,237,.16)}
+.bp-spotlight-card:hover::before,.bp-spotlight-card:hover::after{opacity:1}
 
-/* ============ NAVIGATION FROST & SCROLL-SHRINK ============ */
-/* class="bp-nav-sticky" on the <nav>/<header> element.
-   bp-motion.js sets data-scrolled automatically past 20px. */
+/* ============ MAGNETIC BUTTONS ============ */
+.bp-magnetic-btn{transition:transform .3s var(--bp-ease-spring),box-shadow .3s var(--bp-ease-smooth);will-change:transform}
+.bp-magnetic-btn:hover{box-shadow:0 10px 34px rgba(255,149,0,.24),0 0 60px rgba(124,58,237,.28)}
+
+/* ============ LIFT & HOVER ============ */
+.bp-lift{transition:transform .4s var(--bp-ease-out-expo),box-shadow .4s var(--bp-ease-smooth)}
+.bp-lift:hover{transform:translateY(-5px)}
+.bp-icon-hover{transition:transform .35s var(--bp-ease-spring),color .25s ease}
+.bp-icon-hover:hover{transform:scale(1.12) rotate(-3deg)}
+
+/* ============ NAV — glass, scroll-shrink ============ */
 .bp-nav-sticky{
-  position:sticky;
-  top:0;
-  z-index:1000;
-  padding:20px 0;
-  background-color:transparent;
-  backdrop-filter:blur(0px);
-  border-bottom:1px solid transparent;
-  transition:padding .35s var(--bp-ease-out-expo),background-color .35s var(--bp-ease-smooth),border-color .35s var(--bp-ease-smooth),backdrop-filter .35s var(--bp-ease-smooth);
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  background:var(--bp-glass-bg);backdrop-filter:var(--bp-glass-blur);-webkit-backdrop-filter:var(--bp-glass-blur);
+  border-bottom:1px solid var(--bp-glass-border);
+  transition:padding .35s var(--bp-ease-smooth),background .35s ease,border-color .35s ease;
 }
-.bp-nav-sticky[data-scrolled="true"]{
-  padding:12px 0;
-  background-color:var(--bp-glass-bg);
-  backdrop-filter:var(--bp-glass-blur);
-  -webkit-backdrop-filter:var(--bp-glass-blur);
-  border-bottom-color:var(--bp-glass-border);
-  box-shadow:0 10px 30px rgba(0,0,0,.35);
-}
+.bp-nav-sticky.bp-nav-scrolled{background:rgba(6,6,13,.88);border-bottom-color:var(--bp-border-default)}
 
-/* ============ HERO LOAD SEQUENCING ============ */
-/* Choreograph page-load entry: class="bp-hero-step"
-   style="--bp-hero-delay:120ms" on each hero child. */
-@keyframes bp-heroIn{
-  0%{opacity:0;transform:translateY(30px) scale(.98);filter:blur(4px)}
-  100%{opacity:1;transform:translateY(0) scale(1);filter:blur(0)}
-}
-.bp-hero-step{
-  opacity:0;
-  animation:bp-heroIn .8s var(--bp-ease-out-expo) forwards;
-  animation-delay:var(--bp-hero-delay,0ms);
-}
+/* ============ MARQUEE ============ */
+.bp-marquee{overflow:hidden;position:relative;mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent)}
+.bp-marquee-track{display:inline-flex;white-space:nowrap;animation:bp-marquee 34s linear infinite}
 
-/* ============ SHIMMER TEXT (brand sweep) ============ */
-@keyframes bp-textShimmer{0%{background-position:-200% 0}100%{background-position:200% 0}}
-.bp-shimmer-text{
-  background:linear-gradient(110deg,#F4F5F7 0%,#FF3B30 25%,#FF7A00 50%,#F4F5F7 75%,#F4F5F7 100%);
-  background-size:200% auto;
-  -webkit-background-clip:text;
-  background-clip:text;
-  color:transparent;
-  animation:bp-textShimmer 8s linear infinite;
-}
-
-/* ============ SCROLL PROGRESS BAR ============ */
-/* <div class="bp-scroll-progress-bar"></div> as first body child.
-   Scaled by bp-motion.js while the user scrolls. */
+/* ============ SCROLL PROGRESS ============ */
 .bp-scroll-progress-bar{
-  position:fixed;
-  top:0;left:0;
-  width:100%;height:2px;
-  background:var(--bp-gradient-brand);
-  transform-origin:0 50%;
-  transform:scaleX(0);
-  z-index:10001;
-  pointer-events:none;
+  position:fixed;top:0;left:0;height:2px;z-index:200;width:0;
+  background:linear-gradient(90deg,#7C3AED,#A78BFA,#FF9500);
+  box-shadow:0 0 12px rgba(255,149,0,.55);
 }
 
-/* ============ SKELETON SHIMMER (loading states) ============ */
-@keyframes bp-skeletonPulse{0%{background-position:200% 0}100%{background-position:-200% 0}}
-.bp-skeleton{
-  background:linear-gradient(90deg,var(--bp-surface-1) 25%,var(--bp-surface-2) 50%,var(--bp-surface-1) 75%);
-  background-size:200% 100%;
-  border-radius:var(--bp-r-sm);
-  animation:bp-skeletonPulse 1.8s ease-in-out infinite;
+/* ============ NOISE CANVAS ============ */
+.bp-noise-canvas{position:fixed;inset:0;z-index:1;pointer-events:none;opacity:.5;background-image:var(--bp-noise-url)}
+
+/* ============ SIGNATURE TEXT TREATMENTS ============ */
+.bp-text-grad{
+  background:linear-gradient(110deg,#C4B5FD 20%,#FFFFFF 42%,#FFB86B 58%,#A78BFA 80%);
+  background-size:200% auto;-webkit-background-clip:text;background-clip:text;color:transparent;
+  animation:bp-shimmer 6s linear infinite;
 }
-
-/* ============ INTERACTIVE 3D TILT & MAGNETIC CONTAINERS ============ */
-/* class="bp-tilt-card" / class="bp-magnetic-btn" — driven by bp-motion.js,
-   auto-disabled on touch devices and reduced-motion. */
-.bp-tilt-card{transform-style:preserve-3d;will-change:transform;transition:transform .15s var(--bp-ease-smooth)}
-.bp-magnetic-btn{display:inline-block;will-change:transform;transition:transform .2s var(--bp-ease-out-expo)}
-
-/* ============ ICON MICRO-INTERACTION UTILITIES ============ */
-.bp-icon-hover{transition:transform .3s var(--bp-ease-spring),color .3s var(--bp-ease-smooth)}
-.bp-icon-hover:hover{transform:scale(1.15) rotate(6deg);color:var(--bp-cyan)}
-
-/* ============ REDUCED MOTION (all versions) ============ */
-@media (prefers-reduced-motion:reduce){
-  [data-reveal],.bp-hero-step{opacity:1!important;transform:none!important;filter:none!important;animation:none!important;transition:none!important}
-  .bp-marquee-track{animation:none}
-  .bp-grad-text,.bp-glow,.bp-shimmer-text,.bp-skeleton{animation:none}
-  .bp-scroll-progress-bar{display:none}
+.bp-rim-badge{
+  display:inline-flex;align-items:center;gap:9px;border-radius:100px;
+  background:linear-gradient(180deg,rgba(124,58,237,.22),rgba(59,20,112,.18));
+  border:1px solid var(--bp-rim-light);
+  color:var(--bp-violet-200);font-weight:700;letter-spacing:.02em;
+  box-shadow:0 0 24px rgba(124,58,237,.18),inset 0 1px 0 rgba(255,255,255,.12);
 }
-:focus-visible{outline:2px solid var(--bp-border-focus);outline-offset:2px}
+@media(prefers-reduced-motion:reduce){.bp-text-grad{animation:none}}
