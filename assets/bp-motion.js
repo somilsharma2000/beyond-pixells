@@ -61,38 +61,9 @@
   }
 
   /* ------------------------------------------------------------ */
-  function initSpotlightCards() {
-    if (reduceMotion) return;
+    /* initSpotlightCards removed 26 Sep 2026 — founder dislikes cursor-follow glow.
+     Cards keep their clean lift hover only. */
 
-    var cards = document.querySelectorAll('.bp-spotlight-card, [data-spotlight]');
-    if (!cards.length) return;
-
-    var rafPending = false;
-    var mouseX = 0, mouseY = 0;
-    var currentCard = null;
-
-    Array.prototype.forEach.call(cards, function (card) {
-      card.addEventListener('pointermove', function (e) {
-        currentCard = card;
-        var rect = card.getBoundingClientRect();
-        mouseX = e.clientX - rect.left;
-        mouseY = e.clientY - rect.top;
-
-        if (!rafPending) {
-          rafPending = true;
-          requestAnimationFrame(function () {
-            if (currentCard) {
-              currentCard.style.setProperty('--bp-mouse-x', mouseX + 'px');
-              currentCard.style.setProperty('--bp-mouse-y', mouseY + 'px');
-            }
-            rafPending = false;
-          });
-        }
-      });
-    });
-  }
-
-  /* ------------------------------------------------------------ */
   function init3DTilt() {
     if (reduceMotion || window.matchMedia('(hover: none)').matches) return;
 
@@ -108,8 +79,8 @@
         var centerX = rect.width / 2;
         var centerY = rect.height / 2;
 
-        var rotateX = ((centerY - y) / centerY) * 8; /* max 8deg */
-        var rotateY = ((x - centerX) / centerX) * 8;
+        var rotateX = ((centerY - y) / centerY) * 3; /* max 3deg — smooth per founder directive */
+        var rotateY = ((x - centerX) / centerX) * 3;
 
         if (rafId) cancelAnimationFrame(rafId);
         rafId = requestAnimationFrame(function () {
@@ -258,7 +229,7 @@
     document.body.classList.add('bp-engine-ready');
 
     initScrollReveal();
-    initSpotlightCards();
+    
     init3DTilt();
     initMagneticButtons();
     initNavScroll();

@@ -29,7 +29,7 @@
   background:
     linear-gradient(235deg,rgba(0, 102, 255,.55),rgba(0, 102, 255,0) 34%),           /* gold rim light, bottom-right */
     linear-gradient(150deg,rgba(255,255,255,.28),rgba(255,255,255,0) 42%),        /* top gloss */
-    linear-gradient(160deg,#0066FF 0%,#0066FF 48%,#142F70 100%);                  /* violet chrome body */
+    linear-gradient(160deg,#06F 0%,#06F 48%,#142F70 100%);                  /* violet chrome body */
 
   box-shadow:
     inset 0 2px 1px rgba(255,255,255,.5),                                         /* chrome edge, top */
@@ -70,9 +70,3 @@
 .bp-tilt{transform-style:preserve-3d;transition:transform .25s cubic-bezier(.16,1,.3,1);will-change:transform}
 
 /* ---- BP SPOTLIGHT (cursor-follow glow) ---- */
-.bp-spot-host{position:relative;overflow:hidden}
-.bp-spot{position:absolute;inset:0;border-radius:inherit;pointer-events:none;opacity:0;
-  transition:opacity .3s;z-index:1;
-  background:radial-gradient(300px circle at var(--bp-mx,50%) var(--bp-my,50%),
-    rgba(156, 192, 255,.28),rgba(0, 102, 255,.09) 45%,transparent 70%)}
-.bp-spot-host:hover .bp-spot{opacity:1}

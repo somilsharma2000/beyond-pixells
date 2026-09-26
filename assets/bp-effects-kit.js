@@ -1,7 +1,7 @@
 /* Beyond Pixells — Visual Effects Kit v1 (Chrome Violet v4)
    Patterns ported from Magic UI / Aceternity: meteors, spotlight, tilt.
    Auto-wires: meteors into any element with data-bp-meteors, tilt into
-   .bp-tilt (inside .bp-tilt-scene), spotlight into .bp-spot-host. */
+   .bp-tilt (inside .bp-tilt-scene). */
 (function () {
   var d = document;
 
@@ -21,20 +21,7 @@
     host.appendChild(wrap);
   });
 
-  /* SPOTLIGHT — cursor-follow glow for .bp-spot-host */
-  d.querySelectorAll('.bp-spot-host').forEach(function (el) {
-    if (el.querySelector('.bp-spot')) return;
-    var sp = d.createElement('div');
-    sp.className = 'bp-spot';
-    el.appendChild(sp);
-    el.addEventListener('mousemove', function (e) {
-      var r = el.getBoundingClientRect();
-      sp.style.setProperty('--bp-mx', (e.clientX - r.left) + 'px');
-      sp.style.setProperty('--bp-my', (e.clientY - r.top) + 'px');
-    });
-  });
-
-  /* TILT — 3D perspective follow for .bp-tilt inside .bp-tilt-scene */
+    /* SPOTLIGHT removed 26 Sep 2026 — founder dislikes cursor-follow glow. */
   d.querySelectorAll('.bp-tilt-scene').forEach(function (scene) {
     var t = scene.querySelector('.bp-tilt');
     if (!t || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;

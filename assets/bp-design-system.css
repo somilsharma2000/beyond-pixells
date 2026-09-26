@@ -21,9 +21,9 @@
 
   /* CHROME VIOLET BRAND SPECTRUM */
   --bp-violet-950:#102965; --bp-violet-900:#142F70; --bp-violet-800:#1D4095;
-  --bp-violet-700:#214CB6; --bp-violet-600:#0066FF; --bp-violet-500:#0066FF;
-  --bp-violet-400:#0066FF; --bp-violet-300:#9CC0FF; --bp-violet-200:#9CC0FF;
-  --bp-gold-500:#0066FF; --bp-gold-400:#FFA733; --bp-gold-300:#9CC0FF;
+  --bp-violet-700:#214CB6; --bp-violet-600:#06F; --bp-violet-500:#06F;
+  --bp-violet-400:#06F; --bp-violet-300:#9CC0FF; --bp-violet-200:#9CC0FF;
+  --bp-gold-500:#06F; --bp-gold-400:#FFA733; --bp-gold-300:#9CC0FF;
 
   /* SEMANTIC */
   --bp-text-primary:#F2F5FB; --bp-text-secondary:#94A3B8; --bp-text-muted:#94A3B8; --bp-text-inverse:#0A0E29;
@@ -33,9 +33,9 @@
   --bp-success:#34D399; --bp-warning:#9CC0FF; --bp-error:#FB7185;
 
   /* GRADIENTS — the signature */
-  --bp-gradient-brand:linear-gradient(135deg,#0066FF 0%,#9CC0FF 55%,#9CC0FF 100%);
-  --bp-gradient-gold:linear-gradient(135deg,#0066FF 0%,#9CC0FF 100%);
-  --bp-gradient-chrome:linear-gradient(160deg,#0066FF 0%,#0066FF 45%,#142F70 100%);
+  --bp-gradient-brand:linear-gradient(135deg,#06F 0%,#9CC0FF 55%,#9CC0FF 100%);
+  --bp-gradient-gold:linear-gradient(135deg,#06F 0%,#9CC0FF 100%);
+  --bp-gradient-chrome:linear-gradient(160deg,#06F 0%,#06F 45%,#142F70 100%);
   --bp-gradient-hero:radial-gradient(ellipse 60% 55% at 50% -10%,rgba(58,110,237,.32),transparent 70%);
   --bp-gradient-subtle:linear-gradient(135deg,rgba(58,110,237,.16),rgba(0, 102, 255,.05));
   --bp-gradient-glow:linear-gradient(135deg,rgba(58,110,237,.45),rgba(0, 102, 255,.18));
@@ -99,20 +99,6 @@
   overflow:hidden;
   transition:transform .45s var(--bp-ease-out-expo),border-color .45s var(--bp-ease-smooth),box-shadow .45s var(--bp-ease-smooth);
 }
-.bp-spotlight-card::before{
-  content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;
-  background:radial-gradient(420px circle at var(--bp-mouse-x) var(--bp-mouse-y),var(--bp-spotlight-color),transparent 55%);
-  opacity:0;transition:opacity .4s var(--bp-ease-smooth);
-}
-.bp-spotlight-card::after{
-  content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;
-  background:radial-gradient(240px circle at var(--bp-mouse-x) var(--bp-mouse-y),var(--bp-spotlight-border),transparent 45%);
-  mask:linear-gradient(#000,#000) content-box,linear-gradient(#000,#000);
-  mask-composite:xor;mask-composite:exclude;
-  padding:1px;opacity:0;transition:opacity .4s var(--bp-ease-smooth);
-}
-.bp-spotlight-card:hover{transform:translateY(-4px);border-color:var(--bp-border-default);box-shadow:0 24px 70px rgba(0,0,0,.5),0 0 42px rgba(58,110,237,.16)}
-.bp-spotlight-card:hover::before,.bp-spotlight-card:hover::after{opacity:1}
 
 /* ============ MAGNETIC BUTTONS ============ */
 .bp-magnetic-btn{transition:transform .3s var(--bp-ease-spring),box-shadow .3s var(--bp-ease-smooth);will-change:transform}
@@ -140,7 +126,7 @@
 /* ============ SCROLL PROGRESS ============ */
 .bp-scroll-progress-bar{
   position:fixed;top:0;left:0;height:2px;z-index:200;width:0;
-  background:linear-gradient(90deg,#0066FF,#9CC0FF,#0066FF);
+  background:linear-gradient(90deg,#06F,#9CC0FF,#06F);
   box-shadow:0 0 12px rgba(0, 102, 255,.55);
 }
 
