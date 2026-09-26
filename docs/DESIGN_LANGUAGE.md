@@ -135,3 +135,21 @@ Still needed (not yet reskinned this pass): Dentist OS, Builder OS
 flagships (inherit CDN files automatically, but should be individually
 verified); the 8 client gym sites (out of scope per earlier founder
 directive to focus reskins on Beyond Pixells + OS flagships only).
+
+## v7.1 GYM OS APP PARITY (26 Sep 2026)
+
+The Gym OS landing showcase now recreates the real product app
+(my-gym-os.base44.app) instead of a stylised mock: navy #0b1022 screen,
+#111827 sidebar with the actual nav items (Dashboard active on #2563eb),
+top bar with branch dropdown / search / 9+ badge / SS avatar, Dashboard
+title + Overview/Staff Performance/Reports tabs, + Add Member (blue) /
+Log Payment / Add Lead buttons, and the app's KPI set with Revenue as the
+blue spotlight card. Landing tokens moved to the app palette: navy canvas
+#0A0F1E, #111827 cards, slate strokes, #2563eb accent, #6b7280 muted.
+
+Two-tier system confirmed: studio hub (beyond-pixells) = brand canvas
+(bp logo blue #1D4BC4 on near-black obsidian); Gym OS landing = product
+navy (#2563eb interactive accent), matching the app users actually get.
+
+Ops note: fixed body scroll lock on Gym OS (bp-noise-canvas class on body +
+overflow-x:hidden) found and fixed; smoke tests must assert scrollY.
