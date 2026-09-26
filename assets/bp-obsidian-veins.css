@@ -27,16 +27,22 @@
    strokes, crystal core, glossy droplets. Replaces the old SVG-line veins,
    CSS geode, and JS droplet scatter, which read as thin flat lines and
    never matched the founder's reference photo. */
+/* v6 OBSIDIAN GLOW (26 Sep 2026, founder-selected direction #1):
+   Research verdict from the top design-language study (Linear, Raycast,
+   Superlist, Vapi family): the canvas stays CALM and near-black; ONE
+   saturated violet glow field behind the headline + one quiet secondary
+   field. All richness is carried by the product UI (the Gym OS dashboard
+   mockup), glass panels and glow edges — not by texture imagery.
+   Measured benchmarks: Linear canvas avg (19,20,21), Raycast (59,25,32). */
 .ov-canvas{position:absolute;inset:0;z-index:0;pointer-events:none;
-  background:#010102 url("img/hero-veins.jpg") center top/cover no-repeat}
-/* legibility: darken behind left-column text + fade into the page below */
+  background:
+    radial-gradient(56% 44% at 50% -4%, rgba(124,58,237,.26), transparent 72%),
+    radial-gradient(34% 30% at 88% 20%, rgba(139,92,246,.10), transparent 70%),
+    radial-gradient(42% 36% at 6% 34%, rgba(59,20,112,.14), transparent 72%),
+    #08090D}
 .ov-canvas::after{content:"";position:absolute;inset:0;
-  /* v5.4 reference-match: the 26 Sep reference glows evenly — old veils
-     (.78 left / .92 bottom) crushed it to navy-black. White-on-violet is
-     ~11:1 contrast, so text needs no black backing. Only a whisper of
-     darkening remains for the section transition. */
-  background:linear-gradient(90deg,rgba(3,3,7,.35) 0%,rgba(3,3,7,.10) 36%,rgba(3,3,7,0) 62%),
-             linear-gradient(180deg,rgba(3,3,7,0) 90%,rgba(3,3,7,.55) 100%)}
+  /* only the section-transition fade; no text backing needed */
+  background:linear-gradient(180deg,rgba(8,9,13,0) 88%,rgba(8,9,13,.65) 100%)}
 .hero .container{position:relative;z-index:2}
 @media(max-width:760px){.ov-canvas{background-position:center 12%}}
 
