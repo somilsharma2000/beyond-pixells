@@ -83,3 +83,16 @@ laptop/phone product mockups, warm tones fully purged). **Social template:** `as
 
 **Verification:** `npm run test:render` asserts geode/veins/droplets/grain/meteors/beam/icons
 present + zero JS errors. Pixel check: hero violet-hue coverage 87%, zero warm-hue residue.
+
+## v6 OBSIDIAN GLOW (26 Sep 2026, founder-selected direction #1)
+
+Benchmark study (Linear, Raycast, Superlist, Vapi — measured) locked the law:
+**calm near-black canvas, ONE saturated glow field, product UI carries the richness.**
+
+- Canvas: `#08090D` with layered violet radial glow fields (primary `rgba(124,58,237,.26)` behind the headline; quiet secondary fields top-right + deep-violet left)
+- NO texture imagery in the hero canvas; NO particle dust; grain overlay stays (0.05)
+- The floating product dashboard (Daylight Glass) is the hero centerpiece — Linear-style product-first storytelling
+- Glass panels: `rgba(255,255,255,.04)` surfaces, 1px `rgba(255,255,255,.08)` borders, backdrop blur
+- Accent discipline: violet `#7C3AED`-family only for glow/edges; warm rim light reserved for the single primary CTA
+- Motion: fade/slide entrances, gentle mock float, one beam border — restraint at rest
+- Research record: docs/research/records/2026-09-26_design-language-benchmark.md
