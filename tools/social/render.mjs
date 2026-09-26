@@ -38,7 +38,7 @@ async function main() {
   // static weights (satori cannot parse variable fvar fonts)
   const fontFile = (family, weight) =>
     ({ name: family, data: readFileSync(path.join(root, "fonts", `${family.replace(/ /g, "")}-${weight}.ttf`)), weight: String(weight), style: "normal" });
-  const fonts = [400, 600, 700].flatMap((w) => [fontFile("Space Grotesk", w), fontFile("Plus Jakarta Sans", w)]);
+  const fonts = [400, 600, 700].flatMap((w) => [fontFile("Space Grotesk", w), fontFile("Plus Jakarta Sans", w), fontFile("Inter", w)]);
 
   const tree = template(data, fonts);
   const svg = await satori(tree, { width, height, fonts });

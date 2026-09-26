@@ -68,7 +68,17 @@ orbs and light-beam (retired, conflicted with the flat cracked-texture language)
 - **Droplets** — procedurally scattered glossy dark circles with specular highlight, decorative depth.
 
 **Kit files:** `assets/bp-obsidian-veins.css` + `.js`. **Signature object:** `.ov-geode`
-(was `.bp-chrome-tile`). ### Daylight Glass (dashboard variant, 26 Sep 2026)
+(was `.bp-chrome-tile`). ### Product Frames as Content (26 Sep 2026)
+App-true UI screenshots rendered as marketing content. Tokens (extracted from the
+live my-gym-os app): canvas #0A0E29, surface #141833, elevated #242842, border
+#272C49, primary #0066FF, accent light #9CC0FF, success #21C45D, danger #DC2828,
+amber #F59A0A, text #F1F5F9 / muted #94A3B8, in-app font Inter. Law: product
+frames (`.pframe` on the hub OS family, `productFrame` social template) always
+use the app's REAL palette and Inter — never the marketing palette — so every
+frame doubles as honest product proof and social content. Marketing pages keep
+Space Grotesk (display) + Plus Jakarta Sans (body).
+
+### Daylight Glass (dashboard variant, 26 Sep 2026)
 The in-app/dashboard aesthetic (used inside product mockups, future owner app UI):
 glossy white-silver surfaces (linear-gradient #FBFCFE → #ECEEF4), soft depth
 shadows instead of hard borders, black "spotlight" card reserved for the single

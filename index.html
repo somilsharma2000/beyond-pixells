@@ -17,7 +17,7 @@
 <link rel="icon" href="logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/bp-design-system.css">
 <link rel="stylesheet" href="assets/bp-effects-kit.css">
 <link rel="stylesheet" href="assets/bp-obsidian-veins.css">
@@ -134,7 +134,7 @@ section{padding:88px 0;position:relative}
 .sec-head p{color:var(--muted);margin-top:16px;font-size:1.03rem}
 
 /* BENTO OS GRID — glossy chrome tiles */
-.bento{display:grid;grid-template-columns:repeat(3,1fr);grid-auto-rows:200px;gap:20px}
+.bento{display:grid;grid-template-columns:repeat(3,1fr);grid-auto-rows:210px;gap:20px}
 .bcard{position:relative;background:var(--gloss),linear-gradient(165deg,#141833,#0A0E29);border:1px solid var(--line);border-radius:var(--r);padding:26px;display:flex;flex-direction:column;transition:transform .4s cubic-bezier(.16,1,.3,1),border-color .3s,box-shadow .3s;overflow:hidden;box-shadow:var(--shadow-sm)}
 .bcard:hover{transform:translateY(-4px);box-shadow:var(--shadow);border-color:rgba(0, 102, 255,.4)}
 .bcard::after{content:"";position:absolute;top:0;left:8%;right:8%;height:1px;background:linear-gradient(90deg,transparent,rgba(255,255,255,.35),transparent)}
@@ -144,10 +144,45 @@ section{padding:88px 0;position:relative}
 .st-soon{color:var(--muted);background:rgba(255,255,255,.04);border:1px solid var(--line)}
 .bcard h3{font-size:1.5rem;font-weight:700;margin-bottom:8px;color:#fff}
 .bcard p{color:var(--muted);font-size:.92rem;flex:1}
-.bcard .specs{margin:18px 0 14px;display:flex;flex-wrap:wrap;gap:8px}
+.bcard .specs{margin:10px 0 10px;display:flex;flex-wrap:wrap;gap:8px}
 .bcard .specs span{font-size:.72rem;font-weight:700;color:var(--muted);border:1px solid var(--line);border-radius:7px;padding:4px 10px;background:rgba(255,255,255,.03)}
 .bcard .go{color:var(--gold-soft);font-weight:800;font-size:.88rem}
-.bcard.big{grid-column:span 2;grid-row:span 2;padding:34px;background:var(--gloss),linear-gradient(160deg,#121F40 0%,#121620 55%,#0A0E29 100%)}
+/* ---- product frames: app-true UI screenshots as content (Inter = in-app font) ---- */
+.pframe{font-family:'Inter',sans-serif;background:#0D1230;border:1px solid #272C49;border-radius:12px;overflow:hidden;text-align:left;box-shadow:0 18px 44px rgba(0,0,0,.45);margin:10px 0 8px;flex:none}
+.pframe .pf-chrome{display:flex;align-items:center;gap:6px;background:#141833;border-bottom:1px solid #272C49;padding:6px 10px}
+.pframe .pf-chrome i{width:7px;height:7px;border-radius:99px;display:block}
+.pframe .pf-chrome i:nth-child(1){background:#FF5F57}.pframe .pf-chrome i:nth-child(2){background:#FEBC2E}.pframe .pf-chrome i:nth-child(3){background:#21C45D}
+.pframe .pf-chrome span{font-size:.58rem;color:#94A3B8;margin-left:6px;letter-spacing:.02em}
+.pframe .pf-chrome em{font-size:.58rem;font-weight:700;color:#21C45D;font-style:normal;margin-left:auto}
+.pf-body{display:flex;min-height:0}
+.pf-side{width:74px;border-right:1px solid #272C49;background:#141833;padding:9px 8px;display:flex;flex-direction:column;gap:7px}
+.pf-side b{font-size:.6rem;color:#fff;font-weight:800}
+.pf-side u{text-decoration:none;font-size:.5rem;color:#94A3B8}
+.pf-nav{display:flex;flex-direction:column;gap:4px;margin-top:2px}
+.pf-nav span{font-size:.48rem;color:#94A3B8;padding:3px 6px;border-radius:5px}
+.pf-nav span:first-child{background:rgba(0,102,255,.12);color:#4D94FF;font-weight:700}
+.pf-main{flex:1;padding:7px 9px;display:flex;flex-direction:column;gap:6px;min-width:0}
+.pf-kpis{display:flex;gap:7px}
+.pf-kpis div{flex:1;background:#141833;border:1px solid #272C49;border-radius:8px;padding:5px 7px}
+.pf-kpis small{display:block;font-size:.44rem;color:#94A3B8;font-weight:600;white-space:nowrap;overflow:hidden}
+.pf-kpis b{font-size:.74rem;color:#F1F5F9;font-weight:800}
+.pf-kpis .spot{background:rgba(0,102,255,.1);border-color:rgba(0,102,255,.35)}
+.pf-kpis .spot b{color:#fff}
+.pf-kpis .spot em{font-size:.44rem;color:#21C45D;font-style:normal;font-weight:700}
+.pf-feed{display:flex;flex-direction:column;gap:4px}
+.pf-feed span{display:flex;align-items:center;gap:6px;font-size:.5rem;color:#F1F5F9;background:#141833;border:1px solid #272C49;border-radius:6px;padding:3px 7px;white-space:nowrap;overflow:hidden}
+.pf-feed i{width:5px;height:5px;border-radius:99px;background:#21C45D;flex:none}
+.pf-bars{display:flex;align-items:flex-end;gap:5px;height:46px;margin-top:auto}
+.pf-bars i{flex:1;border-radius:3px 3px 1px 1px;background:linear-gradient(180deg,#4D94FF,#0052CC)}
+.pf-rows{display:flex;flex-direction:column;gap:5px;padding:9px}
+.pf-rows div{display:flex;align-items:center;gap:7px;background:#141833;border:1px solid #272C49;border-radius:7px;padding:6px 8px}
+.pf-rows time{font-size:.5rem;color:#94A3B8;font-weight:700;width:34px;flex:none}
+.pf-rows b{font-size:.54rem;color:#F1F5F9;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.pf-rows em{font-size:.42rem;font-style:normal;font-weight:800;margin-left:auto;flex:none;padding:2px 7px;border-radius:99px}
+.pf-rows .ok{color:#21C45D;background:rgba(33,196,93,.12);border:1px solid rgba(33,196,93,.3)}
+.pf-rows .nx{color:#4D94FF;background:rgba(0,102,255,.1);border:1px solid rgba(0,102,255,.3)}
+.pf-rows .rc{color:#F59A0A;background:rgba(245,159,10,.1);border:1px solid rgba(245,159,10,.3)}
+.bcard.big{grid-column:span 2;grid-row:span 2;padding:22px 34px;background:var(--gloss),linear-gradient(160deg,#121F40 0%,#121620 55%,#0A0E29 100%)}
 .bcard.big h3{font-size:2.1rem;background:linear-gradient(110deg,#9CC0FF,#9CC0FF);-webkit-background-clip:text;background-clip:text;color:transparent}
 .bcard.big p{font-size:1rem;max-width:520px}
 .mini-bars{display:flex;gap:6px;align-items:flex-end;height:64px;margin:22px 0 4px;max-width:420px}
@@ -157,6 +192,7 @@ section{padding:88px 0;position:relative}
 .bcard.wide .v-icon svg{width:26px;height:26px;color:#9CC0FF}
 .bcard.wide h3{font-size:1.15rem;margin-bottom:4px}
 .bcard.wide p{font-size:.87rem}
+@media(min-width:961px){.bento .bcard:nth-child(2){grid-row:span 2}.bento .bcard:nth-child(3){grid-column:1}.bento .bcard:nth-child(5){grid-column:3}}
 @media(max-width:960px){.bento{grid-template-columns:repeat(2,1fr);grid-auto-rows:auto}.bcard.big{grid-column:span 2}.bcard.wide{grid-column:span 2;flex-direction:column;align-items:flex-start}}
 @media(max-width:640px){.bento{grid-template-columns:1fr}.bcard.big,.bcard.wide{grid-column:span 1}}
 
@@ -318,8 +354,21 @@ footer .brand{color:#fff}
       <div class="bcard big bp-beam-border bp-lift bp-spotlight-card">
         <span class="status st-live">● Live</span>
         <h3>Gym OS</h3>
-        <p>The complete gym management system for Indian gyms. Website, member management, WhatsApp automation, QR check-in, lead CRM and AI insights.</p>
-        <div class="mini-bars"><i style="height:30%"></i><i style="height:55%"></i><i style="height:42%"></i><i style="height:70%"></i><i style="height:50%"></i><i style="height:82%"></i><i style="height:60%"></i><i style="height:90%"></i></div>
+        <p>The complete system for Indian gyms — website, members, WhatsApp automation, QR check-in, lead CRM.</p>
+        <div class="pframe" aria-label="Gym OS owner dashboard preview">
+          <div class="pf-chrome"><i></i><i></i><i></i><span>my-gym-os.base44.app</span><em>● Live</em></div>
+          <div class="pf-body">
+            <div class="pf-side"><b>Gym OS</b><u>Owner view</u><div class="pf-nav"><span>Dashboard</span><span>Members</span><span>Payments</span><span>WhatsApp</span></div></div>
+            <div class="pf-main">
+              <div class="pf-kpis">
+                <div class="spot"><small>Collected today</small><b>₹42,300</b><em>▲ 12%</em></div>
+                <div><small>Active members</small><b>486</b></div>
+                <div><small>On the floor</small><b>84</b></div>
+              </div>
+              <div class="pf-feed"><span><i></i>Payment received — Priya S. · ₹18,500 · UPI</span><span><i></i>Renewal link sent — Rahul M. · WhatsApp</span></div>
+            </div>
+          </div>
+        </div>
         <div class="specs"><span>32 modules</span><span>QR check-in</span><span>WhatsApp-first</span><span>UPI ready</span><span>Lead CRM</span><span>AI insights</span></div>
         <a class="go" href="https://somilsharma2000.github.io/gym-os/">Open Gym OS →</a>
       </div>
@@ -327,6 +376,15 @@ footer .brand{color:#fff}
         <span class="status st-demo">● Live Demo</span>
         <h3>Dentist OS</h3>
         <p>Practice management for dental clinics — patients, appointments, recalls, billing.</p>
+        <div class="pframe" aria-label="Dentist OS clinic schedule preview">
+          <div class="pf-chrome"><i></i><i></i><i></i><span>smilecraft.dentist-os.app</span><em>● Live demo</em></div>
+          <div class="pf-rows">
+            <div><time>09:30</time><b>Rajiv K. · Root canal</b><em class="ok">Confirmed</em></div>
+            <div><time>10:15</time><b>Meera D. · Cleaning</b><em class="ok">Confirmed</em></div>
+            <div><time>11:00</time><b>Sanjay P. · Consult</b><em class="nx">Scheduled</em></div>
+            <div><time>12:30</time><b>Anita R. · Recall due</b><em class="rc">Recall</em></div>
+          </div>
+        </div>
         <div class="specs"><span>Patients</span><span>Recalls</span><span>Billing</span></div>
         <a class="go" href="https://somilsharma2000.github.io/dentist-os-site/">Open Dentist OS →</a>
       </div>
