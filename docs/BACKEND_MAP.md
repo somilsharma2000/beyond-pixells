@@ -52,6 +52,16 @@ Agent pipeline: Lead entity → "New lead analysis" workflow → "Daily pipeline
 - **Agent daily review** (live): 8am IST estate health check + 9:30am IST pipeline.
 - **VPS watcher stack** (prepared, not deployed — needs VPS purchase):
   `ops/vps/` — Uptime Kuma, changedetection.io, Healthchecks, Vaultwarden.
+- **Estate Guard** (live): `.github/workflows/estate-guard.yml` — daily 07:30 IST,
+  all 8 client sites checked for gym-os-connect.js + lead form + consent checkbox;
+  GitHub issue on regression, auto-closed on recovery. On-demand: agent skill
+  `estate-guard`.
+- **Quality Audit** (live): `.github/workflows/quality-audit.yml` — weekly Lighthouse
+  (perf≥80, a11y≥90, BP≥85, SEO≥85) + pa11y WCAG2AA on the flagships.
+- **Content machine** (live): `tools/social/` satori+resvg renderer (statCard,
+  hookCard, ogHub templates, Chrome Violet v4 tokens) — render-on-demand via
+  `.github/workflows/content-render.yml` or the `render-social-post` skill;
+  outputs to `content/social/`.
 
 ## Known blocked / pending
 

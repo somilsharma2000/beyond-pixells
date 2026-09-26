@@ -17,14 +17,16 @@
 |---|---|---|
 | **Uptime Kuma** | All 10+ sites + lead API watched 24/7, WhatsApp alerts when anything breaks | Free, ~100MB RAM |
 | **n8n** | The automation brain — visual workflows: lead routing, notifications, syncs | Free self-hosted (Fair-code) |
-| **changedetection.io** | Detects if a client site's form or script breaks/changes — silent failure killer | Free, ~150MB |
+| **changedetection.io** | Detects if a client site's form or script breaks/changes — silent failure killer | Free, ~150MB — **$0 stand-in LIVE**: `estate-guard.yml` daily marker checks |
+| ↳ *Actions stand-in (LIVE)* | `estate-guard.yml` daily: connect script + form + consent markers on all 8 client sites, GitHub issue on regression | $0 until VPS |
 | **Upptime** | ✅ **DEPLOYED 26 Sep 2026** — live at https://somilsharma2000.github.io/beyond-pixells-status/ (repo `beyond-pixells-status`) | Free, zero server |
 | **Healthchecks.io** | Dead-man switch: alerts if a daily job (backup, monitor) stops running | Free, ~100MB |
 | **Umami / Plausible** | Privacy-friendly analytics on every landing page, one dashboard | Free self-hosted |
 | **Listmonk** | Email nurture sequences for leads — our own free Mailchimp | Free, ~50MB |
 | **Cal.com** | Gym owners book demos straight into the calendar | Free self-hosted |
 | **DocuSeal** | Contracts signed digitally — client onboarding automated | Free, ~200MB |
-| **Remotion** | Turns our HTML reel templates into MP4s programmatically — no manual recording | Free, render-on-demand |
+| **Remotion** | Turns our HTML reel templates into MP4s programmatically — no manual recording | Free — **Phase 4 start LIVE**: `tools/social/` satori renderer + `content-render.yml` |
+| ↳ *Phase 4 start (LIVE)* | `tools/social/` satori+resvg renderer + 3 templates + `content-render.yml` — brand image posts render-on-demand, $0 | $0 |
 | **Postiz** | Self-hosted social scheduler (Instagram etc.) — posts on autopilot | Free, ~300MB |
 | **Vaultwarden** | Every password/API key for the whole estate in one vault | Free, ~20MB |
 
@@ -77,9 +79,9 @@
 | **Umami** | umami-software/umami | ~50MB privacy analytics — one dashboard for all landings |
 | **Plausible CE** | plausible/analytics | Alternative; both work, pick one |
 | **SerpBear** | towfiqi/serpbear | Free rank tracking via Google Search Console API (India keywords) |
-| **pa11y-ci / axe-core** | pa11y/pa11y-ci | Automated accessibility audits in CI |
+| **pa11y-ci / axe-core** | pa11y/pa11y-ci | **LIVE 26 Sep** in `quality-audit.yml` (weekly, + Lighthouse floors) |
 | **OWASP ZAP (baseline)** | zaproxy/zaproxy | Security-header scans on schedule |
-| **Lighthouse CI** | GoogleChrome/lighthouse-ci | Perf scores on every push |
+| **Lighthouse CI** | GoogleChrome/lighthouse-ci | **LIVE 26 Sep** in `quality-audit.yml` (weekly floors: perf 80, a11y 90, BP 85, SEO 85) |
 | **PostHog** | PostHog/posthog | Product funnels once Gym OS scales (free tier generous) |
 
 ## CATEGORY 5 — CLIENTS, LEADS, INVOICING & SUPPORT (the money side)

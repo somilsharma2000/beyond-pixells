@@ -136,6 +136,7 @@ Any site adds 2 lines and gets the whole system:
 4. **Safe Browsing review** — sponsored sites normalized; needs Search Console review request.
 5. **Custom domains** — everything still on github.io/base44.app subdomains.
 5b. ~~Free Stack Phase 1 monitoring~~ — Upptime LIVE 26 Sep 2026 (https://somilsharma2000.github.io/beyond-pixells-status/, 14 properties, 5-min checks). VPS watcher stack (Kuma, changedetection.io, Healthchecks, Vaultwarden) prepared in `ops/vps/` — runs when founder buys the VPS.
+5c. **$0 Actions stack (live 26 Sep)** — Estate Guard (daily 07:30 IST: all 8 client sites must keep gym-os-connect.js + lead form + consent; opens/closes GitHub issues) + Quality Audit (weekly Lighthouse floors perf 80/a11y 90/BP 85/SEO 85 + pa11y on 5 flagships) + Content Render (on-demand brand image posts via satori, `tools/social/`) + new og-image.png (Chrome Violet v4) + `content/social/` sample posts. Agent skills installed: estate-guard, render-social-post (alongside site-health-check, visual-effects-kit).
 6. **Legal** — playbooks are checklists, not reviewed by a CA/lawyer yet.
 7. ~~Dentist OS landing rebuild~~ — DONE 26 Sep 2026, live at https://somilsharma2000.github.io/dentist-os-site/ (pricing tiers on it are research-recommended, founder confirmation pending).
 

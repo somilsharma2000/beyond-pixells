@@ -1,0 +1,61 @@
+# Content render — Free Stack Phase 4 (content machine, $0, render-on-demand)
+# Renders brand-styled image posts (satori + resvg) on GitHub Actions.
+# No always-on server needed. Templates + tokens: tools/social/templates.mjs
+# Docs: docs/FREE_TOOLS_STACK.md · docs/SOCIAL_SYSTEM.md
+#
+# Trigger from the Actions tab (workflow_dispatch) or via API:
+#   template: statCard | hookCard | ogHub
+#   data:      JSON matching the template fields
+# Output lands in content/social/ (committed) — ready for scheduling.
+
+name: Content Render
+on:
+  workflow_dispatch:
+    inputs:
+      template:
+        description: "Template: statCard | hookCard | ogHub"
+        required: true
+        default: statCard
+      data:
+        description: "Template data as JSON"
+        required: true
+      filename:
+        description: "Output filename (e.g. post-2026-09-28.png)"
+        required: true
+        default: post.png
+
+permissions:
+  contents: write
+
+jobs:
+  render:
+    name: Render brand image post
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Install renderer deps
+        run: npm install --prefix tools/social --no-audit --no-fund
+      - name: Render ${{ inputs.template }}
+        env:
+          TEMPLATE: ${{ inputs.template }}
+          DATA: ${{ inputs.data }}
+          FILENAME: ${{ inputs.filename }}
+        run: |
+          printf '%s' "$DATA" > data.json   # via file: no shell-injection surface
+          cd tools/social
+          node render.mjs "$TEMPLATE" "@../data.json" "../../content/social/$FILENAME"
+      - name: Commit output
+        run: |
+          git config user.name "beyond-agent"
+          git config user.email "agent@beyondpixells.com"
+          git add content/social/
+          git commit -m "content: render ${{ inputs.template }} -> content/social/${{ inputs.filename }} [skip ci]" || echo "nothing to commit"
+          git push
+      - name: Show artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ inputs.filename }}
+          path: content/social/${{ inputs.filename }}
