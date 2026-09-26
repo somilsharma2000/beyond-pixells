@@ -22,42 +22,19 @@
 .ov-grain{position:fixed;inset:0;z-index:1;pointer-events:none;opacity:.05;mix-blend-mode:overlay;
   background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>")}
 
-/* ---- VEIN NETWORK — jagged static cracks, no travel/dash motion ---- */
-.ov-veins{position:absolute;top:0;left:0;width:100%;height:860px;z-index:1;pointer-events:none;overflow:hidden}
-@media(max-width:760px){.ov-veins{height:640px}}
-.ov-veins .glow{fill:none;stroke:var(--ov-violet-bright);stroke-linecap:round;stroke-linejoin:round;filter:blur(5px);opacity:.5}
-.ov-veins .glow.trunk{stroke-width:6}
-.ov-veins .glow.sub{stroke-width:4;opacity:.38}
-.ov-veins .core{fill:none;stroke:var(--ov-violet-glow);stroke-linecap:round;stroke-linejoin:round;
-  animation:ov-breathe 6s ease-in-out infinite}
-.ov-veins .core.trunk{stroke-width:1.6;opacity:.8}
-.ov-veins .core.sub{stroke-width:1.1;opacity:.55;animation-delay:1.4s}
-@keyframes ov-breathe{0%,100%{opacity:.55}50%{opacity:.95}}
-@media(prefers-reduced-motion:reduce){.ov-veins .core{animation:none;opacity:.75}}
-
-/* ---- GEODE — signature crystal/glitter core object ---- */
-.ov-geode{position:relative;width:180px;height:190px;isolation:isolate}
-.ov-geode .shard{position:absolute;inset:0;
-  clip-path:polygon(48% 2%,72% 14%,88% 40%,84% 68%,62% 92%,36% 96%,12% 76%,8% 46%,20% 18%);
-  background:radial-gradient(120% 120% at 30% 20%,#1a1424 0%,#0B0714 55%,#050308 100%);
-  box-shadow:0 0 0 1.5px rgba(196,181,253,.5) inset,0 0 46px 6px rgba(124,58,237,.55),0 24px 60px rgba(0,0,0,.65);
-  overflow:hidden}
-.ov-geode .shard::after{content:"";position:absolute;inset:0;
-  background:radial-gradient(60% 55% at 45% 35%,rgba(196,181,253,.35),transparent 70%)}
-.ov-geode .rim{position:absolute;inset:0;
-  clip-path:polygon(48% 2%,72% 14%,88% 40%,84% 68%,62% 92%,36% 96%,12% 76%,8% 46%,20% 18%);
-  -webkit-mask:linear-gradient(#000 0 0);pointer-events:none;
-  box-shadow:0 0 0 2px var(--ov-violet-bright) inset;opacity:.6;filter:blur(1px)}
-.ov-geode-particles{position:absolute;inset:0;
-  clip-path:polygon(48% 2%,72% 14%,88% 40%,84% 68%,62% 92%,36% 96%,12% 76%,8% 46%,20% 18%);
-  z-index:2}
-@media(max-width:900px){.ov-geode{width:130px;height:138px}}
-
-/* ---- DROPLETS — glossy black bokeh, decorative depth ---- */
-.ov-droplets{position:absolute;inset:0;z-index:1;pointer-events:none;overflow:hidden}
-.ov-droplets i{position:absolute;border-radius:50%;
-  background:radial-gradient(circle at 32% 28%,rgba(240,232,255,.9),rgba(30,20,45,.92) 40%,rgba(4,3,7,.98) 74%);
-  box-shadow:0 4px 12px rgba(0,0,0,.65),0 0 16px rgba(168,85,247,.4),0 0 1px rgba(196,181,253,.6) inset}
+/* ---- HERO TEXTURE — procedurally rendered obsidian crack slab ----
+   Rendered by tools/render_hero_texture.py: layered bloom, tapered crack
+   strokes, crystal core, glossy droplets. Replaces the old SVG-line veins,
+   CSS geode, and JS droplet scatter, which read as thin flat lines and
+   never matched the founder's reference photo. */
+.ov-canvas{position:absolute;inset:0;z-index:0;pointer-events:none;
+  background:#050308 url("img/hero-veins.jpg") center top/cover no-repeat}
+/* legibility: darken behind left-column text + fade into the page below */
+.ov-canvas::after{content:"";position:absolute;inset:0;
+  background:linear-gradient(90deg,rgba(6,6,13,.78) 0%,rgba(6,6,13,.30) 36%,rgba(6,6,13,0) 62%),
+             linear-gradient(180deg,rgba(6,6,13,0) 74%,rgba(6,6,13,.92) 100%)}
+.hero .container{position:relative;z-index:2}
+@media(max-width:760px){.ov-canvas{background-position:center 12%}}
 
 /* ---- Card + border overrides: violet-only, no warm tones ---- */
 .bcard::after{background:linear-gradient(90deg,transparent,rgba(196,181,253,.35),transparent) !important}

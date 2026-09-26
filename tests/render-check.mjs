@@ -18,9 +18,10 @@ await page.goto(url);
 await page.waitForTimeout(1500);
 
 const results = {
-  geode: await page.locator(".ov-geode").count(),
-  veins: await page.locator(".ov-veins path").count(),
-  droplets: await page.locator(".ov-droplets i").count(),
+  textureBg: await page.locator(".ov-canvas").evaluate(el => getComputedStyle(el).backgroundImage.includes("hero-veins.jpg")),
+  textureLoaded: await page.evaluate(() => new Promise(res => { const i = new window.Image(); i.onload = () => res(true); i.onerror = () => res(false); i.src = "assets/img/hero-veins.jpg"; })),
+  oldSvgAbsent: (await page.locator(".ov-veins").count()) === 0,
+  oldGeodeAbsent: (await page.locator(".ov-geode").count()) === 0,
   grain: await page.locator(".ov-grain").count(),
   meteorsAbsent: (await page.locator(".bp-meteors i").count()) === 0,
   gridAbsent: (await page.locator(".hero").evaluate(el => getComputedStyle(el, "::after").backgroundImage)).indexOf("linear-gradient") === -1,
@@ -45,9 +46,10 @@ results.auroraPainted = metrics.auroraPainted;
 await browser.close();
 
 const pass =
-  results.geode > 0 &&
-  results.veins >= 10 &&
-  results.droplets >= 5 &&
+  results.textureBg &&
+  results.textureLoaded &&
+  results.oldSvgAbsent &&
+  results.oldGeodeAbsent &&
   results.grain > 0 &&
   results.meteorsAbsent &&
   results.gridAbsent &&
