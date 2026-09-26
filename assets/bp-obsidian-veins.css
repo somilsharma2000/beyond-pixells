@@ -35,11 +35,13 @@
    mockup), glass panels and glow edges — not by texture imagery.
    Measured benchmarks: Linear canvas avg (19,20,21), Raycast (59,25,32). */
 .ov-canvas{position:absolute;inset:0;z-index:0;pointer-events:none;
+  /* founder pass 26 Sep: DARK IN ALL COLOURS — every glow halved, every
+     tone pushed deeper. Benchmark target: Linear (19,20,21). */
   background:
-    radial-gradient(56% 44% at 50% -4%, rgba(124,58,237,.26), transparent 72%),
-    radial-gradient(34% 30% at 88% 20%, rgba(139,92,246,.10), transparent 70%),
-    radial-gradient(42% 36% at 6% 34%, rgba(59,20,112,.14), transparent 72%),
-    #08090D}
+    radial-gradient(58% 46% at 50% -6%, rgba(76,29,149,.32), transparent 66%),
+    radial-gradient(30% 26% at 88% 22%, rgba(76,29,149,.12), transparent 68%),
+    radial-gradient(38% 32% at 6% 34%, rgba(35,12,66,.22), transparent 72%),
+    #05050A}
 .ov-canvas::after{content:"";position:absolute;inset:0;
   /* only the section-transition fade; no text backing needed */
   background:linear-gradient(180deg,rgba(8,9,13,0) 88%,rgba(8,9,13,.65) 100%)}
