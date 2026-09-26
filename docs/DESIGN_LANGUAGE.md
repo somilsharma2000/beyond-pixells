@@ -1,4 +1,4 @@
-# Beyond Pixells — Visual Design Language (v1.0)
+# Beyond Pixells — Visual Design Language (v2.0)
 
 > The complete spec lives in `research/design_language.md` (tokens, keyframes,
 > component states, a11y). This is the operating summary.
@@ -32,6 +32,35 @@ never decorates.
 | `bp-numSlide` + countUp | numeric stats animate on view | 1.1s |
 | `bp-marquee` | tickers (`.bp-marquee`) | 28s linear |
 | `.bp-lift` | card hover: -4px + glow | 300ms |
+
+## v2.0 Motion & Lighting Utilities (26 Sep 2026)
+
+Upgrade research (docs/research/motion_visual_upgrade.md) added these opt-in
+utilities to the shared files. All are backward compatible: no existing page
+changes behavior until it opts in.
+
+| Utility | Class / attribute | What it does |
+|---|---|---|
+| Noise canvas | `<body class="bp-noise-canvas">` | Sub-perceptual film-grain overlay; kills banding, adds tactile depth |
+| Scroll progress | `<div class="bp-scroll-progress-bar"></div>` | Brand-gradient bar, scaled by bp-motion.js on scroll |
+| Hero choreography | `class="bp-hero-step" style="--bp-hero-delay:120ms"` | Sequenced load entry: pill → h1 → p → CTAs → trust (0/100/220/340/460ms) |
+| Card spotlight | `class="bp-spotlight-card"` | Mouse-following radial glow + 1px glowing border (the Linear-style signature) |
+| Nav frost/shrink | `class="bp-nav-sticky"` on nav | Transparent → frosted glass + shrink past 20px scroll |
+| Magnetic buttons | `class="bp-magnetic-btn"` | Primary CTAs drift toward cursor (hover devices only) |
+| 3D tilt | `class="bp-tilt-card"` | Max ±8deg perspective tilt (hover devices only) |
+| Shimmer text | `class="bp-shimmer-text"` | Slow brand-color sweep through text |
+| Skeleton | `class="bp-skeleton"` | Loading shimmer blocks |
+| Icon pop | `class="bp-icon-hover"` | scale 1.15 + rotate 6deg + cyan on hover |
+| Reveal variants | `data-reveal="up|scale|left|right"` | Directional scroll reveals; v1 auto-selectors kept |
+| Marquee controls | `data-direction="reverse"`, hover pauses | Ticker variations |
+
+Performance law (v2.0): animate only `transform` + `opacity`; every pointer/scroll
+handler writes inside `requestAnimationFrame`; scroll listeners `{passive:true}`;
+`will-change` only on actively tracked elements; IntersectionObserver unobserves
+after reveal. All engines disable under `prefers-reduced-motion`.
+
+Blacklist (never use): trailing cursors, full card flips, scroll-velocity text
+skew, particle networks, auto-playing sound.
 
 ## Per-product flavors (same DNA, different energy)
 - **Gym OS**: full kinetic energy — crimson/amber, live telemetry mockups, fire emoji accents

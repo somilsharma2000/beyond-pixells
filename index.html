@@ -122,7 +122,8 @@ footer{padding:64px 0 44px;border-top:1px solid var(--stroke-soft)}
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://somilsharma2000.github.io/beyond-pixells/#org", "name": "Beyond Pixells", "description": "Modern product studio that builds sector-specific operating systems for local businesses.", "slogan": "We build operating systems for local businesses.", "url": "https://somilsharma2000.github.io/beyond-pixells/", "founder": {"@type": "Person", "name": "Somil Sharma"}, "address": {"@type": "PostalAddress", "addressCountry": "IN"}, "hasOfferCatalog": {"@type": "OfferCatalog", "name": "OS Family", "itemListElement": [{"@type": "Offer", "itemOffered": {"@type": "SoftwareApplication", "name": "Gym OS", "applicationCategory": "BusinessApplication", "description": "Gym management operating system for Indian gyms — WhatsApp automation, QR check-in, lead CRM, UPI collection.", "url": "https://somilsharma2000.github.io/gym-os/", "offers": {"@type": "Offer", "price": "999", "priceCurrency": "INR"}}}, {"@type": "Offer", "itemOffered": {"@type": "SoftwareApplication", "name": "Dentist OS", "applicationCategory": "BusinessApplication", "description": "Dental clinic management operating system — patients, appointments, recalls, billing.", "url": "https://somilsharma2000.github.io/dentist-os-site/"}}, {"@type": "Offer", "itemOffered": {"@type": "SoftwareApplication", "name": "Builder OS", "applicationCategory": "BusinessApplication", "description": "Real-estate builder operations OS.", "url": "https://somilsharma2000.github.io/builder-os-site/"}}]}}, {"@type": "WebSite", "@id": "https://somilsharma2000.github.io/beyond-pixells/#site", "url": "https://somilsharma2000.github.io/beyond-pixells/", "name": "Beyond Pixells", "publisher": {"@id": "https://somilsharma2000.github.io/beyond-pixells/#org"}}]}</script>
 </head>
-<body>
+<body class="bp-noise-canvas">
+<div class="bp-scroll-progress-bar"></div>
 
 <nav>
   <div class="container">
@@ -140,10 +141,10 @@ footer{padding:64px 0 44px;border-top:1px solid var(--stroke-soft)}
 
 <header class="hero" id="top">
   <div class="container">
-    <div class="pill"><span class="dot"></span>Gym OS is live &middot; Dentist OS demo running</div>
-    <h1>We build operating systems for <span class="hl">local businesses.</span></h1>
-    <p>Beyond Pixells is a modern product studio. We craft sector-specific software platforms — plus websites, marketing automation and digital products — that turn local operations into automated market leaders.</p>
-    <div class="ctas">
+    <div class="pill bp-hero-step" style="--bp-hero-delay:0ms"><span class="dot"></span>Gym OS is live &middot; Dentist OS demo running</div>
+    <h1 class="bp-hero-step" style="--bp-hero-delay:100ms">We build operating systems for <span class="hl">local businesses.</span></h1>
+    <p class="bp-hero-step" style="--bp-hero-delay:220ms">Beyond Pixells is a modern product studio. We craft sector-specific software platforms — plus websites, marketing automation and digital products — that turn local operations into automated market leaders.</p>
+    <div class="ctas bp-hero-step" style="--bp-hero-delay:340ms">
       <a class="btn btn-primary bp-glow" href="#products">Explore the OS Family</a>
       <a class="btn btn-ghost" href="#contact" >Book a Studio Call</a>
     </div>
@@ -164,14 +165,14 @@ footer{padding:64px 0 44px;border-top:1px solid var(--stroke-soft)}
       <p>Each OS is purpose-built for its industry — branded website, customer portal, owner dashboard, WhatsApp automation and lead engine — not generic software with a skin.</p>
     </div>
     <div class="os-grid">
-      <div class="os-card bp-lift">
+      <div class="os-card bp-lift bp-spotlight-card">
         <span class="status st-live">● Live</span>
         <h3>Gym OS</h3>
         <p>The complete gym management system for Indian gyms. Website, member management, WhatsApp automation, QR check-in, lead CRM and AI insights.</p>
         <div class="specs"><span>32 modules</span><span>QR check-in</span><span>WhatsApp-first</span><span>UPI ready</span></div>
         <a class="go" href="https://somilsharma2000.github.io/gym-os/" >Open Gym OS →</a>
       </div>
-      <div class="os-card bp-lift">
+      <div class="os-card bp-lift bp-spotlight-card">
         <span class="status st-demo">● Live Demo</span>
         <h3>Dentist OS</h3>
         <p>Practice management for dental clinics. Patient records, appointment automation, treatment plans, recall reminders and billing.</p>
@@ -179,7 +180,7 @@ footer{padding:64px 0 44px;border-top:1px solid var(--stroke-soft)}
         <a class="go" href="https://somilsharma2000.github.io/dentist-os-site/" >Open Dentist OS →</a>
         <a class="go" href="https://somilsharma2000.github.io/dentist-os/" >Working demo clinic →</a>
       </div>
-      <div class="os-card bp-lift">
+      <div class="os-card bp-lift bp-spotlight-card">
         <span class="status st-soon">In Development</span>
         <h3>Builder OS</h3>
         <p>Real-estate builder operations — project showcases, site-visit booking, lead qualification and buyer follow-up automation.</p>
@@ -270,7 +271,7 @@ footer{padding:64px 0 44px;border-top:1px solid var(--stroke-soft)}
     <h2>Run your business on an operating system, not a register.</h2>
     <p>Book a studio call — we'll map your operations and show you what your industry's OS looks like for you.</p>
     <div class="ctas">
-      <a class="btn btn-primary" href="https://wa.me/917737077479?text=Hi%20Beyond%20Pixells!%20I%20want%20to%20talk%20about%20an%20OS%20for%20my%20business." >Chat on WhatsApp</a>
+      <a class="btn btn-primary bp-magnetic-btn" href="https://wa.me/917737077479?text=Hi%20Beyond%20Pixells!%20I%20want%20to%20talk%20about%20an%20OS%20for%20my%20business." >Chat on WhatsApp</a>
       <a class="btn btn-ghost" href="#products">See the Products</a>
     </div>
   </div>
