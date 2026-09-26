@@ -69,7 +69,7 @@ Iron Forge Hyderabad (main + gh-pages) and PowerHouse Hyderabad now call
 Vesper + BEYOND PIXELLS no longer receive gym leads. End-to-end verification
 pends the Base44 credit reset (capture functions refuse calls with HTTP 402 until then).
 
-## 3. The visual design language (v1.0 — locked)
+## 3. The visual design language (v4.0 CHROME VIOLET — locked 26 Sep 2026)
 
 Single source of truth: **`assets/bp-design-system.css`** + **`assets/bp-motion.js`**.
 Any site adds 2 lines and gets the whole system:
@@ -79,15 +79,17 @@ Any site adds 2 lines and gets the whole system:
 <script src="https://somilsharma2000.github.io/beyond-pixells/assets/bp-motion.js"></script>
 ```
 
-- **Tokens**: canvas `#08090C`, surfaces `#12141A/#1A1D26`, gradient `#FF3B30→#FF7A00`,
-  cyan `#00F2FE`, Space Grotesk + Plus Jakarta Sans, easing `cubic-bezier(.16,1,.3,1)`.
+- **Tokens**: canvas `#06060D`, surfaces `#10101E/#13131F`, violet chrome gradient
+  `#8B5CF6→#6D28D9→#3B1470`, gold accent `#FF9500/#FFB86B` (rim light + CTAs),
+  Space Grotesk + Plus Jakarta Sans, easing `cubic-bezier(.16,1,.3,1)`.
+  Signature object: the glossy chrome tile (violet body, gold rim, top gloss, glow).
 - **Motion library**: `bp-fadeUp` (scroll reveal, auto-applied), `bp-scaleIn`,
   `bp-glowPulse` (CTAs), `bp-gradientShift`, `bp-numSlide` (count-up stats),
   `bp-marquee`. All respect `prefers-reduced-motion`.
 - **Rules**: one accent family per page, no rainbow, no fake data, honest labels.
   Full spec: `docs/DESIGN_LANGUAGE.md` + `docs/research/design_language.md`.
-- **Per-product flavors**: Gym OS = energetic crimson/amber, telemetry imagery;
-  Dentist OS = calm trust, clinical cyan-green; Builder OS = architectural precision.
+- **Per-product flavors**: all products share Chrome Violet v4 (unified language);
+  personality differs via copy and dashboard content, not palette.
 
 ## 4. Marketing system
 

@@ -3,238 +3,103 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Style Lab — pick a direction | Beyond Pixells</title>
-<meta name="description" content="Four visual identity directions for the Beyond Pixells ecosystem. Internal preview page.">
-<meta name="robots" content="noindex">
+<title>Style Lab — Chrome Violet v4 | Beyond Pixells</title>
+<meta name="description" content="The official Chrome Violet v4 design language of the Beyond Pixells ecosystem — tokens, type, components and motion.">
+<meta name="theme-color" content="#06060D">
 <link rel="icon" href="logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600&family=Archivo:wght@700;800;900&family=Sora:wght@400;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="canonical" href="https://somilsharma2000.github.io/beyond-pixells/style-lab.html">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-body{background:#0B0C0F;font-family:'Inter',sans-serif}
-.labhead{padding:60px 28px 40px;text-align:center;color:#fff}
-.labhead h1{font-family:'Space Grotesk';font-size:1.6rem;letter-spacing:-.02em}
-.labhead p{color:#8b90a0;font-size:.9rem;margin-top:10px}
-.dir{padding:88px 28px;position:relative;overflow:hidden}
-.dir-tag{position:absolute;top:20px;left:28px;font-size:.72rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#fff;background:rgba(0,0,0,.55);border:1px solid rgba(255,255,255,.25);border-radius:100px;padding:7px 16px;backdrop-filter:blur(8px);z-index:10}
-.wrap{max-width:1060px;margin:0 auto;display:grid;grid-template-columns:1.15fr .85fr;gap:54px;align-items:center}
-.kick{display:inline-flex;font-size:.72rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;margin-bottom:20px}
-h2{font-size:clamp(2rem,4.6vw,3.4rem);line-height:1.08;letter-spacing:-.03em;margin-bottom:18px}
-.sub{font-size:1.02rem;line-height:1.7;margin-bottom:30px;max-width:520px}
-.ctas{display:flex;gap:14px;flex-wrap:wrap}
-.chips{display:flex;gap:22px;margin-top:38px;flex-wrap:wrap}
-.chips div b{font-size:1.5rem;display:block;letter-spacing:-.02em}
-.chips div span{font-size:.78rem;opacity:.65}
-/* mini dashboards */
-.dash{border-radius:16px;padding:18px;display:flex;flex-direction:column;gap:12px;box-shadow:0 30px 80px rgba(0,0,0,.45)}
-.dash-top{display:flex;gap:7px;align-items:center;font-size:.68rem;opacity:.6}
-.dash-top i{width:10px;height:10px;border-radius:50%;display:inline-block}
-.dash-k{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-.k{border-radius:10px;padding:13px 14px}
-.k span{font-size:.64rem;text-transform:uppercase;letter-spacing:.1em;display:block;margin-bottom:4px;opacity:.6}
-.k b{font-size:1.15rem;letter-spacing:-.02em}
-.dash-feed{border-radius:10px;padding:13px 14px;display:flex;flex-direction:column;gap:8px}
-.dash-feed div{font-size:.72rem;display:flex;justify-content:space-between;opacity:.75}
-
-/* ============ A. LIGHT EDITORIAL ============ */
-#dir-a{background:#FAF7F2;color:#16130E}
-#dir-a .kick{color:#0E7A4E}
-#dir-a h2{font-family:'Fraunces',serif;font-weight:600}
-#dir-a h2 em{font-style:italic;color:#0E7A4E}
-#dir-a .sub{color:#5C554A}
-#dir-a .ctas a{font:600 .92rem 'Inter';padding:14px 26px;border-radius:8px;text-decoration:none}
-#dir-a .a1{background:#16130E;color:#FAF7F2}
-#dir-a .a2{border:1px solid #D8D2C6;color:#16130E}
-#dir-a .chips div b{font-family:'Fraunces'}
-#dir-a .dash{background:#fff;border:1px solid #E9E3D7;box-shadow:0 24px 60px rgba(22,19,14,.1)}
-#dir-a .dash-top i{background:#E3DDD1}
-#dir-a .k{background:#F5F1E9;border:1px solid #E9E3D7}
-#dir-a .k span{color:#5C554A}
-#dir-a .dash-feed{background:#F0EDE4;border:1px solid #E9E3D7}
-#dir-a .k:first-child{background:#0E7A4E;color:#fff}
-#dir-a .k:first-child span{color:rgba(255,255,255,.7)}
-
-/* ============ B. LUXURY PERFORMANCE ============ */
-#dir-b{background:radial-gradient(ellipse 60% 50% at 50% 0%,#1C1A17,#101010 70%);color:#F5F1E8}
-#dir-b .kick{color:#C9A227}
-#dir-b h2{font-family:'Sora',sans-serif;font-weight:600}
-#dir-b h2 em{font-style:normal;color:transparent;background:linear-gradient(120deg,#E8C766,#B98F2E);-webkit-background-clip:text;background-clip:text}
-#dir-b .sub{color:#9A937F}
-#dir-b .ctas a{font:600 .92rem 'Sora';padding:15px 30px;border-radius:6px;text-decoration:none;letter-spacing:.02em}
-#dir-b .a1{background:linear-gradient(120deg,#E8C766,#C9A227);color:#171307;box-shadow:0 0 40px rgba(201,162,39,.25)}
-#dir-b .a2{border:1px solid rgba(201,162,39,.45);color:#E8C766}
-#dir-b .chips div b{font-family:'Sora';color:#E8C766}
-#dir-b .dash{background:linear-gradient(180deg,#191713,#12100D);border:1px solid rgba(201,162,39,.25);box-shadow:0 30px 80px rgba(0,0,0,.6),inset 0 1px 0 rgba(232,199,102,.15)}
-#dir-b .dash-top i{background:#3A342A}
-#dir-b .k{background:rgba(255,255,255,.03);border:1px solid rgba(201,162,39,.18)}
-#dir-b .k:first-child{background:linear-gradient(120deg,rgba(232,199,102,.16),rgba(185,143,46,.1));border-color:rgba(201,162,39,.4)}
-#dir-b .dash-feed{background:rgba(255,255,255,.03);border:1px solid rgba(201,162,39,.18)}
-
-/* ============ C. BOLD SPORTS ============ */
-#dir-c{background:#0A1128;color:#F2F6FF;position:relative}
-#dir-c::before{content:"";position:absolute;inset:0;background:linear-gradient(115deg,transparent 40%,rgba(16,132,255,.14) 50%,transparent 60%);transform:skewX(-18deg);pointer-events:none}
-#dir-c .kick{color:#9BE83B}
-#dir-c h2{font-family:'Archivo',sans-serif;font-weight:900;text-transform:uppercase;letter-spacing:-.01em}
-#dir-c h2 em{font-style:normal;color:#1084FF}
-#dir-c .sub{color:#8FA0C8}
-#dir-c .ctas a{font:800 .95rem 'Archivo';padding:15px 30px;border-radius:4px;text-decoration:none;text-transform:uppercase;letter-spacing:.04em}
-#dir-c .a1{background:#1084FF;color:#fff;box-shadow:0 8px 40px rgba(16,132,255,.5)}
-#dir-c .a2{border:2px solid #9BE83B;color:#9BE83B}
-#dir-c .chips div b{font-family:'Archivo';color:#9BE83B}
-#dir-c .dash{background:#0D1533;border:2px solid #1E2C55;box-shadow:0 24px 70px rgba(16,132,255,.25);transform:rotate(-1.5deg)}
-#dir-c .dash-top i{background:#1E2C55}
-#dir-c .k{background:#101A3D;border:1px solid #1E2C55}
-#dir-c .k:first-child{background:#1084FF}
-#dir-c .k:first-child span{color:rgba(255,255,255,.7)}
-#dir-c .dash-feed{background:#101A3D;border:1px solid #1E2C55}
-
-/* ============ D. CLEAN TECH ============ */
-#dir-d{background:radial-gradient(ellipse 55% 45% at 50% 0%,#161A2E,#0F1117 70%);color:#EDF0FA}
-#dir-d::before{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.08) 1px,transparent 1px);background-size:26px 26px;mask-image:radial-gradient(ellipse 60% 55% at 50% 20%,#000 30%,transparent 75%)}
-#dir-d .wrap{position:relative}
-#dir-d .kick{color:#7C7FF6}
-#dir-d h2{font-family:'Space Grotesk';font-weight:700}
-#dir-d h2 em{font-style:normal;color:#9BA0FF}
-#dir-d .sub{color:#8A90A8}
-#dir-d .ctas a{font:600 .92rem 'Space Grotesk';padding:14px 28px;border-radius:10px;text-decoration:none}
-#dir-d .a1{background:#7C7FF6;color:#0F1117;box-shadow:0 0 35px rgba(124,127,246,.35)}
-#dir-d .a2{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);color:#EDF0FA}
-#dir-d .chips div b{font-family:'Space Grotesk';color:#9BA0FF}
-#dir-d .dash{background:#141827;border:1px solid rgba(255,255,255,.1);box-shadow:0 30px 80px rgba(0,0,0,.5)}
-#dir-d .dash-top i{background:#262B3F}
-#dir-d .k{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.09)}
-#dir-d .k:first-child{background:rgba(124,127,246,.15);border-color:rgba(124,127,246,.4)}
-#dir-d .dash-feed{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.09)}
-
-@media(max-width:860px){.wrap{grid-template-columns:1fr}}
+body{background:#06060D;color:#F4F2FB;font-family:'Plus Jakarta Sans',sans-serif;line-height:1.65;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1000px;margin:0 auto;padding:64px 28px 100px}
+.labhead{text-align:center;margin-bottom:64px}
+.labhead .badge{display:inline-flex;align-items:center;gap:9px;font-size:.78rem;font-weight:700;color:#C4B5FD;background:linear-gradient(180deg,rgba(124,58,237,.22),rgba(59,20,112,.16));border:1px solid rgba(255,149,0,.35);border-radius:100px;padding:7px 16px;margin-bottom:22px;box-shadow:0 0 26px rgba(124,58,237,.22),inset 0 1px 0 rgba(255,255,255,.1)}
+.labhead .badge i{width:7px;height:7px;border-radius:50%;background:#FF9500;box-shadow:0 0 10px #FF9500}
+h1{font-family:'Space Grotesk';font-size:clamp(2rem,5vw,3.2rem);letter-spacing:-.03em;background:linear-gradient(110deg,#A78BFA 15%,#FFB86B 45%,#C4B5FD 75%);background-size:200% auto;-webkit-background-clip:text;background-clip:text;color:transparent;animation:shimmer 6s linear infinite}
+@keyframes shimmer{0%{background-position:-200% 50%}100%{background-position:200% 50%}}
+.labhead p{color:#ABA6C7;margin-top:14px;max-width:560px;margin-left:auto;margin-right:auto}
+h2{font-family:'Space Grotesk';font-size:1.3rem;color:#fff;margin:56px 0 20px;letter-spacing:-.02em}
+h2::before{content:"§ ";color:#FFB86B}
+.grid{display:grid;gap:16px}
+.g3{grid-template-columns:repeat(3,1fr)}
+.g4{grid-template-columns:repeat(4,1fr)}
+.swatch{border-radius:16px;padding:18px 20px;border:1px solid rgba(167,139,250,.14);background:linear-gradient(180deg,rgba(255,255,255,.07),rgba(255,255,255,0) 45%),#10101E;font-size:.78rem;color:#ABA6C7}
+.swatch i{display:block;height:56px;border-radius:12px;margin-bottom:12px;box-shadow:inset 0 1px 0 rgba(255,255,255,.25),0 8px 24px rgba(0,0,0,.4)}
+.swatch b{color:#fff;font-family:'Space Grotesk';font-size:.92rem;display:block;margin-bottom:3px}
+.card{background:linear-gradient(180deg,rgba(255,255,255,.08),rgba(255,255,255,0) 45%),linear-gradient(165deg,#131324,#0C0C17);border:1px solid rgba(167,139,250,.18);border-radius:20px;padding:34px;box-shadow:0 24px 70px rgba(0,0,0,.5),0 0 46px rgba(124,58,237,.12);position:relative;overflow:hidden}
+.card::after{content:"";position:absolute;top:0;left:8%;right:8%;height:1px;background:linear-gradient(90deg,transparent,rgba(255,255,255,.4),transparent)}
+.row{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+.btn{display:inline-flex;align-items:center;gap:9px;border-radius:100px;font-weight:700;font-size:.92rem;padding:13px 26px;cursor:pointer;border:none;text-decoration:none}
+.btn-v{background:linear-gradient(180deg,rgba(255,255,255,.08),rgba(255,255,255,0) 45%),linear-gradient(160deg,#8B5CF6,#6D28D9);color:#fff;box-shadow:0 8px 30px rgba(124,58,237,.4),inset 0 1px 0 rgba(255,255,255,.18)}
+.btn-g{background:linear-gradient(180deg,rgba(255,255,255,.08),rgba(255,255,255,0) 45%),linear-gradient(160deg,#FFA733,#F97300);color:#160A00;box-shadow:0 8px 30px rgba(255,149,0,.35),inset 0 1px 0 rgba(255,255,255,.3)}
+.btn-o{background:rgba(255,255,255,.04);color:#F4F2FB;border:1px solid rgba(167,139,250,.2)}
+.btn:hover{transform:translateY(-2px);transition:.25s}
+h1.demo{font-size:clamp(1.9rem,4vw,2.8rem);margin:0 0 10px}
+p.demo{color:#ABA6C7;max-width:520px}
+.kicker{font-size:.76rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;background:linear-gradient(110deg,#C4B5FD,#FFB86B);-webkit-background-clip:text;background-clip:text;color:transparent;margin-bottom:12px;display:block}
+.spec{font-size:.82rem;color:#6E688F;border-top:1px solid rgba(167,139,250,.12);padding-top:18px;margin-top:26px}
+.spec b{color:#ABA6C7}
+.tile{width:84px;height:84px;border-radius:22px;background:linear-gradient(160deg,#8B5CF6,#6D28D9 45%,#3B1470);border:1px solid rgba(255,149,0,.45);box-shadow:inset 0 2px 0 rgba(255,255,255,.35),inset 0 -3px 8px rgba(0,0,0,.4),0 0 34px rgba(124,58,237,.45);position:relative}
+.tile::after{content:"";position:absolute;top:10px;left:14px;right:14px;height:14px;border-radius:99px;background:linear-gradient(180deg,rgba(255,255,255,.5),transparent)}
+.back{display:inline-block;margin-bottom:34px;color:#ABA6C7;font-size:.9rem;text-decoration:none}
+.back:hover{color:#C4B5FD}
+@media(max-width:760px){.g3,.g4{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:520px){.g3,.g4{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){h1{animation:none}}
 </style>
 </head>
 <body>
-<div class="labhead">
-  <h1>Style Lab — 4 directions, same content</h1>
-  <p>Scroll through all four. Tell beyond which one feels right (A, B, C or D) — it becomes the ecosystem's visual identity everywhere.</p>
-</div>
+<div class="wrap">
+  <div class="labhead">
+    <span class="badge"><i></i>Version 4 · Locked September 2026</span>
+    <h1>Chrome Violet</h1>
+    <p>The official visual language of the Beyond Pixells ecosystem. Glossy dark surfaces, deep violet chrome, orange-gold rim light.</p>
+  </div>
 
-<section class="dir" id="dir-a">
-  <span class="dir-tag">A · Light Editorial</span>
-  <div class="wrap">
-    <div>
-      <span class="kick">Beyond Pixells · Gym OS</span>
-      <h2>Run your gym like it <em>deserves.</em></h2>
-      <p class="sub">Members, renewals, WhatsApp automation and UPI collections — one calm system, no apps to download. Editorial, quiet, premium. Light pages read as honest and high-trust.</p>
-      <div class="ctas"><a class="a1" href="#dir-a">Book a free demo</a><a class="a2" href="#dir-a">See pricing</a></div>
-      <div class="chips">
-        <div><b>Cream #FAF7F2</b><span>canvas</span></div>
-        <div><b>Emerald</b><span>single accent</span></div>
-        <div><b>Fraunces</b><span>display serif</span></div>
-      </div>
-    </div>
-    <div class="dash">
-      <div class="dash-top"><i></i><i></i><i></i><span>owner dashboard</span></div>
-      <div class="dash-k">
-        <div class="k"><span>Active members</span><b>1,248</b></div>
-        <div class="k"><span>Check-ins today</span><b>214</b></div>
-      </div>
-      <div class="dash-feed">
-        <div><span>WhatsApp renewal sent</span><span>now</span></div>
-        <div><span>UPI fee received</span><span>2m</span></div>
-        <div><span>New lead captured</span><span>5m</span></div>
+  <a class="back" href="index.html">← Back to beyond-pixells</a>
+
+  <h2>Core canvas &amp; surfaces</h2>
+  <div class="grid g4">
+    <div class="swatch"><i style="background:#06060D"></i><b>Canvas</b>#06060D</div>
+    <div class="swatch"><i style="background:#10101E"></i><b>Surface 1</b>#10101E</div>
+    <div class="swatch"><i style="background:linear-gradient(165deg,#131324,#0C0C17)"></i><b>Surface 2</b>#131324 → #0C0C17</div>
+    <div class="swatch"><i style="background:#040408"></i><b>Footer</b>#040408</div>
+  </div>
+
+  <h2>Brand spectrum</h2>
+  <div class="grid g4">
+    <div class="swatch"><i style="background:linear-gradient(160deg,#8B5CF6,#6D28D9 45%,#3B1470)"></i><b>Violet chrome</b>#8B5CF6 → #3B1470</div>
+    <div class="swatch"><i style="background:linear-gradient(160deg,#FFA733,#F97300)"></i><b>Gold accent</b>#FFA733 → #F97300</div>
+    <div class="swatch"><i style="background:#C4B5FD"></i><b>Violet 200</b>#C4B5FD</div>
+    <div class="swatch"><i style="background:rgba(255,149,0,.35);border:1px solid rgba(255,149,0,.6)"></i><b>Rim light</b>gold at 35–55% α</div>
+  </div>
+
+  <h2>Signature tile</h2>
+  <div class="card">
+    <div class="row">
+      <div class="tile"></div>
+      <div style="max-width:520px">
+        <span class="kicker">The Chrome Tile</span>
+        <p class="demo">Every card, panel and icon is a glossy chrome tile: violet gradient body, gold rim-light edge, top gloss highlight, and a soft violet glow underneath.</p>
       </div>
     </div>
   </div>
-</section>
 
-<section class="dir" id="dir-b">
-  <span class="dir-tag">B · Luxury Performance</span>
-  <div class="wrap">
-    <div>
-      <span class="kick">Beyond Pixells · Gym OS</span>
-      <h2>Every rep, every rupee — <em>accounted for.</em></h2>
-      <p class="sub">A management system with the finish of a luxury watch. Champagne gold on deep charcoal says premium membership: sell high-ticket plans without saying a word.</p>
-      <div class="ctas"><a class="a1" href="#dir-b">Book a free demo</a><a class="a2" href="#dir-b">See pricing</a></div>
-      <div class="chips">
-        <div><b>Charcoal</b><span>canvas</span></div>
-        <div><b>Champagne</b><span>gold accent</span></div>
-        <div><b>Sora</b><span>geometric sans</span></div>
-      </div>
+  <h2>Typography &amp; components</h2>
+  <div class="card">
+    <span class="kicker">Display / Space Grotesk · Body / Plus Jakarta Sans</span>
+    <h1 class="demo">Run your business on an OS.</h1>
+    <p class="demo">Headlines shimmer violet-gold. Body copy sits in soft violet-grey. CTAs are pill-shaped with inner gloss.</p>
+    <div class="row" style="margin-top:24px">
+      <a class="btn btn-v" href="#top">Violet primary</a>
+      <a class="btn btn-g" href="#top">Gold accent</a>
+      <a class="btn btn-o" href="#top">Glass ghost</a>
     </div>
-    <div class="dash">
-      <div class="dash-top"><i></i><i></i><i></i><span>owner dashboard</span></div>
-      <div class="dash-k">
-        <div class="k"><span>Active members</span><b>1,248</b></div>
-        <div class="k"><span>Check-ins today</span><b>214</b></div>
-      </div>
-      <div class="dash-feed">
-        <div><span>WhatsApp renewal sent</span><span>now</span></div>
-        <div><span>UPI fee received</span><span>2m</span></div>
-        <div><span>New lead captured</span><span>5m</span></div>
-      </div>
-    </div>
+    <div class="spec"><b>Motion law:</b> load reveals and hover lift only · shimmer on headline · <b>prefers-reduced-motion</b> always respected · <b>Gloss law:</b> top-down white fade at 8% α · <b>Border law:</b> violet hairlines at 12–20% α, gold rim only on emphasis.</div>
   </div>
-</section>
-
-<section class="dir" id="dir-c">
-  <span class="dir-tag">C · Bold Sports</span>
-  <div class="wrap">
-    <div>
-      <span class="kick">Beyond Pixells · Gym OS</span>
-      <h2>Stop chasing fees. <em>Start winning.</em></h2>
-      <p class="sub">Loud, fast, athletic. Electric blue and lime with heavyweight uppercase type — the energy of a training floor. Best for a young, aggressive fitness crowd.</p>
-      <div class="ctas"><a class="a1" href="#dir-c">Book a free demo</a><a class="a2" href="#dir-c">See pricing</a></div>
-      <div class="chips">
-        <div><b>Navy #0A1128</b><span>canvas</span></div>
-        <div><b>Blue + Lime</b><span>duo accents</span></div>
-        <div><b>Archivo Black</b><span>condensed caps</span></div>
-      </div>
-    </div>
-    <div class="dash">
-      <div class="dash-top"><i></i><i></i><i></i><span>owner dashboard</span></div>
-      <div class="dash-k">
-        <div class="k"><span>Active members</span><b>1,248</b></div>
-        <div class="k"><span>Check-ins today</span><b>214</b></div>
-      </div>
-      <div class="dash-feed">
-        <div><span>WhatsApp renewal sent</span><span>now</span></div>
-        <div><span>UPI fee received</span><span>2m</span></div>
-        <div><span>New lead captured</span><span>5m</span></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="dir" id="dir-d">
-  <span class="dir-tag">D · Clean Tech</span>
-  <div class="wrap">
-    <div>
-      <span class="kick">Beyond Pixells · Gym OS</span>
-      <h2>Your gym, on one calm <em>system.</em></h2>
-      <p class="sub">Indigo glow on slate, precise grids, engineering calm — the Linear/Vercel school. Reads as serious software; great if you're selling to analytical, urban owners.</p>
-      <div class="ctas"><a class="a1" href="#dir-d">Book a free demo</a><a class="a2" href="#dir-d">See pricing</a></div>
-      <div class="chips">
-        <div><b>Slate #0F1117</b><span>canvas</span></div>
-        <div><b>Indigo</b><span>glow accent</span></div>
-        <div><b>Space Grotesk</b><span>kept</span></div>
-      </div>
-    </div>
-    <div class="dash">
-      <div class="dash-top"><i></i><i></i><i></i><span>owner dashboard</span></div>
-      <div class="dash-k">
-        <div class="k"><span>Active members</span><b>1,248</b></div>
-        <div class="k"><span>Check-ins today</span><b>214</b></div>
-      </div>
-      <div class="dash-feed">
-        <div><span>WhatsApp renewal sent</span><span>now</span></div>
-        <div><span>UPI fee received</span><span>2m</span></div>
-        <div><span>New lead captured</span><span>5m</span></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<div class="labhead" style="padding-bottom:80px">
-  <h1>Pick one</h1>
-  <p>A = light &amp; honest · B = dark &amp; luxurious · C = loud &amp; sporty · D = calm &amp; technical</p>
 </div>
 </body>
 </html>
