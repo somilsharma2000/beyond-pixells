@@ -18,7 +18,7 @@
     var wrap = d.createElement('div');
     wrap.className = 'ov-droplets';
     for (var i = 0; i < n; i++) {
-      var s = 4 + Math.random() * 14;
+      var s = 6 + Math.random() * 20;
       var el = d.createElement('i');
       el.style.width = s + 'px';
       el.style.height = s + 'px';

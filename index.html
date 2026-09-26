@@ -235,8 +235,8 @@ footer .brand{color:#fff}
   </div>
 </nav>
 
-<header class="hero" id="top" data-ov-droplets="14">
-  <svg class="ov-veins" viewBox="0 0 1440 760" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+<header class="hero" id="top" data-ov-droplets="22">
+  <svg class="ov-veins" viewBox="0 0 1440 860" preserveAspectRatio="none" aria-hidden="true">
     <path class="glow trunk" d="M 1240 40 L 1229 113 L 1205 185 L 1193 256 L 1207 321 L 1230 393 L 1240 469 L 1240 534 L 1225 603"/>
     <path class="glow trunk" d="M 1240 40 L 1199 91 L 1145 134 L 1098 189 L 1069 253 L 1032 310 L 1011 368 L 988 438 L 957 498"/>
     <path class="glow trunk" d="M 1240 40 L 1184 92 L 1125 124 L 1059 139 L 983 134 L 914 136 L 848 168 L 784 186"/>
@@ -265,7 +265,32 @@ footer .brand{color:#fff}
     <path class="core sub" d="M 958 92 L 919 154 L 862 195 L 821 260 L 795 323"/>
     <path class="core sub" d="M 797 38 L 763 -2 L 745 -52 L 730 -103"/>
     <path class="core sub" d="M 1140 -150 L 1148 -218 L 1133 -271 L 1153 -332"/>
+    <path class="glow trunk" d="M 90 700 L 136 629 L 175 556 L 204 476 L 232 399 L 272 324"/>
+    <path class="glow trunk" d="M 90 700 L 124 653 L 162 590 L 187 539 L 200 471 L 229 422 L 272 369 L 312 310"/>
+    <path class="glow trunk" d="M 90 700 L 177 685 L 245 649 L 312 615 L 387 592 L 472 560"/>
+    <path class="glow trunk" d="M 90 700 L 149 695 L 212 693 L 272 689 L 340 694 L 404 725"/>
+    <path class="glow trunk" d="M 90 700 L 139 735 L 198 767 L 256 772 L 318 807 L 368 836 L 411 873 L 474 901"/>
+    <path class="glow sub" d="M 204 476 L 254 449 L 290 419 L 318 370"/>
+    <path class="glow sub" d="M 200 471 L 213 408 L 231 348 L 243 298"/>
+    <path class="glow sub" d="M 312 615 L 338 569 L 382 533 L 437 521"/>
+    <path class="glow sub" d="M 272 689 L 289 655 L 327 628 L 353 600"/>
+    <path class="glow sub" d="M 256 772 L 281 826 L 286 888 L 277 944"/>
+    <path class="core trunk" d="M 90 700 L 136 629 L 175 556 L 204 476 L 232 399 L 272 324"/>
+    <path class="core trunk" d="M 90 700 L 124 653 L 162 590 L 187 539 L 200 471 L 229 422 L 272 369 L 312 310"/>
+    <path class="core trunk" d="M 90 700 L 177 685 L 245 649 L 312 615 L 387 592 L 472 560"/>
+    <path class="core trunk" d="M 90 700 L 149 695 L 212 693 L 272 689 L 340 694 L 404 725"/>
+    <path class="core trunk" d="M 90 700 L 139 735 L 198 767 L 256 772 L 318 807 L 368 836 L 411 873 L 474 901"/>
+    <path class="core sub" d="M 204 476 L 254 449 L 290 419 L 318 370"/>
+    <path class="core sub" d="M 200 471 L 213 408 L 231 348 L 243 298"/>
+    <path class="core sub" d="M 312 615 L 338 569 L 382 533 L 437 521"/>
+    <path class="core sub" d="M 272 689 L 289 655 L 327 628 L 353 600"/>
+    <path class="core sub" d="M 256 772 L 281 826 L 286 888 L 277 944"/>
   </svg>
+  <div class="ov-geode ov-geode-float" aria-hidden="true">
+    <div class="shard"></div>
+    <div class="ov-geode-particles"></div>
+    <div class="rim"></div>
+  </div>
   <div class="container">
     <div class="pill bp-hero-step" style="--bp-hero-delay:0ms"><span class="dot"></span>Gym OS is live &middot; 8 client systems running</div>
     <h1 class="bp-hero-step" style="--bp-hero-delay:100ms">We build operating systems for <span class="hl">local businesses.</span></h1>
@@ -282,11 +307,6 @@ footer .brand{color:#fff}
     </div>
 
     <div class="mock-wrap bp-hero-step bp-tilt-scene" style="--bp-hero-delay:600ms">
-      <div class="ov-geode ov-geode-float" aria-hidden="true">
-        <div class="shard"></div>
-        <div class="ov-geode-particles"></div>
-        <div class="rim"></div>
-      </div>
       <div class="mock bp-tilt">
         <div class="mock-top"><i></i><i></i><i></i><span>GYM OS — owner dashboard</span></div>
         <div class="mock-body">
@@ -641,7 +661,8 @@ footer{box-shadow:inset 0 1px 0 rgba(255,255,255,.04)}
 </script>
 
 <style>
-.ov-geode-float{position:absolute;top:-84px;right:-6px;z-index:6;animation:ov-geode-float 7s ease-in-out infinite}
+.ov-geode-float{position:absolute;top:78px;right:6%;z-index:2;animation:ov-geode-float 7s ease-in-out infinite}
+@media(max-width:900px){.ov-geode-float{top:36px;right:4%;transform:scale(.72)}}
 @keyframes ov-geode-float{0%,100%{transform:translateY(0) rotate(1.5deg)}50%{transform:translateY(-16px) rotate(-1.5deg)}}
 .mock{box-shadow:0 40px 100px rgba(0,0,0,.6),0 0 70px rgba(124,58,237,.25)}
 @media(prefers-reduced-motion:reduce){.ov-geode-float{animation:none}}
