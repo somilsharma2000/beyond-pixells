@@ -47,3 +47,29 @@ and email assets are generated around this tile motif.
 - ✅ Gym OS, Dentist OS, Builder OS landings
 - ⏳ Client gym sites + smaller properties: intentionally on hold (founder
   directive 26 Sep 2026 — focus is Beyond Pixells only)
+
+## v5 — OBSIDIAN VEINS (26 Sep 2026, founder-selected; supersedes Chrome Violet v4)
+
+**Reference:** founder-supplied macro photo — cracked black matte surface, glowing violet
+bioluminescent veins running through fissures, a glitter/crystal "geode" core, glossy black
+water droplets. Single accent family: violet-on-black. **Zero warm tones anywhere** — all
+gold/orange (#FF9500, #FFB86B, #F97300) purged sitewide, along with the old floating chrome
+orbs and light-beam (retired, conflicted with the flat cracked-texture language).
+
+**Tokens:** `--ov-ink:#07070A`, `--ov-violet-deep:#3B1470`, `--ov-violet:#7C3AED`,
+`--ov-violet-bright:#A855F7`, `--ov-violet-glow:#C4B5FD`, `--ov-sparkle:#F5F3FF`.
+
+**Mechanics (ported to vanilla CSS/JS/SVG, no image assets):**
+- **Grain** — SVG `feTurbulence` noise, `mix-blend-mode:overlay`, always-on at low opacity.
+- **Veins** — hand-authored branching SVG paths, dual-stroke (wide blurred glow + sharp core),
+  `stroke-dashoffset` animation for an energy-flowing-through-cracks pulse.
+- **Geode** (signature object, replaces the chrome tile) — `clip-path` irregular polygon +
+  tsParticles violet dust confined inside via clip-path host, glow ring.
+- **Droplets** — procedurally scattered glossy dark circles with specular highlight, decorative depth.
+
+**Kit files:** `assets/bp-obsidian-veins.css` + `.js`. **Signature object:** `.ov-geode`
+(was `.bp-chrome-tile`). **Live on:** Hub hero. **Social template:** `assets/social-templates/obsidian-veins-post.html`
+— same visual language as the site, so a screenshot of either reads as one consistent brand.
+
+**Verification:** `npm run test:render` asserts geode/veins/droplets/grain/meteors/beam/icons
+present + zero JS errors. Pixel check: hero violet-hue coverage 87%, zero warm-hue residue.
