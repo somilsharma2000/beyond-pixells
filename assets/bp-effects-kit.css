@@ -27,7 +27,7 @@
    gold rim light bottom-right, diagonal gloss sweep, colored contact glow. */
 .bp-chrome-tile{position:relative;border-radius:22px;
   background:
-    linear-gradient(235deg,rgba(255,149,0,.55),rgba(255,149,0,0) 34%),           /* gold rim light, bottom-right */
+    linear-gradient(235deg,rgba(168,85,247,.55),rgba(168,85,247,0) 34%),           /* gold rim light, bottom-right */
     linear-gradient(150deg,rgba(255,255,255,.28),rgba(255,255,255,0) 42%),        /* top gloss */
     linear-gradient(160deg,#8B5CF6 0%,#6D28D9 48%,#3B1470 100%);                  /* violet chrome body */
 
@@ -35,7 +35,7 @@
     inset 0 2px 1px rgba(255,255,255,.5),                                         /* chrome edge, top */
     inset 0 -2px 1px rgba(59,20,112,.9),
     inset 2px 0 1px rgba(255,255,255,.18),
-    inset -2px 0 1px rgba(255,149,0,.25),                                        /* gold edge, right */
+    inset -2px 0 1px rgba(168,85,247,.25),                                        /* gold edge, right */
     0 22px 60px rgba(124,58,237,.45),                                            /* violet scatter glow */
     0 34px 80px rgba(6,6,13,.7);                                                 /* contact shadow */
 
@@ -54,7 +54,7 @@
 .bp-beam-border{position:relative;overflow:hidden}
 .bp-beam-border::before{content:"";position:absolute;inset:0;border-radius:inherit;padding:1.6px;
   background:conic-gradient(from var(--bp-beam-ang,0deg),
-    transparent 0deg,transparent 300deg,#FFB86B 330deg,#C4B5FD 348deg,#C4B5FD 360deg);
+    transparent 0deg,transparent 300deg,#C4B5FD 330deg,#C4B5FD 348deg,#C4B5FD 360deg);
   mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);
   mask-composite:xor;mask-composite:exclude;
   animation:bp-beam-rotate 4.5s linear infinite;z-index:3;pointer-events:none}
@@ -74,5 +74,5 @@
 .bp-spot{position:absolute;inset:0;border-radius:inherit;pointer-events:none;opacity:0;
   transition:opacity .3s;z-index:1;
   background:radial-gradient(300px circle at var(--bp-mx,50%) var(--bp-my,50%),
-    rgba(196,181,253,.28),rgba(255,149,0,.09) 45%,transparent 70%)}
+    rgba(196,181,253,.28),rgba(168,85,247,.09) 45%,transparent 70%)}
 .bp-spot-host:hover .bp-spot{opacity:1}

@@ -1,0 +1,66 @@
+/* =====================================================================
+   BEYOND PIXELLS — OBSIDIAN VEINS (v5)
+   Cracked black surface, bioluminescent violet veins, glitter geode core,
+   glossy droplets. Single accent family: violet-on-black. No warm tones.
+   Ported technique notes:
+   - grain: SVG feTurbulence noise (procedural, no image asset)
+   - veins: hand-authored branching SVG paths, dual-stroke glow (blurred
+     wide stroke behind sharp stroke) + stroke-dashoffset flow pulse
+   - geode: clip-path irregular polygon + tsParticles violet dust (twinkle)
+   - droplets: radial-gradient glossy dark circles with specular highlight
+   ===================================================================== */
+
+:root{
+  --ov-ink:#07070A;
+  --ov-ink2:#0B0A10;
+  --ov-violet-deep:#3B1470;
+  --ov-violet:#7C3AED;
+  --ov-violet-bright:#A855F7;
+  --ov-violet-glow:#C4B5FD;
+  --ov-sparkle:#F5F3FF;
+}
+
+/* ---- GRAIN — always-on procedural noise over the whole page ---- */
+.ov-grain{position:fixed;inset:0;z-index:1;pointer-events:none;opacity:.05;mix-blend-mode:overlay;
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>")}
+
+/* ---- VEIN NETWORK — glowing crack lines, visible at rest ---- */
+.ov-veins{position:absolute;inset:0;width:100%;height:100%;z-index:1;pointer-events:none;overflow:visible}
+.ov-veins .glow{fill:none;stroke:var(--ov-violet-bright);stroke-linecap:round;filter:blur(7px);opacity:.55}
+.ov-veins .core{fill:none;stroke:var(--ov-violet-glow);stroke-linecap:round;opacity:.9;
+  stroke-dasharray:6 14;animation:ov-flow 5s linear infinite}
+@keyframes ov-flow{to{stroke-dashoffset:-200}}
+.ov-veins .pulse{fill:none;stroke:var(--ov-sparkle);stroke-linecap:round;opacity:0;
+  animation:ov-pulse 4.5s ease-in-out infinite}
+.ov-veins .pulse:nth-of-type(2){animation-delay:1.1s}
+.ov-veins .pulse:nth-of-type(3){animation-delay:2.3s}
+@keyframes ov-pulse{0%,100%{opacity:0}45%{opacity:.85}55%{opacity:0}}
+@media(prefers-reduced-motion:reduce){.ov-veins .core,.ov-veins .pulse{animation:none;opacity:.7}}
+
+/* ---- GEODE — signature crystal/glitter core object ---- */
+.ov-geode{position:relative;width:180px;height:190px;isolation:isolate}
+.ov-geode .shard{position:absolute;inset:0;
+  clip-path:polygon(48% 2%,72% 14%,88% 40%,84% 68%,62% 92%,36% 96%,12% 76%,8% 46%,20% 18%);
+  background:radial-gradient(120% 120% at 30% 20%,#1a1424 0%,#0B0714 55%,#050308 100%);
+  box-shadow:0 0 0 1.5px rgba(196,181,253,.5) inset,0 0 46px 6px rgba(124,58,237,.55),0 24px 60px rgba(0,0,0,.65);
+  overflow:hidden}
+.ov-geode .shard::after{content:"";position:absolute;inset:0;
+  background:radial-gradient(60% 55% at 45% 35%,rgba(196,181,253,.35),transparent 70%)}
+.ov-geode .rim{position:absolute;inset:0;
+  clip-path:polygon(48% 2%,72% 14%,88% 40%,84% 68%,62% 92%,36% 96%,12% 76%,8% 46%,20% 18%);
+  -webkit-mask:linear-gradient(#000 0 0);pointer-events:none;
+  box-shadow:0 0 0 2px var(--ov-violet-bright) inset;opacity:.6;filter:blur(1px)}
+.ov-geode-particles{position:absolute;inset:0;
+  clip-path:polygon(48% 2%,72% 14%,88% 40%,84% 68%,62% 92%,36% 96%,12% 76%,8% 46%,20% 18%);
+  z-index:2}
+@media(max-width:900px){.ov-geode{width:130px;height:138px}}
+
+/* ---- DROPLETS — glossy black bokeh, decorative depth ---- */
+.ov-droplets{position:absolute;inset:0;z-index:1;pointer-events:none;overflow:hidden}
+.ov-droplets i{position:absolute;border-radius:50%;
+  background:radial-gradient(circle at 32% 28%,rgba(230,220,255,.75),rgba(20,14,30,.9) 38%,rgba(4,3,7,.98) 72%);
+  box-shadow:0 3px 10px rgba(0,0,0,.6),0 0 10px rgba(124,58,237,.25)}
+
+/* ---- Card + border overrides: violet-only, no warm tones ---- */
+.bcard::after{background:linear-gradient(90deg,transparent,rgba(196,181,253,.35),transparent) !important}
+.bcard:hover{border-color:rgba(168,85,247,.45) !important}

@@ -23,22 +23,22 @@
   --bp-violet-950:#2E1065; --bp-violet-900:#3B1470; --bp-violet-800:#4C1D95;
   --bp-violet-700:#5B21B6; --bp-violet-600:#6D28D9; --bp-violet-500:#7C3AED;
   --bp-violet-400:#8B5CF6; --bp-violet-300:#A78BFA; --bp-violet-200:#C4B5FD;
-  --bp-gold-500:#FF9500; --bp-gold-400:#FFA733; --bp-gold-300:#FFB86B;
+  --bp-gold-500:#A855F7; --bp-gold-400:#FFA733; --bp-gold-300:#C4B5FD;
 
   /* SEMANTIC */
   --bp-text-primary:#F4F2FB; --bp-text-secondary:#ABA6C7; --bp-text-muted:#6E688F; --bp-text-inverse:#06060D;
   --bp-border-subtle:rgba(167,139,250,.12); --bp-border-default:rgba(167,139,250,.2);
   --bp-border-strong:rgba(167,139,250,.34);
-  --bp-rim-light:linear-gradient(135deg,rgba(255,149,0,.55),rgba(167,139,250,.28) 55%,rgba(124,58,237,.15));
-  --bp-success:#34D399; --bp-warning:#FFB86B; --bp-error:#FB7185;
+  --bp-rim-light:linear-gradient(135deg,rgba(168,85,247,.55),rgba(167,139,250,.28) 55%,rgba(124,58,237,.15));
+  --bp-success:#34D399; --bp-warning:#C4B5FD; --bp-error:#FB7185;
 
   /* GRADIENTS — the signature */
   --bp-gradient-brand:linear-gradient(135deg,#7C3AED 0%,#A78BFA 55%,#C4B5FD 100%);
-  --bp-gradient-gold:linear-gradient(135deg,#FF9500 0%,#FFB86B 100%);
+  --bp-gradient-gold:linear-gradient(135deg,#A855F7 0%,#C4B5FD 100%);
   --bp-gradient-chrome:linear-gradient(160deg,#8B5CF6 0%,#6D28D9 45%,#3B1470 100%);
   --bp-gradient-hero:radial-gradient(ellipse 60% 55% at 50% -10%,rgba(124,58,237,.32),transparent 70%);
-  --bp-gradient-subtle:linear-gradient(135deg,rgba(124,58,237,.16),rgba(255,149,0,.05));
-  --bp-gradient-glow:linear-gradient(135deg,rgba(124,58,237,.45),rgba(255,149,0,.18));
+  --bp-gradient-subtle:linear-gradient(135deg,rgba(124,58,237,.16),rgba(168,85,247,.05));
+  --bp-gradient-glow:linear-gradient(135deg,rgba(124,58,237,.45),rgba(168,85,247,.18));
   --bp-gloss-top:linear-gradient(180deg,rgba(255,255,255,.09),rgba(255,255,255,0) 42%);
 
   /* TYPE */
@@ -71,7 +71,7 @@
 
 @keyframes bp-scaleIn{0%{opacity:0;transform:scale(.92)}100%{opacity:1;transform:scale(1)}}
 
-@keyframes bp-glowPulse{0%,100%{box-shadow:0 0 22px rgba(124,58,237,.28)}50%{box-shadow:0 0 44px rgba(255,149,0,.32)}}
+@keyframes bp-glowPulse{0%,100%{box-shadow:0 0 22px rgba(124,58,237,.28)}50%{box-shadow:0 0 44px rgba(168,85,247,.32)}}
 
 @keyframes bp-gradientShift{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
 
@@ -116,7 +116,7 @@
 
 /* ============ MAGNETIC BUTTONS ============ */
 .bp-magnetic-btn{transition:transform .3s var(--bp-ease-spring),box-shadow .3s var(--bp-ease-smooth);will-change:transform}
-.bp-magnetic-btn:hover{box-shadow:0 10px 34px rgba(255,149,0,.24),0 0 60px rgba(124,58,237,.28)}
+.bp-magnetic-btn:hover{box-shadow:0 10px 34px rgba(168,85,247,.24),0 0 60px rgba(124,58,237,.28)}
 
 /* ============ LIFT & HOVER ============ */
 .bp-lift{transition:transform .4s var(--bp-ease-out-expo),box-shadow .4s var(--bp-ease-smooth)}
@@ -140,8 +140,8 @@
 /* ============ SCROLL PROGRESS ============ */
 .bp-scroll-progress-bar{
   position:fixed;top:0;left:0;height:2px;z-index:200;width:0;
-  background:linear-gradient(90deg,#7C3AED,#A78BFA,#FF9500);
-  box-shadow:0 0 12px rgba(255,149,0,.55);
+  background:linear-gradient(90deg,#7C3AED,#A78BFA,#A855F7);
+  box-shadow:0 0 12px rgba(168,85,247,.55);
 }
 
 /* ============ NOISE CANVAS ============ */
@@ -149,7 +149,7 @@
 
 /* ============ SIGNATURE TEXT TREATMENTS ============ */
 .bp-text-grad{
-  background:linear-gradient(110deg,#C4B5FD 20%,#FFF 42%,#FFB86B 58%,#A78BFA 80%);
+  background:linear-gradient(110deg,#C4B5FD 20%,#FFF 42%,#C4B5FD 58%,#A78BFA 80%);
   background-size:200% auto;background-clip:text;background-clip:text;color:transparent;
   animation:bp-shimmer 6s linear infinite;
 }

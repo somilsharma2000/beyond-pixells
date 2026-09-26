@@ -15,6 +15,9 @@ export default {
     "alpha-value-notation": null,
     "length-zero-no-unit": null,
     "declaration-block-no-duplicate-properties": [true, { ignore: ["consecutive-duplicates"] }],
+    "at-rule-empty-line-before": null,
+    "property-no-vendor-prefix": null,
+    "media-feature-range-notation": null,
     "declaration-property-value-no-unknown": [true, { ignoreProperties: { "mask-composite": ["/./"] } }],
   },
 };
