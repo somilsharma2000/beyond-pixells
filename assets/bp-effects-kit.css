@@ -1,0 +1,69 @@
+/* =====================================================================
+   BEYOND PIXELLS — VISUAL EFFECTS KIT v1 (Chrome Violet v4)
+   Ported patterns: Magic UI / Aceternity (border beam, meteors, sparkles,
+   aurora, shimmer), glassmorphism, glossy-3D-object lighting model.
+   Usage: <link rel="stylesheet" href=".../assets/bp-effects-kit.css">
+          <script src=".../assets/bp-effects-kit.js"></script>
+   ===================================================================== */
+
+/* ---- BP METEORS (shooting stars) ---- */
+.bp-meteors{position:absolute;inset:0;overflow:hidden;pointer-events:none;z-index:1}
+.bp-meteors i{position:absolute;width:2px;height:2px;border-radius:50%;background:#fff;
+  box-shadow:0 0 6px 1px rgba(196,181,253,.8);opacity:0;
+  animation:bp-meteor 3.6s linear infinite}
+.bp-meteors i::before{content:"";position:absolute;top:50%;right:0;width:110px;height:1px;
+  transform:translateY(-50%);background:linear-gradient(90deg,rgba(196,181,253,.9),transparent)}
+@keyframes bp-meteor{
+  0%{transform:translate(0,0) rotate(215deg) scale(1);opacity:1}
+  70%{opacity:1}
+  100%{transform:translate(-500px,600px) rotate(215deg) scale(.6);opacity:0}
+}
+@media(prefers-reduced-motion:reduce){.bp-meteors i{animation:none;display:none}}
+
+/* ---- BP GLOSSY CHROME TILE (signature object) ----
+   Lighting model: base violet body gradient, top-left specular bloom,
+   gold rim light bottom-right, diagonal gloss sweep, colored contact glow. */
+.bp-chrome-tile{position:relative;border-radius:22px;
+  background:
+    linear-gradient(235deg,rgba(255,149,0,.55),rgba(255,149,0,0) 34%),           /* gold rim light, bottom-right */
+    linear-gradient(150deg,rgba(255,255,255,.28),rgba(255,255,255,0) 42%),        /* top gloss */
+    linear-gradient(160deg,#8B5CF6 0%,#6D28D9 48%,#3B1470 100%);                  /* violet chrome body */
+  box-shadow:
+    inset 0 2px 1px rgba(255,255,255,.5),                                         /* chrome edge, top */
+    inset 0 -2px 1px rgba(59,20,112,.9),
+    inset 2px 0 1px rgba(255,255,255,.18),
+    inset -2px 0 1px rgba(255,149,0,.25),                                        /* gold edge, right */
+    0 22px 60px rgba(124,58,237,.45),                                            /* violet scatter glow */
+    0 34px 80px rgba(6,6,13,.7);                                                 /* contact shadow */
+  overflow:hidden}
+.bp-chrome-tile::before{content:"";position:absolute;top:-40%;left:-60%;width:70%;height:180%;
+  background:linear-gradient(100deg,transparent,rgba(255,255,255,.32),transparent);
+  transform:rotate(8deg);animation:bp-gloss-sweep 5.5s ease-in-out infinite}
+@keyframes bp-gloss-sweep{0%,55%{left:-60%}100%{left:130%}}
+.bp-chrome-tile::after{content:"";position:absolute;top:8%;left:12%;width:44%;height:22%;
+  border-radius:50%;background:rgba(255,255,255,.55);filter:blur(10px)}            /* specular bloom */
+@media(prefers-reduced-motion:reduce){.bp-chrome-tile::before{animation:none}}
+
+/* ---- BP BORDER BEAM (animated gradient light traveling the border) ---- */
+.bp-beam-border{position:relative;overflow:hidden}
+.bp-beam-border::before{content:"";position:absolute;inset:0;border-radius:inherit;padding:1.6px;
+  background:conic-gradient(from var(--bp-beam-ang,0deg),
+    transparent 0deg,transparent 300deg,#FFB86B 330deg,#C4B5FD 348deg,#C4B5FD 360deg);
+  -webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);
+  -webkit-mask-composite:xor;mask-composite:exclude;
+  animation:bp-beam-rotate 4.5s linear infinite;z-index:3;pointer-events:none}
+@property --bp-beam-ang{syntax:'<angle>';initial-value:0deg;inherits:false}
+@keyframes bp-beam-rotate{to{--bp-beam-ang:360deg}}
+@media(prefers-reduced-motion:reduce){.bp-beam-border::before{animation:none;opacity:.5}}
+
+/* ---- BP TILT (3D perspective follow) ---- */
+.bp-tilt-scene{perspective:1200px}
+.bp-tilt{transform-style:preserve-3d;transition:transform .25s cubic-bezier(.16,1,.3,1);will-change:transform}
+
+/* ---- BP SPOTLIGHT (cursor-follow glow) ---- */
+.bp-spot-host{position:relative;overflow:hidden}
+.bp-spot{position:absolute;inset:0;border-radius:inherit;pointer-events:none;opacity:0;
+  transition:opacity .3s;z-index:1;
+  background:radial-gradient(300px circle at var(--bp-mx,50%) var(--bp-my,50%),
+    rgba(196,181,253,.28),rgba(255,149,0,.09) 45%,transparent 70%)}
+.bp-spot-host:hover .bp-spot{opacity:1}
