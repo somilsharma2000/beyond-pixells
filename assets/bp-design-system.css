@@ -42,8 +42,8 @@
   --bp-gloss-top:linear-gradient(180deg,rgba(255,255,255,.09),rgba(255,255,255,0) 42%);
 
   /* TYPE */
-  --bp-font-display:'Space Grotesk',-apple-system,blinkmacsystemfont,sans-serif;
-  --bp-font-body:'Plus Jakarta Sans',-apple-system,blinkmacsystemfont,sans-serif;
+  --bp-font-display:'Inter',-apple-system,blinkmacsystemfont,sans-serif;
+  --bp-font-body:'Inter',-apple-system,blinkmacsystemfont,sans-serif;
 
   /* RADIUS & MOTION */
   --bp-r-sm:10px; --bp-r-md:14px; --bp-r-lg:20px; --bp-r-xl:28px;
