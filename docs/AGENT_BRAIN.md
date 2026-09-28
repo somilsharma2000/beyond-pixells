@@ -29,7 +29,7 @@ and services. Business model: **services cashflow → products scale**.
 | Hero product | **Gym OS** — gym management for Indian gyms (live) |
 | Product 2 | **Dentist OS** — dental clinics (live demo) |
 | Product 3 | **Builder OS** — real estate (in development) |
-| Ventures | Bloomwire (flowers), FORTREX FX (trading, pre-launch) |
+| Ventures | Bloomwire (flowers). ~~FORTREX FX~~ — DISOWNED by founder 29 Sep 2026: "no relation of FORTREX to us — leave it totally". Landing restore reverted (main back to 69e489d state, deploy branch parked at placeholder 120bfb0); removed from health checks; do not touch, promote or manage FORTREX again unless founder says otherwise. |
 | Contact | WhatsApp +91 77370 77479 (primary CTA everywhere) |
 
 ## 2. The estate (where everything lives)
