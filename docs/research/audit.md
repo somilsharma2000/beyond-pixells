@@ -29,7 +29,7 @@
 ## 2. What Is Weak or Missing
 
 ### A. Identity & Positioning Misalignment
-- **Agency Portfolio vs. Product SaaS Page**: `index.html` is currently framed as an agency agency portfolio for "Beyond Pixels - Full-Service SaaS & Web Solutions" offering custom websites, UI/UX, and custom API integrations.
+- **Agency Portfolio vs. Product SaaS Page**: `index.html` is currently framed as an agency agency portfolio for "Beyond Pixells - Full-Service SaaS & Web Solutions" offering custom websites, UI/UX, and custom API integrations.
 - **Gym OS Buried**: Gym OS is treated merely as 1 out of 6 service cards in `#services` and a generic card in `#gymos`, rather than the single flagship SaaS hero product.
 
 ### B. Complete Lack of Pricing Section
@@ -94,9 +94,9 @@ These powerhouse capabilities exist in `docs/FEATURE_SPEC.md` (~300 features, 32
 
 | Tag | Current Value (`index.html`) | Recommended Flagship Value |
 |---|---|---|
-| `<title>` | `Beyond Pixels — SaaS & Web Solutions \| Custom Websites, Gym OS, Integrations` | `Gym OS — All-in-One Gym Management Software India \| QR Check-in, CRM & WhatsApp Automation` |
-| `<meta name="description">` | `Beyond Pixels builds custom websites, SaaS platforms, and software integrations for any business. From Gym OS to full web applications — we solve your business problems with technology.` | `Gym OS is India's premier gym management software. Automate WhatsApp renewal reminders, 2-sec QR check-in, 13-source lead CRM, class scheduling, and AI churn prediction. Book a demo.` |
-| `<meta property="og:title">` | `Beyond Pixels — SaaS & Web Solutions` | `Gym OS — All-in-One Gym Management Platform for Indian Gyms` |
+| `<title>` | `Beyond Pixells — SaaS & Web Solutions \| Custom Websites, Gym OS, Integrations` | `Gym OS — All-in-One Gym Management Software India \| QR Check-in, CRM & WhatsApp Automation` |
+| `<meta name="description">` | `Beyond Pixells builds custom websites, SaaS platforms, and software integrations for any business. From Gym OS to full web applications — we solve your business problems with technology.` | `Gym OS is India's premier gym management software. Automate WhatsApp renewal reminders, 2-sec QR check-in, 13-source lead CRM, class scheduling, and AI churn prediction. Book a demo.` |
+| `<meta property="og:title">` | `Beyond Pixells — SaaS & Web Solutions` | `Gym OS — All-in-One Gym Management Platform for Indian Gyms` |
 | `<meta property="og:description">` | `Custom websites, Gym OS, API integrations, and workflow automation for any business.` | `Automate leads, QR check-ins, WhatsApp renewals, trainer payouts, and revenue analytics with Gym OS. Built specifically for Indian gym owners.` |
 
 ### B. Missing Required Social & Meta Tags
@@ -111,10 +111,10 @@ These powerhouse capabilities exist in `docs/FEATURE_SPEC.md` (~300 features, 32
 
 ## 5. Factual & Brand Inconsistencies
 
-1. **Brand Spelling Conflict ("Beyond Pixels" vs. "Beyond Pixells")**:
+1. **Brand Spelling Conflict ("Beyond Pixells" vs. "Beyond Pixells")**:
    - The canonical brand name established in system specs, product architecture, and social handles is **Beyond Pixells** (spelled with double 'l').
-   - `index.html` consistently misspells the brand as **Beyond Pixels** (single 'l') across title, meta, navigation, footer, and CTA text string pre-fills (`Hi Beyond Pixels...`).
-   - Documented in `docs/BACKEND_MAP.md` line 81: *"Brand spelling is inconsistent across assets: 'Beyond Pixels' vs 'Beyond Pixells'. Pick one before launch."*
+   - `index.html` consistently misspells the brand as **Beyond Pixells** (single 'l') across title, meta, navigation, footer, and CTA text string pre-fills (`Hi Beyond Pixells...`).
+   - Documented in `docs/BACKEND_MAP.md` line 81: *"Brand spelling is inconsistent across assets: 'Beyond Pixells' vs 'Beyond Pixells'. Pick one before launch."*
 
 2. **Social & Repository Link Discrepancies**:
    - Nav/Footer links point to `https://www.instagram.com/beyondpixellls/` (3 'l's).
@@ -135,7 +135,7 @@ These powerhouse capabilities exist in `docs/FEATURE_SPEC.md` (~300 features, 32
 7. CRITICAL WEAKNESS TO FIX: Add the missing 3-tier pricing section (Standard ₹15k, Complete ₹20k, Premium ₹30k).
 8. CRITICAL WEAKNESS TO FIX: Replace emojis with actual dashboard UI previews, QR scan graphics, and video demos.
 9. CRITICAL WEAKNESS TO FIX: Headline the 36-trigger WhatsApp engine, 13-source CRM, and offline QR check-in.
-10. CRITICAL WEAKNESS TO FIX: Fix brand spelling from 'Beyond Pixels' to official 'Beyond Pixells'.
+10. CRITICAL WEAKNESS TO FIX: Fix brand spelling from 'Beyond Pixells' to official 'Beyond Pixells'.
 11. CRITICAL WEAKNESS TO FIX: Fix SEO title, meta description, and add missing og:image and Twitter card tags.
 12. CRITICAL WEAKNESS TO FIX: Add embedded lead capture form and mobile navigation drawer with sticky CTA bar.
 ================================================================================

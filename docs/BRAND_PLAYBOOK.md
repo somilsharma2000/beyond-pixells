@@ -43,7 +43,7 @@ Rules:
   operating system (website + portal + dashboard + automation), never a lone app.
 - Ventures with a different audience (Bloomwire, FORTREX) keep standalone names
   but appear in the studio's "Ventures" section.
-- Spelling is **Beyond Pixells** — always. Audit and fix "Beyond Pixels" on sight.
+- Spelling is **Beyond Pixells** — always. Audit and fix "Beyond Pixells" on sight.
 
 ## 3. Message Hierarchy (homepage flow)
 

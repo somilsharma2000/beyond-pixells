@@ -151,7 +151,7 @@ Any site adds 2 lines and gets the whole system:
 4. Push to `main` (EXCEPT `iron-forge-website`: push to `gh-pages` too/instead).
 5. Verify live after every deploy (curl the URL, grep for your change).
 6. When you add a new finding or decision, update the docs in THIS repo.
-7. "Beyond Pixells" spelling is sacred. Audit for "Beyond Pixels" typos.
+7. "Beyond Pixells" spelling is sacred. Audit for "Beyond Pixells" typos.
 8. All lead-capture client sites must keep: consent capture + offline fallback.
 
 ## Lead Capture Connection (26 Sep 2026)

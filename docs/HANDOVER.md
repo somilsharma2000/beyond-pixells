@@ -108,7 +108,7 @@ All in the **beyond-pixells** repo (github.com/somilsharma2000/beyond-pixells �
 7. **`docs/research/`** — 15 research reports behind every decision (competitors, psychology, legal, survival, market, design, SEO/GEO, social)
 8. **Design system assets** — `assets/bp-design-system.css` + `assets/bp-motion.js` (any site: 2 lines and it inherits everything) + `assets/social-templates/` (reel templates)
 
-**Spelling law:** it is always **"Beyond Pixells"** — never "Beyond Pixels."
+**Spelling law:** it is always **"Beyond Pixells"** — never "Beyond Pixells."
 
 ---
 
