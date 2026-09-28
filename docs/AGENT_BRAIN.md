@@ -135,8 +135,8 @@ Any site adds 2 lines and gets the whole system:
    verify end-to-end once integration credits reset; then migrate old BEYOND PIXELLS leads).
 1b. ~~Migrate old BEYOND PIXELLS leads~~ — CLOSED 26 Sep 2026: audited all 129 legacy lead records (Gym osssss 99 + BEYOND PIXELLS 30) — 100% founder tests/demo seeds/gibberish probes, zero genuine customer leads. Nothing to migrate; pipeline starts clean. Backups live: private repo beyond-pixells-data + weekly workflow + docs/ops/BACKUP_RECOVERY.md.
 2. **Base44 integration credits exhausted** — capture API fails until reset/upgrade.
-3. **Gym OS pricing** — ₹999/₹1,999 are research-recommended, Somil hasn't confirmed.
-4. **Safe Browsing review** — sponsored sites normalized; needs Search Console review request.
+3. ~~Gym OS pricing~~ — CONFIRMED 27 Sep 2026: Starter ₹15,000 + ₹3,500/mo · Standard ₹20,000 + ₹4,000/mo · Premium ₹30,000 + ₹4,500/mo. Applied everywhere. Partner commission proposed 30% setup / 20% monthly (12 mo), founder sign-off pending.
+4. ~~Safe Browsing review~~ — FORTREX flag CLEARED 28 Sep 2026 (Google Transparency Report shows no data); FORTREX landing restored live on the `deploy` branch. Search Console review request for flagship sites still pending (founder account access needed).
 5. **Custom domains** — everything still on github.io/base44.app subdomains.
 5b. ~~Free Stack Phase 1 monitoring~~ — Upptime LIVE 26 Sep 2026 (https://somilsharma2000.github.io/beyond-pixells-status/, 14 properties, 5-min checks). VPS watcher stack (Kuma, changedetection.io, Healthchecks, Vaultwarden) prepared in `ops/vps/` — runs when founder buys the VPS.
 5c. **$0 Actions stack (live 26 Sep)** — Estate Guard (daily 07:30 IST: all 8 client sites must keep gym-os-connect.js + lead form + consent; opens/closes GitHub issues) + Quality Audit (weekly Lighthouse floors perf 80/a11y 90/BP 85/SEO 85 + pa11y on 5 flagships) + Content Render (on-demand brand image posts via satori, `tools/social/`) + new og-image.png (Chrome Violet v4) + `content/social/` sample posts. Agent skills installed: estate-guard, render-social-post (alongside site-health-check, visual-effects-kit).
@@ -162,3 +162,12 @@ Any site adds 2 lines and gets the whole system:
 - When Base44 integration credits reset/upgrade, CRM capture resumes automatically — no code change needed.
 
 - 26 Sep: BP Command Center live at /beyond-pixells/admin/ — full site control (content/theme/features/health/deploy) via content/site.json data layer; design-law guard enforces v7.2 hues. style-lab.html now documents v7.2 (v4 page retired).
+
+## Estate Audit Wave (28 Sep 2026, agent "beyond")
+- Dentist OS landing 29ef2da: compare table + hero mock mobile overflow fixed (scrollable table-wrap). Live 390px clean, 0 JS errors.
+- Builder OS c1f8ac3: pricing table + app.html overflow fixed. Live 390px clean, 0 JS errors.
+- FORTREX FX: Pages serves from the `deploy` branch (NOT main — always push both). Placeholder was parked 26 Sep (safe-browsing flag, commit 120bfb0); flag cleared 28 Sep, landing restored fb32eb9 = navy-law restyle (#0A0E29/#0066FF, zero warm hues), honest pre-launch SEBI disclaimer, robots/sitemap/llms.txt added. Live 390px clean, 0 JS errors.
+- dentist-os demo app + fortrex-command-center verified already clean.
+- MACHINE LAW learned: delegated estate audits stalled 3x at checkpoints; hands-on in-coordinator audits are the reliable path.
+- BLOCKER: gym-os-app.vercel.app deploy STALLED — envcheck diagnostic (eefcd86) pushed ~10:30 IST, 5+ hrs later live still serves the old build (normal is ~25 min). Founder must check Vercel → gym-os-app → Deployments tab (Error/Queued?) + share log. Super-admin login blocked until deploy works AND SUPER_ADMIN_EMAIL/SUPER_ADMIN_PASSWORD env vars are set in Vercel.
+- CONSTRAINT DISCOVERED: GitHub account is FREE plan — private repos lose Pages. "Make gymos/gym-os repos private" must WAIT until Vercel deploy is live and the estate moves to gymos.in; making them private now would take live Pages landings dark.
