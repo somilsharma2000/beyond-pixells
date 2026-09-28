@@ -270,12 +270,12 @@ footer .brand{color:#fff}
     <a class="brand" href="#top"><img src="logo.png" alt="Beyond Pixells">Beyond Pixells</a>
     <ul>
       <li><a href="#products">Products</a></li>
-      <li><a href="#start">Start a Project</a></li>
+      <li><a href="#start">Start Your OS</a></li>
       <li><a href="#proof">Work</a></li>
       <li><a href="#process">Process</a></li>
       <li data-bp="blognav"><a href="blog/">Blog</a></li>
       <li><a href="terms-of-service.html">Legal</a></li>
-      <li><a class="btn btn-accent btn-sm" href="#contact">Start a Project</a></li>
+      <li><a class="btn btn-accent btn-sm" href="#contact">Start Your OS</a></li>
     </ul>
   </div>
 </nav>
@@ -287,8 +287,8 @@ footer .brand{color:#fff}
     <h1 class="bp-hero-step" id="bp-headline" style="--bp-hero-delay:100ms">We build operating systems for <span class="hl">local businesses.</span></h1>
     <p class="bp-hero-step" id="bp-sub" style="--bp-hero-delay:220ms">Beyond Pixells is a modern product studio. We craft sector-specific software platforms — plus websites, marketing automation and digital products — that turn local operations into automated market leaders.</p>
     <div class="ctas bp-hero-step" style="--bp-hero-delay:340ms">
-      <a class="btn btn-primary bp-magnetic-btn" href="#products">Explore the OS Family</a>
-      <a class="btn btn-ghost bp-magnetic-btn" href="#contact">Book a Studio Call</a>
+      <a class="btn btn-primary bp-magnetic-btn" href="#contact">Get Your <span class="cta-rotator"><b id="bpCtaWord">Gym</b></span> OS</a>
+      <a class="btn btn-ghost bp-magnetic-btn" href="#proof">See 8 Live Systems</a>
     </div>
     <div class="trust bp-hero-step" style="--bp-hero-delay:460ms">
       <div><b>3</b>vertical operating systems</div>
@@ -482,10 +482,10 @@ footer .brand{color:#fff}
 <section class="band" id="contact">
   <div class="container">
     <h2>Run your business on an operating system, not a register.</h2>
-    <p>Book a studio call — we'll map your operations and show you what your industry's OS looks like for you.</p>
+    <p>Tell us about your business — we'll map your operations and show you exactly what your industry's OS looks like, running. Free, no slides, no pressure.</p>
     <div class="ctas">
-      <a class="btn btn-accent bp-magnetic-btn" href="https://wa.me/917737077479?text=Hi%20Beyond%20Pixells!%20I%20want%20to%20talk%20about%20an%20OS%20for%20my%20business.">Chat on WhatsApp</a>
-      <a class="btn btn-ghost bp-magnetic-btn" href="#products">See the Products</a>
+      <a class="btn btn-accent bp-magnetic-btn" href="https://wa.me/917737077479?text=Hi%20Beyond%20Pixells!%20I%20want%20to%20talk%20about%20an%20OS%20for%20my%20business.">Start My OS Project</a>
+      <a class="btn btn-ghost bp-magnetic-btn" href="#proof">See 8 Live Systems</a>
     </div>
   </div>
 </section>
@@ -537,7 +537,7 @@ footer .brand{color:#fff}
       </div>
       <div class="f-col"><b>Studio</b>
         <a href="blog/">Blog</a>
-        <a href="#start">Start a Project</a>
+        <a href="#start">Start Your OS</a>
         <a href="#proof">Work</a>
         <a href="#process">Process</a>
       </div>
@@ -677,6 +677,12 @@ nav{background:rgba(6,8,13,.6)!important;box-shadow:0 8px 40px rgba(0,0,0,.4)}
 .st-live{box-shadow:0 0 18px rgba(52,211,153,.35)!important}
 .st-demo{box-shadow:0 0 18px rgba(34,211,238,.3)!important}
 
+
+/* ---- unique CTA: rotating OS family word ---- */
+.cta-rotator{display:inline-block;min-width:4.6ch;text-align:center;position:relative}
+.cta-rotator b{font-weight:inherit;transition:opacity .18s ease,transform .18s ease;display:inline-block}
+.cta-rotator b.out{opacity:0;transform:translateY(6px)}
+@media(prefers-reduced-motion:reduce){.cta-rotator b{transition:none}}
 /* hero: obsidian veins takes over background texture; sparkle twinkle kept (glitter motif) */
 .hero{position:relative;overflow:visible}
 footer{box-shadow:inset 0 1px 0 rgba(255,255,255,.04)}
@@ -772,6 +778,21 @@ footer{box-shadow:inset 0 1px 0 rgba(255,255,255,.04)}
       keepalive:true
     }).catch(function(){});
   }catch(e){}
+})();
+</script>
+<script>
+(function(){
+  var words=['Gym','Dental','Clinic','Builder','Business'];
+  var el=document.getElementById('bpCtaWord');if(!el)return;
+  if(window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+  var i=0;
+  setInterval(function(){
+    el.classList.add('out');
+    setTimeout(function(){
+      i=(i+1)%words.length;el.textContent=words[i];
+      el.classList.remove('out');
+    },190);
+  },2200);
 })();
 </script>
 </body>
