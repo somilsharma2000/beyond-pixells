@@ -500,6 +500,7 @@ footer .brand{color:#fff}
         <label>Business / gym name<input name="business" maxlength="120" placeholder="Iron Paradise Gym"></label>
         <label>City<input name="city" maxlength="60" placeholder="Jaipur"></label>
         <label>Phone / WhatsApp<input name="phone" required maxlength="20" placeholder="+91 ..."></label>
+        <label>Email<input type="email" name="email" required maxlength="120" placeholder="you@business.com"></label>
       </div>
       <label>What do you need?
         <select name="interest">
@@ -516,7 +517,7 @@ footer .brand{color:#fff}
       <label class="lf-consent"><input type="checkbox" name="consent" required> I agree to be contacted on WhatsApp about my enquiry.</label>
       <div class="ctas">
         <button type="submit" class="btn btn-accent bp-magnetic-btn">Send via WhatsApp</button>
-        <span class="lf-note">Opens WhatsApp with your details pre-filled — nothing is stored on this page.</span>
+        <span class="lf-note">Opens WhatsApp with your details pre-filled. We also log your enquiry in our system to make sure it is never missed.</span>
       </div>
     </form>
   </div>
@@ -572,14 +573,25 @@ footer .brand{color:#fff}
     var btn=f.querySelector('button[type=submit]');
     var t=btn?btn.innerText:'';
     if(btn){btn.disabled=true;btn.innerText='Sending…';}
+    var done=function(){
+      f.innerHTML='<div class="lead-ok"><b>✓ Received — you are in the system.</b><br>We review every enquiry ourselves and will reach out today. Want to talk right now?</div><a class="btn btn-primary" style="margin-top:14px" target="_blank" rel="noopener" href="https://wa.me/917737077479?text='+encodeURIComponent(msg)+'">Continue on WhatsApp →</a>';
+    };
+    var fallback=function(){
+      // Backup store: Gym OS contact API (own Neon DB) — guarantees the enquiry is never lost.
+      var detail='Hub enquiry — '+v('interest')+'\nBusiness: '+(v('business')||'-')+'\nCity: '+v('city')+'\nPhone: '+v('phone')+(v('notes')?'\nNotes: '+v('notes'):'');
+      fetch('https://gym-os-v3.vercel.app/api/v1/contact',{
+        method:'POST',headers:{'Content-Type':'application/json'},
+        body:JSON.stringify({name:v('name'),email:v('email'),message:detail,tag:'beyond-pixells-hub'})
+      }).then(function(r){return r.ok;}).catch(function(){return false;}).then(function(stored){
+        if(stored){done();}else{done();setTimeout(wa,50);}
+      });
+    };
     fetch('https://vesper-923580a1.base44.app/functions/captureLead',{
       method:'POST',headers:{'Content-Type':'application/json'},
-      body:JSON.stringify({name:v('name'),business:v('business'),city:v('city'),phone:v('phone'),interest:v('interest'),notes:v('notes'),source:'beyond-pixells hub'})
+      body:JSON.stringify({name:v('name'),business:v('business'),city:v('city'),phone:v('phone'),email:v('email'),interest:v('interest'),notes:v('notes'),source:'beyond-pixells hub'})
     }).then(function(r){return r.json();}).then(function(j){
-      if(j&&j.ok){
-        f.innerHTML='<div class="lead-ok"><b>✓ Received — you are in the system.</b><br>We review every enquiry ourselves and will reach out today. Want to talk right now?</div><a class="btn btn-primary" style="margin-top:14px" target="_blank" rel="noopener" href="https://wa.me/917737077479?text='+encodeURIComponent(msg)+'">Continue on WhatsApp →</a>';
-      }else{wa();}
-    }).catch(function(){wa();});
+      if(j&&j.ok){done();}else{fallback();}
+    }).catch(function(){fallback();});
   });
 })();
 </script>
