@@ -173,3 +173,11 @@ mobile has designed sticky CTA bar, nav hides links below 640px intentionally.
 | 2026-10-01 | Inter loaded at 400-800 but weight 800 used by zero rules | 16 | dropped from all 7 pages → one less font file per visit | live |
 | 2026-10-01 | Instrument Serif (7 uses) + JetBrains Mono (28 uses) genuinely earn their payload | 16 | keep | counted |
 | 2026-10-01 | bp-motion.js loads after footer (non-blocking); only 2 images ship to the hub page | 16 | none needed | inspected |
+
+### Cycle 7 — module 25 estate sweep (1 Oct 2026)
+| Date | Finding | Module | Fix | Verified |
+|------|---------|--------|-----|----------|
+| 2026-10-01 | dentist-os-site used og-image.png (77KB) as favicon | 16 | replaced with 2KB brand favicon-32 | live |
+| 2026-10-01 | builder-os-site favicon = inline SVG (lightweight) ✓; gym-os-v3 Next.js icons ✓ | 16 | none needed | checked |
+| 2026-10-01 | Sister sites: robots + sitemap + Inter all present | 12 | none needed | curl |
+| 2026-10-01 | gym-os-v3 font stack not verifiable in first HTML pass (Next.js injects via CSS); check in next estate pass | 04 | noted | open |
