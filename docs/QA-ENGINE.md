@@ -156,3 +156,12 @@ mobile has designed sticky CTA bar, nav hides links below 640px intentionally.
 | 2026-10-01 | dentistos.in DNS dead; email template links to it | 14 | flagged for Dentist OS domain work | curl probe |
 | 2026-10-01 | 3 vendor JS bundles (432KB) referenced by zero pages | 21 | repo-only weight; not shipped to users | scan |
 | 2026-10-01 | Internal links all resolve (12 pages); wa.me + gym-os-v3 healthy | 00 | none needed | crawler + curl |
+
+### Cycle 4 — module 03/05 visual + motion audit of OBSIDIAN LUXE v9 (1 Oct 2026)
+| Date | Finding | Module | Fix | Verified |
+|------|---------|--------|-----|----------|
+| 2026-10-01 | v9 palette contrast: ink 17.8:1, CTA text 20.1:1, muted 7.98:1, accent 5.41:1 (AA pass, sub-AAA for body-size accent text) | 17 | keep accent for large/semibold text only | computed |
+| 2026-10-01 | Motion system: hero stagger 0-600ms expo easing, reduced-motion guards on stagger + word rotator + gradient + chrome tiles + beam borders | 05 | none needed — system is sound | code read |
+| 2026-10-01 | Fonts: 3 families, display=swap — acceptable cost for the serif/mono identity | 16 | none needed | checked |
+| 2026-10-01 | OPEN DECISION: v9 uses #06070B canvas + #4D7CFF accent; founder standing rules said #0A0E27 + #0066FF. Owner must confirm which is law before further brand output. | 04 | awaiting owner | flagged |
+| 2026-10-01 | captureLeadV2 + trackEvent staged in agent workspace, ready to deploy when integration credits reset (server dedupe, rate limit, validation, event taxonomy) | 07/11 | staged, not deployed | n/a |
