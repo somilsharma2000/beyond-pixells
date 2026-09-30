@@ -1,6 +1,6 @@
 /* ============================================================
-   BEYOND PIXELLS — SHARED DESIGN SYSTEM v4.0
-   "CHROME VIOLET" — Glossy dark premium OS language
+   BEYOND PIXELLS — SHARED DESIGN SYSTEM v8.0
+   "LIGHT CLARITY" — White canvas, slate ink, blue accent (research: 2026-10-01)
 
    Deep violet/purple gradient surfaces, orange-gold rim light,
    glass blur, spotlight cards, cinematic glow.
@@ -16,30 +16,30 @@
 
 :root{
   /* CORE CANVAS */
-  --bp-canvas:#0A0E29; --bp-surface-1:#0A0E29; --bp-surface-2:#121620; --bp-surface-3:#192030;
-  --bp-glass:rgba(12,15,23,.78);
+  --bp-canvas:#FFF; --bp-surface-1:#FFF; --bp-surface-2:#F8FAFC; --bp-surface-3:#F1F5F9;
+  --bp-glass:rgba(255,255,255,.85);
 
   /* CHROME VIOLET BRAND SPECTRUM */
-  --bp-violet-950:#102965; --bp-violet-900:#142F70; --bp-violet-800:#1D4095;
-  --bp-violet-700:#214CB6; --bp-violet-600:#06F; --bp-violet-500:#06F;
-  --bp-violet-400:#06F; --bp-violet-300:#9CC0FF; --bp-violet-200:#9CC0FF;
-  --bp-gold-500:#06F; --bp-gold-400:#FFA733; --bp-gold-300:#9CC0FF;
+  --bp-violet-950:#EFF6FF; --bp-violet-900:#DBEAFE; --bp-violet-800:#BFDBFE;
+  --bp-violet-700:#93C5FD; --bp-violet-600:#2563EB; --bp-violet-500:#2563EB;
+  --bp-violet-400:#2563EB; --bp-violet-300:#2563EB; --bp-violet-200:#1D4ED8;
+  --bp-gold-500:#D97706; --bp-gold-400:#F59E0B; --bp-gold-300:#2563EB;
 
   /* SEMANTIC */
-  --bp-text-primary:#F2F5FB; --bp-text-secondary:#94A3B8; --bp-text-muted:#94A3B8; --bp-text-inverse:#0A0E29;
-  --bp-border-subtle:rgba(139,171,250,.12); --bp-border-default:rgba(139,171,250,.2);
-  --bp-border-strong:rgba(139,171,250,.34);
-  --bp-rim-light:linear-gradient(135deg,rgba(0, 102, 255,.55),rgba(139,171,250,.28) 55%,rgba(58,110,237,.15));
-  --bp-success:#34D399; --bp-warning:#9CC0FF; --bp-error:#FB7185;
+  --bp-text-primary:#0F172A; --bp-text-secondary:#475569; --bp-text-muted:#64748B; --bp-text-inverse:#FFF;
+  --bp-border-subtle:rgba(15,23,42,.08); --bp-border-default:rgba(15,23,42,.12);
+  --bp-border-strong:rgba(15,23,42,.2);
+  --bp-rim-light:linear-gradient(135deg,rgba(37,99,235,.35),rgba(37,99,235,.15) 55%,rgba(37,99,235,.08));
+  --bp-success:#16A34A; --bp-warning:#D97706; --bp-error:#DC2626;
 
   /* GRADIENTS — the signature */
-  --bp-gradient-brand:linear-gradient(135deg,#06F 0%,#9CC0FF 55%,#9CC0FF 100%);
-  --bp-gradient-gold:linear-gradient(135deg,#06F 0%,#9CC0FF 100%);
-  --bp-gradient-chrome:linear-gradient(160deg,#06F 0%,#06F 45%,#142F70 100%);
-  --bp-gradient-hero:radial-gradient(ellipse 60% 55% at 50% -10%,rgba(58,110,237,.32),transparent 70%);
-  --bp-gradient-subtle:linear-gradient(135deg,rgba(58,110,237,.16),rgba(0, 102, 255,.05));
-  --bp-gradient-glow:linear-gradient(135deg,rgba(58,110,237,.45),rgba(0, 102, 255,.18));
-  --bp-gloss-top:linear-gradient(180deg,rgba(255,255,255,.09),rgba(255,255,255,0) 42%);
+  --bp-gradient-brand:linear-gradient(135deg,#2563EB 0%,#3B82F6 100%);
+  --bp-gradient-gold:linear-gradient(135deg,#2563EB 0%,#60A5FA 100%);
+  --bp-gradient-chrome:linear-gradient(160deg,#2563EB 0%,#2563EB 45%,#1D4ED8 100%);
+  --bp-gradient-hero:radial-gradient(ellipse 60% 55% at 50% -10%,rgba(37,99,235,.07),transparent 70%);
+  --bp-gradient-subtle:linear-gradient(135deg,rgba(37,99,235,.06),rgba(37,99,235,.02));
+  --bp-gradient-glow:linear-gradient(135deg,rgba(37,99,235,.14),rgba(37,99,235,.05));
+  --bp-gloss-top:linear-gradient(180deg,rgba(255,255,255,0),rgba(255,255,255,0) 42%);
 
   /* TYPE */
   --bp-font-display:'Inter',-apple-system,blinkmacsystemfont,sans-serif;
@@ -53,12 +53,12 @@
 
   /* LIGHTING & SPOTLIGHT */
   --bp-mouse-x:50%; --bp-mouse-y:50%;
-  --bp-spotlight-color:rgba(92,137,246,.14);
-  --bp-spotlight-border:rgba(156, 192, 255,.28);
+  --bp-spotlight-color:rgba(37,99,235,.05);
+  --bp-spotlight-border:rgba(37,99,235,.16);
 
   /* GLASS */
-  --bp-glass-bg:rgba(12,15,23,.72);
-  --bp-glass-border:rgba(139,171,250,.14);
+  --bp-glass-bg:rgba(255,255,255,.82);
+  --bp-glass-border:rgba(15,23,42,.08);
   --bp-glass-blur:blur(18px) saturate(160%);
 
   /* NOISE */
@@ -71,7 +71,7 @@
 
 @keyframes bp-scaleIn{0%{opacity:0;transform:scale(.92)}100%{opacity:1;transform:scale(1)}}
 
-@keyframes bp-glowPulse{0%,100%{box-shadow:0 0 22px rgba(58,110,237,.28)}50%{box-shadow:0 0 44px rgba(0, 102, 255,.32)}}
+@keyframes bp-glowPulse{0%,100%{box-shadow:0 0 18px rgba(37,99,235,.16)}50%{box-shadow:0 0 30px rgba(37,99,235,.2)}}
 
 @keyframes bp-gradientShift{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
 
@@ -102,7 +102,7 @@
 
 /* ============ MAGNETIC BUTTONS ============ */
 .bp-magnetic-btn{transition:transform .3s var(--bp-ease-spring),box-shadow .3s var(--bp-ease-smooth);will-change:transform}
-.bp-magnetic-btn:hover{box-shadow:0 10px 34px rgba(0, 102, 255,.24),0 0 60px rgba(58,110,237,.28)}
+.bp-magnetic-btn:hover{box-shadow:0 10px 30px rgba(37,99,235,.2)}
 
 /* ============ LIFT & HOVER ============ */
 .bp-lift{transition:transform .4s var(--bp-ease-out-expo),box-shadow .4s var(--bp-ease-smooth)}
@@ -117,7 +117,7 @@
   border-bottom:1px solid var(--bp-glass-border);
   transition:padding .35s var(--bp-ease-smooth),background .35s ease,border-color .35s ease;
 }
-.bp-nav-sticky.bp-nav-scrolled{background:rgba(6,8,13,.88);border-bottom-color:var(--bp-border-default)}
+.bp-nav-sticky.bp-nav-scrolled{background:rgba(255,255,255,.92);border-bottom-color:var(--bp-border-default)}
 
 /* ============ MARQUEE ============ */
 .bp-marquee{overflow:hidden;position:relative;mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent)}
@@ -126,25 +126,25 @@
 /* ============ SCROLL PROGRESS ============ */
 .bp-scroll-progress-bar{
   position:fixed;top:0;left:0;height:2px;z-index:200;width:0;
-  background:linear-gradient(90deg,#06F,#9CC0FF,#06F);
-  box-shadow:0 0 12px rgba(0, 102, 255,.55);
+  background:linear-gradient(90deg,#2563EB,#60A5FA,#2563EB);
+  box-shadow:0 0 12px rgba(37,99,235,.35);
 }
 
 /* ============ NOISE CANVAS ============ */
-.bp-noise-canvas{position:fixed;inset:0;z-index:1;pointer-events:none;opacity:.5;background-image:var(--bp-noise-url)}
+.bp-noise-canvas{position:fixed;inset:0;z-index:1;pointer-events:none;opacity:.18;background-image:var(--bp-noise-url)}
 
 /* ============ SIGNATURE TEXT TREATMENTS ============ */
 .bp-text-grad{
-  background:linear-gradient(110deg,#9CC0FF 20%,#FFF 42%,#9CC0FF 58%,#9CC0FF 80%);
+  background:linear-gradient(110deg,#2563EB 20%,#0F172A 42%,#2563EB 58%,#2563EB 80%);
   background-size:200% auto;background-clip:text;background-clip:text;color:transparent;
   animation:bp-shimmer 6s linear infinite;
 }
 .bp-rim-badge{
   display:inline-flex;align-items:center;gap:9px;border-radius:100px;
-  background:linear-gradient(180deg,rgba(58,110,237,.22),rgba(20,47,112,.18));
-  border:1px solid var(--bp-rim-light);
-  color:var(--bp-violet-200);font-weight:700;letter-spacing:.02em;
-  box-shadow:0 0 24px rgba(58,110,237,.18),inset 0 1px 0 rgba(255,255,255,.12);
+  background:#EFF6FF;
+  border:1px solid rgba(37,99,235,.25);
+  color:#1D4ED8;font-weight:700;letter-spacing:.02em;
+  box-shadow:none;
 }
 
 @media(prefers-reduced-motion:reduce){.bp-text-grad{animation:none}}
@@ -155,13 +155,13 @@
 .bp-mobile-cta{display:none}
 @media (max-width:768px){
   .bp-mobile-cta{display:block;position:fixed;left:0;right:0;bottom:0;z-index:90;
-    background:rgba(20,24,51,.92);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
-    border-top:1px solid #272C49;padding:10px 16px calc(10px + env(safe-area-inset-bottom))}
+    background:rgba(255,255,255,.94);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+    border-top:1px solid #E2E8F0;padding:10px 16px calc(10px + env(safe-area-inset-bottom))}
   .bp-mobile-cta-in{display:flex;align-items:center;justify-content:space-between;gap:12px}
-  .bp-mct-copy b{display:block;font-size:.92rem;color:#F1F5F9}
-  .bp-mct-copy span{display:block;font-size:.72rem;color:#94A3B8;margin-top:2px}
-  .bp-mct-btn{flex:none;background:#21C45D;color:#06120B;font-weight:700;font-size:.9rem;
-    padding:11px 20px;border-radius:12px;text-decoration:none;box-shadow:0 6px 20px rgba(33,196,93,.35)}
+  .bp-mct-copy b{display:block;font-size:.92rem;color:#0F172A}
+  .bp-mct-copy span{display:block;font-size:.72rem;color:#64748B;margin-top:2px}
+  .bp-mct-btn{flex:none;background:#16A34A;color:#FFF;font-weight:700;font-size:.9rem;
+    padding:11px 20px;border-radius:12px;text-decoration:none;box-shadow:0 6px 20px rgba(22,163,74,.25)}
   .bp-mct-btn:active{transform:translateY(1px)}
   body{padding-bottom:74px}
 }
