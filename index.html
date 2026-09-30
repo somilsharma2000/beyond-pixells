@@ -57,7 +57,13 @@ nav .container{display:flex;justify-content:space-between;align-items:center;hei
 .brand{display:flex;align-items:center;gap:11px;font-family:'Inter';font-weight:700;font-size:1.06rem;color:#fff}
 .brand img{width:34px;height:34px;border-radius:50%;object-fit:cover;box-shadow:0 0 18px var(--violet-glow)}
 nav ul{display:flex;gap:30px;list-style:none;align-items:center}
+.bp-scroll-progress-bar{position:fixed;top:0;left:0;right:0;height:2px;z-index:9999;background:linear-gradient(90deg,#0066FF,#7aa2ff);transform:scaleX(0);transform-origin:0 50%;pointer-events:none}
+section[id]{scroll-margin-top:86px}
 nav ul a{color:var(--muted);font-size:.9rem;font-weight:600;transition:.2s}
+nav ul a.on{color:var(--blue)}
+nav ul a.on::after{content:'';position:absolute;left:15%;right:15%;bottom:-6px;height:2px;border-radius:2px;background:var(--blue)}
+nav ul li{position:relative}
+.btn:active{transform:scale(.96)}
 nav ul a:hover{color:#fff}
 .btn{display:inline-flex;align-items:center;gap:9px;border-radius:100px;font-weight:700;font-size:.92rem;padding:13px 26px;transition:.25s cubic-bezier(.4,0,.2,1);cursor:pointer;border:none}
 .btn-primary{background:var(--gloss),linear-gradient(160deg,#0066FF,#0066FF);color:#fff;box-shadow:0 8px 30px rgba(58,110,237,.4),inset 0 1px 0 rgba(255,255,255,.18)}
@@ -496,9 +502,9 @@ footer .brand{color:#fff}
       <h2>The system, running.</h2>
       <p>Not mockups. These are the real Gym OS screens, seeded with a working gym's data. Click any one and test it yourself.</p>
     </div>
-    <div class="wk-grid">
+    <div class="wk-grid" data-reveal-stagger="90">
 
-      <a class="wk-shot" href="https://gym-os-v3.vercel.app/demo" target="_blank" rel="noopener">
+      <a class="wk-shot" data-reveal="up" href="https://gym-os-v3.vercel.app/demo" target="_blank" rel="noopener">
         <div class="wk-bar"><span class="wk-dot"></span><span class="wk-dot"></span><span class="wk-dot"></span><span class="wk-url">gym-os-v3.vercel.app/dashboard</span></div>
         <div class="wk-ui">
           <div class="wk-side"><div class="wk-logo">GYM OS</div><div class="wk-nav on">Dashboard</div><div class="wk-nav">Members</div><div class="wk-nav">Leads</div><div class="wk-nav">Renewals</div><div class="wk-nav">Intelligence</div><div class="wk-nav">Support</div><div class="wk-nav">Classes</div><div class="wk-nav">Check-In</div><div class="wk-nav">Engines</div><div class="wk-nav">Settings</div></div>
@@ -518,7 +524,7 @@ footer .brand{color:#fff}
         <div class="wk-cap"><b>The owner's morning view</b><span>Members, money and retention on one screen — risk flagged before it costs you.</span><i>Open in the live demo →</i></div>
       </a>
 
-      <a class="wk-shot" href="https://gym-os-v3.vercel.app/demo" target="_blank" rel="noopener">
+      <a class="wk-shot" data-reveal="up" href="https://gym-os-v3.vercel.app/demo" target="_blank" rel="noopener">
         <div class="wk-bar"><span class="wk-dot"></span><span class="wk-dot"></span><span class="wk-dot"></span><span class="wk-url">gym-os-v3.vercel.app/leads</span></div>
         <div class="wk-ui">
           <div class="wk-side"><div class="wk-logo">GYM OS</div><div class="wk-nav">Dashboard</div><div class="wk-nav">Members</div><div class="wk-nav on">Leads</div><div class="wk-nav">Renewals</div><div class="wk-nav">Intelligence</div><div class="wk-nav">Support</div><div class="wk-nav">Classes</div><div class="wk-nav">Check-In</div><div class="wk-nav">Engines</div><div class="wk-nav">Settings</div></div>
@@ -535,7 +541,7 @@ footer .brand{color:#fff}
         <div class="wk-cap"><b>No enquiry ever forgotten</b><span>Every lead tracked from first WhatsApp to signed membership — overdue follow-ups surface themselves.</span><i>Open in the live demo →</i></div>
       </a>
 
-      <a class="wk-shot" href="https://gym-os-v3.vercel.app/demo" target="_blank" rel="noopener">
+      <a class="wk-shot" data-reveal="up" href="https://gym-os-v3.vercel.app/demo" target="_blank" rel="noopener">
         <div class="wk-bar"><span class="wk-dot"></span><span class="wk-dot"></span><span class="wk-dot"></span><span class="wk-url">gym-os-v3.vercel.app/renewals</span></div>
         <div class="wk-ui">
           <div class="wk-side"><div class="wk-logo">GYM OS</div><div class="wk-nav">Dashboard</div><div class="wk-nav">Members</div><div class="wk-nav">Leads</div><div class="wk-nav on">Renewals</div><div class="wk-nav">Intelligence</div><div class="wk-nav">Support</div><div class="wk-nav">Classes</div><div class="wk-nav">Check-In</div><div class="wk-nav">Engines</div><div class="wk-nav">Settings</div></div>
@@ -893,6 +899,19 @@ footer{box-shadow:inset 0 1px 0 rgba(255,255,255,.04)}
       el.classList.remove('out');
     },190);
   },2200);
+})();
+
+/* active section -> nav highlight */
+(function(){
+  var map=[['#products','products'],['#start','start'],['#proof','proof'],['#process','process']];
+  var links={};document.querySelectorAll('nav ul a').forEach(function(a){links[a.getAttribute('href')]=a;});
+  var io=new IntersectionObserver(function(es){
+    es.forEach(function(e){
+      var a=links['#'+e.target.id];if(!a)return;
+      if(e.isIntersecting){document.querySelectorAll('nav ul a.on').forEach(function(x){x.classList.remove('on');});a.classList.add('on');}
+    });
+  },{rootMargin:'-40% 0px -55% 0px'});
+  map.forEach(function(m){var el=document.querySelector(m[0]);if(el)io.observe(el);});
 })();
 </script>
 </body>
