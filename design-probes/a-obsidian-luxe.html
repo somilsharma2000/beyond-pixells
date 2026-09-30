@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta name="robots" content="noindex">
+<meta charset="UTF-8">
+<title>Direction A — Obsidian Luxe</title>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg:#06070B;--bg2:#0A0C12;--panel:rgba(255,255,255,.03);
+  --line:rgba(255,255,255,.08);--line2:rgba(255,255,255,.14);
+  --ink:#F4F5F8;--mut:#8A90A0;--dim:#5C6272;
+  --accent:#4D7CFF;--accent2:#7AA0FF;
+}
+body{background:var(--bg);color:var(--ink);font-family:'Inter',sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1160px;margin:0 auto;padding:0 32px}
+.serif{font-family:'Instrument Serif',serif;font-weight:400}
+.mono{font-family:'JetBrains Mono',monospace}
+
+/* NAV */
+nav{position:fixed;inset:0 0 auto 0;z-index:50;backdrop-filter:blur(20px);background:rgba(6,7,11,.6);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;justify-content:space-between;align-items:center;height:64px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:600;letter-spacing:.01em}
+.brand i{width:28px;height:28px;border-radius:8px;background:linear-gradient(135deg,#4D7CFF,#2B4FD1);display:flex;align-items:center;justify-content:center;font-style:normal;font-size:.72rem;font-weight:700;color:#fff}
+nav ul{display:flex;gap:28px;list-style:none;font-size:.85rem;color:var(--mut)}
+.nav-cta{background:var(--ink);color:#0A0C12;padding:9px 18px;border-radius:10px;font-size:.85rem;font-weight:600}
+
+/* HERO */
+.hero{padding:150px 0 40px;text-align:center;position:relative;
+  background:radial-gradient(52% 42% at 50% -4%,rgba(77,124,255,.14),transparent 70%),
+             radial-gradient(30% 24% at 85% 10%,rgba(122,160,255,.06),transparent 70%)}
+.hero .kicker{display:inline-flex;gap:8px;align-items:center;font-size:.72rem;color:var(--accent2);border:1px solid rgba(77,124,255,.25);background:rgba(77,124,255,.07);padding:6px 14px;border-radius:100px;margin-bottom:28px}
+.hero .kicker .dot{width:5px;height:5px;border-radius:50%;background:var(--accent)}
+h1{font-size:clamp(3rem,6.5vw,5.2rem);line-height:1.04;letter-spacing:-.02em;max-width:900px;margin:0 auto}
+h1 .serif em{font-style:italic;color:var(--accent2)}
+.hero p{color:var(--mut);max-width:640px;margin:24px auto 40px;font-size:1.1rem}
+.ctas{display:flex;gap:14px;justify-content:center}
+.btn{padding:15px 30px;border-radius:12px;font-weight:600;font-size:.95rem}
+.btn-p{background:linear-gradient(180deg,#5B87FF,#3E66E8);color:#fff;box-shadow:0 8px 32px rgba(77,124,255,.35)}
+.btn-s{border:1px solid var(--line2);color:var(--ink);background:var(--panel)}
+.trust{display:flex;gap:36px;justify-content:center;margin-top:44px;color:var(--dim);font-size:.8rem}
+.trust b{color:var(--ink);font-size:1.15rem;display:block;font-weight:600}
+
+/* WINDOW */
+.window{max-width:960px;margin:64px auto 0;border-radius:14px;border:1px solid var(--line2);
+  background:linear-gradient(180deg,#0D1017,#0A0C12);overflow:hidden;text-align:left;
+  box-shadow:0 40px 120px rgba(0,0,0,.6),0 0 80px rgba(77,124,255,.09)}
+.titlebar{display:flex;align-items:center;gap:7px;padding:12px 16px;border-bottom:1px solid var(--line)}
+.titlebar i{width:10px;height:10px;border-radius:50%;background:#2E3340}
+.titlebar i:first-child{background:#3A4050}
+.titlebar span{margin-left:10px;color:var(--dim);font-size:.68rem;letter-spacing:.05em}
+.win-body{display:grid;grid-template-columns:1fr 2.2fr;min-height:300px}
+.win-side{border-right:1px solid var(--line);padding:16px}
+.win-side div{font-size:.78rem;color:var(--dim);padding:8px 10px;border-radius:8px}
+.win-side .on{background:rgba(77,124,255,.12);color:var(--accent2);border:1px solid rgba(77,124,255,.2)}
+.win-main{padding:20px;display:flex;flex-direction:column;gap:12px}
+.win-kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.win-kpi{border:1px solid var(--line);border-radius:10px;padding:12px 14px;background:var(--panel)}
+.win-kpi small{display:block;color:var(--dim);font-size:.6rem;text-transform:uppercase;letter-spacing:.08em}
+.win-kpi b{font-size:1rem;font-weight:600}
+.win-kpi .up{color:#4ADE80;font-size:.66rem}
+.win-chart{flex:1;border:1px solid var(--line);border-radius:10px;background:var(--panel);padding:14px;display:flex;align-items:flex-end;gap:6px}
+.win-chart i{flex:1;border-radius:3px 3px 0 0;background:linear-gradient(180deg,#5B87FF,rgba(91,135,255,.15))}
+
+/* CARDS */
+section{padding:70px 0 0}
+.sec-kicker{color:var(--accent2);font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;margin-bottom:12px}
+h2{font-size:clamp(1.9rem,3.6vw,2.6rem);letter-spacing:-.02em;line-height:1.1}
+h2 .serif em{font-style:italic;color:var(--accent2)}
+.sec-sub{color:var(--mut);margin-top:12px;max-width:560px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:44px}
+.card{border:1px solid var(--line);border-radius:16px;padding:26px;background:linear-gradient(180deg,rgba(255,255,255,.025),rgba(255,255,255,.005))}
+.card .num{color:var(--dim);font-size:.68rem}
+.card h3{font-size:1.2rem;margin:8px 0 8px;font-weight:600}
+.card p{color:var(--mut);font-size:.9rem}
+.card .go{display:inline-block;margin-top:18px;color:var(--accent2);font-size:.85rem;font-weight:600}
+.band{margin-top:70px;border-top:1px solid var(--line);padding:60px 0 80px;text-align:center}
+.band h2{max-width:700px;margin:0 auto 28px}
+</style>
+</head>
+<body>
+<nav><div class="wrap">
+  <div class="brand"><i>bp</i> Beyond Pixells</div>
+  <ul><li>Products</li><li>Work</li><li>Studio</li></ul>
+  <div class="nav-cta">Book a call</div>
+</div></nav>
+
+<header class="hero"><div class="wrap">
+  <div class="kicker mono"><span class="dot"></span> SOFTWARE STUDIO · INDIA</div>
+  <h1>Run your business on <span class="serif"><em>software</em></span> that finally feels yours.</h1>
+  <p>We build operating systems for local businesses — Gym OS, Dentist OS, Builder OS — designed, built and supported end-to-end.</p>
+  <div class="ctas"><a class="btn btn-p">See Gym OS live</a><a class="btn btn-s">Explore the OS family</a></div>
+  <div class="trust"><div><b class="serif" style="font-size:1.5rem">3</b> OS products</div><div><b class="serif" style="font-size:1.5rem">1</b> studio</div><div><b class="serif" style="font-size:1.5rem">0</b> templates used</div></div>
+
+  <div class="window">
+    <div class="titlebar"><i></i><i></i><i></i><span class="mono">beyondpixells.app/dashboard</span></div>
+    <div class="win-body">
+      <div class="win-side"><div class="on">Dashboard</div><div>Members</div><div>Leads</div><div>Payments</div><div>Classes</div></div>
+      <div class="win-main">
+        <div class="win-kpis">
+          <div class="win-kpi"><small>Revenue</small><b>₹1.9L</b> <span class="up">+12%</span></div>
+          <div class="win-kpi"><small>Members</small><b>122</b> <span class="up">+6</span></div>
+          <div class="win-kpi"><small>Leads</small><b>36</b> <span class="up">new</span></div>
+          <div class="win-kpi"><small>Dues</small><b>₹8,400</b> <span class="up">-31%</span></div>
+        </div>
+        <div class="win-chart"><i style="height:40%"></i><i style="height:65%"></i><i style="height:50%"></i><i style="height:80%"></i><i style="height:58%"></i><i style="height:92%"></i><i style="height:70%"></i><i style="height:100%"></i></div>
+      </div>
+    </div>
+  </div>
+</div></header>
+
+<section><div class="wrap">
+  <div class="sec-kicker mono">01 / THE OS FAMILY</div>
+  <h2>One operating system <span class="serif"><em>per business.</em></span></h2>
+  <p class="sec-sub">Not a website. Not a CRM template. A complete system your staff can actually use every morning.</p>
+  <div class="grid">
+    <div class="card"><div class="num mono">/01</div><h3>Gym OS</h3><p>Memberships, check-ins, WhatsApp billing and renewals for gyms and fitness studios.</p><a class="go">Open Gym OS →</a></div>
+    <div class="card"><div class="num mono">/02</div><h3>Dentist OS</h3><p>Appointments, patient records, treatment plans and payment tracking for clinics.</p><a class="go">Open Dentist OS →</a></div>
+    <div class="card"><div class="num mono">/03</div><h3>Builder OS</h3><p>Site progress, client updates, bills and builder payments in one project console.</p><a class="go">Open Builder OS →</a></div>
+  </div>
+</div></section>
+
+<div class="band"><div class="wrap">
+  <h2>Your business, <span class="serif"><em>run properly.</em></span></h2>
+  <a class="btn btn-p">Book a free demo on WhatsApp</a>
+</div></div>
+</body>
+</html>

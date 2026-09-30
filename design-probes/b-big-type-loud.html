@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta name="robots" content="noindex">
+<meta charset="UTF-8">
+<title>Direction B — Big Type Loud</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --paper:#F6F4EC;--ink:#141310;--accent:#FF4D00;--accent-ink:#FFF;
+  --blue:#1B3FFF;--line:#141310;
+}
+body{background:var(--paper);color:var(--ink);font-family:'Inter',sans-serif;line-height:1.55;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1180px;margin:0 auto;padding:0 30px}
+.grotesk{font-family:'Space Grotesk',sans-serif}
+.mono{font-family:'JetBrains Mono',monospace}
+
+/* NAV */
+nav{border-bottom:2px solid var(--ink);background:var(--paper);position:sticky;top:0;z-index:50}
+nav .wrap{display:flex;justify-content:space-between;align-items:center;height:60px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:1rem}
+.brand i{width:30px;height:30px;background:var(--ink);color:var(--paper);display:flex;align-items:center;justify-content:center;font-style:normal;font-size:.72rem;font-weight:700;border-radius:6px}
+nav ul{display:flex;gap:24px;list-style:none;font-size:.85rem;font-weight:600}
+.nav-cta{background:var(--accent);color:#fff;padding:9px 16px;border-radius:100px;font-size:.85rem;font-weight:700;box-shadow:3px 3px 0 var(--ink)}
+
+/* MARQUEE */
+.marquee{background:var(--ink);color:var(--paper);overflow:hidden;padding:10px 0;font-size:.78rem;font-weight:600;letter-spacing:.08em}
+.marquee span{display:inline-block;white-space:nowrap;animation:slide 18s linear infinite}
+@keyframes slide{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.marquee b{color:var(--accent)}
+
+/* HERO */
+.hero{padding:80px 0 56px;border-bottom:2px solid var(--ink)}
+.sticker{display:inline-block;background:var(--blue);color:#fff;font-size:.72rem;font-weight:700;letter-spacing:.06em;padding:7px 14px;border-radius:4px;transform:rotate(-2deg);margin-bottom:26px}
+h1{font-size:clamp(3.2rem,8.5vw,7rem);line-height:.95;letter-spacing:-.04em;text-transform:uppercase}
+h1 .out{color:transparent;-webkit-text-stroke:2px var(--ink)}
+h1 .acc{background:var(--accent);color:#fff;padding:0 18px;display:inline-block;transform:rotate(-1deg)}
+.hero-bottom{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;margin-top:40px;flex-wrap:wrap}
+.hero p{max-width:480px;font-size:1.05rem;font-weight:500}
+.ctas{display:flex;gap:12px}
+.btn{padding:16px 28px;font-weight:800;font-size:.95rem;border-radius:0;border:2px solid var(--ink);box-shadow:5px 5px 0 var(--ink)}
+.btn-p{background:var(--ink);color:var(--paper)}
+.btn-p:hover{transform:translate(2px,2px);box-shadow:3px 3px 0 var(--ink)}
+.btn-s{background:var(--paper)}
+
+/* BIG CARDS */
+section{padding:64px 0;border-bottom:2px solid var(--ink)}
+.sec-head{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:36px;flex-wrap:wrap;gap:12px}
+h2{font-size:clamp(2rem,4.5vw,3.4rem);letter-spacing:-.03em;text-transform:uppercase;line-height:1}
+.os-list{display:flex;flex-direction:column;border:2px solid var(--ink)}
+.os-row{display:grid;grid-template-columns:90px 1.4fr 2fr 140px;align-items:center;gap:20px;padding:26px 28px;border-bottom:2px solid var(--ink);background:var(--paper);transition:background .15s}
+.os-row:last-child{border-bottom:none}
+.os-row:hover{background:#fff}
+.os-row .idx{font-family:'JetBrains Mono';font-weight:700;font-size:.85rem;color:var(--accent)}
+.os-row h3{font-size:clamp(1.3rem,2.6vw,1.9rem);text-transform:uppercase;letter-spacing:-.02em;font-weight:700}
+.os-row p{font-size:.92rem;color:#3D3B36;font-weight:500}
+.os-row .go{font-family:'JetBrains Mono';font-size:.78rem;font-weight:700;background:var(--ink);color:var(--paper);padding:10px 14px;text-align:center;border-radius:0}
+.os-row:hover .go{background:var(--accent)}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);border:2px solid var(--ink);margin-top:34px}
+.stat{padding:22px 26px;border-right:2px solid var(--ink)}
+.stat:last-child{border-right:none}
+.stat b{font-size:clamp(1.8rem,4vw,2.6rem);font-weight:800;display:block;letter-spacing:-.03em}
+.stat b em{color:var(--accent);font-style:normal}
+.stat span{font-size:.8rem;font-weight:600;text-transform:uppercase;letter-spacing:.06em}
+
+/* CTA BAND */
+.band{background:var(--accent);border-bottom:2px solid var(--ink);padding:70px 0;text-align:center}
+.band h2{color:#fff;text-shadow:4px 4px 0 var(--ink)}
+.band .btn{background:#fff;color:var(--ink);margin-top:28px}
+footer{padding:22px 0;font-size:.78rem;font-weight:600;display:flex;justify-content:space-between}
+</style>
+</head>
+<body>
+<nav><div class="wrap">
+  <div class="brand"><i>bp</i>BEYOND PIXELLS</div>
+  <ul><li>PRODUCTS</li><li>WORK</li><li>STUDIO</li></ul>
+  <div class="nav-cta">BOOK A CALL ↗</div>
+</div></nav>
+
+<div class="marquee"><span>GYM OS <b>●</b> DENTIST OS <b>●</b> BUILDER OS <b>●</b> CUSTOM SOFTWARE <b>●</b> GYM OS <b>●</b> DENTIST OS <b>●</b> BUILDER OS <b>●</b> CUSTOM SOFTWARE <b>●</b> GYM OS <b>●</b> DENTIST OS <b>●</b> BUILDER OS <b>●</b> CUSTOM SOFTWARE <b>●</b> </span></div>
+
+<header class="hero"><div class="wrap">
+  <div class="sticker mono">★ BUILT IN INDIA — RUNS ANYWHERE</div>
+  <h1 class="grotesk">WE BUILD<br><span class="out">OPERATING</span><br>SYSTEMS FOR<br><span class="acc">REAL</span> BUSINESS.</h1>
+  <div class="hero-bottom">
+    <p>Gyms. Dentists. Builders. Your business gets real software — designed, built, and supported by one studio. No templates. No bloat.</p>
+    <div class="ctas"><a class="btn btn-p grotesk">SEE GYM OS LIVE →</a><a class="btn btn-s grotesk">THE OS FAMILY</a></div>
+  </div>
+</div></header>
+
+<section><div class="wrap">
+  <div class="sec-head">
+    <h2 class="grotesk">THE OS<br>FAMILY</h2>
+    <div class="sticker mono" style="transform:rotate(1deg)">3 SYSTEMS. 1 STUDIO.</div>
+  </div>
+  <div class="os-list">
+    <div class="os-row"><div class="idx mono">/01</div><h3 class="grotesk">GYM OS</h3><p>Memberships, check-ins, WhatsApp billing, renewals — the complete gym console.</p><div class="go">OPEN ↗</div></div>
+    <div class="os-row"><div class="idx mono">/02</div><h3 class="grotesk">DENTIST OS</h3><p>Appointments, patient records, treatment plans, payments — clinic, sorted.</p><div class="go">OPEN ↗</div></div>
+    <div class="os-row"><div class="idx mono">/03</div><h3 class="grotesk">BUILDER OS</h3><p>Site progress, client updates, bills and builder payments in one console.</p><div class="go">OPEN ↗</div></div>
+  </div>
+  <div class="stats">
+    <div class="stat"><b class="grotesk"><em>3</em> OS</b><span>PRODUCTS LIVE</span></div>
+    <div class="stat"><b class="grotesk">1<em>→1</em></b><span>STUDIO TO BUSINESS</span></div>
+    <div class="stat"><b class="grotesk">0</b><span>TEMPLATES USED</span></div>
+  </div>
+</div></section>
+
+<div class="band"><div class="wrap">
+  <h2 class="grotesk">STOP RUNNING YOUR BUSINESS ON PAPER.</h2>
+  <a class="btn grotesk">BOOK A FREE DEMO ON WHATSAPP →</a>
+</div></div>
+
+<footer><div class="wrap" style="display:flex;justify-content:space-between"><span class="mono">© 2026 BEYOND PIXELLS</span><span class="mono">MADE IN INDIA</span></div></footer>
+</body>
+</html>

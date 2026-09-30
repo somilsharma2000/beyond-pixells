@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta name="robots" content="noindex">
+<meta charset="UTF-8">
+<title>Direction C — Console OS</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg:#0B0E16;--bg2:#0E1220;--win:#12172499;--win-solid:#131826;
+  --line:#232B3E;--line2:#2E3850;
+  --ink:#E8EBF2;--mut:#9AA3B8;--dim:#5F6879;
+  --green:#3DD68C;--blue:#4D8DFF;--amber:#F5B455;
+}
+body{background:
+  radial-gradient(40% 32% at 70% -6%,rgba(77,141,255,.1),transparent 70%),
+  radial-gradient(30% 26% at 8% 30%,rgba(61,214,140,.05),transparent 70%),
+  var(--bg);
+  color:var(--ink);font-family:'Inter',sans-serif;line-height:1.55;-webkit-font-smoothing:antialiased;
+  background-attachment:fixed}
+.wrap{max-width:1120px;margin:0 auto;padding:0 28px}
+.mono{font-family:'JetBrains Mono',monospace}
+.grotesk{font-family:'Space Grotesk',sans-serif}
+.cursor::after{content:"▊";color:var(--green);animation:blink 1s steps(1) infinite;font-size:.9em}
+@keyframes blink{50%{opacity:0}}
+
+/* TOP BAR = site nav styled as OS chrome */
+.topbar{position:sticky;top:0;z-index:60;background:rgba(11,14,22,.85);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
+.topbar .wrap{display:flex;align-items:center;gap:18px;height:56px}
+.tb-left{display:flex;align-items:center;gap:10px;font-weight:700;font-size:.95rem}
+.tb-left i{width:26px;height:26px;border-radius:7px;background:linear-gradient(135deg,#4D8DFF,#2B4FD1);display:flex;align-items:center;justify-content:center;font-style:normal;font-size:.68rem;font-weight:700;color:#fff}
+.tb-path{color:var(--dim);font-size:.78rem}
+.tb-right{margin-left:auto;display:flex;gap:8px;align-items:center}
+.tb-item{font-size:.8rem;color:var(--mut);padding:7px 12px;border-radius:8px}
+.tb-item.on{background:rgba(77,141,255,.14);color:var(--blue);border:1px solid rgba(77,141,255,.25)}
+.tb-cta{background:var(--green);color:#06130C;font-weight:700;font-size:.8rem;padding:8px 14px;border-radius:8px}
+
+/* HERO: terminal + product window */
+.hero{padding:72px 0 48px}
+.term{border:1px solid var(--line2);border-radius:12px;background:var(--win-solid);max-width:720px;box-shadow:0 24px 70px rgba(0,0,0,.45)}
+.term-bar{display:flex;gap:6px;padding:11px 14px;border-bottom:1px solid var(--line)}
+.term-bar i{width:10px;height:10px;border-radius:50%;background:#2E3340}
+.term-bar span{margin-left:auto;color:var(--dim);font-size:.66rem}
+.term-body{padding:20px 22px;font-size:.92rem}
+.term-body .ln{display:block;margin:4px 0}
+.pr{color:var(--green)} .flag{color:var(--amber)} .out{color:var(--mut)} .hl{color:var(--blue)}
+h1{font-size:clamp(2.4rem,5.2vw,4rem);letter-spacing:-.02em;line-height:1.08;margin:44px 0 18px;max-width:840px}
+h1 em{font-style:normal;color:var(--green)}
+.hero p{color:var(--mut);max-width:560px;font-size:1.05rem;margin-bottom:30px}
+.ctas{display:flex;gap:12px}
+.btn{padding:14px 24px;border-radius:10px;font-weight:600;font-size:.92rem;font-family:'JetBrains Mono'}
+.btn-p{background:var(--green);color:#06130C}
+.btn-s{border:1px solid var(--line2);color:var(--ink)}
+
+/* PRODUCTS AS OS WINDOWS */
+section{padding:56px 0 40px}
+.sec-kicker{color:var(--green);font-size:.78rem;margin-bottom:10px}
+h2{font-size:clamp(1.8rem,3.4vw,2.5rem);letter-spacing:-.02em}
+h2 em{font-style:normal;color:var(--blue)}
+.windows{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:40px}
+.oswin{border:1px solid var(--line2);border-radius:12px;background:rgba(19,24,38,.75);backdrop-filter:blur(6px);overflow:hidden;box-shadow:0 16px 50px rgba(0,0,0,.35)}
+.osw-bar{display:flex;align-items:center;gap:6px;padding:10px 14px;border-bottom:1px solid var(--line);background:rgba(255,255,255,.02)}
+.osw-bar i{width:9px;height:9px;border-radius:50%;background:#2E3340}
+.osw-bar span{margin-left:8px;color:var(--dim);font-size:.64rem}
+.osw-bar b{margin-left:auto;font-size:.6rem;color:var(--green);font-family:'JetBrains Mono'}
+.osw-body{padding:20px}
+.osw-body h3{font-size:1.15rem;font-family:'Space Grotesk'}
+.osw-body .desc{color:var(--mut);font-size:.86rem;margin:8px 0 16px}
+.osw-foot{display:flex;justify-content:space-between;align-items:center;border-top:1px solid var(--line);padding-top:14px;margin-top:2px}
+.osw-foot .st{font-size:.68rem;font-family:'JetBrains Mono';color:var(--green)}
+.osw-foot .open{font-size:.78rem;color:var(--blue);font-weight:600;font-family:'JetBrains Mono'}
+
+/* STATUS BAR */
+.statusbar{position:fixed;bottom:0;left:0;right:0;z-index:60;background:rgba(14,18,32,.92);backdrop-filter:blur(14px);border-top:1px solid var(--line)}
+.statusbar .wrap{display:flex;align-items:center;height:42px;gap:16px;font-family:'JetBrains Mono';font-size:.7rem;color:var(--dim)}
+.statusbar .sb-live{color:var(--green)}
+.statusbar .sb-item b{color:var(--mut);font-weight:500}
+.statusbar .sb-time{margin-left:auto}
+body{padding-bottom:56px}
+
+/* CTA */
+.band{border:1px solid var(--line2);border-radius:14px;background:rgba(19,24,38,.75);padding:44px 40px;margin-top:48px;display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap}
+.band h2{max-width:520px}
+.band h2 em{color:var(--green)}
+</style>
+</head>
+<body>
+<div class="topbar"><div class="wrap">
+  <div class="tb-left"><i>bp</i><span>Beyond Pixells</span></div>
+  <span class="tb-path mono">~/studio/products</span>
+  <div class="tb-right">
+    <span class="tb-item mono">gym-os</span>
+    <span class="tb-item mono">dentist-os</span>
+    <span class="tb-item on mono">builder-os</span>
+    <span class="tb-cta mono">₹ book_demo →</span>
+  </div>
+</div></div>
+
+<header class="hero"><div class="wrap">
+  <div class="term">
+    <div class="term-bar"><i></i><i></i><i></i><span class="mono">beyond — zsh</span></div>
+    <div class="term-body mono">
+      <span class="ln"><span class="pr">beyond@studio</span>:<span class="flag">~</span>$ ./install --business gym</span>
+      <span class="ln out">▸ detecting business type... <span class="hl">GYM DETECTED</span></span>
+      <span class="ln out">▸ members ✓  dues ✓  whatsapp billing ✓  renewals ✓</span>
+      <span class="ln"><span class="pr">beyond@studio</span>:<span class="flag">~</span>$ status <span class="cursor"></span></span>
+    </div>
+  </div>
+  <h1 class="grotesk">Local businesses deserve <em>real software.</em></h1>
+  <p>We design and build complete operating systems — Gym OS, Dentist OS, Builder OS — and run them for you. One studio. Zero templates.</p>
+  <div class="ctas"><a class="btn btn-p">open gym_os --demo</a><a class="btn btn-s">ls ./os-family</a></div>
+</div></header>
+
+<section><div class="wrap">
+  <div class="sec-kicker mono">~/studio/products — 3 systems installed</div>
+  <h2 class="grotesk">The <em>OS family</em></h2>
+  <div class="windows">
+    <div class="oswin">
+      <div class="osw-bar"><i></i><i></i><i></i><span class="mono">gym-os.app</span><b>RUNNING</b></div>
+      <div class="osw-body"><h3>Gym OS</h3><p class="desc">Memberships, check-ins, WhatsApp billing, renewals — the complete gym console.</p>
+        <div class="osw-foot"><span class="st mono">● LIVE</span><span class="open">open →</span></div></div>
+    </div>
+    <div class="oswin">
+      <div class="osw-bar"><i></i><i></i><i></i><span class="mono">dentist-os.app</span><b>RUNNING</b></div>
+      <div class="osw-body"><h3>Dentist OS</h3><p class="desc">Appointments, patient records, treatment plans, payment tracking for clinics.</p>
+        <div class="osw-foot"><span class="st mono">● LIVE</span><span class="open">open →</span></div></div>
+    </div>
+    <div class="oswin">
+      <div class="osw-bar"><i></i><i></i><i></i><span class="mono">builder-os.app</span><b>BETA</b></div>
+      <div class="osw-body"><h3>Builder OS</h3><p class="desc">Site progress, client updates, bills and builder payments in one console.</p>
+        <div class="osw-foot"><span class="st mono">◐ DEMO</span><span class="open">open →</span></div></div>
+    </div>
+  </div>
+  <div class="band">
+    <h2 class="grotesk">Install a proper system in your business, <em>this month.</em></h2>
+    <a class="btn btn-p">./book_demo --whatsapp</a>
+  </div>
+</div></section>
+
+<div class="statusbar"><div class="wrap">
+  <span class="sb-live mono">● ALL SYSTEMS OPERATIONAL</span>
+  <span class="sb-item mono"><b>products:</b> 3</span>
+  <span class="sb-item mono"><b>support:</b> direct whatsapp</span>
+  <span class="sb-item mono"><b>templates:</b> 0</span>
+  <span class="sb-time mono">IST 01:58</span>
+</div></div>
+</body>
+</html>
