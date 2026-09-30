@@ -181,3 +181,12 @@ mobile has designed sticky CTA bar, nav hides links below 640px intentionally.
 | 2026-10-01 | builder-os-site favicon = inline SVG (lightweight) ✓; gym-os-v3 Next.js icons ✓ | 16 | none needed | checked |
 | 2026-10-01 | Sister sites: robots + sitemap + Inter all present | 12 | none needed | curl |
 | 2026-10-01 | gym-os-v3 font stack not verifiable in first HTML pass (Next.js injects via CSS); check in next estate pass | 04 | noted | open |
+
+### Cycle 8 — module 04 brand sweep across all estate pages (2 Oct 2026)
+| Date | Finding | Module | Fix | Verified |
+|------|---------|--------|-----|----------|
+| 2026-10-02 | Legal pages (privacy/terms/refund) had Inter link but 'Space Grotesk' font-family rules → silent fallback to system font | 04 | all rules → Inter | live: 0 violations |
+| 2026-10-02 | 404 + handover + admin carried legacy #0066FF accent | 04 | → #4D7CFF (v9 token) | live |
+| 2026-10-02 | style-lab.html = public v7.2 specimen page teaching the obsolete font law, unlinked anywhere | 04 | deleted (in git history) | live |
+| 2026-10-02 | 'Beyond Pixells' spelling clean estate-wide; zero 'Coming Soon'; zero tel: links | 04 | none needed | grep |
+| 2026-10-02 | design-probes/ + social templates keep Space Grotesk deliberately (active sandbox, not user-facing) | 04 | left as-is | noted |
