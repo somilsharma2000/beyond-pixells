@@ -223,6 +223,46 @@ section{padding:88px 0;position:relative}
 .stat{background:#FFFFFF;border:1px solid var(--line);border-radius:var(--r);padding:34px 30px;text-align:center;box-shadow:var(--shadow-sm);transition:transform .35s cubic-bezier(.16,1,.3,1),border-color .3s}
 .stat:hover{transform:translateY(-4px);border-color:rgba(37,99,235,.4)}
 .stat b{font-family:'Inter';font-size:2.5rem;font-weight:700;color:#2563EB;display:block;line-height:1.1}
+
+/* ===== WORK — real product gallery (v1, Oct 2026) ===== */
+.wk-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin:38px 0 30px}
+.wk-shot{display:block;text-decoration:none;color:inherit;border:1px solid var(--line);border-radius:16px;overflow:hidden;background:var(--card);box-shadow:var(--shadow-sm);transition:transform .35s cubic-bezier(.2,.7,.2,1),border-color .35s,box-shadow .35s}
+.wk-shot:hover{transform:translateY(-6px);border-color:rgba(0,102,255,.45);box-shadow:var(--shadow),0 0 40px rgba(0,102,255,.14)}
+.wk-bar{display:flex;align-items:center;gap:8px;padding:10px 14px;background:rgba(255,255,255,.03);border-bottom:1px solid var(--line-soft)}
+.wk-dot{width:9px;height:9px;border-radius:50%;background:rgba(255,255,255,.14)}
+.wk-shot:hover .wk-dot{background:var(--blue)}
+.wk-url{margin-left:6px;font:500 10.5px/1 Inter,sans-serif;letter-spacing:.04em;color:var(--muted);background:rgba(255,255,255,.05);border:1px solid var(--line-soft);border-radius:99px;padding:5px 12px}
+.wk-ui{display:flex;background:#0B0D13;min-height:300px}
+.wk-side{width:86px;flex:0 0 86px;padding:12px 8px;border-right:1px solid rgba(148,163,184,.09);background:#0E1018;display:flex;flex-direction:column;gap:7px}
+.wk-logo{font:700 10px/1 Inter,sans-serif;color:#F2F5FB;letter-spacing:.08em;padding:2px 6px 8px}
+.wk-nav{font:500 9.5px/1 Inter,sans-serif;color:#8B94A3;padding:7px 8px;border-radius:8px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.wk-nav.on{color:#F2F5FB;background:rgba(0,102,255,.16)}
+.wk-main{flex:1;padding:14px;min-width:0}
+.wk-h{font:600 13px/1.2 Inter,sans-serif;color:#F2F5FB}
+.wk-sub{font:500 9px/1.4 Inter,sans-serif;color:#8B94A3;margin:3px 0 12px}
+.wk-tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.wk-tile{background:#161B26;border:1px solid rgba(148,163,184,.09);border-radius:10px;padding:10px}
+.wk-t{font:600 8px/1.2 Inter,sans-serif;letter-spacing:.06em;color:#8B94A3}
+.wk-v{font:700 17px/1 Inter,sans-serif;color:#F2F5FB;margin-top:6px}
+.wk-v.blue{color:#5B9BFF}.wk-v.red{color:#F87171}.wk-v.amber{color:#FBBF24}
+.wk-rows{display:flex;flex-direction:column;gap:7px;margin-top:4px}
+.wk-row{display:flex;align-items:center;gap:8px;background:#161B26;border:1px solid rgba(148,163,184,.09);border-radius:10px;padding:9px 10px}
+.wk-name{font:600 10.5px/1 Inter,sans-serif;color:#F2F5FB;white-space:nowrap}
+.wk-bad{font:700 8px/1 Inter,sans-serif;color:#FCA5A5;background:rgba(239,68,68,.14);border:1px solid rgba(239,68,68,.3);border-radius:6px;padding:3px 6px;white-space:nowrap}
+.wk-task{font:400 9px/1.3 Inter,sans-serif;color:#8B94A3;flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.wk-done{font:600 8.5px/1 Inter,sans-serif;color:#6EE7B7;background:rgba(16,185,129,.13);border:1px solid rgba(16,185,129,.3);border-radius:6px;padding:4px 8px;white-space:nowrap}
+.wk-wa{display:flex;align-items:center;gap:10px;margin-top:10px;background:rgba(16,185,129,.07);border:1px solid rgba(16,185,129,.22);border-radius:10px;padding:10px 12px}
+.wk-wat{font:700 8.5px/1.2 Inter,sans-serif;letter-spacing:.05em;color:#6EE7B7}
+.wk-was{font:400 8.5px/1.35 Inter,sans-serif;color:#8B94A3;margin-top:3px}
+.wk-q{margin-left:auto;font:600 8.5px/1 Inter,sans-serif;color:#0B0D13;background:#6EE7B7;border-radius:6px;padding:6px 9px;white-space:nowrap}
+.wk-cap{padding:14px 16px;border-top:1px solid var(--line-soft)}
+.wk-cap b{display:block;font:600 13px/1.3 Inter,sans-serif;color:var(--ink)}
+.wk-cap span{display:block;font:400 11.5px/1.5 Inter,sans-serif;color:var(--muted);margin-top:4px}
+.wk-cap i{display:inline-flex;align-items:center;gap:6px;font:600 11px/1 Inter,sans-serif;font-style:normal;color:var(--blue);margin-top:9px}
+.wk-shot:hover .wk-cap i{gap:10px}
+.wk-note{text-align:center;font:500 11.5px/1.5 Inter,sans-serif;color:var(--muted)}
+.wk-note b{color:var(--ink)}
+@media(max-width:1020px){.wk-grid{grid-template-columns:1fr}.wk-ui{min-height:0}}
 .stat span{color:var(--muted);font-size:.87rem;font-weight:600}
 
 /* PROCESS */
@@ -256,7 +296,7 @@ footer .brand{color:#0F172A}
 .f-col a:hover{color:#2563EB}
 .f-bottom{border-top:1px solid rgba(15,23,42,.08);padding-top:26px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;color:#64748B;font-size:.8rem}
 @media(max-width:960px){.svc-grid,.proof,.steps{grid-template-columns:repeat(2,1fr)}.split{grid-template-columns:1fr}.f-grid{grid-template-columns:1fr 1fr}}
-@media(max-width:640px){.svc-grid,.proof,.steps{grid-template-columns:1fr}nav ul{display:none}.trust{gap:22px}}
+@media(max-width:640px){.svc-grid,.proof,.steps{grid-template-columns:1fr}.wk-side{display:none}nav ul{display:none}.trust{gap:22px}}
 @media(prefers-reduced-motion:reduce){.hero h1 .hl{animation:none}.bp-hero-step,.bp-hero-delay{animation:none;opacity:1}}
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://somilsharma2000.github.io/beyond-pixells/#org", "name": "Beyond Pixells", "description": "Modern product studio that builds sector-specific operating systems for local businesses.", "slogan": "We build operating systems for local businesses.", "url": "https://somilsharma2000.github.io/beyond-pixells/", "founder": {"@type": "Person", "name": "Somil Sharma"}, "address": {"@type": "PostalAddress", "addressCountry": "IN"}, "hasOfferCatalog": {"@type": "OfferCatalog", "name": "OS Family", "itemListElement": [{"@type": "Offer", "itemOffered": {"@type": "SoftwareApplication", "name": "Gym OS", "applicationCategory": "BusinessApplication", "description": "Gym management operating system for Indian gyms — branded website, member portal, owner dashboard, WhatsApp automation, QR check-in, lead CRM, auto-renewals with UPI, classes and bookings, AI insights.", "url": "https://somilsharma2000.github.io/gym-os/", "offers": {"@type": "Offer", "price": "999", "priceCurrency": "INR"}}}, {"@type": "Offer", "itemOffered": {"@type": "SoftwareApplication", "name": "Dentist OS", "applicationCategory": "BusinessApplication", "description": "Dental clinic management operating system — patients, appointments, recalls, billing.", "url": "https://somilsharma2000.github.io/dentist-os-site/"}}, {"@type": "Offer", "itemOffered": {"@type": "SoftwareApplication", "name": "Builder OS", "applicationCategory": "BusinessApplication", "description": "Real-estate builder operations OS.", "url": "https://somilsharma2000.github.io/builder-os-site/"}}]}}, {"@type": "WebSite", "@id": "https://somilsharma2000.github.io/beyond-pixells/#site", "url": "https://somilsharma2000.github.io/beyond-pixells/", "name": "Beyond Pixells", "publisher": {"@id": "https://somilsharma2000.github.io/beyond-pixells/#org"}}]}</script>
@@ -451,9 +491,68 @@ footer .brand{color:#0F172A}
   <div class="container">
     <div class="sec-head center">
       <span class="kicker">Work</span>
-      <h2>Eight branded client systems. Live today.</h2>
-      <p>Every client gets their own branded site, member portal and owner dashboard — running on Gym OS.</p>
+      <h2>The system, running.</h2>
+      <p>Not mockups. These are the real Gym OS screens, seeded with a working gym's data. Click any one and test it yourself.</p>
     </div>
+    <div class="wk-grid">
+
+      <a class="wk-shot" href="https://gym-os-v3.vercel.app/demo" target="_blank" rel="noopener">
+        <div class="wk-bar"><span class="wk-dot"></span><span class="wk-dot"></span><span class="wk-dot"></span><span class="wk-url">gym-os-v3.vercel.app/dashboard</span></div>
+        <div class="wk-ui">
+          <div class="wk-side"><div class="wk-logo">GYM OS</div><div class="wk-nav on">Dashboard</div><div class="wk-nav">Members</div><div class="wk-nav">Leads</div><div class="wk-nav">Renewals</div><div class="wk-nav">Intelligence</div><div class="wk-nav">Support</div><div class="wk-nav">Classes</div><div class="wk-nav">Check-In</div><div class="wk-nav">Engines</div><div class="wk-nav">Settings</div></div>
+          <div class="wk-main">
+            <div class="wk-h">Overview Dashboard</div>
+            <div class="wk-sub">Real-time metrics for your gym</div>
+            <div class="wk-tiles">
+              <div class="wk-tile"><div class="wk-t">TOTAL MEMBERS</div><div class="wk-v">100</div></div>
+              <div class="wk-tile"><div class="wk-t">REVENUE THIS WEEK</div><div class="wk-v blue">₹1,32,042</div></div>
+              <div class="wk-tile"><div class="wk-t">ATTENDANCE TODAY</div><div class="wk-v">40</div></div>
+              <div class="wk-tile"><div class="wk-t">FOLLOW-UPS OVERDUE</div><div class="wk-v red">5</div></div>
+              <div class="wk-tile"><div class="wk-t">AT-RISK MEMBERS</div><div class="wk-v amber">28</div></div>
+              <div class="wk-tile"><div class="wk-t">RENEWALS ≤ 7 DAYS</div><div class="wk-v">10</div></div>
+            </div>
+          </div>
+        </div>
+        <div class="wk-cap"><b>The owner's morning view</b><span>Members, money and retention on one screen — risk flagged before it costs you.</span><i>Open in the live demo →</i></div>
+      </a>
+
+      <a class="wk-shot" href="https://gym-os-v3.vercel.app/demo" target="_blank" rel="noopener">
+        <div class="wk-bar"><span class="wk-dot"></span><span class="wk-dot"></span><span class="wk-dot"></span><span class="wk-url">gym-os-v3.vercel.app/leads</span></div>
+        <div class="wk-ui">
+          <div class="wk-side"><div class="wk-logo">GYM OS</div><div class="wk-nav">Dashboard</div><div class="wk-nav">Members</div><div class="wk-nav on">Leads</div><div class="wk-nav">Renewals</div><div class="wk-nav">Intelligence</div><div class="wk-nav">Support</div><div class="wk-nav">Classes</div><div class="wk-nav">Check-In</div><div class="wk-nav">Engines</div><div class="wk-nav">Settings</div></div>
+          <div class="wk-main">
+            <div class="wk-h">CRM Leads Pipeline</div>
+            <div class="wk-sub">36 prospective leads · follow-ups due: <b style="color:#FBBF24">5 open</b></div>
+            <div class="wk-rows">
+              <div class="wk-row"><span class="wk-name">Ananya Rao</span><span class="wk-bad">OVERDUE</span><span class="wk-task">Call about trial booking — no answer yet, follow up again.</span><span class="wk-done">Done</span></div>
+              <div class="wk-row"><span class="wk-name">Rohan Sethi</span><span class="wk-bad">OVERDUE</span><span class="wk-task">Called about trial — no answer, try again today.</span><span class="wk-done">Done</span></div>
+              <div class="wk-row"><span class="wk-name">Divya Sharma</span><span class="wk-bad">OVERDUE</span><span class="wk-task">Book a trial slot for this week.</span><span class="wk-done">Done</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="wk-cap"><b>No enquiry ever forgotten</b><span>Every lead tracked from first WhatsApp to signed membership — overdue follow-ups surface themselves.</span><i>Open in the live demo →</i></div>
+      </a>
+
+      <a class="wk-shot" href="https://gym-os-v3.vercel.app/demo" target="_blank" rel="noopener">
+        <div class="wk-bar"><span class="wk-dot"></span><span class="wk-dot"></span><span class="wk-dot"></span><span class="wk-url">gym-os-v3.vercel.app/renewals</span></div>
+        <div class="wk-ui">
+          <div class="wk-side"><div class="wk-logo">GYM OS</div><div class="wk-nav">Dashboard</div><div class="wk-nav">Members</div><div class="wk-nav">Leads</div><div class="wk-nav on">Renewals</div><div class="wk-nav">Intelligence</div><div class="wk-nav">Support</div><div class="wk-nav">Classes</div><div class="wk-nav">Check-In</div><div class="wk-nav">Engines</div><div class="wk-nav">Settings</div></div>
+          <div class="wk-main">
+            <div class="wk-h">Renewals Pipeline</div>
+            <div class="wk-sub">Memberships expiring in the next 30 days</div>
+            <div class="wk-tiles">
+              <div class="wk-tile"><div class="wk-t">EXPIRING (30 DAYS)</div><div class="wk-v">58</div></div>
+              <div class="wk-tile"><div class="wk-t">URGENT ≤ 7 DAYS</div><div class="wk-v amber">5</div></div>
+              <div class="wk-tile"><div class="wk-t">CRITICAL ≤ 3 DAYS</div><div class="wk-v red">5</div></div>
+            </div>
+            <div class="wk-wa"><div><div class="wk-wat">WHATSAPP RENEWAL REMINDERS</div><div class="wk-was">Consent-gated, no double-sends within 24h</div></div><span class="wk-q">Queue reminders</span></div>
+          </div>
+        </div>
+        <div class="wk-cap"><b>Renewals that renew themselves</b><span>WhatsApp nudges and UPI links go out before a member ever thinks about quitting.</span><i>Open in the live demo →</i></div>
+      </a>
+
+    </div>
+    <p class="wk-note"><b>Real product, demo data.</b> Every screen above is clickable — the same one runs 8 gyms today.</p>
     <div class="proof">
       <div class="stat bp-lift"><b>17</b><span>live properties in the ecosystem</span></div>
       <div class="stat bp-lift"><b>8</b><span>branded client systems live</span></div>
