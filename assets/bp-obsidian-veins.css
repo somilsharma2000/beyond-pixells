@@ -19,7 +19,7 @@
 }
 
 /* ---- GRAIN — always-on procedural noise over the whole page ---- */
-.ov-grain{position:fixed;inset:0;z-index:1;pointer-events:none;opacity:.02;mix-blend-mode:overlay;
+.ov-grain{position:fixed;inset:0;z-index:1;pointer-events:none;opacity:.05;mix-blend-mode:overlay;
   background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>")}
 
 /* ---- HERO TEXTURE — procedurally rendered obsidian crack slab ----
@@ -36,14 +36,16 @@
   /* founder pass 26 Sep: DARK IN ALL COLOURS — every glow halved, every
      tone pushed deeper. Benchmark target: Linear (19,20,21). */
   background:
-    radial-gradient(58% 46% at 50% -6%, rgba(37,99,235,.06), transparent 66%),
-    #FFF}
+    radial-gradient(58% 46% at 50% -6%, rgba(29,64,149,.32), transparent 66%),
+    radial-gradient(30% 26% at 88% 22%, rgba(29,64,149,.12), transparent 68%),
+    radial-gradient(38% 32% at 6% 34%, rgba(12,28,66,.22), transparent 72%),
+    #05060A}
 .ov-canvas::after{content:"";position:absolute;inset:0;
   /* only the section-transition fade; no text backing needed */
-  background:linear-gradient(180deg,rgba(255,255,255,0) 88%,rgba(248,250,252,1) 100%)}
+  background:linear-gradient(180deg,rgba(8,9,13,0) 88%,rgba(8,9,13,.65) 100%)}
 .hero .container{position:relative;z-index:2}
 @media(max-width:760px){.ov-canvas{background-position:center 12%}}
 
 /* ---- Card + border overrides: violet-only, no warm tones ---- */
-.bcard::after{content:none !important}
-.bcard:hover{border-color:rgba(37,99,235,.4) !important}
+.bcard::after{background:linear-gradient(90deg,transparent,rgba(156, 192, 255,.35),transparent) !important}
+.bcard:hover{border-color:rgba(0, 102, 255,.45) !important}
