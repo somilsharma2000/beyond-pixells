@@ -1,0 +1,51 @@
+# Estate visual regression — Pass 25_REGRESSION of the 40-layer audit law.
+#
+# Daily 09:10 IST: recaptures the 8 marketing pages (desktop/tablet/390px)
+# and pixel-diffs them against the committed baselines in
+# tools/visual-regression/baselines/. Baselines are the last VERIFIED-GOOD
+# state; recapture only after a deliberate design change has passed review:
+#   node tools/visual-regression/capture.mjs && commit the baselines.
+# On regression: opens a GitHub issue (label visual-regression) with the
+# failing pages; auto-closes when a passing run follows.
+
+name: Estate Visual Regression
+on:
+  schedule:
+    - cron: "40 3 * * *" # 09:10 IST daily
+  workflow_dispatch:
+
+permissions:
+  issues: write
+  contents: read
+
+env:
+  ALERT_LABEL: visual-regression
+
+jobs:
+  compare:
+    name: Pixel-diff live estate vs baselines
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 22 }
+      - run: npm ci --ignore-scripts || npm install --no-save playwright pixelmatch pngjs
+      - run: npx playwright install --with-deps chromium
+      - run: node tools/visual-regression/compare.mjs
+        id: compare
+        continue-on-error: true
+      - name: Open issue on regression
+        if: steps.compare.outcome == 'failure'
+        run: |
+          gh label create "$ALERT_LABEL" --color b60205 || true
+          gh issue create --title "Visual regression detected on estate pages" \
+            --label "$ALERT_LABEL" \
+            --body "The daily visual regression run failed (see the run log: $GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID). Diff images are archived as artifacts of this run." || true
+          gh run upload-artifact -n diffs tools/visual-regression/diffs || true
+        env: { GH_TOKEN: "${{ github.token }}", GH_REPO: "${{ github.repository }}" }
+      - name: Close issue on recovery
+        if: steps.compare.outcome == 'success'
+        run: |
+          gh issue list --label "$ALERT_LABEL" --state open --json number -q '.[].number' |
+            while read -r n; do [ -n "$n" ] && gh issue close "$n" -c "Recovered: visual regression run passing again."; done
+        env: { GH_TOKEN: "${{ github.token }}", GH_REPO: "${{ github.repository }}" }
