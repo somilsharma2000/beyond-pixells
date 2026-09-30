@@ -110,6 +110,7 @@ Agent pipeline: Lead entity → "New lead analysis" workflow → "Daily pipeline
 - beyond-pixells/admin/ — client-side control panel (noindex). Tabs: overview (estate pings), content, theme (design-law guard), features, health, deploy.
 - content/site.json — single source of truth for hub copy/toggles/tokens; hub applies at runtime (HTML holds matching defaults).
 - Deploy path: GitHub Contents API PUT with browser-local fine-grained PAT (contents RW on somilsharma2000/beyond-pixells only), Pages auto-rebuilds. No servers, no secrets in repo.
+- 30 Sep: ESTATE-WIDE — content/site.json data layers also live in dentist-os-site + builder-os-site; Command Center property switcher controls hub / Dentist OS / Builder OS (each deploys to its own repo). gym-os repo is now a redirect to gym-os-v3.vercel.app (V3 canonical) — no static control target there.
 
 ## 27 Sep 2026 — Client pitch-site estate deleted
 Founder directive (27 Sep 2026): all 8 client gym pitch sites DELETED — repos and Pages removed from GitHub entirely: bettabodies-system, reds-gym-system, flex-n-tone-system, fight-factory-manchester-system, oxigen-fitness-digital, ironforge-website, iron-forge-website, powerhouse-fitness. URLs now 404. Estate Guard workflow retired (nothing left to guard); Upptime status page + site-health-check updated to remove the 8 entries. Client gym acquisition moves to Gym OS product site + direct demo flow.
