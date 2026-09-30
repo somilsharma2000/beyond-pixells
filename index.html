@@ -680,7 +680,7 @@ nav ul a.on::after{content:'';position:absolute;left:15%;right:15%;bottom:-6px;h
 })();
 /* active section -> nav highlight */
 (function(){
-  var map=['#products','products'],['#proof','proof'],['#process','process'],['#start','start'];
+  var map=[['#products','#proof','#process','#start']][0];
   var links={};document.querySelectorAll('nav ul a').forEach(function(a){links[a.getAttribute('href')]=a;});
   var io=new IntersectionObserver(function(es){
     es.forEach(function(e){
