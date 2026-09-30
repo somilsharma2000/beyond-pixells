@@ -30,7 +30,12 @@ The founder repeatedly rejected agent-chosen dark designs (v4 Chrome Violet, v5 
 Adopt LIGHT CLARITY system for Gym OS marketing surface: white canvas, slate-900 ink, blue-600 accent, flat design (no gradients/glass), real product screenshots in browser+phone frames, confirmed pricing (₹3,500/₹4,000/₹4,500 per month + setup). Implemented 1 Oct 2026 in gym-os-v3 (public) route group, commit 99a8371, live-verified.
 
 ### 9. Pass B / Recheck Status
-NOT_RECHECKED — pending founder visual approval on live site; hub/dentist/builder landings still dark (rollout decision after founder sign-off on the new look).
+Founder approved the Gym OS look ("ok u work on the os", 1 Oct 2026) and the LIGHT system is now rolled out estate-wide (marketing surfaces only; product apps stay dark app-true):
+- Hub (beyond-pixells): index + 5 blog pages + handover converted; shared bp-design-system.css v8 + bp-obsidian-veins.css flipped light (they are the CDN source for dentist/builder too).
+- Dentist OS + Builder OS landings converted (inline CSS remap; product hero mocks kept dark app-true in light frames).
+- Live-verified 1 Oct 2026: all 4 surfaces white canvas, slate-900 ink, 0 JS errors, 390px clean, no invisible text, hero mocks still dark.
+- NOT converted (intentionally): product apps (gym-os-v3 dashboard, builder app.html, dentist-os demo) = dark app-true; admin Command Center (self-contained dark, internal); style-lab.html (v7.2 reference, internal).
+- Follow-ups: OG images estate-wide still dark-branded v7.2 (regenerate when founder asks); gym-os-static retired surfaces untouched.
 
 ### 10. Confidence
 HIGH on teardown facts (primary sources); implementation verified live (0 JS errors, 390px clean, screenshots loading, pricing live).
