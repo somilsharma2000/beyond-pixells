@@ -458,7 +458,7 @@ export function ogHubV9({ kicker, title, accent, tagline, url }) {
                   style: {
                     width: 42, height: 42, borderRadius: 12, display: "flex", alignItems: "center", justifyContent: "center",
                     background: "rgba(255,255,255,0.06)", border: "1px solid rgba(255,255,255,0.16)",
-                    color: V9.accSoft, ...t(21, 700),
+                    ...t(21, 700), color: V9.accSoft,
                   },
                   children: "BP",
                 },
