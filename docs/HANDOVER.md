@@ -204,3 +204,43 @@ marked broken or pending.*
 
 ## 27 Sep — Deleted
 - 8 client gym pitch sites + repos (bettabodies, reds-gym, flex-n-tone, fight-factory-mcr, oxigen-fitness, ironforge-blr, iron-forge-hyd, powerhouse) — founder directive, gone from GitHub.
+
+---
+
+## 🔴 UPDATE — 1–2 October 2026 (authoritative; supersedes stale points above)
+
+### Design law is now OBSIDIAN LUXE v9
+- Canvas near-black **#06070B**, accent **#4D7CFF**, Inter + Instrument Serif (italic accents) + JetBrains Mono.
+- **UNRESOLVED FOUNDER DECISION:** the original standing rule said #0A0E27 + #0066FF.
+  The founder has NOT yet confirmed which palette is law. Until he answers, treat v9 as
+  the working law (it is what is live) but do not print brand guidelines elsewhere.
+- All live pages (hub, blog, legal, 404, handover, admin) are now v9-clean and Inter-only.
+  Space Grotesk/Jakarta remain ONLY in design-probes and social templates (sandbox).
+
+### How work is dispatched: QA-ENGINE.md v2 (read it before ANY change)
+- Work runs as **named module passes (00–26)**, never one monolithic "improve everything" blob.
+- Findings classified **P0–P4**; no P4 while P0/P1 open. Report format **A–X**.
+- Law: INSPECT → REPORT → PRIORITIZE → MODIFY → TEST → RECHECK. Smallest safe diff.
+
+### Audit cycles 1–8 completed and verified live (see QA-ENGINE.md findings log)
+1. Crawl parity + favicon → 2. Lead security hardening (honeypot, time-trap, admin disallow, sitemap)
+→ 3. Lead idempotency (10-min phone key, kills duplicate leads) → 4. v9 visual+motion audit (contrast AA+, guards sound)
+→ 5. Blog brand + GEO (Inter everywhere, Blog schema) → 6. Performance (18KB gzipped hub; Inter 800 dropped)
+→ 7. Estate sweep (Dentist OS favicon was a 77KB og-image — fixed) → 8. Full brand sweep (0 violations live).
+
+### New blockers discovered (add to the red list above)
+7. **dentistos.in DNS is dead** and the Dentist OS email template links to it. Domain must be purchased/pointed before dentist flows ship.
+8. **Two agents work this estate in parallel** (this conversation + a second agent). Always `git pull --rebase` before pushing; expect QA-ENGINE.md conflicts; merge, don't overwrite.
+
+### Staged and deploy-ready (blocked ONLY on integration credits)
+- `captureLeadV2` — server-side phone dedupe, 5/hr rate limit, validation, honeypot rejection.
+- `trackEvent` — full analytics event taxonomy (cta_click, form_started/completed, os_card_opened).
+- Both deploy in minutes once Base44 credits reset. Client-side wiring follows AFTER deploy.
+
+### Estate status (all verified live 1–2 Oct 2026)
+| Property | URL | Status |
+|---|---|---|
+| Hub | somilsharma2000.github.io/beyond-pixells | v9 live, audited cycles 1-8 |
+| Gym OS product | gym-os-v3.vercel.app | live, demo creds in AGENT_BRAIN.md |
+| Dentist OS site | somilsharma2000.github.io/dentist-os-site | live, favicon fixed |
+| Builder OS site | somilsharma2000.github.io/builder-os-site | live, clean |
