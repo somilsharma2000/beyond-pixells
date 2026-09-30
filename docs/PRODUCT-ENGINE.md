@@ -1,0 +1,48 @@
+# PRODUCT ENGINE — the 70-layer transformation law (installed 1 Oct 2026)
+
+> Master operating system for product work. Subsumes QA-ENGINE module passes:
+> QA-ENGINE (modules 00–26) = the HOW for web estate work.
+> PRODUCT-ENGINE (layers 1–70) = the full lifecycle: DISCOVER → RESEARCH →
+> UNDERSTAND → DEFINE → AUDIT → PRIORITIZE → DESIGN → BUILD → TEST → PACKAGE →
+> POSITION → LAUNCH → OPERATE → MEASURE → IMPROVE → RECHECK.
+> One product at a time (Law 6). Current focus: GYM OS (flagship).
+
+## PRODUCT DEFINITION (layer 2 — Gym OS)
+- **Name/Category:** Gym OS — vertical SaaS, gym management operating system.
+- **Customer:** Indian single/multi-branch gym owner (buyer = owner; users = front-desk staff, trainers, members via portal).
+- **Problem:** renewals quietly lapse; leads untracked; billing/attendance manual. A website gets people in the door; nothing runs the business after.
+- **Alternatives:** registers, Excel, WhatsApp groups, generic gym CRMs (Playbook etc.), do-nothing.
+- **Promise:** "We build operating systems for local businesses" — Gym OS runs billing, QR check-in, lead CRM, WhatsApp reminders, renewals automatically.
+- **Revenue model:** one-time setup (branded website, data transfer, training) + flat monthly fee, GST invoice included.
+- **Scope:** member mgmt, QR check-in, lead CRM, renewals pipeline, classes, payments, multi-branch dashboard, trial passes, demo sandbox.
+- **Non-goals (today):** payroll/HR, accounting, diet delivery ops, international localization beyond EN-IN.
+- **Maturity:** live product + working demo sandbox; paying-customer pipeline blocked on integrations credits, not product.
+
+## FINDINGS REGISTER (FOUND format — top items)
+### F-01 · Join Waitlist contradicts live product
+- FOUND: gym-os-v3.vercel.app nav shows "Join Waitlist" next to "Live Demo".
+- WHY: signals vaporware; violates the no-vaporware brand law; kills conversion when the product demonstrably works.
+- SEVERITY: P1 (trust/conversion blocker).
+- ROOT CAUSE: waitlist CTA predates working demo.
+- FIX: replace waitlist CTA with demo/WhatsApp demo CTA. BLOCKED for this agent: no push access to gym-os-v3 repo (token scoped to beyond-pixells/dentist-os-site/builder-os-site). Founder or parallel agent must action.
+- REMAINING: owner decision.
+
+### F-02 · Handover pricing note stale
+- FOUND: HANDOVER said "₹999/₹1,999 unconfirmed"; live site publishes 3-tier (₹15k+₹3.5k/mo etc.), structure founder-adopted Sept 2026.
+- SEVERITY: P2 (documentation lies about reality).
+- FIX: handover updated (this commit). Evidence: live /pricing page.
+
+### F-03 · Lead backend hardening staged, credits-blocked
+- captureLeadV2 + trackEvent staged; deploy = 5 minutes after Base44 credits reset. P0 revenue path.
+
+### F-04 · Dentist OS email links to dead dentistos.in
+- P2. Domain purchase/point needed before dentist flows ship.
+
+## LAUNCH GATES (cannot launch while open)
+1. Integration credits reset → deploy captureLeadV2/trackEvent → verify end-to-end lead flow.
+2. F-01 waitlist CTA removed (product repo, founder/parallel agent).
+3. Brand palette law settled (v9 vs original) — affects all future output.
+4. gymos.in domain pointed at Vercel + NEXT_PUBLIC_SITE_URL set.
+
+## CADENCE
+Each engine cycle: named pass → FOUND-format entries here → smallest safe fix → live verify → log in QA-ENGINE findings table.
