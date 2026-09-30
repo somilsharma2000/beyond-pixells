@@ -1,14 +1,14 @@
 {
   "_meta": {
     "name": "Beyond Pixells site content layer",
-    "version": 1,
-    "updated": "2026-09-26",
+    "version": 2,
+    "updated": "2026-10-01",
     "note": "Single source of truth for editable hub content + toggles. The Command Center (admin/) edits this file and deploys it via the GitHub Contents API. Pages apply these values at runtime; HTML keeps matching defaults for SEO/no-JS."
   },
   "hero": {
-    "pill": "Gym OS is live \u00b7 8 client systems running",
+    "pill": "Software studio · Gym OS · Dentist OS · Builder OS",
     "headline": "We build operating systems for local businesses.",
-    "sub": "Websites, member portals, owner dashboards and WhatsApp automation \u2014 one system per business, built in India."
+    "sub": "Beyond Pixells is a modern product studio. We craft sector-specific software platforms — plus websites, marketing automation and digital products — that turn local operations into automated market leaders."
   },
   "cta": {
     "primaryLabel": "Start My OS Project",
@@ -26,7 +26,7 @@
     "mobileCta": {
       "enabled": true,
       "head": "Start your project",
-      "sub": "WhatsApp \u00b7 free consult"
+      "sub": "WhatsApp · free consult"
     },
     "blogNav": {
       "enabled": true
@@ -36,9 +36,9 @@
     }
   },
   "theme": {
-    "accent": "#0066FF",
-    "accentSoft": "#338CFF",
-    "success": "#21C45D",
+    "accent": "#4D7CFF",
+    "accentSoft": "#7AA0FF",
+    "success": "#3DD68C",
     "radius": "12px"
   }
 }

@@ -1,49 +1,54 @@
 /* ============================================================
-   BEYOND PIXELLS — SHARED DESIGN SYSTEM v4.0
-   "CHROME VIOLET" — Glossy dark premium OS language
+   BEYOND PIXELLS — SHARED DESIGN SYSTEM v9.0
+   "OBSIDIAN LUXE" — quiet luxury software studio language
 
-   Deep violet/purple gradient surfaces, orange-gold rim light,
-   glass blur, spotlight cards, cinematic glow.
+   Near-black obsidian canvas (#06070B), crisp near-white ink,
+   one electric blue accent (#4D7CFF), serif italic display
+   accents, hairline borders, generous space. No rainbow, no
+   glow washes — depth comes from spacing, contrast and the
+   product itself.
 
    Include on any site (2 lines and it inherits everything):
    <link rel="stylesheet"
      href="https://somilsharma2000.github.io/beyond-pixells/assets/bp-design-system.css">
    <script src="https://somilsharma2000.github.io/beyond-pixells/assets/bp-motion.js"></script>
 
-   Class names are stable from v2/v3 (bp-* utilities kept) so
-   existing markup upgrades in place.
+   Class names are stable (bp-* utilities kept) so existing
+   markup upgrades in place.
    ============================================================ */
 
 :root{
   /* CORE CANVAS */
-  --bp-canvas:#0A0E29; --bp-surface-1:#0A0E29; --bp-surface-2:#121620; --bp-surface-3:#192030;
-  --bp-glass:rgba(12,15,23,.78);
+  --bp-canvas:#06070B; --bp-surface-1:#0B0D13; --bp-surface-2:#10131C; --bp-surface-3:#151927;
+  --bp-glass:rgba(11,13,19,.78);
 
-  /* CHROME VIOLET BRAND SPECTRUM */
-  --bp-violet-950:#102965; --bp-violet-900:#142F70; --bp-violet-800:#1D4095;
-  --bp-violet-700:#214CB6; --bp-violet-600:#06F; --bp-violet-500:#06F;
-  --bp-violet-400:#06F; --bp-violet-300:#9CC0FF; --bp-violet-200:#9CC0FF;
-  --bp-gold-500:#06F; --bp-gold-400:#FFA733; --bp-gold-300:#9CC0FF;
+  /* OBSIDIAN ACCENT SPECTRUM */
+  --bp-violet-950:#16224E; --bp-violet-900:#1B2A5C; --bp-violet-800:#24346E;
+  --bp-violet-700:#3350A8; --bp-violet-600:#4D7CFF; --bp-violet-500:#5B87FF;
+  --bp-violet-400:#7AA0FF; --bp-violet-300:#A7C0FF; --bp-violet-200:#C4D4FF;
+  --bp-gold-500:#4D7CFF; --bp-gold-400:#7AA0FF; --bp-gold-300:#A7C0FF;
 
   /* SEMANTIC */
-  --bp-text-primary:#F2F5FB; --bp-text-secondary:#94A3B8; --bp-text-muted:#94A3B8; --bp-text-inverse:#0A0E29;
-  --bp-border-subtle:rgba(139,171,250,.12); --bp-border-default:rgba(139,171,250,.2);
-  --bp-border-strong:rgba(139,171,250,.34);
-  --bp-rim-light:linear-gradient(135deg,rgba(0, 102, 255,.55),rgba(139,171,250,.28) 55%,rgba(58,110,237,.15));
-  --bp-success:#34D399; --bp-warning:#9CC0FF; --bp-error:#FB7185;
+  --bp-text-primary:#F4F5F8; --bp-text-secondary:#8A90A0; --bp-text-muted:#5C6272; --bp-text-inverse:#06070B;
+  --bp-border-subtle:rgba(255,255,255,.07); --bp-border-default:rgba(255,255,255,.11);
+  --bp-border-strong:rgba(255,255,255,.18);
+  --bp-rim-light:linear-gradient(135deg,rgba(77,124,255,.35),rgba(122,160,255,.12) 55%,rgba(255,255,255,.04));
+  --bp-success:#3DD68C; --bp-warning:#F5B455; --bp-error:#F87C8C;
 
-  /* GRADIENTS — the signature */
-  --bp-gradient-brand:linear-gradient(135deg,#06F 0%,#9CC0FF 55%,#9CC0FF 100%);
-  --bp-gradient-gold:linear-gradient(135deg,#06F 0%,#9CC0FF 100%);
-  --bp-gradient-chrome:linear-gradient(160deg,#06F 0%,#06F 45%,#142F70 100%);
-  --bp-gradient-hero:radial-gradient(ellipse 60% 55% at 50% -10%,rgba(58,110,237,.32),transparent 70%);
-  --bp-gradient-subtle:linear-gradient(135deg,rgba(58,110,237,.16),rgba(0, 102, 255,.05));
-  --bp-gradient-glow:linear-gradient(135deg,rgba(58,110,237,.45),rgba(0, 102, 255,.18));
-  --bp-gloss-top:linear-gradient(180deg,rgba(255,255,255,.09),rgba(255,255,255,0) 42%);
+  /* GRADIENTS */
+  --bp-gradient-brand:linear-gradient(180deg,#5B87FF,#3E66E8);
+  --bp-gradient-gold:linear-gradient(180deg,#5B87FF,#3E66E8);
+  --bp-gradient-chrome:linear-gradient(160deg,#151927,#0B0D13);
+  --bp-gradient-hero:radial-gradient(52% 42% at 50% -4%,rgba(77,124,255,.13),transparent 70%);
+  --bp-gradient-subtle:linear-gradient(135deg,rgba(77,124,255,.08),rgba(77,124,255,.02));
+  --bp-gradient-glow:linear-gradient(135deg,rgba(77,124,255,.25),rgba(77,124,255,.08));
+  --bp-gloss-top:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,0) 42%);
 
   /* TYPE */
   --bp-font-display:'Inter',-apple-system,blinkmacsystemfont,sans-serif;
+  --bp-font-serif:'Instrument Serif',georgia,serif;
   --bp-font-body:'Inter',-apple-system,blinkmacsystemfont,sans-serif;
+  --bp-font-mono:'JetBrains Mono',ui-monospace,monospace;
 
   /* RADIUS & MOTION */
   --bp-r-sm:10px; --bp-r-md:14px; --bp-r-lg:20px; --bp-r-xl:28px;
@@ -51,73 +56,58 @@
   --bp-ease-spring:cubic-bezier(.34,1.56,.64,1);
   --bp-ease-smooth:cubic-bezier(.4,0,.2,1);
 
-  /* LIGHTING & SPOTLIGHT */
+  /* LIGHTING (kept for compat; v9 keeps surfaces flat) */
   --bp-mouse-x:50%; --bp-mouse-y:50%;
-  --bp-spotlight-color:rgba(92,137,246,.14);
-  --bp-spotlight-border:rgba(156, 192, 255,.28);
+  --bp-spotlight-color:rgba(77,124,255,.06);
+  --bp-spotlight-border:rgba(122,160,255,.2);
 
   /* GLASS */
-  --bp-glass-bg:rgba(12,15,23,.72);
-  --bp-glass-border:rgba(139,171,250,.14);
-  --bp-glass-blur:blur(18px) saturate(160%);
+  --bp-glass-bg:rgba(11,13,19,.72);
+  --bp-glass-border:rgba(255,255,255,.08);
+  --bp-glass-blur:blur(18px) saturate(140%);
 
-  /* NOISE */
-  --bp-noise-url:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.045'/%3E%3C/svg%3E");
+  /* NOISE — near-invisible on v9 */
+  --bp-noise-url:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.03'/%3E%3C/svg%3E");
   --bp-hero-delay:0ms;
 }
 
 /* ============ KEYFRAMES ============ */
 @keyframes bp-fadeUp{0%{opacity:0;transform:translateY(24px)}100%{opacity:1;transform:translateY(0)}}
-
 @keyframes bp-scaleIn{0%{opacity:0;transform:scale(.92)}100%{opacity:1;transform:scale(1)}}
-
-@keyframes bp-glowPulse{0%,100%{box-shadow:0 0 22px rgba(58,110,237,.28)}50%{box-shadow:0 0 44px rgba(0, 102, 255,.32)}}
-
+@keyframes bp-glowPulse{0%,100%{box-shadow:0 0 0 rgba(77,124,255,0)}50%{box-shadow:0 8px 32px rgba(77,124,255,.28)}}
 @keyframes bp-gradientShift{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
-
 @keyframes bp-numSlide{0%{opacity:0;transform:translateY(14px)}100%{opacity:1;transform:translateY(0)}}
-
 @keyframes bp-marquee{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
-
 @keyframes bp-shimmer{0%{background-position:-200% 50%}100%{background-position:200% 50%}}
-
 @keyframes bp-spin{to{transform:rotate(360deg)}}
 
 /* ============ HERO CHOREOGRAPHY ============ */
 .bp-hero-step{opacity:0;animation:bp-fadeUp .9s var(--bp-ease-out-expo) forwards;animation-delay:calc(var(--bp-hero-delay) + var(--bp-d,0ms))}
 .bp-hero-delay{opacity:0;animation:bp-fadeUp .9s var(--bp-ease-out-expo) forwards;animation-delay:var(--bp-hero-delay)}
-
 @media(prefers-reduced-motion:reduce){.bp-hero-step,.bp-hero-delay{animation:none;opacity:1}}
 
-/* ============ SPOTLIGHT CARDS — glossy chrome tile ============ */
-.bp-spotlight-card{
-  position:relative;border-radius:var(--bp-r-lg);
-  background:
-    var(--bp-gloss-top),
-    linear-gradient(165deg,var(--bp-surface-2),var(--bp-surface-1));
-  border:1px solid var(--bp-border-subtle);
-  overflow:hidden;
-  transition:transform .45s var(--bp-ease-out-expo),border-color .45s var(--bp-ease-smooth),box-shadow .45s var(--bp-ease-smooth);
-}
+/* ============ LEGACY SPOTLIGHT (visual no-op in v9 — kept so old markup never breaks) ============ */
+.bp-spotlight-card{position:relative}
 
 /* ============ MAGNETIC BUTTONS ============ */
 .bp-magnetic-btn{transition:transform .3s var(--bp-ease-spring),box-shadow .3s var(--bp-ease-smooth);will-change:transform}
-.bp-magnetic-btn:hover{box-shadow:0 10px 34px rgba(0, 102, 255,.24),0 0 60px rgba(58,110,237,.28)}
+.bp-magnetic-btn:hover{box-shadow:0 8px 28px rgba(77,124,255,.28)}
 
 /* ============ LIFT & HOVER ============ */
-.bp-lift{transition:transform .4s var(--bp-ease-out-expo),box-shadow .4s var(--bp-ease-smooth)}
-.bp-lift:hover{transform:translateY(-5px)}
+.bp-lift{transition:transform .45s var(--bp-ease-out-expo),border-color .35s var(--bp-ease-smooth),background .35s}
+.bp-lift:hover{transform:translateY(-4px)}
 .bp-icon-hover{transition:transform .35s var(--bp-ease-spring),color .25s ease}
 .bp-icon-hover:hover{transform:scale(1.12) rotate(-3deg)}
 
 /* ============ NAV — glass, scroll-shrink ============ */
 .bp-nav-sticky{
-  position:fixed;top:0;left:0;right:0;z-index:100;
-  background:var(--bp-glass-bg);backdrop-filter:var(--bp-glass-blur);backdrop-filter:var(--bp-glass-blur);
-  border-bottom:1px solid var(--bp-glass-border);
-  transition:padding .35s var(--bp-ease-smooth),background .35s ease,border-color .35s ease;
+  position:sticky;top:0;z-index:50;
+  background:rgba(6,7,11,.6);
+  backdrop-filter:var(--bp-glass-blur);-webkit-backdrop-filter:var(--bp-glass-blur);
+  border-bottom:1px solid transparent;
+  transition:background .3s var(--bp-ease-smooth),border-color .3s var(--bp-ease-smooth);
 }
-.bp-nav-sticky.bp-nav-scrolled{background:rgba(6,8,13,.88);border-bottom-color:var(--bp-border-default)}
+.bp-nav-sticky.bp-nav-scrolled{background:rgba(6,7,11,.88);border-bottom-color:var(--bp-border-subtle)}
 
 /* ============ MARQUEE ============ */
 .bp-marquee{overflow:hidden;position:relative;mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent)}
@@ -125,28 +115,24 @@
 
 /* ============ SCROLL PROGRESS ============ */
 .bp-scroll-progress-bar{
-  position:fixed;top:0;left:0;height:2px;z-index:200;width:0;
-  background:linear-gradient(90deg,#06F,#9CC0FF,#06F);
-  box-shadow:0 0 12px rgba(0, 102, 255,.55);
+  position:fixed;top:0;left:0;height:2px;width:0;z-index:80;
+  background:linear-gradient(90deg,#3E66E8,#7AA0FF);
 }
 
 /* ============ NOISE CANVAS ============ */
-.bp-noise-canvas{position:fixed;inset:0;z-index:1;pointer-events:none;opacity:.5;background-image:var(--bp-noise-url)}
+.bp-noise-canvas{position:fixed;inset:0;z-index:1;pointer-events:none;opacity:.4;background-image:var(--bp-noise-url)}
 
 /* ============ SIGNATURE TEXT TREATMENTS ============ */
 .bp-text-grad{
-  background:linear-gradient(110deg,#9CC0FF 20%,#FFF 42%,#9CC0FF 58%,#9CC0FF 80%);
-  background-size:200% auto;background-clip:text;background-clip:text;color:transparent;
-  animation:bp-shimmer 6s linear infinite;
+  background:linear-gradient(110deg,#7AA0FF 10%,#C4D4FF 45%,#7AA0FF 80%);
+  background-size:200% auto;-webkit-background-clip:text;background-clip:text;color:transparent;
+  animation:bp-shimmer 7s linear infinite;
 }
 .bp-rim-badge{
-  display:inline-flex;align-items:center;gap:9px;border-radius:100px;
-  background:linear-gradient(180deg,rgba(58,110,237,.22),rgba(20,47,112,.18));
-  border:1px solid var(--bp-rim-light);
-  color:var(--bp-violet-200);font-weight:700;letter-spacing:.02em;
-  box-shadow:0 0 24px rgba(58,110,237,.18),inset 0 1px 0 rgba(255,255,255,.12);
+  display:inline-flex;align-items:center;gap:6px;padding:5px 12px;border-radius:100px;
+  font-size:.68rem;font-weight:600;letter-spacing:.04em;
+  color:#A7C0FF;border:1px solid rgba(122,160,255,.28);background:rgba(77,124,255,.08);
 }
-
 @media(prefers-reduced-motion:reduce){.bp-text-grad{animation:none}}
 
 /* ---- Sticky mobile CTA (conversion layer, estate-wide) ----------------
@@ -155,13 +141,13 @@
 .bp-mobile-cta{display:none}
 @media (max-width:768px){
   .bp-mobile-cta{display:block;position:fixed;left:0;right:0;bottom:0;z-index:90;
-    background:rgba(20,24,51,.92);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
-    border-top:1px solid #272C49;padding:10px 16px calc(10px + env(safe-area-inset-bottom))}
+    background:rgba(6,7,11,.92);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+    border-top:1px solid rgba(255,255,255,.09);padding:10px 16px calc(10px + env(safe-area-inset-bottom))}
   .bp-mobile-cta-in{display:flex;align-items:center;justify-content:space-between;gap:12px}
-  .bp-mct-copy b{display:block;font-size:.92rem;color:#F1F5F9}
-  .bp-mct-copy span{display:block;font-size:.72rem;color:#94A3B8;margin-top:2px}
-  .bp-mct-btn{flex:none;background:#21C45D;color:#06120B;font-weight:700;font-size:.9rem;
-    padding:11px 20px;border-radius:12px;text-decoration:none;box-shadow:0 6px 20px rgba(33,196,93,.35)}
+  .bp-mct-copy b{display:block;font-size:.92rem;color:#F4F5F8}
+  .bp-mct-copy span{display:block;font-size:.72rem;color:#8A90A0;margin-top:2px}
+  .bp-mct-btn{flex:none;background:#3DD68C;color:#06130C;font-weight:700;font-size:.9rem;
+    padding:11px 20px;border-radius:12px;text-decoration:none;box-shadow:0 6px 20px rgba(61,214,140,.3)}
   .bp-mct-btn:active{transform:translateY(1px)}
   body{padding-bottom:74px}
 }

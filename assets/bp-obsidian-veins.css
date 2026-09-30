@@ -1,51 +1,34 @@
 /* =====================================================================
-   BEYOND PIXELLS — OBSIDIAN VEINS (v5.1)
-   Correction pass: veins were smooth flowing-dash curves that read as
-   moving neon "lines"/shooting stars — wrong. Reference = STATIC jagged
-   fracture cracks in a rock/glass surface. Rebuilt as angular polylines,
-   no travel/dash animation, only a slow ambient opacity breathe.
-   Also: NO grid pattern, NO meteors/twinkle stars anywhere — none of
-   that exists in the reference photo.
+   BEYOND PIXELLS — OBSIDIAN VEINS v9 (1 Oct 2026)
+   OBSIDIAN LUXE pass: quiet luxury. Deep obsidian #06070B with ONE
+   gentle electric-blue top glow — no washes, no cracks, no neon.
+   Benchmark: Linear (19,20,21) · Raycast canvas depth. CDN-shared:
+   every property loading this file inherits v9 automatically.
    ===================================================================== */
 
 :root{
-  --ov-ink:#07080A;
-  --ov-ink2:#0A0C10;
-  --ov-violet-deep:#142F70;
-  --ov-violet:#06F;
-  --ov-violet-bright:#06F;
-  --ov-violet-glow:#9CC0FF;
-  --ov-sparkle:#F3F6FF;
+  --ov-ink:#06070B;
+  --ov-ink2:#0B0D13;
+  --ov-violet-deep:#16224E;
+  --ov-violet:#4D7CFF;
+  --ov-violet-bright:#7AA0FF;
+  --ov-violet-glow:#A7C0FF;
+  --ov-sparkle:#F4F6FF;
 }
 
-/* ---- GRAIN — always-on procedural noise over the whole page ---- */
-.ov-grain{position:fixed;inset:0;z-index:1;pointer-events:none;opacity:.05;mix-blend-mode:overlay;
+/* ---- GRAIN — near-invisible texture over the whole page ---- */
+.ov-grain{position:fixed;inset:0;z-index:1;pointer-events:none;opacity:.03;mix-blend-mode:overlay;
   background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>")}
 
-/* ---- HERO TEXTURE — procedurally rendered obsidian crack slab ----
-   Rendered by tools/render_hero_texture.py: layered bloom, tapered crack
-   strokes, crystal core, glossy droplets. Replaces the old SVG-line veins,
-   CSS geode, and JS droplet scatter, which read as thin flat lines and
-   never matched the founder's reference photo. */
-/* v7 BLUE PIXEL OBSIDIAN (26 Sep 2026): v6 Obsidian Glow's calm near-black
-   canvas + ONE saturated glow field, recoloured to the founder's bp logo
-   palette — royal blue #0066FF / navy #0A1C40. Violet retired estate-wide;
-   every property loading this file (CDN-shared) inherits the new palette.
-   Measured benchmarks: Linear canvas avg (19,20,21), Raycast (59,25,32). */
+/* ---- CANVAS — obsidian + one quiet glow ---- */
 .ov-canvas{position:absolute;inset:0;z-index:0;pointer-events:none;
-  /* founder pass 26 Sep: DARK IN ALL COLOURS — every glow halved, every
-     tone pushed deeper. Benchmark target: Linear (19,20,21). */
   background:
-    radial-gradient(58% 46% at 50% -6%, rgba(29,64,149,.32), transparent 66%),
-    radial-gradient(30% 26% at 88% 22%, rgba(29,64,149,.12), transparent 68%),
-    radial-gradient(38% 32% at 6% 34%, rgba(12,28,66,.22), transparent 72%),
-    #05060A}
+    radial-gradient(52% 40% at 50% -4%, rgba(77,124,255,.11), transparent 68%),
+    #06070B}
 .ov-canvas::after{content:"";position:absolute;inset:0;
-  /* only the section-transition fade; no text backing needed */
-  background:linear-gradient(180deg,rgba(8,9,13,0) 88%,rgba(8,9,13,.65) 100%)}
+  background:linear-gradient(180deg,rgba(6,7,11,0) 88%,rgba(6,7,11,.6) 100%)}
 .hero .container{position:relative;z-index:2}
 @media(max-width:760px){.ov-canvas{background-position:center 12%}}
 
-/* ---- Card + border overrides: violet-only, no warm tones ---- */
-.bcard::after{background:linear-gradient(90deg,transparent,rgba(156, 192, 255,.35),transparent) !important}
-.bcard:hover{border-color:rgba(0, 102, 255,.45) !important}
+/* ---- v9 card overrides: flat panels, hairline borders ---- */
+.bcard::after{background:none !important}
