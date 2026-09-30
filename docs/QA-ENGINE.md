@@ -146,3 +146,13 @@ Known-good (verified this pass): no dead anchors, all legal pages exist, single 
 OG tags + JSON-LD present, robots.txt + sitemap.xml live, form is double-click
 protected with loading state + dual-API fallback chain, reduced-motion covered,
 mobile has designed sticky CTA bar, nav hides links below 640px intentionally.
+
+### Cycle 3 — state-machine, idempotency, assets, links (1 Oct 2026)
+| Date | Finding | Module | Fix | Verified |
+|------|---------|--------|-----|----------|
+| 2026-10-01 | Lead form: refresh/re-submit/two-tabs could create duplicate leads | 09 | 10-min idempotency key by phone (localStorage) | static |
+| 2026-10-01 | 5.6MB content/ brochures+social assets unreferenced in public repo | asset gov | flagged; serve only when intentionally used | inventory |
+| 2026-10-01 | hero-veins*.jpg (632KB) unused since dark revert | asset gov | removal candidates; held for design-probes | inventory |
+| 2026-10-01 | dentistos.in DNS dead; email template links to it | 14 | flagged for Dentist OS domain work | curl probe |
+| 2026-10-01 | 3 vendor JS bundles (432KB) referenced by zero pages | 21 | repo-only weight; not shipped to users | scan |
+| 2026-10-01 | Internal links all resolve (12 pages); wa.me + gym-os-v3 healthy | 00 | none needed | crawler + curl |
