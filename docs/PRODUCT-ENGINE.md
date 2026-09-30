@@ -38,6 +38,12 @@
 ### F-04 · Dentist OS email links to dead dentistos.in
 - P2. Domain purchase/point needed before dentist flows ship.
 
+### F-05 · Live product functional + security smoke — PASS (1 Oct 2026, layers 8/34, read-only)
+- FOUND: API auth (POST /api/v1/auth/login) returns owner session; cookie is HttpOnly + Secure + SameSite=Lax, 7-day expiry.
+- VERIFIED ENDPOINTS (200, real demo data): members (19.7KB), leads (6.3KB), classes (3.6KB).
+- SECURITY: no-auth → 401; fake session cookie → 401; cross-tenant injection (?tenantId=ten_other_gym) returned ONLY own-tenant data — server derives tenancy from session, ignores client input. Tenant isolation CONFIRMED.
+- REMAINING: checkins/payments/dashboard API paths unnamed (404 on guesses — UI works per browser QA earlier); verify exact routes via UI pass when browser budget allows. Demo junk root-cause documented by parallel agent (see commit cb07fa5).
+
 ## LAUNCH GATES (cannot launch while open)
 1. Integration credits reset → deploy captureLeadV2/trackEvent → verify end-to-end lead flow.
 2. F-01 waitlist CTA removed (product repo, founder/parallel agent).
