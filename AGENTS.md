@@ -105,6 +105,15 @@ After deployment:
 When a decision is made, update the relevant documentation.
 The repo is the company's institutional memory.
 
+## Specialist-pass law (1 Oct 2026, founder directive)
+Work runs as NAMED MODULE PASSES (00_DISCOVERY ... 26_CONTINUOUS_IMPROVEMENT), never one
+monolithic improve-everything pass. State the pass, do only it, verify, stop.
+`docs/QA-ENGINE.md` (v2) is the master operating protocol: the 27 module passes, the
+40 audit layers each pass owns, the second-order law (every change asks "what else
+could this affect?"), and Pass 25_REGRESSION (visual BEFORE/AFTER, desktop+tablet+390px)
+which runs after every pass that touches UI or code. Company-law table:
+notes/company-master-plan/audit-layers.md.
+
 ## Final review
 Before claiming completion:
 1. inspect the master index
