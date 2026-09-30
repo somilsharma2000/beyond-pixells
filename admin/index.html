@@ -103,7 +103,6 @@ pre{background:var(--surf);border:1px solid var(--line);border-radius:10px;paddi
   <a class="brand" href="../index.html">Beyond <em>Pixells</em> · Command Center</a>
   <select id="propSel" title="Choose which site to control" style="width:auto;font-size:.82rem;padding:7px 10px">
     <option value="hub">hub (Beyond Pixells)</option>
-    <option value="gym-os">Gym OS</option>
     <option value="dentist-os">Dentist OS</option>
     <option value="builder-os">Builder OS</option>
   </select>
@@ -245,7 +244,7 @@ pre{background:var(--surf);border:1px solid var(--line);border-radius:10px;paddi
         <button class="btn ghost" onclick="copyCmds()">Copy git commands instead</button>
       </div>
       <div class="status" id="deployMsg"></div>
-      <p class="note">The token never leaves your browser and is never stored in the repo. Scope it to Contents read/write on the four estate repos (beyond-pixells, gym-os, dentist-os-site, builder-os-site), and set an expiry.</p>
+      <p class="note">The token never leaves your browser and is never stored in the repo. Scope it to Contents read/write on the three estate repos (beyond-pixells, dentist-os-site, builder-os-site), and set an expiry.</p>
     </div>
     <div class="card">
       <span class="k">Change preview (site.json)</span>
@@ -263,7 +262,6 @@ pre{background:var(--surf);border:1px solid var(--line);border-radius:10px;paddi
 const LS_DRAFT = "bpcc.draft", LS_PIN = "bpcc.pin", LS_PAT = "bpcc.pat";
 const PROPS = {
   "hub":        {repo:"somilsharma2000/beyond-pixells", raw:"https://somilsharma2000.github.io/beyond-pixells/content/site.json", fallback:"../content/site.json", label:"hub"},
-  "gym-os":     {repo:"somilsharma2000/gym-os",        raw:"https://somilsharma2000.github.io/gym-os/content/site.json",        fallback:"https://somilsharma2000.github.io/gym-os/content/site.json", label:"Gym OS"},
   "dentist-os": {repo:"somilsharma2000/dentist-os-site", raw:"https://somilsharma2000.github.io/dentist-os-site/content/site.json", fallback:"https://somilsharma2000.github.io/dentist-os-site/content/site.json", label:"Dentist OS"},
   "builder-os": {repo:"somilsharma2000/builder-os-site", raw:"https://somilsharma2000.github.io/builder-os-site/content/site.json", fallback:"https://somilsharma2000.github.io/builder-os-site/content/site.json", label:"Builder OS"},
 };
@@ -271,7 +269,7 @@ let prop = "hub";
 const REPO = () => PROPS[prop].repo;
 const ESTATE = [
   ["Beyond Pixells (hub)", "https://somilsharma2000.github.io/beyond-pixells/"],
-  ["Gym OS", "https://somilsharma2000.github.io/gym-os/"],
+  ["Gym OS (redirects to Vercel app)", "https://somilsharma2000.github.io/gym-os/"],
   ["Dentist OS", "https://somilsharma2000.github.io/dentist-os-site/"],
   ["Dentist OS demo app", "https://somilsharma2000.github.io/dentist-os/"],
   ["Builder OS", "https://somilsharma2000.github.io/builder-os-site/"],
