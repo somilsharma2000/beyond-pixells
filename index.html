@@ -591,7 +591,7 @@ nav ul a.on::after{content:'';position:absolute;left:15%;right:15%;bottom:-6px;h
         </label>
       </div>
       <label>Anything else? (optional)<textarea name="notes" rows="3" maxlength="500" placeholder="Current tools, problems, timeline..."></textarea></label>
-      <label class="lf-consent"><input type="checkbox" name="consent" required> I agree to be contacted on WhatsApp about my enquiry.</label>
+      <label class="lf-consent"><input type="text" name="company_website" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;top:-9999px;opacity:0;pointer-events:none"><input type="checkbox" name="consent" required> I agree to be contacted on WhatsApp about my enquiry.</label>
       <div class="ctas" style="justify-content:flex-start">
         <button type="submit" class="btn btn-primary bp-magnetic-btn">Send via WhatsApp</button>
         <span class="lf-note">Opens WhatsApp with your details pre-filled. We also log your enquiry in our system to make sure it is never missed.</span>
@@ -636,9 +636,13 @@ nav ul a.on::after{content:'';position:absolute;left:15%;right:15%;bottom:-6px;h
 (function(){
   var f=document.getElementById('bp-lead-form');
   if(!f)return;
+  window._bpFormReady=Date.now();
   f.addEventListener('submit',function(e){
     e.preventDefault();
     var v=function(n){var el=f.elements[n];return el?el.value.trim():'';};
+    /* bot traps: honeypot + time-trap. Bots get fake success, no data sent. */
+    if(v('company_website')){f.innerHTML='<div class="lead-ok"><b>✓ Received.</b><br>We will reach out shortly.</div>';return;}
+    if(window._bpFormReady && (Date.now()-window._bpFormReady)<2500){return;}
     var msg='Hi Beyond Pixells! New project enquiry —\n'
       +'Name: '+v('name')+'\n'
       +'Business: '+(v('business')||'-')+'\n'
@@ -665,7 +669,7 @@ nav ul a.on::after{content:'';position:absolute;left:15%;right:15%;bottom:-6px;h
     };
     fetch('https://vesper-923580a1.base44.app/functions/captureLead',{
       method:'POST',headers:{'Content-Type':'application/json'},
-      body:JSON.stringify({name:v('name'),business:v('business'),city:v('city'),phone:v('phone'),email:v('email'),interest:v('interest'),notes:v('notes'),source:'beyond-pixells hub'})
+      body:JSON.stringify({name:v('name'),business:v('business'),city:v('city'),phone:v('phone'),email:v('email'),interest:v('interest'),notes:v('notes'),source:'beyond-pixells hub',hp:false})
     }).then(function(r){return r.json();}).then(function(j){
       if(j&&j.ok){done(true);}else{fallback();}
     }).catch(function(){fallback();});

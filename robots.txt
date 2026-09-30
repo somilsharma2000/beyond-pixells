@@ -1,6 +1,7 @@
 # robots.txt — Beyond Pixells
 User-agent: *
 Allow: /
+Disallow: /admin/
 User-agent: GPTBot
 Allow: /
 User-agent: OAI-SearchBot

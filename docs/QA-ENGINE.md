@@ -44,6 +44,23 @@ P10 POLISH — alignment, 1-2px inconsistencies, awkward line breaks, competing 
 - Claims must be true or labeled demo. No fake urgency, no vaporware.
 - Motion communicates state/hierarchy/continuity — delete anything that only "looks cool".
 
+
+## FINDINGS CLASSIFICATION
+P0 critical (security/data-loss/broken flow) → P1 major (function/UX/conversion/a11y/perf)
+→ P2 important improvement → P3 polish → P4 experimental. Never work on P4 while P0/P1 exist.
+
+## AUDIT REPORT FORMAT (A–X)
+Every audit cycle reports: A inspected · B already good · C critical problems · D security risks ·
+E logic risks · F UX · G visual · H motion · I mobile · J accessibility · K SEO · L GEO ·
+M analytics · N admin/ops · O integrations · P performance · Q missing features ·
+R research · S recommendations · T changes implemented · U tests · V regression ·
+W remaining risks · X next highest-value improvements. Then run a SECOND discovery pass.
+
+## ANALYTICS EVENT TAXONOMY (planned; do not fake data)
+page_view (live) · cta_click [hero/proof/contact/nav/mobile-bar] · form_started ·
+form_completed · form_fallback_used · os_card_opened [gym/dentist/builder/custom].
+Wire when backend credits allow; every event → funnel → business outcome.
+
 ## FINDINGS LOG
 
 | Date | Finding | Pass | Fix | Verified |
@@ -52,6 +69,11 @@ P10 POLISH — alignment, 1-2px inconsistencies, awkward line breaks, competing 
 | 2026-10-01 | Nav/footer logo 194KB rendered at 34px | P07 | logo-nav.png (4KB) | live check |
 | 2026-10-01 | No custom 404 page | P01 | branded 404.html | live check |
 | 2026-10-01 | No visible focus rings for links/buttons (keyboard users) | P06 | :focus-visible outline | live check |
+| 2026-10-01 | Lead form had no spam protection (open endpoint abuse) | N | honeypot + 2.5s time-trap, bots get fake success | static |
+| 2026-10-01 | Sitemap contained 4 foreign-origin URLs (ignored by Google) | K | sitemap.xml same-origin only | live check |
+| 2026-10-01 | /admin/ crawlable in robots.txt | D | Disallow added (noindex meta already present) | live check |
+| 2026-10-01 | P1 OPS: Base44 integration credits exhausted → captureLead + trackView endpoints returning limit errors; Gym OS fallback still stores leads | T | no code change possible client-side; owner informed; restore monitoring after credit reset | curl probe |
+| 2026-10-01 | Admin PIN stored as base64, PAT in localStorage by choice (documented trade-off) | D | recommendation: SHA-256 PIN + session-only PAT; left untouched (other agent's surface) | reviewed |
 | 2026-10-01 | Form showed "✓ Received" even if storage failed | P03/P09 | honest dual-state messaging | live check |
 
 Known-good (verified this pass): no dead anchors, all legal pages exist, single H1,
