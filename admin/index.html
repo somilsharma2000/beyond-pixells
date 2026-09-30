@@ -101,6 +101,12 @@ pre{background:var(--surf);border:1px solid var(--line);border-radius:10px;paddi
 
 <header class="top"><div class="in">
   <a class="brand" href="../index.html">Beyond <em>Pixells</em> · Command Center</a>
+  <select id="propSel" title="Choose which site to control" style="width:auto;font-size:.82rem;padding:7px 10px">
+    <option value="hub">hub (Beyond Pixells)</option>
+    <option value="gym-os">Gym OS</option>
+    <option value="dentist-os">Dentist OS</option>
+    <option value="builder-os">Builder OS</option>
+  </select>
   <nav class="tabs" id="tabs">
     <button data-v="overview" class="on">Overview</button>
     <button data-v="content">Content</button>
@@ -139,6 +145,7 @@ pre{background:var(--surf);border:1px solid var(--line);border-radius:10px;paddi
       <span class="k">Hero</span>
       <label>Pill text (leave empty to hide)</label><input data-f="hero.pill">
       <label>Headline</label><textarea data-f="hero.headline" rows="2"></textarea>
+      <label>Headline accent (highlighted words)</label><input data-f="hero.hl">
       <label>Sub-headline</label><textarea data-f="hero.sub" rows="3"></textarea>
     </div>
     <div class="card">
@@ -238,7 +245,7 @@ pre{background:var(--surf);border:1px solid var(--line);border-radius:10px;paddi
         <button class="btn ghost" onclick="copyCmds()">Copy git commands instead</button>
       </div>
       <div class="status" id="deployMsg"></div>
-      <p class="note">The token never leaves your browser and is never stored in the repo. Scope it to Contents read/write on this one repository, and set an expiry.</p>
+      <p class="note">The token never leaves your browser and is never stored in the repo. Scope it to Contents read/write on the four estate repos (beyond-pixells, gym-os, dentist-os-site, builder-os-site), and set an expiry.</p>
     </div>
     <div class="card">
       <span class="k">Change preview (site.json)</span>
@@ -254,8 +261,14 @@ pre{background:var(--surf);border:1px solid var(--line);border-radius:10px;paddi
    No secrets in the repo. PAT (if used) lives in localStorage only, and deploys
    only touch content/site.json on somilsharma2000/beyond-pixells. */
 const LS_DRAFT = "bpcc.draft", LS_PIN = "bpcc.pin", LS_PAT = "bpcc.pat";
-const REPO = "somilsharma2000/beyond-pixells";
-const RAW = "https://somilsharma2000.github.io/beyond-pixells/content/site.json";
+const PROPS = {
+  "hub":        {repo:"somilsharma2000/beyond-pixells", raw:"https://somilsharma2000.github.io/beyond-pixells/content/site.json", fallback:"../content/site.json", label:"hub"},
+  "gym-os":     {repo:"somilsharma2000/gym-os",        raw:"https://somilsharma2000.github.io/gym-os/content/site.json",        fallback:"https://somilsharma2000.github.io/gym-os/content/site.json", label:"Gym OS"},
+  "dentist-os": {repo:"somilsharma2000/dentist-os-site", raw:"https://somilsharma2000.github.io/dentist-os-site/content/site.json", fallback:"https://somilsharma2000.github.io/dentist-os-site/content/site.json", label:"Dentist OS"},
+  "builder-os": {repo:"somilsharma2000/builder-os-site", raw:"https://somilsharma2000.github.io/builder-os-site/content/site.json", fallback:"https://somilsharma2000.github.io/builder-os-site/content/site.json", label:"Builder OS"},
+};
+let prop = "hub";
+const REPO = () => PROPS[prop].repo;
 const ESTATE = [
   ["Beyond Pixells (hub)", "https://somilsharma2000.github.io/beyond-pixells/"],
   ["Gym OS", "https://somilsharma2000.github.io/gym-os/"],
@@ -285,11 +298,11 @@ $("#pinIn").addEventListener("keydown", e => { if (e.key === "Enter") unlock(); 
 
 /* ---------- data ---------- */
 async function fetchLive(){
-  for (const u of [RAW + "?t=" + Date.now(), "../content/site.json?t=" + Date.now()]){
-    const r = await fetch(u);
-    if (r.ok) return r.json();
+  const P = PROPS[prop];
+  for (const u of [P.raw + "?t=" + Date.now(), P.fallback + "?t=" + Date.now()]){
+    try { const r = await fetch(u); if (r.ok) return r.json(); } catch(e){}
   }
-  throw new Error("site.json unreachable");
+  throw new Error("site.json unreachable for " + P.label);
 }
 function hydrate(){
   $$("[data-f]").forEach(el => {
@@ -359,9 +372,11 @@ async function deploy(){
   if (!token) return msg("deployMsg","Enter a GitHub token (contents: read+write on beyond-pixells) or use the git commands.","warn");
   msg("deployMsg","Deploying…","warn");
   try {
-    const api = "https://api.github.com/repos/" + REPO + "/contents/content/site.json";
+    const api = "https://api.github.com/repos/" + REPO() + "/contents/content/site.json";
+    if (!draft._meta) draft._meta = {};
+    draft._meta.updated = new Date().toISOString().slice(0,10);
     const cur = await fetch(api, {headers:{Authorization:"Bearer "+token, Accept:"application/vnd.github+json"}}).then(r=>{ if(!r.ok) throw new Error("token rejected ("+r.status+") — check scopes"); return r.json(); });
-    const body = { message: "content: command center update", content: btoa(unescape(encodeURIComponent(JSON.stringify(draft, null, 2)))), sha: cur.sha };
+    const body = { message: "content: command center update (" + PROPS[prop].label + ")", content: btoa(unescape(encodeURIComponent(JSON.stringify(draft, null, 2)))), sha: cur.sha };
     const res = await fetch(api, {method:"PUT", headers:{Authorization:"Bearer "+token, Accept:"application/vnd.github+json"}, body: JSON.stringify(body)});
     if (!res.ok) throw new Error("commit failed ("+res.status+")");
     const j = await res.json();
@@ -407,6 +422,13 @@ $$(".tabs button").forEach(b => b.addEventListener("click", () => {
   $$(".view").forEach(v => v.classList.remove("on")); $("#v-" + b.dataset.v).classList.add("on");
 }));
 if (!localStorage.getItem(LS_PIN)) { $("#pinIn").placeholder = "Choose a 4+ character PIN"; }
+$("#propSel").addEventListener("change", async () => {
+  prop = $("#propSel").value;
+  localStorage.removeItem(LS_DRAFT);
+  live = null; dirty(false);
+  await loadLive();
+  msg("contentMsg", "Now controlling: " + PROPS[prop].label, "ok");
+});
 </script>
 </body>
 </html>

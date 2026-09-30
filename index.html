@@ -484,7 +484,7 @@ footer .brand{color:#fff}
     <h2>Run your business on an operating system, not a register.</h2>
     <p>Tell us about your business — we'll map your operations and show you exactly what your industry's OS looks like, running. Free, no slides, no pressure.</p>
     <div class="ctas">
-      <a class="btn btn-accent bp-magnetic-btn" href="https://wa.me/917737077479?text=Hi%20Beyond%20Pixells!%20I%20want%20to%20talk%20about%20an%20OS%20for%20my%20business.">Start My OS Project</a>
+      <a class="btn btn-accent bp-magnetic-btn" id="bp-cta" href="https://wa.me/917737077479?text=Hi%20Beyond%20Pixells!%20I%20want%20to%20talk%20about%20an%20OS%20for%20my%20business.">Start My OS Project</a>
       <a class="btn btn-ghost bp-magnetic-btn" href="#proof">See 8 Live Systems</a>
     </div>
   </div>
@@ -737,7 +737,7 @@ footer{box-shadow:inset 0 1px 0 rgba(255,255,255,.04)}
             a.href='https://wa.me/'+wa+'?text='+encodeURIComponent(c.cta.waPrefill||'Hi Beyond Pixells!');
           }
         });
-        var btn=document.querySelector('.hero .btn-accent.bp-magnetic-btn');
+        var btn=document.getElementById('bp-cta');
         if(btn && c.cta.primaryLabel) btn.textContent = c.cta.primaryLabel;
       }
       if(c.contact && c.contact.email){
