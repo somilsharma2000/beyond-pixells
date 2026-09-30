@@ -7,7 +7,7 @@
 > **Working method:** read `docs/QA-ENGINE.md` before ANY change. Named module passes (00–26), findings P0–P4, report A–X. INSPECT → REPORT → PRIORITIZE → MODIFY → TEST → RECHECK.
 > **Hard rules:** never invent proof · verify live after every push · preserve lead consent + offline fallback · `git pull --rebase` (two agents work in parallel).
 > **Top blockers right now:** (1) Base44 integration credits exhausted → lead API + staged backend deploys blocked; (2) founder must settle brand palette (v9 vs original #0A0E27/#0066FF); (3) dentistos.in DNS dead; (4) pricing unconfirmed.
-> **Then read:** this whole file → `docs/AGENT_BRAIN.md` (machinery) → `docs/QA-ENGINE.md` (law).
+> **Then read:** this whole file → `docs/AGENT_BRAIN.md` (machinery) → `docs/QA-ENGINE.md` (web-estate law) → `docs/PRODUCT-ENGINE.md` (product transformation law, 70 layers).
 
 > **This is the complete transfer document.** A new agent with zero context should
 > read THIS file top to bottom and understand the founder's vision, the entire
