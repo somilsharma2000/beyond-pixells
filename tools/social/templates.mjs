@@ -423,4 +423,87 @@ export function productFrame({ badge, headline, kpiValue, kpiLabel, feed, cta })
   ], { w: 1080, h: 1350 });
 }
 
-export const TEMPLATES = { statCard, hookCard, ogHub, productFrame };
+
+// ---- OBSIDIAN LUXE v9 (1 Oct 2026) — quiet luxury og card ----
+export function ogHubV9({ kicker, title, accent, tagline, url }) {
+  const V9 = { canvas: "#06070B", ink: "#F4F5F8", mut: "#8A90A0", dim: "#5C6272", acc: accent || "#4D7CFF", accSoft: "#7AA0FF" };
+  const t = (size, weight, extra = {}) => ({ fontFamily: "Inter", fontSize: size, fontWeight: weight, color: V9.ink, ...extra });
+  return {
+    type: "div",
+    props: {
+      style: {
+        width: "100%", height: "100%", display: "flex", flexDirection: "column",
+        justifyContent: "space-between", backgroundColor: V9.canvas,
+        padding: "72px 84px 60px 84px", position: "relative",
+      },
+      children: [
+        {
+          type: "div",
+          props: {
+            style: {
+              position: "absolute", top: -300, left: 280, width: 900, height: 560,
+              borderRadius: 900,
+              background: "radial-gradient(ellipse, rgba(77,124,255,0.16) 0%, rgba(77,124,255,0.05) 45%, transparent 72%)",
+            },
+          },
+        },
+        {
+          type: "div",
+          props: {
+            style: { display: "flex", alignItems: "center", gap: 16 },
+            children: [
+              {
+                type: "div",
+                props: {
+                  style: {
+                    width: 42, height: 42, borderRadius: 12, display: "flex", alignItems: "center", justifyContent: "center",
+                    background: "rgba(255,255,255,0.06)", border: "1px solid rgba(255,255,255,0.16)",
+                    color: V9.accSoft, ...t(21, 700),
+                  },
+                  children: "BP",
+                },
+              },
+              { type: "div", props: { style: t(25, 600, { color: V9.ink }), children: "Beyond Pixells" } },
+            ],
+          },
+        },
+        {
+          type: "div",
+          props: {
+            style: { display: "flex", flexDirection: "column", gap: 26, position: "relative" },
+            children: [
+              { type: "div", props: { style: t(22, 600, { color: V9.acc, letterSpacing: "0.14em", textTransform: "uppercase" }), children: kicker } },
+              { type: "div", props: { style: t(92, 700, { lineHeight: 1.06, letterSpacing: "-0.025em" }), children: title } },
+              { type: "div", props: { style: t(30, 400, { color: V9.mut, lineHeight: 1.5, maxWidth: 900 }), children: tagline } },
+            ],
+          },
+        },
+        {
+          type: "div",
+          props: {
+            style: {
+              display: "flex", justifyContent: "space-between", alignItems: "center",
+              borderTop: "1px solid rgba(255,255,255,0.09)", paddingTop: 28,
+            },
+            children: [
+              { type: "div", props: { style: t(22, 500, { color: V9.dim }), children: url } },
+              {
+                type: "div",
+                props: {
+                  style: {
+                    display: "flex", alignItems: "center", gap: 10,
+                    background: "linear-gradient(180deg, #5B87FF, #3E66E8)",
+                    borderRadius: 999, padding: "12px 26px", color: "#FFFFFF", ...t(20, 600),
+                  },
+                  children: "Start Your OS",
+                },
+              },
+            ],
+          },
+        },
+      ],
+    },
+  };
+}
+
+export const TEMPLATES = { statCard, hookCard, ogHub, ogHubV9, productFrame };
