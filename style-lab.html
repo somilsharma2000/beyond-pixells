@@ -18,33 +18,33 @@ body{background:#0A0E29;color:#F1F5F9;font-family:'Plus Jakarta Sans',sans-serif
 .wrap{max-width:1000px;margin:0 auto;padding:64px 28px 100px}
 .labhead{text-align:center;margin-bottom:64px}
 .labhead .badge{display:inline-flex;align-items:center;gap:9px;font-size:.78rem;font-weight:700;color:#9CC0FF;background:linear-gradient(180deg,rgba(0,102,255,.22),rgba(0,82,204,.16));border:1px solid rgba(0,102,255,.35);border-radius:100px;padding:7px 16px;margin-bottom:22px;box-shadow:0 0 26px rgba(0,102,255,.22),inset 0 1px 0 rgba(255,255,255,.1)}
-.labhead .badge i{width:7px;height:7px;border-radius:50%;background:#0066FF;box-shadow:0 0 10px #0066FF}
-h1{font-family:'Space Grotesk';font-size:clamp(2rem,5vw,3.2rem);letter-spacing:-.03em;color:#F1F5F9}
+.labhead .badge i{width:7px;height:7px;border-radius:50%;background:#4D7CFF;box-shadow:0 0 10px #4D7CFF}
+h1{font-family:'Inter';font-size:clamp(2rem,5vw,3.2rem);letter-spacing:-.03em;color:#F1F5F9}
 .labhead p{color:#94A3B8;margin-top:14px;max-width:600px;margin-left:auto;margin-right:auto}
-h2{font-family:'Space Grotesk';font-size:1.3rem;color:#F1F5F9;margin:56px 0 20px;letter-spacing:-.02em}
-h2::before{content:"§ ";color:#0066FF}
+h2{font-family:'Inter';font-size:1.3rem;color:#F1F5F9;margin:56px 0 20px;letter-spacing:-.02em}
+h2::before{content:"§ ";color:#4D7CFF}
 .grid{display:grid;gap:16px}
 .g3{grid-template-columns:repeat(3,1fr)}
 .g4{grid-template-columns:repeat(4,1fr)}
 .swatch{border-radius:16px;padding:18px 20px;border:1px solid #272C49;background:#141833;font-size:.78rem;color:#94A3B8}
 .swatch i{display:block;height:56px;border-radius:12px;margin-bottom:12px;box-shadow:inset 0 1px 0 rgba(255,255,255,.25),0 8px 24px rgba(0,0,0,.4)}
-.swatch b{color:#F1F5F9;font-family:'Space Grotesk';font-size:.92rem;display:block;margin-bottom:3px}
+.swatch b{color:#F1F5F9;font-family:'Inter';font-size:.92rem;display:block;margin-bottom:3px}
 .card{background:#141833;border:1px solid #272C49;border-radius:20px;padding:34px;box-shadow:0 24px 70px rgba(0,0,0,.5);position:relative;overflow:hidden}
 .card::after{content:"";position:absolute;top:0;left:8%;right:8%;height:1px;background:linear-gradient(90deg,transparent,rgba(255,255,255,.4),transparent)}
 .row{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
 .btn{display:inline-flex;align-items:center;gap:9px;border-radius:12px;font-weight:700;font-size:.92rem;padding:13px 26px;cursor:pointer;border:none;text-decoration:none}
-.btn-p{background:#0066FF;color:#fff;box-shadow:0 8px 30px rgba(0,102,255,.4),inset 0 1px 0 rgba(255,255,255,.18)}
+.btn-p{background:#4D7CFF;color:#fff;box-shadow:0 8px 30px rgba(0,102,255,.4),inset 0 1px 0 rgba(255,255,255,.18)}
 .btn-p:hover{background:#1A5AE0;transform:translateY(-2px);transition:.25s}
 .btn-g{background:#21C45D;color:#06120B;box-shadow:0 8px 30px rgba(33,196,93,.35),inset 0 1px 0 rgba(255,255,255,.3)}
 .btn-o{background:transparent;color:#F1F5F9;border:1px solid #272C49}
-.btn-o:hover{border-color:#0066FF;transform:translateY(-2px);transition:.25s}
+.btn-o:hover{border-color:#4D7CFF;transform:translateY(-2px);transition:.25s}
 h1.demo{font-size:clamp(1.9rem,4vw,2.8rem);margin:0 0 10px}
 p.demo{color:#94A3B8;max-width:520px}
 .kicker{font-size:.76rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:#338CFF;margin-bottom:12px;display:block}
 .spec{font-size:.82rem;color:#64748B;border-top:1px solid #272C49;padding-top:18px;margin-top:26px}
 .spec b{color:#94A3B8}
 .tile{width:84px;height:84px;border-radius:22px;background:linear-gradient(160deg,#1D4BC4,#0A1C40);border:1px solid rgba(255,255,255,.25);box-shadow:inset 0 2px 0 rgba(255,255,255,.35),inset 0 -3px 8px rgba(0,0,0,.4),0 0 34px rgba(0,102,255,.35);position:relative}
-.tile::after{content:"bp";position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-family:'Space Grotesk';font-weight:700;font-size:1.5rem;color:#fff}
+.tile::after{content:"bp";position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-family:'Inter';font-weight:700;font-size:1.5rem;color:#fff}
 .back{display:inline-block;margin-bottom:34px;color:#94A3B8;font-size:.9rem;text-decoration:none}
 .back:hover{color:#9CC0FF}
 .chip{display:inline-flex;align-items:center;gap:8px;border:1px solid #272C49;border-radius:100px;padding:7px 14px;font-size:.8rem;color:#94A3B8}
@@ -68,7 +68,7 @@ p.demo{color:#94A3B8;max-width:520px}
     <div class="swatch"><i style="background:#141833"></i><b>surface</b>#141833 — cards, elevated panels</div>
     <div class="swatch"><i style="background:#242842"></i><b>elevated</b>#242842 — inputs, nested surfaces</div>
     <div class="swatch"><i style="background:#272C49"></i><b>border</b>#272C49 — hairlines, dividers</div>
-    <div class="swatch"><i style="background:#0066FF"></i><b>primary</b>#0066FF — the one accent: CTAs, links, focus</div>
+    <div class="swatch"><i style="background:#4D7CFF"></i><b>primary</b>#4D7CFF — the one accent: CTAs, links, focus</div>
     <div class="swatch"><i style="background:#338CFF"></i><b>primary-soft</b>#338CFF — kickers, highlights</div>
     <div class="swatch"><i style="background:#21C45D"></i><b>success</b>#21C45D — live status, WhatsApp actions</div>
     <div class="swatch"><i style="background:#0A1C40"></i><b>brand navy</b>#0A1C40 — bp logo badge</div>
