@@ -114,3 +114,18 @@ Agent pipeline: Lead entity → "New lead analysis" workflow → "Daily pipeline
 
 ## 27 Sep 2026 — Client pitch-site estate deleted
 Founder directive (27 Sep 2026): all 8 client gym pitch sites DELETED — repos and Pages removed from GitHub entirely: bettabodies-system, reds-gym-system, flex-n-tone-system, fight-factory-manchester-system, oxigen-fitness-digital, ironforge-website, iron-forge-website, powerhouse-fitness. URLs now 404. Estate Guard workflow retired (nothing left to guard); Upptime status page + site-health-check updated to remove the 8 entries. Client gym acquisition moves to Gym OS product site + direct demo flow.
+
+## Gym OS flagship alert stack (as of 30 Sep 2026)
+
+- Layer 1 — availability: Upptime (beyond-pixells-status repo) pings
+  https://gym-os-v3.vercel.app/ every 5 min; failure auto-opens an issue,
+  recovery closes it. Public page: beyond-pixells-status.
+- Layer 2 — functional: `gym-os-smoke.yml` in this repo runs daily 08:40 IST —
+  logs in as the demo owner, asserts dashboard render + clean demo data +
+  no JS errors + no 390px overflow; opens/updates `gym-os-alert` issues and
+  auto-closes them on the next passing run. Runnable on demand via
+  workflow_dispatch.
+- Layer 3 — human check: `site-health-check` skill (estate-wide curl table,
+  flagship row included).
+- Demo hygiene runbook: docs/ops/GYM_OS_DEMO_RESET.md (built-in demo reset,
+  UI + API steps, verification checklist, safety rules).
