@@ -1,5 +1,14 @@
 # 🔑 THE HANDOVER — Beyond Pixells
 
+> ## ⚡ READ THIS FIRST (cold start — 60 seconds)
+> **We are:** Beyond Pixells — an Indian product studio building operating systems for local businesses (Gym OS · Dentist OS · Builder OS) plus custom web/SaaS work.
+> **Live estate:** hub `somilsharma2000.github.io/beyond-pixells` · product `gym-os-v3.vercel.app` · `dentist-os-site` · `builder-os-site` (all github.io).
+> **Design law:** OBSIDIAN LUXE v9 — #06070B canvas, #4D7CFF accent, Inter + Instrument Serif + JetBrains Mono. Dark premium only.
+> **Working method:** read `docs/QA-ENGINE.md` before ANY change. Named module passes (00–26), findings P0–P4, report A–X. INSPECT → REPORT → PRIORITIZE → MODIFY → TEST → RECHECK.
+> **Hard rules:** never invent proof · verify live after every push · preserve lead consent + offline fallback · `git pull --rebase` (two agents work in parallel).
+> **Top blockers right now:** (1) Base44 integration credits exhausted → lead API + staged backend deploys blocked; (2) founder must settle brand palette (v9 vs original #0A0E27/#0066FF); (3) dentistos.in DNS dead; (4) pricing unconfirmed.
+> **Then read:** this whole file → `docs/AGENT_BRAIN.md` (machinery) → `docs/QA-ENGINE.md` (law).
+
 > **This is the complete transfer document.** A new agent with zero context should
 > read THIS file top to bottom and understand the founder's vision, the entire
 > product estate, what is finished, what is broken, what must improve, and how
