@@ -165,3 +165,11 @@ mobile has designed sticky CTA bar, nav hides links below 640px intentionally.
 | 2026-10-01 | Fonts: 3 families, display=swap — acceptable cost for the serif/mono identity | 16 | none needed | checked |
 | 2026-10-01 | OPEN DECISION: v9 uses #06070B canvas + #4D7CFF accent; founder standing rules said #0A0E27 + #0066FF. Owner must confirm which is law before further brand output. | 04 | awaiting owner | flagged |
 | 2026-10-01 | captureLeadV2 + trackEvent staged in agent workspace, ready to deploy when integration credits reset (server dedupe, rate limit, validation, event taxonomy) | 07/11 | staged, not deployed | n/a |
+
+### Cycle 6 — module 16 performance audit (1 Oct 2026)
+| Date | Finding | Module | Fix | Verified |
+|------|---------|--------|-----|----------|
+| 2026-10-01 | Hub ships ~76KB ungzip (~18KB gzipped transfer): 56K HTML (20K inline CSS, 7K JS) + 19.5K css/js assets + 2 images (4KB logo). Excellent for a static site. | 16 | none needed | measured |
+| 2026-10-01 | Inter loaded at 400-800 but weight 800 used by zero rules | 16 | dropped from all 7 pages → one less font file per visit | live |
+| 2026-10-01 | Instrument Serif (7 uses) + JetBrains Mono (28 uses) genuinely earn their payload | 16 | keep | counted |
+| 2026-10-01 | bp-motion.js loads after footer (non-blocking); only 2 images ship to the hub page | 16 | none needed | inspected |
