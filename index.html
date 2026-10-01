@@ -675,9 +675,18 @@ nav ul a.on::after{content:'';position:absolute;left:15%;right:15%;bottom:-6px;h
         if(stored){done(true);}else{done(false);setTimeout(wa,50);}
       });
     };
-    fetch('https://vesper-923580a1.base44.app/functions/captureLead',{
+    var consentBox=f.elements['consent'];
+    fetch('https://vesper-923580a1.base44.app/functions/captureLeadV2',{
       method:'POST',headers:{'Content-Type':'application/json'},
-      body:JSON.stringify({name:v('name'),business:v('business'),city:v('city'),phone:v('phone'),email:v('email'),interest:v('interest'),notes:v('notes'),source:'beyond-pixells hub',hp:false})
+      body:JSON.stringify({
+        name:v('name'),phone:v('phone'),email:v('email'),
+        consent:!!(consentBox&&consentBox.checked),
+        form_loaded_at:window._bpFormReady||0,
+        website:v('company_website'),
+        source:'beyond-pixells hub',
+        interest:v('interest'),
+        message:'Business: '+(v('business')||'-')+' | City: '+v('city')+(v('notes')?' | Notes: '+v('notes'):'')
+      })
     }).then(function(r){return r.json();}).then(function(j){
       if(j&&j.ok){done(true);}else{fallback();}
     }).catch(function(){fallback();});
@@ -767,10 +776,11 @@ nav ul a.on::after{content:'';position:absolute;left:15%;right:15%;bottom:-6px;h
 <script>
 (function(){
   try{
-    fetch('https://vesper-923580a1.base44.app/functions/trackView',{
+    var sid='';try{sid=localStorage.getItem('bp_sid');if(!sid){sid=Math.random().toString(36).slice(2,12);localStorage.setItem('bp_sid',sid);}}catch(e){}
+    fetch('https://vesper-923580a1.base44.app/functions/trackEvent',{
       method:'POST',
       headers:{'Content-Type':'application/json'},
-      body:JSON.stringify({path:location.pathname,referrer:document.referrer||'direct'}),
+      body:JSON.stringify({event_type:'page_view',path:location.pathname+location.hash,page_url:location.href,referrer:document.referrer||'direct',source:'hub',session_id:sid}),
       keepalive:true
     }).catch(function(){});
   }catch(e){}
