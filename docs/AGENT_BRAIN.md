@@ -13,6 +13,12 @@
 
 ## IMPORTANT (27 Sep 2026): 8 client gym pitch sites + repos deleted per founder directive — do not reference bettabodies/reds-gym/flex-n-tone/fight-factory/oxigen/ironforge/iron-forge/powerhouse as live properties.
 
+## IMPORTANT (1 Oct 2026): Gym OS v3 ticket machine + CAS live-verified; Vercel GitHub statuses are DEAD (deploys still work)
+
+- **Ticket status machine (matrix §1) CLOSED**: `TICKET_STATUS_MACHINE` declared in src/domain/state-machines.ts (single source of truth; support.ts re-exports for compatibility). PATCH /api/v1/support/tickets/:id now (a) rejects illegal/unknown transitions 400 with the legal-next list, (b) compare-and-swaps status writes — concurrent movers get **409 CONCURRENT_TRANSITION**. LIVE-PROVEN on gym-os-v3.vercel.app: 5 racing PATCH pairs produced the exact 409 body + machine 400s; unit suite 11/11; CI green (ff1cf30). Matrix §1 updated. Test tickets ("Follow-up for Priya Verma" × 5, created by 30 Sep lead-matrix tests) walked to closed — demo ticket table clean.
+- **VERCEL DEPLOY LAW UPDATE**: commits ff1cf30/24c671b sat at GitHub status `pending` with 0 statuses for ~7h → looked like the 28 Sep stall. FALSE ALARM: the deploy HAD landed; **Vercel no longer posts GitHub commit statuses for this repo** (integration reporting broken/removed, deploys fine). RULE: never judge deploy state from GitHub commit status — probe the live API (error-message canary) instead.
+- **Lead capture RE-VERIFIED live** (post credit reset): captureGymLead returns 200 + stores the lead (probe deleted after). Estate health 14/14 PASS, 0 WARN — health-skill marker updated ("Gym OS" → "Gym Management Software", the light-copy headline; 204 on capture GET-probe is the expected 2xx success).
+
 ## 1. What this is
 
 > **NEW AGENT?** Read `docs/HANDOVER.md` FIRST — the complete transfer document
