@@ -35,3 +35,12 @@
 ## DO NOT
 - Do not re-add lead API to Upptime before T2 passes.
 - Do not announce/marketing-push leads until T2 duplicate + rate-limit tests pass.
+
+---
+## DONE - EXECUTED 2 Oct 2026 (T0-T3 results)
+- T0: credits reset confirmed (integration 0/100 at month start).
+- T1: captureLeadV2 + trackEvent deployed (Deno.serve pattern, createClientFromRequest).
+  SDK QUIRK DISCOVERED: .list({filter:...}) and .list({limit}) silently return [] - entity reads MUST use .filter({...}). (Also affects deployed cleanPhoneNumbers - it uses the broken shape and will always report "no pending posts"; fix before reuse.)
+- T2: VERIFIED - valid capture OK, duplicate within 10 min returns deduped:true with same id OK, honeypot fake success no write OK, no consent 400 OK, invalid phone 400 OK, invalid event 400 OK, CORS preflight 200 with ACAO:* from real origin OK, public-URL POST from the wild OK. All test records deleted (source qa-test).
+- Hub index.html wired: captureLeadV2 (consent + form_loaded_at + server honeypot) + trackEvent (page_view, session_id).
+- Upptime re-add for lead API: pending (status repo not in this agent's token scope) - founder/parallel agent action.

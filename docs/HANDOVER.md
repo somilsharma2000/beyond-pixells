@@ -133,10 +133,7 @@ All in the **beyond-pixells** repo (github.com/somilsharma2000/beyond-pixells â†
 - All knowledge codified in the repo docs
 
 ### ðŸ”´ Broken / blocked (know this before anything)
-1. **Base44 integration credits are EXHAUSTED.** The lead-capture API is
-   failing right now. Leads still save locally on each client site but do NOT
-   reach the platform. **This is the #1 revenue blocker.** Fix: reset/upgrade
-   the Base44 plan.
+1. RESOLVED 2 Oct 2026: credits reset; hardened captureLeadV2 deployed and verified end-to-end (hub wired; see docs/ops/UNBLOCK-RUNBOOK.md).
 2. **Leads land in the wrong app.** They go to "Vesper" / "BEYOND PIXELLS"
    Base44 apps instead of the published Gym OS platform ("Gym osssss",
    id `6a85aadd01bc42f293723858`). One repoint fixes the whole pipe.
