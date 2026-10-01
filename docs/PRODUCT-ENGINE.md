@@ -32,7 +32,7 @@
 - SEVERITY: P2 (documentation lies about reality).
 - FIX: handover updated (this commit). Evidence: live /pricing page.
 
-### F-03 · Lead backend hardening staged, credits-blocked
+### F-03 · Lead backend hardening — CLOSED 2 Oct 2026 (VERIFIED LIVE)
 - captureLeadV2 + trackEvent staged; deploy = 5 minutes after Base44 credits reset. P0 revenue path.
 
 ### F-04 · Dentist OS email links to dead dentistos.in
@@ -45,7 +45,7 @@
 - REMAINING: checkins/payments/dashboard API paths unnamed (404 on guesses — UI works per browser QA earlier); verify exact routes via UI pass when browser budget allows. Demo junk root-cause documented by parallel agent (see commit cb07fa5).
 
 ## LAUNCH GATES (cannot launch while open)
-1. Integration credits reset → deploy captureLeadV2/trackEvent → verify end-to-end lead flow.
+1. DONE 2 Oct 2026 — lead pipe live and verified (see docs/ops/UNBLOCK-RUNBOOK.md).
 2. F-01 waitlist CTA removed (product repo, founder/parallel agent).
 3. Brand palette law settled (v9 vs original) — affects all future output.
 4. gymos.in domain pointed at Vercel + NEXT_PUBLIC_SITE_URL set.
