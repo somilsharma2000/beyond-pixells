@@ -106,3 +106,15 @@ Both repos have test infrastructure (vitest) and actually use it. No static buil
 ## Verified claims vs inference
 - Verified: all route lists, env names, isolation mechanism, password hashing, webhook HMAC, test counts, tsconfig, committed files.
 - Inference: risk narratives in Findings 1-2 (based on the verified mechanisms); Phase 2 TEST should prove exploit paths before remediation.
+
+---
+
+## ADDENDUM — 2 Oct 2026, 00:45 IST (post-audit discoveries)
+
+The estate moved during the audit. Three material updates:
+
+1. **gym-os-app is RETIRED.** Commit 7924385 (Sep 28): "retire this deployment — permanent redirect all traffic to the single combined site at gym-os-v3.vercel.app." Verified live: gym-os-app.vercel.app → 308 → gym-os-v3.vercel.app (200). Consequences: the app's 12 API routes and ops console are legacy surface; the SPA console actions now live on v3's real endpoints (aaf98d3). **Finding F-02 (plaintext env super-admin) was fixed anyway (commit bb24bf3, pushed by audit engine) but the surface is now retired — moot on production.**
+2. **v3 gained 12 commits during the audit window** (C1/C2/C3 batches, 185→201 tests): Social OS foundation (social_accounts, content pipeline state machine with consent hard-gates, REAL publishing adapters for Instagram/Facebook/Google Business — Graph calls, never simulated), per-automation run transparency, integration health stamps, membership state machines. New routes exist that postdate the route map above (notably `/dashboard/content`). Audit findings partially superseded: **F-10 (dbg.mjs) already fixed upstream.**
+3. **A parallel worker is actively shipping to v3** (commits timestamped through 00:42 IST today). Coordination rule for Phase 2: re-clone before any change, check `git log` for new commits, and expect the map to be stale on arrival.
+
+**Still-valid top findings after this churn:** F-01 (app-layer tenancy, no Postgres RLS — unchanged), F-03 (dependency drift — now moot for the retired repo; v3-only estate simplifies), F-09 (no CI — still true for v3), F-06 (hand-rolled auth — unchanged, still well-executed).
